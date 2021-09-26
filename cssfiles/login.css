@@ -1,0 +1,99 @@
+/*The properties of the body*/
+body{
+    margin:0;
+    padding:0;
+    background-image:url(/imagefiles/background-login.jpeg); 
+    
+    
+    /* font-family: 'Bebas Neue', cursive; */
+}
+/*The properties of the top-container on the page*/
+#top-login-container{
+ height: 100px;
+ box-sizing: border-box;
+ 
+}
+/*The properties of the logo on the top-navbar of the loginpage*/
+#navbar-logo{
+    font-family:'Bebas Neue', cursive;
+    font-size: 45px;
+    height: 50px;
+    width:150px;
+    color: rgb(215, 94, 39);
+    text-decoration: none;
+    margin-left: 5%;
+    
+    
+   }
+/*The properties of the small property on the logo of the top-nav bar  of the login page*/
+   #small-log{
+   color: #fff;
+   }
+/*The properties of the donthaveaccount on the navbar */   
+   #donthaveaccount{
+     margin-left:52%;
+     margin-right: 0;
+     color: #fff;
+     font-family: 'Open Sans', sans-serif;
+   }
+/*The properties of the registerwithus-link */
+   #registerwithus-link{
+    margin-right:7%;
+    color:#ef672a;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    
+   }
+/*The properties of the hover on the registerwithus-link*/
+   #registerwithus-link:hover{text-decoration: underline;}
+/*The properties of the login container on the login page*/   
+   #login-container{
+     width:35%;
+     box-sizing: border-box;
+     text-align: center;
+     margin-top:8%;
+     height:400px;
+     background-color: #141b29;
+     
+   }
+/*The properties of the paragragh in the login container*/   
+   #login-container p{
+       color: #fff;
+       font-family: "Open Sans", sans-serif;
+
+    }
+/*The properties of the username input */
+#username{
+   width: 90%;
+   height: 55px;
+}
+/*The properties of the  password input */
+#userpassword{
+    width: 90%;
+    height: 55px; 
+}
+/*The properties  of the usersubmit button*/
+#usersubmit{
+    width: 90%;
+    height: 55px; 
+    color:#fff;
+    text-align: center;
+    font-weight: 900;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1;
+    background: #ef672a;
+    border: 1px solid #ef672a;
+}
+/*The properties of the hovering on the submit button*/
+#usersubmit:hover{
+    color:#ef672a;
+    background-color: #fff;
+    border: 1px solid #fff;
+
+}
+/*The properties of the forgot password link*/
+#forgotpassword{
+    color:#ef672a;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+}
