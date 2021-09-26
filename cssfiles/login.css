@@ -2,7 +2,7 @@
 body{
     margin:0;
     padding:0;
-    background-image:url(/imagefiles/background-login.jpeg); 
+    background-image:url(/imagefiles/band-photo.jpeg); 
     
     
     /* font-family: 'Bebas Neue', cursive; */
@@ -11,6 +11,7 @@ body{
 #top-login-container{
  height: 100px;
  box-sizing: border-box;
+
  
 }
 /*The properties of the logo on the top-navbar of the loginpage*/
@@ -22,6 +23,7 @@ body{
     color: rgb(215, 94, 39);
     text-decoration: none;
     margin-left: 5%;
+    
     
     
    }
@@ -65,11 +67,13 @@ body{
 /*The properties of the username input */
 #username{
    width: 90%;
+   font-family: "Open Sans", sans-serif;
    height: 55px;
 }
 /*The properties of the  password input */
 #userpassword{
     width: 90%;
+    font-family: "Open Sans", sans-serif;
     height: 55px; 
 }
 /*The properties  of the usersubmit button*/
