@@ -2,7 +2,7 @@
 body{
     margin:0;
     padding:0;
-    background-image:url(/imagefiles/band-photo.jpeg); 
+    background-image:linear-gradient(rgba(20,27,41,0.8), rgba(20,27,41,0.9)),url(/imagefiles/band-photo.jpeg);
     
     
     /* font-family: 'Bebas Neue', cursive; */
