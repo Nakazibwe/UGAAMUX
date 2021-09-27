@@ -5,15 +5,23 @@ body{
     background: #141b29;
     
    
-}/*The properties of the top nav bar on the home page*/
+
+}
+/*The properties of the header of the home page*/
+#header{
+ height: 600px;
+ background-image:linear-gradient(rgba(20,27,41,0.8), rgba(20,27,41,0.9)),url(/imagefiles/band-photo.jpeg);
+ 
+}
+/*The properties of the top nav bar on the home page*/
 #top-navbar{
-    height: 70px;
+    height: 100px;
     box-sizing: border-box;
     padding-top: 10px;
     padding-bottom: 20px;
     padding-left:10px;
     padding-right:20px;
-    background-color:#141b29;
+    background-color:linear-gradient(rgba(20,27,41,0.8), rgba(20,27,41,0.9))
 }
 /*The properties of the logo on the top navbar*/
 #navbar-logo{
@@ -29,6 +37,10 @@ body{
 /*The properties of the small property on the logo on the navbar on the homepage*/
 #small-log{
 color:#fff;
+}
+/*The properties of the inner div inside the nav bar*/
+#navbar-inner-div{
+ margin-left: 45%;
 }
 /*The properties of the artists link on the  top navbar of the homepage */
 #navbar-artistes{
@@ -100,14 +112,46 @@ box-sizing:border-box;
     
 
 }
-/*The properties of the signin on the top nav bar of the home page*/
-#navbar-signin{
+/*The properties of the text area container inside of the header */
+#header-text-area{
+    text-align: center;
+    box-sizing:border-box ;
+    height:500px;
+    margin:auto;
+    padding-top: 50px;
+    box-sizing: border-box;
+    width:80% ;
+    
+}
+/*The properties of the heading on the text area container */
+#header-text-area h1{
+color:#dedede;
+font-size:60px;
+font-family: 'Carter One', cursive;
+}
+/*The properties of the paragraph in the text area */
+#header-text-area P{
+    color:#dedede;
+    line-height: 30px;
     font-family: "Open Sans", sans-serif;
+}
+/*The properties of the small quote on the header section. */
+#small-header-quote{
+    font-size: 25px;
+    color: rgb(215, 94, 39);
+    font-family:'Bonheur Royale', cursive;
+}
+/*The properties of the signin on the top nav bar of the home page*/
+#signin{
+    
     font-size: 0.875em;
     height: 40px;
-    width:100px;
-    color:#fff;
+    width:20%;
+    color:#dedede;
     margin-left:2px;
+    margin-right: 30px;
+    padding-left: 70px;
+    padding-right: 70px;
     padding-bottom:10px ;
     padding-top:10px;
     text-align: center;
@@ -116,49 +160,65 @@ box-sizing:border-box;
     border: 1px solid #fff;
 }
 /*The properties of the hovering on the top nav bar of the home page*/
-#navbar-signin:hover{
+#signin:hover{
     background-color: #fff;
     color:#ff781f;
 }
-/*The properties of the Carousel slide*/
-#carouselExampleDark{
+/*The properties of the register button on the header section*/
+#register-with-us{
     
-    height: 600px;
-    margin-top: 20px;
-    box-sizing: border-box;
-    padding-left: 2%;
-    padding-right: 2%;
-    margin-bottom: 20px; 
-    background: #141b29;
+    font-size: 0.875em;
+    height: 40px;
+    width:20%;
+    color:#dedede;
+    margin-left:2px;
+    margin-right: 30px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom:10px ;
+    padding-top:10px;
+    text-align: center;
+    text-decoration: none;
+    box-sizing:border-box;
+    border: 1px solid #fff;
 }
-/*The properties of the first card on the carousel*/
-#card1{
+/*The properties of the hover on the register. */
+#register-with-us:hover{
+    background-color: #fff;
+    color:#ff781f;
+}
+
+/*The properties of the first image div */
+#image-div1{
  height: auto;
- margin-left:5%;
- padding-left: 0;
- background: #141b29;
+ margin-left:6%;
+ padding:0;
+ margin-top: 2%;
+ margin-bottom: 2%;
+ /* background: #141b29; */
 
 }
-/*The properties of the cardbody */ 
-#card1body{
+/*The properties of the text-div1 */ 
+#text-div1{
 color: #aed3e1;
 font-family: "Open Sans", sans-serif;
 font-size: 14px;
+background-color: #141b29;
+height: auto;
+margin-top: 2%;
+margin-bottom: 2%;
 
-}
-/*The properties of the image div inside the card1*/
-#img-div1{
- height: fit-content;
- padding: 0;
 
 }
 /*The properties of the image inside the card1*/ 
-#card-img1{
-height:250px
+#azawi-img{
+width:250px;    
+height:250px;
+
  
 }
-/*The properties of the title inside the card body*/
-#card-title-ID1{
+/*The properties of the title inside the text-div1 body*/
+#title-ID1{
     font-family: 'Bonheur Royale', cursive;
     font-size: 30px;
 }
@@ -167,119 +227,137 @@ height:250px
     color: #aed3e1;
     font-family: "Open Sans", sans-serif;
 }
-/*The properties of card2 on the carousel.*/
-#card2{
+
+/*The properties of image-div3 .*/
+#image-div3{
 height: auto;
-padding-left: 0;
-margin-left:5%;
+margin-left:6%;
+padding: 0;
+margin-top: 2%;
+margin-bottom: 2%;
 background: #141b29;
     
 }
-/*The properties of the body on the  card2 on the carousel*/
-#card2body{
+/*The properties of the body on the  text div3 */
+#text-div3{
 color: #aed3e1;
+margin-top: 2%;
+margin-bottom: 2%;
+background-color: #141b29;
 font-family: "Open Sans", sans-serif;
 font-size: 14px;
 
 }
-/*The properties of the twitter handle text on card2. */
-#small-handle2{
+/*The properties of the twitter handle text on  */
+#small-handle3{
     color: #aed3e1;
     font-family: "Open Sans", sans-serif;
 }
-/*The properties of the image div of card2 on the carousel. */
-#img-div2{
-    height: fit-content;
-    padding: 0;
 
+/*The properties of the image of fik fameica*/ 
+#fik-img{
+height:250px;
+width:250px; 
 }
-/*The properties of the image inside the card2*/ 
-#card-img2{
-height:250px
-
-}
-/*The properties of the title inside the card body2*/
-#card-title-ID2{
+/*The properties of the title inside the div*/
+#title-ID3{
 font-family: 'Bonheur Royale', cursive;
 font-size: 30px;
 }
-/*The properties of headings on the caption of the carousel.*/
-.carousel-caption h5{
-    font-family:'Bebas Neue', cursive;
-    color: rgb(215, 94, 39);
-}
-/*The captioon paragraph on the carousel*/
-.carousel-caption p{
-    font-family: 'Bonheur Royale', cursive;
-    color: rgb(215, 94, 39);
-}
-/*The properties of  card3 on the carousel*/
-#card3{
+
+/*The properties of image-div2 */
+#image-div2{
     height: auto;
     margin-left:2%;
-    margin-right:5%;
-    padding-left: 0;
-    background: #141b29;
+    padding: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    /* background: #141b29; */
    
   }
-/*The properties of the cardbody  of card3*/ 
-   #card3body{
+/*The properties of the text-div2 */ 
+   #text-div2{
     color: #aed3e1;
+    background-color: #141b29;
     font-family: "Open Sans", sans-serif;
-   font-size: 14px;
+    font-size: 14px;
+    height: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
    
 }
-/*The properties of the image div inside the card1*/
-   #img-div3{
-    height: fit-content;
-    padding: 0;
+/*The properties of row1*/
+#row1{
+background-color:#141b29; 
+}
+/*The properties of row2*/
+#row2{
+    background-color:#141b29;
+}
+/*The properties of row3*/
+#row3{
+    background-color:#141b29; 
+}
+/*The properties of row4*/
+#row4{
+    background-color:#141b29;   
+}
+/*The properties of row5*/
+#row5{
+    background-color:#141b29;     
+}
+/*The properties of row6*/
+#row6{
+    background-color:#141b29;  
+}
+/*The properties of the image of chameleon*/ 
+   #camili-img{
+   height:250px;
+   width:250px; 
    
-   }
-/*The properties of the image inside the card3*/ 
-   #card-img3{
-   height:250px
     
 }
 /*The properties of the twitter handle in card 3*/
-   #small-handle3{
+   #small-handle2{
     color: #aed3e1;
     font-family: "Open Sans", sans-serif;
 }
 
 /*The properties of the title inside the card body of card3*/
-   #card-title-ID3{
+   #title-ID2{
        font-family: 'Bonheur Royale', cursive;
        font-size: 30px;
 }
+
 /*The properties of  card4 on the carousel*/
-#card4{
+#image-div4{
     height: auto;
     background: #141b29;
     margin-left:2%;
-    margin-right:5%;
-    padding-left: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 0;
    
    }
  /*The properties of the cardbody of card4 */ 
-   #card4body{
+#text-div4{
     color: #aed3e1;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #141b29;
     font-family: "Open Sans", sans-serif;
-   font-size: 14px;
+    font-size: 14px;
    
 }
-/*The properties of the image div inside the card4*/
-   #img-div4{
-    height: fit-content;
-    padding: 0;
-   
-}
+ 
+
 /*The properties of the image inside the card4*/ 
-   #card-img4{
-   height:250px
-    
+#juliana-img{
+   height:250px;
+   width:250px ;
 }
 /*The properties of the title inside the card body on card 4*/
-   #card-title-ID4{
+   #title-ID4{
        font-family: 'Bonheur Royale', cursive;
        font-size: 30px;
 } 
@@ -290,33 +368,34 @@ font-size: 30px;
 }
 
 /*The properties of  card5 on the carousel*/
-#card5{
+#image-div5{
     height: auto;
-    margin-left:5%;
-    padding-left: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left:6%;
+    padding:0;
     background: #141b29;
    
 }
 /*The properties of the cardbody of card 5*/ 
-   #card5body{
+   #text-div5{
     color: #aed3e1;
+    margin-top: 2%;
+    background: #141b29;
+    margin-bottom: 2%;
     font-family: "Open Sans", sans-serif;
    font-size: 14px;
    
  }
-/*The properties of the image div inside the card5*/
-   #img-div5{
-    height: fit-content;
-    padding: 0;
-   
-}
+
 /*The properties of the image inside the card5*/ 
-   #card-img5{
-   height:200px
+#mung-img{
+    height:250px;
+    width:250px ;
     
 }
 /*The properties of the title inside the card body of card5*/
- #card-title-ID5{
+ #title-ID5{
        font-family: 'Bonheur Royale', cursive;
        font-size: 30px;
 }
@@ -326,33 +405,35 @@ font-size: 30px;
     font-family: "Open Sans", sans-serif;
 }
 /*The properties of card6 on the carousel. */
-   #card6{
+   #image-div6{
     height: auto;
-    margin-left:5%;
-    padding-left: 0;
+    margin-left:2%;
     background: #141b29;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding:0;
+    
    
 }
 /*The properties of the cardbody inside the card6*/ 
-   #card6body{
+   #text-div6{
     color: #aed3e1;
     font-family: "Open Sans", sans-serif;
    font-size: 14px;
+   margin-top: 2%;
+   background: #141b29;
+   margin-bottom: 2%;
    
 }
-/*The properties of the image div inside card6*/
-   #img-div6{
-    height: fit-content;
-    padding: 0;
-   
-}
+
 /*The properties of the image inside card6*/ 
-   #card-img6{
-   height:200px
+   #vinka-img{
+    height:250px;
+    width:250px ;
     
 }
 /*The properties of the title inside the card body of card6*/
-   #card-title-ID6{
+   #title-ID6{
        font-family: 'Bonheur Royale', cursive;
        font-size: 30px;
 }
@@ -362,31 +443,30 @@ font-size: 30px;
     font-family: "Open Sans", sans-serif;
    }
 /*The properties of  card7 on the carousel*/
-#card7{
+#image-div7{
     height: auto;
-    margin-left:2%;
-    margin-right:5%;
-    padding-left: 0;
+    margin-left:6%;
+    padding: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
     background: #141b29;
    
   }
 /*The properties of the cardbody on card7*/ 
-   #card7body{
+   #text-div7{
     color: #aed3e1;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background: #141b29;
     font-family: "Open Sans", sans-serif;
    font-size: 14px;
    
 }
-/*The properties of the image div inside  card7*/
-   #img-div7{
-    height: fit-content;
-    padding: 0;
-   
-}
+
 /*The properties of the image inside the card7*/ 
-   #card-img7{
-   height:250px
-    
+   #sheeba-img{
+   height:250px;
+   width:250px;
 }
 /*The properties of twitter handle on card 7*/
    #small-handle7{
@@ -395,36 +475,35 @@ font-size: 30px;
 }
 
 /*The properties of the title inside the card body of card7*/
-   #card-title-ID7{
+   #title-ID7{
        font-family: 'Bonheur Royale', cursive;
        font-size: 30px;
    }
 /*The properties of  card8  on the carousel*/
-#card8{
+#image-div8{
     height: auto;
     margin-left:2%;
-    margin-right:5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     background: #141b29;
-    padding-left: 0;
+    padding: 0;
    
   }
 /*The properties of the cardbody on card 8 */ 
-   #card8body{
+   #text-div8{
     color: #aed3e1;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background: #141b29;
     font-family: "Open Sans", sans-serif;
-   font-size: 14px;
+    font-size: 14px;
    
 }
-/*The properties of the image div inside the card8*/
-   #img-div8{
-    height: fit-content;
-    padding: 0;
-   
-}
+
 /*The properties of the image inside the card8*/ 
-   #card-img8{
-   height:250px
-    
+#maurice-img{
+   height:250px;
+   width:250px;
 }
 /*The properties of the twitter handle on card8*/
 #small-handle8{
@@ -433,38 +512,38 @@ font-size: 30px;
 }
 
 /*The properties of the title inside the card bod of card8*/
-   #card-title-ID8{
+   #title-ID8{
        font-family: 'Bonheur Royale', cursive;
        font-size: 30px;
 }
 /*The properties of card9 on the carousel.*/
-   #card9{
+   #image-div9{
     height: auto;
     background: #141b29;
-    margin-left:5%;
-    padding-left: 0;
+    margin-left:6%;
+    padding: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
    
 }
 /*The properties of the cardbody on  card9*/ 
-#card9body{
+#text-div9{
     color: #aed3e1;
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
-    
+    background: #141b29;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
-/*The properties of the image div inside the card9*/
-#img-div9{
-     height: fit-content;
-     padding: 0;
-    
-}
+
 /*The properties of the image inside the card9*/ 
- #card-img9{
-    height:250px
+ #rema-img{
+    height:250px;
+    width:250px;
      
 }
 /*The properties of the title inside the card body of card9*/
-#card-title-ID9{
+#title-ID9{
         font-family: 'Bonheur Royale', cursive;
         font-size: 30px;
 }
@@ -474,33 +553,34 @@ font-size: 30px;
         font-family: "Open Sans", sans-serif;
 }
 /*The properties of card10 on the carousel*/
-    #card10{
+    #image-div10{
         height: auto;
         background: #141b29;
-        margin-left:5%;
-        padding-left: 0;
+        margin-left:2%;
+        padding:0;
+        margin-top: 2%;
+        margin-bottom: 2%;
        
 }
 /*The properties of card 10 on the carousel.*/
-    #card10body{
+    #text-div10{
         color: #aed3e1;
         font-family: "Open Sans", sans-serif;
         font-size: 14px;
+        margin-top: 2%;
+        background: #141b29;
+        margin-bottom: 2%;
         
 }
-/*The properties of the image div inside the card10*/
-        #img-div10{
-         height: fit-content;
-         padding: 0;
-        
-}
+
 /*The properties of the image inside card10*/ 
-        #card-img10{
-        height:250px
+        #kenzo-img{
+        height:250px;
+        width:250px;
          
 }
 /*The properties of the title inside the card body of card 10*/
-    #card-title-ID10{
+    #title-ID10{
             font-family: 'Bonheur Royale', cursive;
             font-size: 30px;
 }
@@ -510,30 +590,30 @@ font-size: 30px;
             font-family: "Open Sans", sans-serif;
         }
 /*The properties of  card11 on the carousel*/
-#card11{
+#image-div11{
     height: auto;
-    margin-left:2%;
     background: #141b29;
-    margin-right:5%;
-    padding-left: 0;
+    margin-left:6%;
+    padding: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
    
 }
 /*The properties of the cardbody on card 11 */ 
-   #card11body{
+   #text-div11{
     color: #aed3e1;
     font-family: "Open Sans", sans-serif;
    font-size: 14px;
+   background: #141b29;
+   margin-top: 2%;
+   margin-bottom: 2%;
    
  }
-/*The properties of the image div inside  card11*/
-   #img-div111{
-    height: fit-content;
-    padding: 0;
-   
- }
+
 /*The properties of the image inside  card11*/ 
-   #card-img11{
-   height:250px
+   #bebe-img{
+   height:250px;
+   width:250px;
     
 }
 /*The properties of the twitter handle on card11.*/
@@ -543,34 +623,34 @@ font-size: 30px;
 }
 
 /*The properties of the title inside the card body of card 11.*/
-#card-title-ID11{
+#title-ID11{
        font-family: 'Bonheur Royale', cursive;
        font-size: 30px;
 }
 /*The properties of card 12 on the carousel*/
-   #card12{
+   #image-div12{
     height: auto;
     margin-left:2%;
     background: #141b29;
-    margin-right:5%;
-    padding-left: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 0;
    
 }
 /*The properties of the cardbody on card 12*/ 
-      #card12body{
+      #text-div12{
         color: #aed3e1;
         font-family: "Open Sans", sans-serif;
        font-size: 14px;
+       background: #141b29;
+       margin-top: 2%;
+       margin-bottom: 2%;
  }
- /*The properties of the image div inside the card12*/
-       #img-div12{
-        height: fit-content;
-        padding: 0;
-       
- }
+
  /*The properties of the image inside the card12*/ 
-       #card-img12{
-       height:200px
+     #nwagi-img{
+       height:250px;
+       width:250px;
         
 }
 /*The properties of the twitter handle on card12. */
@@ -580,7 +660,7 @@ font-size: 30px;
  }
     
 /*The properties of the title inside the card body on card 12.*/
-#card-title-ID12{
+#title-ID12{
         font-family: 'Bonheur Royale', cursive;
         font-size: 30px;
 }
@@ -833,3 +913,13 @@ font-size: 30px;
         background-color: #fff;
         border: 1px solid #fff;
     }
+/*THE MEDIA QUERIES FOR THE HOME PAGE. */
+/* Extra small devices (phones, 600px and down) */
+
+
+
+
+
+
+
+
