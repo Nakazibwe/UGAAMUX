@@ -8,22 +8,24 @@ body{
     /* font-family: 'Bebas Neue', cursive; */
 }
 /*The properties of the top-container on the page*/
-#top-login-container{
+#top-navbar{
  height: 100px;
  box-sizing: border-box;
 
  
 }
+/*The properties for the inner div inside the nav bar*/
+#navbar-inner-div{
+   margin-left:50%;
+}
 /*The properties of the logo on the top-navbar of the loginpage*/
 #navbar-logo{
     font-family:'Bebas Neue', cursive;
     font-size: 45px;
-    height: 50px;
     width:150px;
     color: rgb(215, 94, 39);
     text-decoration: none;
     margin-left: 5%;
-    
     
     
    }
@@ -33,17 +35,17 @@ body{
    }
 /*The properties of the donthaveaccount on the navbar */   
    #donthaveaccount{
-     margin-left:52%;
-     margin-right: 0;
      color: #fff;
+     width: 70%;
      font-family: 'Open Sans', sans-serif;
    }
 /*The properties of the registerwithus-link */
    #registerwithus-link{
-    margin-right:7%;
     color:#ef672a;
+    width: 200px;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
+    
     
    }
 /*The properties of the hover on the registerwithus-link*/
@@ -51,10 +53,11 @@ body{
 /*The properties of the login container on the login page*/   
    #login-container{
      width:35%;
+     padding-top: 20px;
      box-sizing: border-box;
      text-align: center;
      margin-top:8%;
-     height:400px;
+     height:420px;
      background-color: #141b29;
      
    }
