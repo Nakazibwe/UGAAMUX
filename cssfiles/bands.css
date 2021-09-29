@@ -1,0 +1,318 @@
+/*The properties of the body on the home page*/
+body {
+    margin: 0;
+    padding: 0;
+
+    background: #141b29;
+}
+/*The properties of the header of the home page*/
+#header {
+    height: 600px;
+    background-image: linear-gradient(
+                        rgba(20, 27, 41, 0.8),
+                        rgba(20, 27, 41, 0.9)
+              ),
+              url(/imagefiles/band-photo.jpeg);
+}
+/*The properties of the top nav bar on the home page*/
+#top-navbar {
+    height: 100px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 20px;
+    background-color: linear-gradient(
+              rgba(20, 27, 41, 0.8),
+              rgba(20, 27, 41, 0.9)
+    );
+}
+/*The properties of the top-container on the page*/
+#top-navbar {
+    height: 100px;
+    box-sizing: border-box;
+}
+/*The properties for the inner div inside the nav bar*/
+#navbar-inner-div {
+    margin-left: 50%;
+}
+/*The properties of the logo on the top-navbar of the loginpage*/
+#navbar-logo {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 45px;
+    width: 150px;
+    color: rgb(215, 94, 39);
+    text-decoration: none;
+    margin-left: 5%;
+}
+/*The properties of the small property on the logo on the navbar on the homepage*/
+#small-log {
+    color: #fff;
+}
+/*The properties of the inner div inside the nav bar*/
+#navbar-inner-div {
+    margin-left: 45%;
+}
+/*The properties of the artists link on the  top navbar of the homepage */
+#navbar-artistes {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 100px;
+    margin-left: 5px;
+    padding-left: 30px;
+    padding-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    box-sizing: border-box;
+}
+/*The properties of the comedians link in the top nav bar of the homepage*/
+#navbar-comedians {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 120px;
+    color: #fff;
+    margin-left: 2px;
+    padding-left: 30px;
+    text-decoration: none;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+/*The properties of the bands on the top nav bar on the home page */
+#navbar-bands {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 80px;
+    color: #fff;
+    margin-left: 2px;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+/*The properties of the about us on the top nav bar on the home page*/
+#navbar-aboutus {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 100px;
+    color: #fff;
+    margin-left: 2px;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+/*The properties of the contactus on the top-nav bar*/
+#navbar-contactus {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 100px;
+    color: #fff;
+    margin-left: 2px;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+/*The properties of the text area container inside of the header */
+#header-text-area {
+    text-align: center;
+    box-sizing: border-box;
+    height: 500px;
+    margin: auto;
+    padding-top: 50px;
+    box-sizing: border-box;
+    width: 80%;
+}
+/*The properties of the heading on the text area container */
+#header-text-area h1 {
+    color: #dedede;
+    font-size: 60px;
+    font-family: 'Carter One', cursive;
+}
+/*The properties of the paragraph in the text area */
+#header-text-area P {
+    color: #dedede;
+    line-height: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+/*The properties of the small quote on the header section. */
+#small-header-quote {
+    font-size: 25px;
+    color: rgb(215, 94, 39);
+    font-family: 'Bonheur Royale', cursive;
+}
+
+/*The properties of the second-group of cards on the home page*/
+#second-group {
+    background: #141b29;
+    height: auto;
+    margin-bottom: 20px;
+}
+/*The properties of the second-group-card1 on the homepage  */
+#second-group-card1 {
+    height: auto;
+    margin-left: 5%;
+    background: #141b29;
+    padding-left: 0;
+}
+/*The properties of the image on the second-group-card1*/
+second-group-img1 {
+    height: 230px;
+}
+/*The properties of the second-group-cardbody1*/
+#second-group-cardbody1 {
+    color: #aed3e1;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+/*The properties of the title on the second-group-card1 */
+#second-group-cardTITTLE1 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 30px;
+}
+/*The properties of the second-group-card2 */
+#second-group-card2 {
+    height: auto;
+    margin-left: 2%;
+    background: #141b29;
+    padding-left: 0;
+}
+/*The properties of the second-group-img2 */
+#second-group-img2 {
+    height: 230px;
+}
+/*The properties of the second-group-cardbody2 */
+#second-group-cardbody2 {
+    color: #aed3e1;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}*The properties of the second-group-cardTITTLE3*/
+#second-group-cardTITTLE2 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 30px;
+}
+/*The properties of the second-group-card3 */
+#second-group-card3 {
+    height: auto;
+    margin-left: 2%;
+    background: #141b29;
+    padding-left: 0;
+}
+/*The properties of the second-group-img3 */
+#second-group-img3 {
+    height: 230px;
+}
+/*The properties of the second-group-cardbody3 */
+#second-group-cardbody3 {
+    color: #aed3e1;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+/*The properties of the second-group-cardTITTLE3*/
+#second-group-cardTITTLE3 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 30px;
+}
+/*The properties of the footer*/
+#footer {
+    background: #2b313e;
+    height: 420px;
+}
+/*The properties of the AboutUs-Section*/
+#AboutUs-Section {
+    margin-top: 20px;
+    margin-left: 5%;
+    background: #2b313e;
+}
+/*The properties of the h2 inside the AboutUs Section*/
+#AboutUs-Section h2 {
+    color: #aed3e1;
+    font-family: 'Bonheur Royale', cursive;
+}
+/*The properties of the paragraph inside the AboutUs Section*/
+#AboutUs-Section p {
+    color: #aed3e1;
+    font-size: 14px;
+    line-height: 35px;
+    font-family: 'Open Sans', sans-serif;
+}
+/*The properties of the small quote on the About Us section*/
+#small-quote {
+    margin-left: 30%;
+    font-size: 25px;
+    color: rgb(215, 94, 39);
+    font-family: 'Bonheur Royale', cursive;
+}
+/*The properties of the Contact Us-Section*/
+#ContactUs-Section {
+    background: #2b313e;
+    margin-top: 20px;
+    padding-right: 0;
+}
+/*The properties of the h2 on top of the Contact Us.*/
+#contactus-heading {
+    color: #aed3e1;
+    font-family: 'Bonheur Royale', cursive;
+}
+/*The properties of the contact info section*/
+#contact-info {
+    width: 40%;
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+    float: left;
+    padding-left: 20px;
+    box-sizing: border-box;
+    background: #2b313e;
+}
+/*The properties of the contact-input*/
+#contact-input {
+    width: 60%;
+    float: right;
+    background: #2b313e;
+    height: auto;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-left: 10px;
+    color: #aed3e1;
+}
+/*The properties of the input for name*/
+#inputname {
+    font-family: 'Open Sans', sans-serif;
+    width: 320px;
+}
+/*The properties of the input for email*/
+#inputemail {
+    font-family: 'Open Sans', sans-serif;
+    width: 320px;
+}
+/*The properties of the input message section. */
+#inputmessage {
+    width: 320px;
+    font-family: 'Open Sans', sans-serif;
+    /* height: 200px; */
+}
+/*The properties of the submit button*/
+#submit-feedback {
+    width: 200px;
+    border-radius: 25px;
+    color: #fff;
+    border: 1px solid rgb(215, 94, 39);
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(215, 94, 39);
+    margin-left: 20%;
+}
+/*The properties of the submit button hover.*/
+#submit-feedback:hover {
+    color: rgb(215, 94, 39);
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+
+/*THE MEDIA QUERIES FOR THE HOME PAGE. */
+/* Extra small devices (phones, 600px and down) */
