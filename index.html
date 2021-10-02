@@ -25,43 +25,56 @@
 </head>
 
 <body>
-    <!--Code for the header section-->
-    <div class="container-fluid" id="header">
-        <!---Code for the top navigation bar-->
-        <nav class="navbar navbar-expand-lg navbar-dark " id="top-navbar">
-            <div class="container-fluid">
-                <a class="navbar-brand" id="navbar-logo" href="/index.html"><small id="small-log">UGAA</small>MUX</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav" id="navbar-inner-div">
-                        <a class="nav-link active" aria-current="page" id="navbar-aboutus" href="#AboutUs-Section">About
-                            Us</a>
-                        <a class="nav-link" id="navbar-artistes" href="#row1">Artists</a>
-                        <a class="nav-link" id="navbar-bands" href="/HTMLfiles/bands.html">Bands</a>
-                        <a class="nav-link" id="navbar-comedians" href="/HTMLfiles/comedians.html">Comedians</a>
-                        <a class="nav-link" id="navbar-contactus" href="#ContactUs-Section">Contact Us</a>
+    <!---Code for the top navigation bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark " id="top-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" id="navbar-logo" href="/index.html"><small id="small-log">UGAA</small>MUX<img
+                    src="/imagefiles/ugflag.jpeg" alt="UG-LOGO" id="logopicture" height="30px" width="50px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav" id="navbar-inner-div">
+                    <a class="nav-link active" aria-current="page" id="navbar-aboutus" href="#AboutUs-Section">About
+                        Us</a>
+                    <a class="nav-link" id="navbar-artistes" href="#row1">Artists</a>
+                    <a class="nav-link" id="navbar-bands" href="/HTMLfiles/bands.html">Bands</a>
+                    <a class="nav-link" id="navbar-comedians" href="/HTMLfiles/comedians.html">Comedians</a>
+                    <a class="nav-link" id="navbar-contactus" href="#ContactUs-Section">Contact Us</a>
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="navbar-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            Account
+                        </a>
+                      
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <li><a class="dropdown-item"  id="signin" href="/HTMLfiles/login.html">SIGN IN</a></li>
+                          <li><a class="dropdown-item" id="register-with-us" href="/HTMLfiles/registermessage.html">REGISTER</a></li>
+                          
+                        </ul>
+                      </div>
+                    
+                   
+                    <a href="/HTMLfiles/registermessage.html" > </a> 
 
-                    </div>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
+    <!--Code for the header section-->
+    <div class="container-fluid" id="header">
         <!--Code for the inner text box inside the header section-->
-        <div class="container" id="header-text-area">
-
+        <div class="header-text-area">
             <h1>Talent Lives Here</h1>
-            <P>Lets re-introduce you to the Ugandan talent you didnt know, lets make make it possible for your
+            <p>Lets re-introduce you to the Ugandan talent you didnt know, lets make make it possible for your
                 favourite artistes and comedians to share their work. Because, Ugandan talent lives here. As a
                 creative the entertainment industry, you have the opportunity to freely showcase and get your work on
                 a platform that speaks your language and hears you. Join a community of celebrities who are making a
                 difference in the industry by making your work known to your fans and lets grow Ugandan talent together.
-            </p><br><br>
+            </p>
 
-            <a href="/HTMLfiles/login.html" id="signin">SIGN IN</a>
-            <a href="/HTMLfiles/registermessage.html" id="register-with-us"> Register </a><br><br><br>
+
+
             <small id="small-header-quote">Ugandan Talent Lives Here!!!</small>
 
 
@@ -69,29 +82,25 @@
         </div>
     </div>
     <div class="row" id="row1">
-        <div class="col-lg-2" id="image-div1"><img src="/imagefiles/Azawi.jpeg" id="azawi-img"
-                class="img-fluid rounded-start" alt="Azawi photo">
+        <div class="col-lg-2 col-sm-12" id="image-div1"><img src="/imagefiles/Azawi.jpeg" id= "azawiimage"
+                class="img-fluid " alt="Azawi photo">
         </div>
-        <div class="col-lg-3" id="text-div1">
+        <div class="col-lg-3 col-sm-12" id="text-div1">
             <h5 class="card-title" id="title-ID1"> Azawi </h5>
             <p class="card-text">During her musical journey as a songwriter, Azawi was
                 discovered by
-                Swangz Avenue music label, which is located at 3rd Street The Square, 2nd Floor
-                in Kampala, Uganda. She has 15 songs and among these is the famous,
-                "Quanaminno". She promised that 2020 would be a big year
-                because
-                she would start to work on her first album, which is currently unfamiliar.</p>
+                Swangz Avenue music label. She has 15 songs and among these is the famous,
+                "Quanaminno". She promised that she would start to work on her first album, which is currently
+                unfamiliar.</p>
             <p class="card-text"><small class="text-muted" id="small-handle1">
                     @AzawiOfficial</small></p>
         </div>
-        <div class="col-lg-2" id="image-div2"><img src="/imagefiles/Chameleon.jpeg" id="camili-img"
-                class="img-fluid rounded-start" alt="Chameleon photo"> </div>
-        <div class="col-lg-3" id="text-div2">
+        <div class="col-lg-2 col-sm-12" id="image-div2"><img src="/imagefiles/Chameleon.jpeg" id="camili-img"
+                class="img-fluid " alt="Chameleon photo"> </div>
+        <div class="col-lg-3 col-sm-12" id="text-div2">
             <h5 class="card-title" id="title-ID2"> Jose Chameleone</h5>
             <p class="card-text">Chameleon started his music career in the early 1990s with the
-                Ogopa
-                Deejays, a Kenyan record label then and managed to gain popularity because of
-                his talent across the entire African continent. He has 13 known albums and
+                Ogopa Deejays, He has 13 known albums and
                 several songs like the popular "Wale Wale". He is the founder of Leone Island
                 label which
                 he uses to record his music.</p>
@@ -102,53 +111,47 @@
 
     </div>
     <div class="row" id="row2">
-        <div class="col-lg-2" id="image-div3"><img src="/imagefiles/FikFamaica.jpeg" id="fik-img"
-                class="img-fluid rounded-start" alt="FikFamaica photo"></div>
-        <div class="col-lg-3" id="text-div3">
+        <div class="col-lg-2 col-sm-12" id="image-div3"><img src="/imagefiles/FikFamaica.jpeg" id="fik-img"
+                class="img-fluid " alt="FikFamaica photo"></div>
+        <div class="col-lg-3 col-sm-12" id="text-div3">
             <h5 class="card-title" id="title-ID3"> Fik Fameica </h5>
             <p class="card-text"> Fik Fameica fame came in 2015 with "Pistol" under the Black
                 Man Town
-                music label.He started a recording label called Fresh Gang Records with his
-                international manager known as Skizzie, Wembley Mo, Mozelo Kidz, Sam Kikumba,
-                Promoter Brian & DJ Ranks Showmaster. Fik has nine albums, and several songs
+                music label. Fik has nine albums, and several songs
                 like the popular "Omu Bwati".</p>
             <p class="card-text"><small class="text-muted" id="small-handle3"> @FFameica</small>
             </p>
         </div>
-        <div class="col-lg-2" id="image-div4"><img src="/imagefiles/JulianaKanyomozi.jpeg" id="juliana-img"
-                class="img-fluid rounded-start" alt="Juliana Kanyomozi photo"> </div>
-        <div class="col-lg-3" id="text-div4">
+        <div class="col-lg-2 col-sm-12" id="image-div4"><img src="/imagefiles/JulianaKanyomozi.jpeg" id="juliana-img"
+                class="img-fluid " alt="Juliana Kanyomozi photo"> </div>
+        <div class="col-lg-3 col-sm-12" id="text-div4">
             <h5 class="card-title" id="title-ID4"> Juliana Kanyomozi</h5>
             <p class="card-text">Juliana went solo with her music career, and evolved from
                 Karaoke
-                singer, Kanyomozi has
-                risen to become one of the biggest divas in Ugandan music and East Africa at
-                large. She has 14 known albums and several songs including the popular,
+                singer, and made a successful career. She has 14 known albums and several songs including the popular,
                 "Kanyimbe"</p>
             <p class="card-text"><small class="text-muted" id="small-handle4">
                     @JKanyomozi</small></p>
         </div>
     </div>
     <div class="row" id="row3">
-        <div class="col-lg-2" id="image-div5"><img src="/imagefiles/MunG.jpeg" id="mung-img"
-                class="img-fluid rounded-start" alt="MunG photo"></div>
-        <div class="col-lg-3" id="text-div5">
+        <div class="col-lg-2 col-sm-12" id="image-div5"><img src="/imagefiles/MunG.jpeg" id="mung-img"
+                class="img-fluid " alt="MunG photo"></div>
+        <div class="col-lg-3 col-sm-12" id="text-div5">
             <h5 class="card-title" id="title-ID5"> MUN*G</h5>
             <p class="card-text">MUN*G is a rap artist under the label BABOON FOREST
-                ENTERMAINMENT.He has been in the rap game for some time, to many he came to be
-                known after he released songs like “Oh my Goodness” and “Kyaba Too God.
-                He has 19 albums including the famous,"Kyaba Too Much”
+                ENTERMAINMENT.He has been in the rap game for some time.
+                He has 19 albums including the famous, "Kyaba Too Much”
             </p>
             <p class="card-text"><small class="text-muted" id="small-handle5"> @MunGmato</small>
             </p>
         </div>
-        <div class="col-lg-2" id="image-div6"><img src="/imagefiles/Vinka.jpeg" id="vinka-img"
-                class="img-fluid rounded-start" alt="Vinka photo"></div>
-        <div class="col-lg-3" id="text-div6">
+        <div class="col-lg-2 col-sm-12" id="image-div6"><img src="/imagefiles/Vinka.jpeg" id="vinka-img"
+                class="img-fluid " alt="Vinka photo"></div>
+        <div class="col-lg-3 col-sm-12" id="text-div6">
             <h5 class="card-title" id="title-ID6"> Vinka </h5>
             <p class="card-text"> Late 2016, the record label she worked for asked her to
-                convert into a musician. After considerations, Vinka took the opportunity and
-                signed a record deal under stage name Vinka in Febuary of 2017.
+                convert into a musician.
                 She is currently signed to the Swangz Avenue label and she has 17 albums, this
                 includes the famous, "Love Panic".
             </p>
@@ -157,50 +160,45 @@
         </div>
     </div>
     <div class="row" id="row4">
-        <div class="col-lg-2" id="image-div7"><img src="/imagefiles/SheebaKarungi.jpeg" id="sheeba-img"
-                class="img-fluid rounded-start" alt="Sheeba photo"></div>
-        <div class="col-lg-3" id="text-div7">
+        <div class="col-lg-2 col-sm-12" id="image-div7"><img src="/imagefiles/karungi.jpeg" id="sheeba-img"
+                class="img-fluid " alt="Sheeba photo"></div>
+        <div class="col-lg-3 col-sm-12" id="text-div7">
             <h5 class="card-title" id="title-ID7"> Sheeba Karungi</h5>
             <p class="card-text">Sheeba is a musician, dancer and actress who debuted her acting
                 career in
-                Queen of Katwe as Shakira. After quitting Obsessions, a dance group she joined
-                in 2006, she rose to recognition upon the release of her hit single "Ice
-                Cream".She is currently has 8 albums and is known for her popular works like,
-                "Twesana".
-                .</p>
+                Queen of Katwe as Shakira. She is currently has 8 albums and is known for her popular works like,
+                "Nkwatako".
+                </p>
             <p class="card-text"><small class="text-muted" id="small-handle7">@Ksheebah1</small>
             </p>
         </div>
-        <div class="col-lg-2" id="image-div8"> <img src="/imagefiles/MauriceKirye.jpeg" id="maurice-img"
-                class="img-fluid rounded-start" alt="Maurice photo"></div>
-        <div class="col-lg-3" id="text-div8">
+        <div class="col-lg-2 col-sm-12" id="image-div8"> <img src="/imagefiles/MauriceKirye.jpeg" id="maurice-img"
+                class="img-fluid " alt="Maurice photo"></div>
+        <div class="col-lg-3 col-sm-12" id="text-div8">
             <h5 class="card-title" id="title-ID8"> Maurice Kirya </h5>
-            <p class="card-text">Maurice Kirya is a singer, songwriter, actor and humanitarian
-                from Uganda, East Africa. He has 5 albums and he is famous for his works like,
+            <p class="card-text">Maurice Kirya is a singer, songwriter, actor and humanitarian.
+                He has 5 albums and he is famous for his works like,
                 "Misubbaawa,"</p>
             <p class="card-text"><small class="text-muted" id="small-handle8">
                     @mauricekirya</small></p>
         </div>
     </div>
     <div class="row" id="row5">
-        <div class="col-lg-2" id="image-div9"> <img src="/imagefiles/RemaNamakula.jpeg" id="rema-img"
-                class="img-fluid rounded-start" alt="Rema Namakula photo"></div>
+        <div class="col-lg-2 col-sm-12" id="image-div9"> <img src="/imagefiles/RemaNamakula.jpeg" id="rema-img"
+                class="img-fluid " alt="Rema Namakula photo"></div>
         <div class="col-lg-3" id="text-div9">
             <h5 class="card-title" id="title-ID9"> Rema Namakula </h5>
-            <p class="card-text">Rema Namakula, popularly referred to as Rema is a musical
-                artist based in Uganda. She started her professional music career under a fellow
-                artist BebeCool who mentored her and she later went solo. She has 6 known albums
+            <p class="card-text">Rema Namakula, popularly referred to as Rema has 6 known albums
                 and is famous for most of her popular works like, "Oliwange" . </p>
             <p class="card-text"><small class="text-muted" id="small-handle9">
                     @REMAUG1</small></p>
         </div>
-        <div class="col-lg-2" id="image-div10"><img src="/imagefiles/Eddy-kenzo.jpeg" id="kenzo-img"
-                class="img-fluid rounded-start" alt="Kenzo photo"></div>
-        <div class="col-lg-3" id="text-div10">
+        <div class="col-lg-2 col-sm-12" id="image-div10"><img src="/imagefiles/Eddy-kenzo.jpeg" id="kenzo-img"
+                class="img-fluid " alt="Kenzo photo"></div>
+        <div class="col-lg-3 col-sm-12" id="text-div10">
             <h5 class="card-title" id="title-ID10"> Eddy Kenzo </h5>
             <p class="card-text">Eddy Kenzo, is a Ugandan singer and music executive who is a
-                founder and a member of Big Talent Entertainment. He received international
-                attention after the release of his 2014 single, "Sitya Loss". In total, he has
+                founder and a member of Big Talent Entertainment. He has
                 released 8 albums,
                 including Roots in 2018 and most recently Made in Africa in 2021. </p>
             <p class="card-text"><small class="text-muted" id="small-handle10">
@@ -208,83 +206,73 @@
         </div>
     </div>
     <div class="row" id="row6">
-        <div class="col-lg-2" id="image-div11"> <img src="/imagefiles/BebeCool.jpeg" id="bebe-img"
-                class="img-fluid rounded-start" alt="Bebe cool photo"></div>
-        <div class="col-lg-3" id="text-div11">
+        <div class="col-lg-2 col-sm-12" id="image-div11"> <img src="/imagefiles/BebeCool.jpeg" id="bebe-img"
+                class="img-fluid " alt="Bebe cool photo"></div>
+        <div class="col-lg-3 col-sm-12" id="text-div11">
             <h5 class="card-title" id="title-ID11"> Bebe Cool</h5>
             <p class="card-text"> Bebe Cool is a ragga musician from Uganda. He started his
                 career around 1997 in Nairobi, Kenya, he was one of the first artists affiliated
                 with Ogopa DJs, a
-                production house and record label in Kenya. He has 8 albums and has mentored
-                many
-                artists through his record label Gagamel Records.</p>
+                production house and record label in Kenya. He has 8 albums currently known.</p>
             <p class="card-text"><small class="text-muted" id="small-handle11">
                     @BebeCoolUG</small></p>
         </div>
-        <div class="col-lg-2" id="image-div12"><img src="/imagefiles/WinneNwagi.jpeg" id="nwagi-img"
-                class="img-fluid rounded-start" alt="Nwagi  photo"></div>
-        <div class="col-lg-3" id="text-div12">
+        <div class="col-lg-2 col-sm-12" id="image-div12"><img src="/imagefiles/WinneNwagi.jpeg" id="nwagi-img"
+                class="img-fluid " alt="Nwagi  photo"></div>
+        <div class="col-lg-3 col-sm-12" id="text-div12">
             <h5 class="card-title" id="title-ID12"> Winnie Nwagi </h5>
             <p class="card-text">Nwagi's music career began when she became the second runner-up
                 during the second season of "CocaCola Rated Next" music competitions in 2014.
-                She was signed by Swangz Avenue label and released a number of songs including
-                Embeera, Katono Katono, Gwenoonya and Kyowulila.
-                She released her commercially successful single Musawo in early 2016. She has 9
-                known albums.</p>
+                She has 9
+                known albums, and is signed to Swangz Avenue label.</p>
             <p class="card-text"><small class="text-muted" id="small-handle12">
                     @WinnieNwagi</small></p>
         </div>
     </div>
     <div class="row" id="row7">
-        <div class="col-lg-2" id="image-div13"><img src="/imagefiles/NinaRose.jpeg" id="ninarose-img"
-                class="img-fluid rounded-start" alt="NinaRose  photo"></div>
-        <div class="col-lg-3" id="text-div13">
+        <div class="col-lg-2 col-sm-12" id="image-div13"><img src="/imagefiles/NinaRose.jpeg" id="ninarose-img"
+                class="img-fluid " alt="NinaRose  photo"></div>
+        <div class="col-lg-3 col-sm-12" id="text-div13">
             <h5 class="card-title" id="title-ID13"> Nina Rose </h5>
             <p class="card-text"> Nina Rose is a song writer, singer and model who has traversed the Ugandan
                 entertainment
-                industry with her exceptional talent. She has 2 known albums and is famous for her "Andeleya" hit that
-                was a
-                dual song with husband Andre.</p>
+                industry with her exceptional talent. She has 2 known albums and is famous for her "Andeleya" hit .</p>
             <p class="card-text"><small class="text-muted" id="small-handle13">
                     @NinarozMusic</small></p>
         </div>
-        <div class="col-lg-2" id="image-div14"><img src="/imagefiles/Navio.jpeg" id="navio-img"
-                class="img-fluid rounded-start" alt="Navio  photo"></div>
-        <div class="col-lg-3" id="text-div14">
+        <div class="col-lg-2 col-sm-12" id="image-div14"><img src="/imagefiles/Navio.jpeg" id="navio-img"
+                class="img-fluid " alt="Navio  photo"></div>
+        <div class="col-lg-3 col-sm-12" id="text-div14">
             <h5 class="card-title" id="title-ID14"> Navio </h5>
             <p class="card-text"> Navio is a musician and record producer. Starting off his career, he was part of the
                 award-winning Hip hop group Klear Kut that introduced the term "Ugaflow" to describe Uganda's hip hop
-                scene. Navio is best known for his successful solo career with hits such as 'Ngalo', 'Bugumu', "One &
-                Only", and "On and On" (with American R&B legend Keith Sweat)and has 7 known albums.</p>
+                scene.He has 7 known albums.</p>
             <p class="card-text"><small class="text-muted" id="small-handle14">
                     @naviomusic</small></p>
         </div>
 
     </div>
     <div class="row" id="row8">
-        <div class="col-lg-2" id="image-div15"><img src="/imagefiles/Apass.jpeg" id="apass-img"
-                class="img-fluid rounded-start" alt="Apass photo"></div>
-        <div class="col-lg-3" id="text-div15">
+        <div class="col-lg-2 col-sm-12" id="image-div15"><img src="/imagefiles/Apass.jpeg" id="apass-img"
+                class="img-fluid " alt="Apass photo"></div>
+        <div class="col-lg-3 col-sm-12" id="text-div15">
             <h5 class="card-title" id="title-ID15"> Apass </h5>
-            <p class="card-text"> Ugandan musician and songwriter,Apass has collaborated with various musicians
-                including, A.Y. (musician), Goodlyfe from Uganda and Cinderella Sanyu among others. A Pass has
-                written songs for Bebe Cool[7] and co-written 'Love I fell' with Michael Ross.[8] He has is famous for
+            <p class="card-text"> Apass is a Ugandan musician and songwriter, He has
+                written songs for Bebe Cool and co-written 'Love I fell' with Michael Ross. He has is famous for
                 alot of his work like
-                released a single Wuuyo the official soundtrack to Uganda movie Bala Bala Sese written by Usama Mukwaya.
+                "Wuuyo".
                 He has 6 known albums.
             </p>
             <p class="card-text"><small class="text-muted" id="small-handle15">
                     @IamApass</small></p>
         </div>
-        <div class="col-lg-2" id="image-div16"><img src="/imagefiles/SpiceDiana.jpeg" id="spicy-img"
-                class="img-fluid rounded-start" alt="spicy photo"></div>
-        <div class="col-lg-3" id="text-div16">
+        <div class="col-lg-2 col-sm-12" id="image-div16"><img src="/imagefiles/SpiceDiana.jpeg" id="spicy-img"
+                class="img-fluid " alt="spicy photo"></div>
+        <div class="col-lg-3 col-sm-12" id="text-div16">
             <h5 class="card-title" id="title-ID16"> Spice Diana </h5>
             <p class="card-text">Spice Diana, is a female Ugandan musician who started her music career early while
-                studying at Makerere University. She has had several
-                singles including 'Anti Kale', 'Bukete' and 'Bimpe'. Spice Diana has also collaborated with both local
-                and international artists that include Pallaso, Ray G, Aganaga and Jamaican Orisha Sound among
-                others.She has 4 known albums.
+                studying at Makerere University. She has 4 known albums and is famous for her many works like,
+                "Bestfriend".
 
             </p>
             <p class="card-text"><small class="text-muted" id="small-handle16">
@@ -293,35 +281,28 @@
         </div>
     </div>
     <div class="row" id="row10">
-        <div class="col-lg-2" id="image-div17"><img src="/imagefiles/PiaPounds.jpeg" id="pia-img"
-                class="img-fluid rounded-start" alt="pia photo"></div>
+        <div class="col-lg-2 col-sm-12" id="image-div17"><img src="/imagefiles/PiaPounds.jpeg" id="pia-img"
+                class="img-fluid " alt="pia photo"></div>
         <div class="col-lg-3" id="text-div17">
             <h5 class="card-title" id="title-ID17"> Pia Pounds </h5>
-            <p class="card-text">Pia Pounds career started in 2011 when she released her first single Just the way you
-                are featuring Ragga Dee.
-                She was signed by Big Talent Entertainment label in 2018.Under Big Talent,
-                Pounds' biggest releases were Tubawe and Wawangula.
+            <p class="card-text">Pia Pounds career started in 2011.
+                She was signed by Big Talent Entertainment label in 2018.
 
-                She later exited Big Talent Entertainment and started
-                releasing her music as an independent artist in 2019.
+                She later exited Big Talent Entertainment, for a sole career.
 
-                She then released songs like Byompa featuring Fik Fameica, Easy, and Delicious. She is mostly known for
+                She is known for alot of her work and mostlty
                 her recent hit , 'Tupaate'.
 
             </p>
             <p class="card-text"><small class="text-muted" id="small-handle17">
                     @pia_pounds</small></p>
         </div>
-        <div class="col-lg-2" id="image-div18"><img src="/imagefiles/NaavaGrey.jpeg" id="naava-img"
-                class="img-fluid rounded-start" alt="naava photo"></div>
-        <div class="col-lg-3" id="text-div18">
+        <div class="col-lg-2 col-sm-12" id="image-div18"><img src="/imagefiles/NaavaGrey.jpeg" id="naava-img"
+                class="img-fluid " alt="naava photo"></div>
+        <div class="col-lg-3 col-sm-12" id="text-div18">
             <h5 class="card-title" id="title-ID18"> Naava Grey </h5>
-            <p class="card-text">Grey Naava is a Ugandan artist signed to Fenon Records.With R&B steadily becoming one
-                of the sought after
-                genres in the Ugandan music industry, one artist to watch out for is Grey Naava. After her first single
-                “Aliba wani” received wide across the region, Naava’s management Fenon Records decided to
-                release the second song “Nteredde”. And this sparked off what for very many years has been a successful
-                career. She has 8 known albums.
+            <p class="card-text">Grey Naava is a Ugandan artist signed to Fenon Records. She has built a successful
+                career in the entertainment industry. And has 8 known albums.
 
             </p>
             <p class="card-text"><small class="text-muted" id="small-handle18">
@@ -330,39 +311,36 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-2" id="image-div19"><img src="/imagefiles/DaddyAndre.png" id="daddyandre-img"
-                class="img-fluid rounded-start" alt="daddyandre photo"></div>
-        <div class="col-lg-3" id="text-div19">
+        <div class="col-lg-2 col-sm-12" id="image-div19"><img src="/imagefiles/DaddyAndre.png" id="daddyandre-img"
+                class="img-fluid " alt="daddyandre photo"></div>
+        <div class="col-lg-3 col-sm-12" id="text-div19">
             <h5 class="card-title" id="title-ID19"> Daddy Andre</h5>
             <p class="card-text">
-                Daddy Andre is a Ugandan music producer, singer and songwriter who is one of the best music producers in
-                the country and has now also ventured into singing as a career. He has 5 known albums of his own but he
-                is mostly famous for his excellent producer skills as he is the brain behind most of the beats on the
-                famous songs Ugandans know and love.
+                Daddy Andre is a Ugandan music producer, singer and songwriter. He has 5 known albums of his own but he
+                is mostly famous for his excellent producer skills.
 
             </p>
             <p class="card-text"><small class="text-muted" id="small-handle19">
                     @daddyandreug</small></p>
         </div>
-        <div class="col-lg-2" id="image-div20"><img src="/imagefiles/LydiaJazmine.jpeg" id="lydia-img"
-                class="img-fluid rounded-start" alt="lydiajazmin photo"></div>
-        <div class="col-lg-3" id="text-div20">
+        <div class="col-lg-2 col-sm-12" id="image-div20"><img src="/imagefiles/LydiaJazmine.jpeg" id="lydia-img"
+                class="img-fluid " alt="lydiajazmin photo"></div>
+        <div class="col-lg-3 col-sm-12" id="text-div20">
             <h5 class="card-title" id="title-ID20"> Lydia Jazmine </h5>
             <p class="card-text">
-                Music group Radio and Weasel signed Jazmine to a contract as a back-up singer at the start of her career. She is the
-                back-up vocalist on the songs 'Ntunga' and 'Breath Away'. She later performed background vocal lyrics
-                for Bebe Cool and Sheebah Karungi. Her first single was a duet with Rabadaba called "You Know",
-                released in 2014. She has 17 albums that are publically known. And is famous for her works like, 'Same Way'.
+                Jazmine started her career as a back-up singer for other artists. She has 17 albums that are publically
+                known. And is famous for her works like, "Same
+                Way" .
 
             </p>
             <p class="card-text"><small class="text-muted" id="small-handle20">
-                @LydiahJazmine</small></p>
+                    @LydiahJazmine</small></p>
         </div>
     </div>
 
     <div class="container-fluid" id="footer">
         <div class="row">
-            <div class="col-md-5" id="AboutUs-Section">
+            <div class="col-lg-4 col-sm-12" id="AboutUs-Section">
                 <h2>About Us</h2>
                 <p>UGAAMUX is a platform that registers the creatives in Uganda, and gives artistes a uniform platform
                     to showcase their work to their fans. Fans can view the works of celebrities, and creatives on the
@@ -372,9 +350,10 @@
                     showcase your work to the public. </p><br> <small id="small-quote">Ugandan Talent Lives Here</small>
 
             </div>
-            <div class="col-md-6" id="ContactUs-Section">
-                <h2 id="contactus-heading">Contact Us</h2>
-                <div id="contact-info">
+            <div class="col-lg-3 col-sm-12" id="ContactUs-Section">
+                
+                <div class id="contact-info">
+                    <h2 id="contactus-heading">Contact Us</h2>
                     <h2>Location</h2>
                     <p>13th Street Nansana, Wamala.</p>
                     <h2>Email Us</h2>
@@ -382,25 +361,28 @@
                     <h2>Call Us</h2>
                     <p>+256-414-674-867</p>
                 </div>
-                <div id="contact-input">
-                    <form>
-                        <label for="name" id="namelabel"> Your Name</label><br>
-                        <input type="text" id="inputname" placeholder=" Enter Your Name" required>
-                    </form><br>
-                    <form>
-                        <label for="email" id="emaillabel"> Your Email</label><br>
-                        <input type="text" id="inputemail" placeholder="Enter Your Email " required>
-                    </form><br>
-                    <form>
-                        <label for="email" id="emaillabel"> Your Message </label><br>
-                        <textarea name="message" id="inputmessage" placeholder=" Message " required></textarea>
-                    </form><br>
-                    <form>
-                        <input type="submit" id="submit-feedback" value="Submit">
-                    </form><br>
-                </div>
-
             </div>
+            <div class="col-lg-4 col-sm-12" id="contact-input">
+                <form>
+                    <div class="container" id="form-inner-div">
+                      <label for="name" id="namelabel"> Your Name</label><br>
+                      <input type="text" id="inputname" placeholder=" Enter Your Name" required><br>
+
+
+                      <label for="email" id="emaillabel"> Your Email</label><br>
+                      <input type="text" id="inputemail" placeholder="Enter Your Email " required><br>
+
+
+                      <label for="email" id="messagelabel"> Your Message </label><br>
+                      <textarea name="message" id="inputmessage" placeholder=" Message " required></textarea><br>
+
+
+                     <input type="submit" id="submit-feedback" value="Submit">
+                </div>
+                </form>
+            </div>
+
+
         </div>
     </div>
 
