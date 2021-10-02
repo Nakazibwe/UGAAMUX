@@ -25,31 +25,30 @@
 </head>
 
 <body>
+    <!---Code for the top navigation bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark " id="top-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" id="navbar-logo" href="/index.html"><small id="small-log">UGAA</small>MUX<img
+                    src="/imagefiles/ugflag.jpeg" alt="UG-LOGO" id="logopicture" height="30px" width="50px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav" id="navbar-inner-div">
+                    <a class="nav-link active" aria-current="page" id="navbar-aboutus" href="/index.html">About
+                        Us</a>
+                    <a class="nav-link" id="navbar-artistes" href="/index.html">Artists</a>
+                    <a class="nav-link" id="navbar-bands" href="/HTMLfiles/bands.html">Bands</a>
+                    <a class="nav-link" id="navbar-comedians" href="/HTMLfiles/comedians.html">Comedians</a>
+                    <a class="nav-link" id="navbar-contactus" href="#ContactUs-Section">Contact Us</a>
 
-    <!--Code for the header section-->
-    <div class="container-fluid" id="header">
-        <!---Code for the top navigation bar-->
-        <nav class="navbar navbar-expand-lg navbar-dark " id="top-navbar">
-            <div class="container-fluid">
-                <a class="navbar-brand" id="navbar-logo" href="/index.html"><small id="small-log">UGAA</small>MUX</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav" id="navbar-inner-div">
-                        <a class="nav-link active" aria-current="page" id="navbar-aboutus" href="/index.html">About
-                            Us</a>
-                        <a class="nav-link" id="navbar-artistes" href="/index.html">Artists</a>
-                        <a class="nav-link" id="navbar-bands" href="/HTMLfiles/bands.html">Bands</a>
-                        <a class="nav-link" id="navbar-comedians" href="/HTMLfiles/comedians.html">Comedians</a>
-                        <a class="nav-link" id="navbar-contactus" href="#ContactUs-Section">Contact Us</a>
-
-                    </div>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
+    <!--Code for the header section-->
+    <div class="container-fluid" id="header">
         <!--Code for the inner text box inside the header section-->
         <div class="container" id="header-text-area">
 
@@ -109,19 +108,23 @@
     </div>
     <div class="container-fluid" id="footer">
         <div class="row">
-            <div class="col-md-5" id="AboutUs-Section">
+            <div class="col-lg-4 col-sm-12" id="AboutUs-Section">
                 <h2>About Us</h2>
-                <p>UGAAMUX is a platform that registers the creatives in Uganda, and gives artistes a uniform platform
-                    to showcase their work to their fans. Fans can view the works of celebrities, and creatives on the
+                <p>UGAAMUX is a platform that registers the creatives in Uganda, and gives artistes a uniform
+                    platform
+                    to showcase their work to their fans. Fans can view the works of celebrities, and creatives on
+                    the
                     other
                     hand get to have a platform to show the public their authentic work their fans probably didnot
                     about. Get to know celebrities more and their work. As a creative get in touch with UGAAMUX to
-                    showcase your work to the public. </p><br> <small id="small-quote">Ugandan Talent Lives Here</small>
+                    showcase your work to the public. </p><br> <small id="small-quote">Ugandan Talent Lives
+                    Here</small>
 
             </div>
-            <div class="col-md-6" id="ContactUs-Section">
-                <h2 id="contactus-heading">Contact Us</h2>
-                <div id="contact-info">
+            <div class="col-lg-3 col-sm-12" id="ContactUs-Section">
+
+                <div class id="contact-info">
+                    <h2 id="contactus-heading">Contact Us</h2>
                     <h2>Location</h2>
                     <p>13th Street Nansana, Wamala.</p>
                     <h2>Email Us</h2>
@@ -129,28 +132,30 @@
                     <h2>Call Us</h2>
                     <p>+256-414-674-867</p>
                 </div>
-                <div id="contact-input">
-                    <form>
-                        <label for="name" id="namelabel"> Your Name</label><br>
-                        <input type="text" id="inputname" placeholder=" Enter Your Name" required>
-                    </form><br>
-                    <form>
-                        <label for="email" id="emaillabel"> Your Email</label><br>
-                        <input type="text" id="inputemail" placeholder="Enter Your Email " required>
-                    </form><br>
-                    <form>
-                        <label for="email" id="emaillabel"> Your Message </label><br>
-                        <textarea name="message" id="inputmessage" placeholder=" Message " required></textarea>
-                    </form><br>
-                    <form>
-                        <input type="submit" id="submit-feedback" value="Submit">
-                    </form><br>
-                </div>
-
             </div>
+            <div class="col-lg-4 col-sm-12" id="contact-input">
+                <form>
+                    <div class="container" id="form-inner-div">
+                        <label for="name" id="namelabel"> Your Name</label><br>
+                        <input type="text" id="inputname" placeholder=" Enter Your Name" required><br>
+
+
+                        <label for="email" id="emaillabel"> Your Email</label><br>
+                        <input type="text" id="inputemail" placeholder="Enter Your Email " required><br>
+
+
+                        <label for="email" id="messagelabel"> Your Message </label><br>
+                        <textarea name="message" id="inputmessage" placeholder=" Message " required></textarea><br>
+
+
+                        <input type="submit" id="submit-feedback" value="Submit">
+                    </div>
+                </form>
+            </div>
+
+
         </div>
     </div>
-
 
 
 
