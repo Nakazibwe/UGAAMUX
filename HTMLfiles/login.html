@@ -2,57 +2,56 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UGAAMUX Login Page</title>
-    <link rel="stylesheet" href="/cssfiles/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/cssfiles/login.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/cssfiles/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/cssfiles/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-  <!--Code for the top nav on the login page-->
-    <nav class="navbar navbar-expand-lg navbar-dark " id="top-navbar">
+    <!--Code for the top nav on the login page-->
+    <nav class="navbar navbar-expand-lg navbar-dark" id="top-navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" id="navbar-logo" href="/index.html"><small id="small-log">UGAA</small>MUX</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <a class="navbar-brand" id="navbar-logo" href="/index.html"><small id="small-log">UGAA</small>MUX<img
+                    src="/imagefiles/ugflag.jpeg" alt="UG-LOGO" id="logopicture" height="30px" width="50px" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav" id="navbar-inner-div">
-
-                    <a class="nav-link" id= "donthaveaccount"> Don't have an account? </a>
-                    <a class="nav-link" id= "registerwithus-link" href="/HTMLfiles/registermessage.html"> Register With Us.</a>
-
+                    <a class="nav-link" id="donthaveaccount">
+                        Don't have an account?
+                    </a>
+                    <a class="nav-link" id="registerwithus-link" href="/HTMLfiles/registermessage.html">
+                        Register With Us.</a>
                 </div>
             </div>
         </div>
     </nav>
-<!--The code of the login container. -->
+    <!--The code of the login container. -->
     <div class="container" id="login-container">
-        <a href="#" id="navbar-logo"><small id="small-log">UGAA</small>MUX</a>
+        <a class="navbar-brand" id="navbar-logo" href="/index.html"><small id="small-log">UGAA</small>MUX<img
+                src="/imagefiles/ugflag.jpeg" alt="UG-LOGO" id="logopicture" height="30px" width="50px" /></a>
         <p>Sign in to your account</p>
         <form>
-            <input type="text" id="username" placeholder="User Name" >
-        </form><br>
-        <form>
-            <input type="password" id="userpassword" placeholder="Password" >
-        </form><br>
-        <form>
-            <input type = "submit" id="usersubmit" value="SIGN IN" >
-        </form><br>
-        <a href="/HTMLfiles/forgotpassword.html" id="forgotpassword">I forgot my password</a><br>
+            <input type="text" id="username" placeholder="User Name" />
+
+            <input type="password" id="userpassword" placeholder="Password" />
+
+            <input type="submit" id="usersubmit" value="SIGN IN" />
+        </form>
+        <br />
+        <a href="/HTMLfiles/forgotpassword.html" id="forgotpassword">I forgot my password</a><br />
     </div>
-
-
 
     <script src="/javaScriptfiles/js/bootstrap.min.js"></script>
 </body>
