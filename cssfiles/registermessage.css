@@ -2,7 +2,7 @@
 body{
     margin:0;
     padding:0;
-    background-image:linear-gradient(rgba(20,27,41,0.8), rgba(20,27,41,0.9)),url(/imagefiles/band-photo.jpeg);
+    background-image:linear-gradient(rgba(20,27,41,0.8), rgba(20,27,41,0.9)),url(/imagefiles/blackpiano.jpeg);
     
     
     /* font-family: 'Bebas Neue', cursive; */
@@ -72,12 +72,14 @@ body{
    width: 90%;
    font-family: "Open Sans", sans-serif;
    height: 55px;
+   margin-bottom: 5%;
 }
 /*The properties of the  password input */
 #visitoremail{
     width: 90%;
     font-family: "Open Sans", sans-serif;
     height: 55px; 
+    margin-bottom: 5%;
 }
 #customermessage{
     width: 90%;
