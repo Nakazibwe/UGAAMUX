@@ -3,35 +3,31 @@ body {
     margin: 0;
     padding: 0;
 
-    background: #141b29;
+    background-color: #fffafa;
 }
 /*The properties of the header of the home page*/
 #header {
-    height: 600px;
+    height: 450px;
+    box-sizing: border-box;
+    padding-top: 1%;
     background-image: linear-gradient(
-                        rgba(20, 27, 41, 0.8),
-                        rgba(20, 27, 41, 0.9)
-              ),
-              url(/imagefiles/band-photo.jpeg);
+            rgba(20, 27, 41, 0.8),
+            rgba(20, 27, 41, 0.9)
+        ),
+        url(/imagefiles/blackpiano.jpeg);
 }
 /*The properties of the top nav bar on the home page*/
 #top-navbar {
-    height: 100px;
+    height: 70px;
     box-sizing: border-box;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 10px;
     padding-right: 20px;
-    background-color: linear-gradient(
-              rgba(20, 27, 41, 0.8),
-              rgba(20, 27, 41, 0.9)
-    );
+    background: #555A64;
+        
 }
-/*The properties of the top-container on the page*/
-#top-navbar {
-    height: 100px;
-    box-sizing: border-box;
-}
+
 /*The properties for the inner div inside the nav bar*/
 #navbar-inner-div {
     margin-left: 50%;
@@ -62,6 +58,7 @@ body {
     margin-left: 5px;
     padding-left: 30px;
     padding-top: 10px;
+    font-weight:900;
     text-decoration: none;
     color: #fff;
     box-sizing: border-box;
@@ -74,6 +71,7 @@ body {
     width: 120px;
     color: #fff;
     margin-left: 2px;
+    font-weight:900;
     padding-left: 30px;
     text-decoration: none;
     padding-top: 10px;
@@ -87,6 +85,7 @@ body {
     width: 80px;
     color: #fff;
     margin-left: 2px;
+    font-weight:900;
     padding-left: 20px;
     padding-top: 10px;
     text-decoration: none;
@@ -100,6 +99,7 @@ body {
     width: 100px;
     color: #fff;
     margin-left: 2px;
+    font-weight:900;
     padding-left: 20px;
     padding-top: 10px;
     text-decoration: none;
@@ -113,6 +113,7 @@ body {
     width: 100px;
     color: #fff;
     margin-left: 2px;
+    font-weight:900;
     padding-left: 20px;
     padding-top: 10px;
     text-decoration: none;
@@ -122,44 +123,46 @@ body {
 #header-text-area {
     text-align: center;
     box-sizing: border-box;
-    height: 500px;
+    height: 450px;
     margin: auto;
-    padding-top: 50px;
-    box-sizing: border-box;
-    width: 80%;
+    margin-top:20px;
+    width: 75%;
 }
 /*The properties of the heading on the text area container */
 #header-text-area h1 {
-    color: #dedede;
+    color: #fff;
     font-size: 60px;
     font-family: 'Carter One', cursive;
 }
 /*The properties of the paragraph in the text area */
-#header-text-area P {
-    color: #dedede;
-    line-height: 30px;
+#header-text-area p {
+    color: #fff;
+    line-height: 40px;
+    font-weight: 700;
     font-family: 'Open Sans', sans-serif;
 }
 /*The properties of the small quote on the header section. */
 #small-header-quote {
     font-size: 25px;
     color: rgb(215, 94, 39);
+    font-weight: 900;
     font-family: 'Bonheur Royale', cursive;
 }
 
 
 /*The properties of the first  card group on the home page*/
 #card-group {
-    background: #141b29;
     height: auto;
+    margin-top: 2%;
     margin-bottom: 20px;
 }
 /*The properties of the group-card-1*/
 #group-card-1 {
     height: auto;
-    margin-left: 5%;
-    background: #141b29;
+    margin-left:5%;
+    background-color:#e5e4e2;
     padding-left: 0;
+    border-style: hidden;
 }
 /*The properties of the image inside group-card-1*/
 #group-card-img1 {
@@ -167,21 +170,24 @@ body {
 }
 /*The properties of the body in group-card-1*/
 #group-card-body1 {
-    color: #aed3e1;
+    color: #141b29;
+    padding-top: 5%;
     font-size: 14px;
+    font-weight: 900;
     font-family: 'Open Sans', sans-serif;
 }
 /*The properties of the tittle on the group-card-1*/
 #GROUP-CARD-TITLE1 {
     font-family: 'Bonheur Royale', cursive;
-    font-size: 30px;
+    font-size: 40px;
 }
 /*The properties of the group-card-2*/
 #group-card-2 {
     height: auto;
-    margin-left: 2%;
-    background: #141b29;
+    margin-left:2%;
+    background-color:#e5e4e2;
     padding-left: 0;
+    border-style: hidden;
 }
 /*The properties of the image inside group-card-2*/
 #group-card-img2 {
@@ -189,21 +195,25 @@ body {
 }
 /*The properties of the body in group-card-2*/
 #group-card-body2 {
-    color: #aed3e1;
+    color: #141b29;
+    padding-top: 5%;
     font-size: 14px;
+    font-weight: 900;
     font-family: 'Open Sans', sans-serif;
 }
 /*The properties of the tittle on the group-card-2*/
 #GROUP-CARD-TITLE2 {
     font-family: 'Bonheur Royale', cursive;
-    font-size: 30px;
+    font-size: 40px;
 }
 /*The properties of the group-card-3*/
 #group-card-3 {
     height: auto;
-    margin-left: 2%;
-    background: #141b29;
+    margin-left:2%;
+    margin-right: 5%;
+    background-color:#e5e4e2;
     padding-left: 0;
+    border-style: hidden;
 }
 /*The properties of the image inside group-card-2*/
 #group-card-img3 {
@@ -211,107 +221,133 @@ body {
 }
 /*The properties of the body in group-card-3*/
 #group-card-body3 {
-    color: #aed3e1;
+    color: #141b29;
+    padding-top: 5%;
     font-size: 14px;
+    font-weight: 900;
     font-family: 'Open Sans', sans-serif;
 }
 /*The properties of the tittle on the group-card-3*/
 #GROUP-CARD-TITLE3 {
     font-family: 'Bonheur Royale', cursive;
-    font-size: 30px;
+    font-size: 40px;
 }
 /*The properties of the footer*/
 #footer {
-    background: #2b313e;
+    background: #555A64;
     height: 420px;
 }
 /*The properties of the AboutUs-Section*/
 #AboutUs-Section {
     margin-top: 20px;
-    margin-left: 5%;
-    background: #2b313e;
+    margin-left: 3%;
+    box-sizing: border-box;
+    padding-top: 2%;
+    background: #555A64;
 }
 /*The properties of the h2 inside the AboutUs Section*/
 #AboutUs-Section h2 {
-    color: #aed3e1;
+    color: #fff;
     font-family: 'Bonheur Royale', cursive;
 }
 /*The properties of the paragraph inside the AboutUs Section*/
 #AboutUs-Section p {
-    color: #aed3e1;
+    color: #fff;
     font-size: 14px;
+    font-weight:900;
     line-height: 35px;
     font-family: 'Open Sans', sans-serif;
 }
 /*The properties of the small quote on the About Us section*/
 #small-quote {
-    margin-left: 30%;
+    margin-left: 10%;
     font-size: 25px;
     color: rgb(215, 94, 39);
+    font-weight:900;
     font-family: 'Bonheur Royale', cursive;
 }
 /*The properties of the Contact Us-Section*/
 #ContactUs-Section {
-    background: #2b313e;
+    background: #555A64;
     margin-top: 20px;
     padding-right: 0;
+    box-sizing: border-box;
+    padding-top: 2%;
 }
 /*The properties of the h2 on top of the Contact Us.*/
 #contactus-heading {
-    color: #aed3e1;
+    color: #fff;
     font-family: 'Bonheur Royale', cursive;
 }
 /*The properties of the contact info section*/
 #contact-info {
-    width: 40%;
-    color: #aed3e1;
+    color: #fff;
     font-family: 'Open Sans', sans-serif;
     float: left;
     padding-left: 20px;
     box-sizing: border-box;
-    background: #2b313e;
+    background: #555A64;
 }
 /*The properties of the contact-input*/
 #contact-input {
-    width: 60%;
     float: right;
-    background: #2b313e;
+    box-sizing: border-box;
+    padding-top:5%;
+    background: #555A64;
     height: auto;
     box-sizing: border-box;
     padding-top: 20px;
     padding-left: 10px;
-    color: #aed3e1;
+    color: #fff;
+}
+
+#form-inner-div{
+    margin-top: 7%;
+
 }
 /*The properties of the input for name*/
 #inputname {
     font-family: 'Open Sans', sans-serif;
     width: 320px;
+    margin-bottom: 20px;
 }
 /*The properties of the input for email*/
 #inputemail {
     font-family: 'Open Sans', sans-serif;
     width: 320px;
+    margin-bottom: 20px;
 }
 /*The properties of the input message section. */
 #inputmessage {
     width: 320px;
+    margin-bottom: 20px;
     font-family: 'Open Sans', sans-serif;
-    /* height: 200px; */
 }
 /*The properties of the submit button*/
 #submit-feedback {
     width: 200px;
     border-radius: 25px;
     color: #fff;
+    margin-bottom: 30px;
     border: 1px solid rgb(215, 94, 39);
     font-weight: 800;
     font-family: 'Open Sans', sans-serif;
     background-color: rgb(215, 94, 39);
     margin-left: 20%;
 }
+
 /*The properties of the submit button hover.*/
 #submit-feedback:hover {
     color: rgb(215, 94, 39);
     background-color: #fff;
     border: 1px solid #fff;
+}
+#namelabel{
+    margin-bottom: 10px;
+}
+#emaillabel{
+    margin-bottom: 10px;
+}
+#messagelabel{
+    margin-bottom: 10px;
 }
