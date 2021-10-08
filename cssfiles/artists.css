@@ -1,0 +1,1041 @@
+/*The properties of the body on the home page*/
+body {
+    margin: 0;
+    padding: 0;
+    /* background: #f5f5f5; */
+    background-color: #fffafa;
+}
+/*The properties of the header of the home page*/
+#header {
+    height: 300px;
+    box-sizing: border-box;
+    padding-top: 1%;
+    background-image: linear-gradient(
+            rgba(20, 27, 41, 0.8),
+            rgba(20, 27, 41, 0.9)
+        ),
+        url(/imagefiles/blackpiano.jpeg);
+}
+/*The properties of the top nav bar on the home page*/
+#top-navbar {
+    height: 65px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 20px;
+    background: #555a64;
+    /* background: linear-gradient(rgba(20, 27, 41, 0.8), rgba(20, 27, 41, 0.9)); */
+  
+}
+
+/*The properties of the logo on the top-navbar of the loginpage*/
+#navbar-logo {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 45px;
+    width: 150px;
+    color: rgb(215, 94, 39);
+    text-decoration: none;
+    margin-left: 5%;
+}
+/*The properties of the small property on the logo on the navbar on the homepage*/
+#small-log {
+    color: #fff;
+}
+
+/*The properties of the inner div inside the nav bar*/
+#navbar-inner-div {
+    margin-left: 38%;
+    
+}
+/*The properties of the artists link on the  top navbar of the homepage */
+#navbar-artistes {
+    font-family:  sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 100px;
+    margin-left: 5px;
+    padding-left: 30px;
+    padding-top: 10px;
+    font-weight:900;
+    text-decoration: none;
+    color: #fff;
+    box-sizing: border-box;
+}
+#navbar-artistes:hover{color:#ff781f}
+
+#navbar-home {
+    font-family:  sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 100px;
+    margin-left: 5px;
+    padding-left: 30px;
+    padding-top: 10px;
+    font-weight:900;
+    text-decoration: none;
+    color: #fff;
+    box-sizing: border-box;
+}
+#navbar-home:hover{color:#ff781f}
+/*The properties of the comedians link in the top nav bar of the homepage*/
+#navbar-comedians {
+    font-family:  sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 120px;
+    color: #fff;
+    margin-left: 2px;
+    font-weight:900;
+    padding-left: 30px;
+    text-decoration: none;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+#navbar-comedians:hover{color:#ff781f}
+/*The properties of the bands on the top nav bar on the home page */
+#navbar-bands {
+    font-family:  sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 80px;
+    color: #fff;
+    margin-left: 2px;
+    font-weight:900;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+#navbar-bands:hover{color:#ff781f}
+/*The properties of the about us on the top nav bar on the home page*/
+#navbar-aboutus {
+    font-family:  sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 100px;
+    color: #fff;
+    margin-left: 2px;
+    font-weight:900;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+#navbar-aboutus:hover{color:#ff781f}
+/*The properties of the contactus on the top-nav bar*/
+#navbar-contactus {
+    font-family:  sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 120px;
+    color: #fff;
+    margin-left: 2px;
+    font-weight:900;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+#navbar-contactus:hover{color:#ff781f}
+/*The properties of the text area container inside of the header */
+.header-text-area {
+    text-align: center;
+    box-sizing: border-box;
+    height: 450px;
+    margin: auto;
+    margin-top: 20px;
+    width: 75%;
+}
+/*The properties of the heading on the text area container */
+.header-text-area h1 {
+    color: #fff;
+    font-size: 60px;
+    font-family: 'Carter One', cursive;
+}
+/*The properties of the paragraph in the text area */
+.header-text-area p {
+    color: #fff;
+    line-height: 40px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+}
+/*The properties of the small quote on the header section. */
+#small-header-quote {
+    font-size: 25px;
+    color: rgb(215, 94, 39);
+    display: block;
+    margin-top: 6%;
+    font-weight:900;
+    font-family: 'Bonheur Royale', cursive;
+}
+
+#small-header-quote:hover {color: #fff;}
+
+/*The properties of the first image div */
+#image-div1 {
+    height:270px;
+    margin-left: 6%;
+    padding: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    
+}
+/*The properties of the text-div1 */
+#text-div1 {
+    color: #141b29;
+    font-family: 'Open Sans', sans-serif;
+    font-size:14px;
+    padding-top: 2%;
+    font-weight:900;
+    box-sizing: border-box;
+    border: 1px solid #e5e4e2;
+    background-color:#e5e4e2;
+    height:270px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    /* border-radius: 25px; */
+}
+/*The properties of the image inside the card1*/
+#azawiimage{
+   height:inherit;
+   /* border-radius:50px; */
+}
+/*The properties of the title inside the text-div1 body*/
+#title-ID1 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+/*The properties of the twitter handle text*/
+#small-handle1 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*The properties of image-div3 .*/
+#image-div3 {
+    height:270px;
+    margin-left: 6%;
+    padding: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    
+    
+}
+/*The properties of the body on the  text div3 */
+#text-div3 {
+    color: #141b29;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-top: 2%;
+    font-weight:900;
+    height:270px;
+    border: 1px solid #e5e4e2;
+    box-sizing: border-box;
+    background-color:#e5e4e2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+/*The properties of the twitter handle text on  */
+#small-handle3 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*The properties of the image of fik fameica*/
+#fik-img {
+    height:inherit;
+    
+    
+}
+/*The properties of the title inside the div*/
+#title-ID3 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+
+/*The properties of image-div2 */
+#image-div2 {
+    height:270px;;
+    margin-left: 5%;
+    padding: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    
+}
+/*The properties of the text-div2 */
+#text-div2{
+    color: #141b29;
+    background-color:#e5e4e2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    height: 268px;
+    font-weight:900;
+    margin-top: 2%;
+    padding-top: 2%;
+    border: 1px solid #e5e4e2;
+    box-sizing: border-box;
+    margin-bottom: 2%;
+}
+
+/*The properties of the image of chameleon*/
+#camili-img {
+    height:inherit;
+    
+    
+}
+/*The properties of the twitter handle in card 3*/
+#small-handle2 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*The properties of the title inside the card body of card3*/
+#title-ID2 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+
+/*The properties of  card4 on the carousel*/
+#image-div4 {
+    margin-left: 5%;
+    margin-top: 2%;
+    height:270px;
+    margin-bottom: 2%;
+    padding: 0;
+    
+}
+/*The properties of the cardbody of card4 */
+#text-div4 {
+    color: #141b29;
+    border: 1px solid #e5e4e2;
+    background-color:#e5e4e2;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height:270px;
+    padding-top:2%;
+    font-weight:900;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    
+}
+
+/*The properties of the image inside the card4*/
+#juliana-img {
+    height:inherit;
+    
+    
+}
+/*The properties of the title inside the card body on card 4*/
+#title-ID4 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+/*The properties of the twitter handle inside card 4*/
+#small-handle4 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*The properties of  card5 on the carousel*/
+#image-div5 {
+    height: 270px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 6%;
+    padding: 0;
+    
+}
+/*The properties of the cardbody of card 5*/
+#text-div5 {
+    color: #141b29;
+    background-color:#e5e4e2;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 270px;
+    padding-top: 2%;
+    font-weight:900;
+    border: 1px solid #e5e4e2;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+/*The properties of the image inside the card5*/
+#mung-img {
+    height:inherit;
+ 
+    
+}
+/*The properties of the title inside the card body of card5*/
+#title-ID5 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+/*The properties of the twitter handle on the card5*/
+#small-handle5 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+/*The properties of card6 on the carousel. */
+#image-div6 {
+    height: 270px;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 0;
+    
+}
+/*The properties of the cardbody inside the card6*/
+#text-div6 {
+    color: #141b29;
+    background-color:#e5e4e2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin-top: 2%;
+    height:270px;
+    font-weight:900;
+    padding-top: 2%;
+    border: 1px solid #e5e4e2;
+    box-sizing: border-box;
+    margin-bottom: 2%;
+}
+
+/*The properties of the image inside card6*/
+#vinka-img {
+    height:inherit;
+    
+    
+}
+/*The properties of the title inside the card body of card6*/
+#title-ID6 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+/*The properties of the twitter handle on card6*/
+#small-handle6 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+/*The properties of  card7 on the carousel*/
+#image-div7 {
+    height: 270px;
+    margin-left: 6%;
+    padding: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    
+}
+/*The properties of the cardbody on card7*/
+#text-div7 {
+    color: #141b29;
+    background-color:#e5e4e2;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 270px;
+    padding-top: 2%;
+    font-weight:900;
+    border: 1px solid #e5e4e2;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+/*The properties of the image inside the card7*/
+#sheeba-img {
+    height:inherit;
+    
+    
+}
+/*The properties of twitter handle on card 7*/
+#small-handle7 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*The properties of the title inside the card body of card7*/
+#title-ID7 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+/*The properties of  card8  on the carousel*/
+#image-div8 {
+    height: 270px;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 0;
+    
+}
+/*The properties of the cardbody on card 8 */
+#text-div8 {
+    color: #141b29;
+    background-color:#e5e4e2;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 270px;
+    box-sizing: border-box;
+    padding-top: 2%;
+    border: 1px solid #e5e4e2;
+    font-weight:900;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+/*The properties of the image inside the card8*/
+#maurice-img {
+    height: inherit;
+   
+    
+}
+/*The properties of the twitter handle on card8*/
+#small-handle8 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*The properties of the title inside the card bod of card8*/
+#title-ID8 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+/*The properties of card9 on the carousel.*/
+#image-div9 {
+    height: 270px;
+    margin-left: 6%;
+    padding: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    
+}
+/*The properties of the cardbody on  card9*/
+#text-div9 {
+    color: #141b29;
+    background-color:#e5e4e2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    height: 270px;
+    padding-top:2%;
+    font-weight:900;
+    border: 1px solid #e5e4e2;
+    box-sizing: border-box;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/*The properties of the image inside the card9*/
+#rema-img {
+    height:inherit;
+    
+}   
+/*The properties of the title inside the card body of card9*/
+#title-ID9 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size : 40px;
+}
+/*The properties of the twitter handle on card9*/
+#small-handle9 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+/*The properties of card10 on the carousel*/
+#image-div10 {
+    height: 270px;
+    margin-left: 5%;
+    padding: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+/*The properties of card 10 on the carousel.*/
+#text-div10 {
+    color: #141b29;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin-top: 2%;
+    height:270px;
+    font-weight:900;
+    box-sizing: border-box;
+    padding-top: 2%;
+    border: 1px solid #e5e4e2;
+    background: #e5e4e2;
+    margin-bottom: 2%;
+}
+
+/*The properties of the image inside card10*/
+#kenzo-img {
+    height: inherit;
+   
+    
+}
+/*The properties of the title inside the card body of card 10*/
+#title-ID10 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+/*The properties of the twitter handle on card 10.*/
+#small-handle10 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+/*The properties of  card11 on the carousel*/
+#image-div11 {
+    height: 270px;
+    margin-left: 6%;
+    padding: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+/*The properties of the cardbody on card 11 */
+#text-div11 {
+    color: #141b29;
+    background-color:#e5e4e2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding-top:2%;
+    height: 270px;
+    font-weight:900;
+    border: 1px solid #e5e4e2;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/*The properties of the image inside  card11*/
+#bebe-img {
+    height:inherit;
+    
+    
+}
+/*The properties of the twitter handle on card11.*/
+#small-handle11 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*The properties of the title inside the card body of card 11.*/
+#title-ID11 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+/*The properties of card 12 on the carousel*/
+#image-div12 {
+    height: 270px;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 0;
+    
+}
+/*The properties of the cardbody on card 12*/
+#text-div12 {
+    color: #141b29;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    height: 270px;
+    box-sizing: border-box;
+    padding-top: 2%;
+    font-weight:900;
+    border: 1px solid #e5e4e2;
+    background: #e5e4e2;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    
+}
+
+/*The properties of the image inside the card12*/
+#nwagi-img {
+    height:inherit;
+    
+    
+}
+/*The properties of the twitter handle on card12. */
+#small-handle12 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*The properties of the title inside the card body on card 12.*/
+#title-ID12 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+/*The properties of the class for the twitter handles on the carousel. */
+.text-muted {
+    font-family: 'Open Sans', sans-serif;
+    color: #141b29 !important;
+}
+/*The properties of  image-div13 on the carousel*/
+#image-div13 {
+    height: 270px;
+    margin-left: 6%;
+    padding: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+/*The properties of the cardbody on text-div13*/
+#text-div13 {
+    color: #141b29;
+    background-color:#e5e4e2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    height: 270px;
+    padding-top: 2%;
+    font-weight:900;
+    border: 1px solid #e5e4e2;
+    box-sizing: border-box;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/*The properties of the image inside  img-div13*/
+#ninarose-img {
+    height:inherit;
+    
+    
+}
+/*The properties of the twitter handle on text-div13 */
+#small-handle13 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*The properties of the title inside the card body of text-div 13.*/
+#title-ID13 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+/*The properties of card 12 on the carousel*/
+#image-div14 {
+    height: 270px;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 0;
+}
+/*The properties of the cardbody on card 12*/
+#text-div14 {
+    color: #141b29;
+    background-color:#e5e4e2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    height: 270px;
+    padding-top: 2%;
+    font-weight:900;
+    border: 1px solid #e5e4e2;
+    box-sizing: border-box;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/*The properties of the image inside the card12*/
+#navio-img {
+    height:inherit;
+   
+    
+}
+/*The properties of the twitter handle on card12. */
+#small-handle14 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*The properties of the title inside the card body on card 14.*/
+#title-ID14 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+
+/*The properties of  image-div15 on the carousel*/
+#image-div15 {
+    height: 270px;
+    margin-left: 6%;
+    padding: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+/*The properties of the cardbody on text-div13*/
+#text-div15 {
+    color: #141b29;
+    border: 1px solid #e5e4e2;
+    background-color:#e5e4e2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    height:270px;
+    font-weight:900;
+   
+    box-sizing: border-box;
+    padding-top: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/*The properties of the image inside  img-div15*/
+#apass-img {
+    height:inherit;
+    
+    
+}
+/*The properties of the twitter handle on text-div13 */
+#small-handle15 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*The properties of the title inside the card body of text-div 13.*/
+#title-ID15 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+/*The properties of card 12 on the carousel*/
+#image-div16 {
+    height: 270px;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 0;
+}
+/*The properties of the cardbody on card 12*/
+#text-div16 {
+    color: #141b29;
+    border: 1px solid #e5e4e2;
+    background-color:#e5e4e2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    height: 270px;
+    font-weight:900;
+    box-sizing: border-box;
+    padding-top: 2%;
+    margin-top: 2%;
+    
+    margin-bottom: 2%;
+}
+
+/*The properties of the image inside the card12*/
+#spicy-img {
+    height:inherit;
+   
+    
+}
+/*The properties of the twitter handle on card12. */
+#small-handle16 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*The properties of the title inside the card body on card 14.*/
+#title-ID16 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+
+/*The properties of  image-div15 on the carousel*/
+#image-div17 {
+    height: 270px;
+    margin-left: 6%;
+    padding: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+/*The properties of the cardbody on text-div13*/
+#text-div17 {
+    color: #141b29;
+    border: 1px solid #e5e4e2;
+    background-color:#e5e4e2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    height:270px;
+    font-weight:900;
+    box-sizing: border-box;
+    padding-top: 2%;
+    margin-top: 2%;
+    
+    margin-bottom: 2%;
+}
+
+/*The properties of the image inside  img-div15*/
+#pia-img {
+    height: inherit;
+   
+   
+}
+/*The properties of the twitter handle on text-div13 */
+#small-handle17 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*The properties of the title inside the card body of text-div 13.*/
+#title-ID17 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+/*The properties of card 12 on the carousel*/
+#image-div18 {
+    height: 270px;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 0;
+}
+/*The properties of the cardbody on card 12*/
+#text-div18 {
+    color: #141b29;
+    background-color:#e5e4e2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    height: 270px;
+    box-sizing: border-box;
+    padding-top: 2%;
+    font-weight:900;
+    margin-top: 2%;
+    border: 1px solid #e5e4e2;
+    margin-bottom: 2%;
+}
+
+/*The properties of the image inside the card12*/
+#naava-img {
+    height: inherit;
+ 
+   
+}
+/*The properties of the twitter handle on card12. */
+#small-handle18 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*The properties of the title inside the card body on card 14.*/
+#title-ID18 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+/*The properties of  image-div15 on the carousel*/
+#image-div19 {
+    height: 270px;
+    margin-left: 6%;
+    padding: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+/*The properties of the cardbody on text-div13*/
+#text-div19 {
+    color: #141b29;
+    border: 1px solid #e5e4e2;
+    background-color:#e5e4e2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    height: 270px;
+    box-sizing: border-box;
+    padding-top: 2%;
+    font-weight:900;
+    margin-top: 2%;
+    margin-bottom: 2%;
+   
+}
+
+/*The properties of the image inside  img-div15*/
+#daddyandre-img {
+    height:inherit;
+    
+    
+}
+/*The properties of the twitter handle on text-div13 */
+#small-handle19 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*The properties of the title inside the card body of text-div 13.*/
+#title-ID19 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+/*The properties of card 12 on the carousel*/
+#image-div20 {
+    height: 270px;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 0;
+}
+/*The properties of the cardbody on card 12*/
+#text-div20 {
+    color: #141b29;
+    border: 1px solid #e5e4e2;
+    background-color:#e5e4e2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    height: 270px;
+    box-sizing: border-box;
+    padding-top: 2%;
+    font-weight:900;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/*The properties of the image inside the card12*/
+#lydia-img {
+    height: inherit;
+   
+    
+}
+/*The properties of the twitter handle on card12. */
+#small-handle20 {
+    color: #aed3e1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*The properties of the title inside the card body on card 14.*/
+#title-ID20 {
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+
+.card-text{
+ text-decoration: none;
+}
+
+.text-muted{
+ color: #141b29;
+ font-size: 14px;
+ font-style: italic;
+}
+.text-muted:hover{
+    color:#ff781f !important;
+}
+
+.footer {
+    height: 65px;
+    background: #555a64;
+}
+.nav-link {
+    color: #fff;
+}
+.nav-link:hover {
+    color: #ff781f;
+}
+.nav-container {
+    margin-left: 40%;
+    display: flex;
+    
+}
+.icon {
+    color:#fff; 
+}
+.copy {
+    font-family:  sans-serif;
+    font-size: 14px;
+    margin-left: 4%;
+    font-weight: 900;
+}
+/*The properties of the small quote on the About Us section*/
+#small-quote {
+    font-size: 25px;
+    color: rgb(215, 94, 39);
+    font-weight: 900;
+    font-family: 'Bonheur Royale', cursive;
+}
+#small-quote:hover{
+    color:#fff;
+}
