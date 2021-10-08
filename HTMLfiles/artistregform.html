@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> UGAAMUX Artiste Registration form</title>
+    <link rel="stylesheet" href="/cssfiles/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/cssfiles/artistregform.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" id="top-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" id="navbar-logo" href="/index.html"><small id="small-log">UGAA</small>MUX<img
+                    src="/imagefiles/ugflag.jpeg" alt="UG-LOGO" id="logopicture" height="30px" width="50px" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav" id="navbar-inner-div">
+                    <a class="nav-link" aria-current="page" id="navbar-admin" href="/HTMLfiles/registrationpage.html">ADMIN</a>
+                    <a class="nav-link" id="navbar-artistes" href="/HTMLfiles/artists.html">Artists</a>
+                    <a class="nav-link" id="navbar-bands" href="/HTMLfiles/bands.html">Bands</a>
+                    <a class="nav-link" id="navbar-comedians" href="/HTMLfiles/comedians.html">Comedians</a>
+                    <a class="nav-link" id="navbar-contactus" href="/HTMLfiles/contactUs.html">Contact Us</a>
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="navbar-dropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Account
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" id="sign-out" href="#">SIGN OUT</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+
+
+        <form name="ArstisteRegistration" id="form-id">
+          
+            <div class="form-action">
+                <label for="" id="firstname">First Name</label>
+                <input type="text" name="firstName" placeholder="Enter Artiste First Name " id="fname">
+                
+            </div>
+            <small class="error">Error Message</small>
+            <div class="form-action">
+                <label for="" id="lastname">Last Name</label>
+                <input type="text" name="lastName" placeholder="Enter  Artiste Last Name " id="lname">
+            </div>
+            <small class="error">Error Message</small>
+            <div class="form-action">
+                <label for="" id="stgname">Stage Name</label><br>
+                <input type="text" name="stagename" placeholder="Enter Artiste Stage name" id="stgname">
+            </div>
+            <small class="error">Error Message</small>
+             
+            <p id="pgender">Gender</p>
+            <div  id="gender-form">
+                
+                <span><label for="smale" id="fmale">Male</label>
+                <input type="radio" name="gender" value="male" id="smale"></span>
+                <span><label for="sfemale" id="fmale">Female</label>
+                <input type="radio" name="gender" value="female" id="sfemale"></span>
+
+            </div>
+            <small class="error">Error Message</small>
+            <div class="form-action">
+                <label for="" id="telcontact">Telephone Contact(256)</label><br>
+                <input type="text" placeholder="Enter Artiste Phone number" name="telephone" id="telecontact">
+            </div>
+            <small class="error">Error Message</small>
+            <div class="form-action">
+                <label for="" id="socialcontact">Twitter Handle</label><br>
+                <input type="text" placeholder="Enter Artiste twitter handle" name="twitter" id="twitter-contact">
+            </div>
+            <small class="error">Error Message</small>
+            <div class="form-action">
+                <label for="" id="contact">Email </label><br>
+                <input type="text" placeholder="Enter Artiste email" name="email" id="email-contact">
+            </div>
+            <small class="error">Error Message</small>
+            <div class="form-action">
+                <label for="" id="DOB">Date of birth</label><br>
+                <input type="date" id="dob-id">
+            </div>
+            <small class="error">Error Message</small>
+
+            <div class="form-action">
+                <label for="" id="based">Based(District)</label><br>
+                <input type="text" name="Based" id="based" placeholder="Enter district artiste is based">
+            </div>
+            <small class="error">Error Message</small>
+            <div class="form-action">
+                <label for="" id="nin">National ID NIN</label><br>
+                <input type="text" id="NIN-id" placeholder="Enter Artiste  NIN">
+            </div>
+            <small class="error">Error Message</small>
+            <div class="form-action">
+                <label for="" id="date-started">Date Began Music</label><br>
+                <input type="date" name="date-started-sing " id="date-started">
+            </div>
+            <small class="error">Error Message</small>
+            <div class="form-action">
+                <label for="" id="location">Location</label><br>
+                <input type="text" name="Location" placeholder="Enter Artiste Location" id="location">
+            </div>
+            <small class="error">Error Message</small>
+            <div class="form-action">
+                <label for="" id="numofalbums">Number of Albums</label><br>
+                <input type="number" id=numalbums name="number-of-albums">
+            </div>
+            <small class="error">Error Message</small>
+            <div class="form-action">
+                <label for="" id="numofsongs">Number of Songs</label><br>
+                <input type="number" id=numsongs name="number-of-songs">
+            </div>
+            <small class="error">Error Message</small>
+            <div class="form-action">
+                <label for="" id="genre">Genre</label><br>
+                <input type="text" id="music-type" name="genre">
+            </div>
+            <small class="error">Error Message</small>
+            <div class="form-action">
+                <label for="" id="ArtistID">Artist ID</label><br>
+                <input type="text" placeholder="Enter Artist ID" id="artist-id">
+            </div>
+            <small class="error">Error Message</small>
+            <div class="form-action">
+                <label for="" id="profile-photo">Profile Picture</label><br>
+                <input id="artiste-image" type="file" name="uploaded-picture" id="profile-pic" >
+            </div>
+            <small class="error">Error Message</small>
+            <div id="button-form">
+                <input id="submit-btn" type="submit" name="submit-button" value="SUBMIT" >
+                <input id="cancel-btn" type="reset" name="cancel-button" value="CANCEL" >
+            </div>
+        </form>
+
+    </div>
+    <div class="navbar navbar-expand-lg navbar-dark footer">
+        <a href="#" class="nav-link copy">&copy 2021 Grace Nakazibwe </a>
+        <small id="small-quote">Ugandan Talent Lives Here</small>
+        <div class="nav-container">
+            <a href="#" class="nav-link icon"><i class="fa fa-facebook-square"></i></a>
+            <a href="#" class="nav-link icon"><i class="fa fa-twitter-square"></i></a>
+            <a href="#" class="nav-link icon"><i class="fa fa-google-plus-square"></i></a>
+            <a href="#" class="nav-link icon"><i class="fa fa-instagram"></i></i></a>
+            <a href="#" class="nav-link icon"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="/javaScriptfiles/js/bootstrap.min.js"></script>
+</body>
+
+</html>
