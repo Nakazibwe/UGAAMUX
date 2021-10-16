@@ -43,18 +43,23 @@
                 src="/imagefiles/ugflag.jpeg" alt="UG-LOGO" id="logopicture" height="30px" width="50px"></a>
         <p>Unfortunately, you are unable to self register!</p>
         <p>Send us a Message, we shall contact you.</p>
-        <form>
-            <input type="text" id="visitorname" placeholder="Enter Your Name" required>
-
-
-            <input type="text" id="visitoremail" placeholder="Enter Your Email" required>
-
-
-            <textarea name="message" id="customermessage" rows="5" cols="33" placeholder="Type A Message"
-                required></textarea><br>
-
-
-            <input type="submit" id="submitmessage" value="SEND MESSAGE ">
+        <form name ="RegisterMessage" id="form-id">
+            <div class="form-action">
+                <input type="text"  name= "customername" id="visitorname" placeholder="Enter Your Name">
+            </div>
+            <small id="name-error"></small>
+            <div class="form-action">
+                <input type="text" name= "customeremail" id="visitoremail" placeholder="Enter Your Email">
+            </div>
+            <small id="email-error"> </small>
+            <div class=form-action>
+                <textarea name="message" id="customermessage" rows="5" cols="33"
+                    placeholder="Type A Message"></textarea>
+            </div>
+            <small id="message-error"></small>
+            <div class="form-action">
+                <input type="submit" id="submitmessage" value="SEND MESSAGE ">
+            </div>
         </form>
 
     </div>
@@ -63,5 +68,5 @@
 
     <script src="/javaScriptfiles/js/bootstrap.min.js"></script>
 </body>
-
+<script src="/javaScriptfiles/registermessage.js"></script>
 </html>

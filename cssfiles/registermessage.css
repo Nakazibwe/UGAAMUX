@@ -2,7 +2,7 @@
 body{
     margin:0;
     padding:0;
-    background-image:linear-gradient(rgba(20,27,41,0.8), rgba(20,27,41,0.9)),url(/imagefiles/blackpiano.jpeg);
+    background: rgba(20,27,41,0.8);
     
     
     /* font-family: 'Bebas Neue', cursive; */
@@ -58,7 +58,7 @@ body{
      text-align: center;
      margin-top:5%;
      height:auto;
-     background-color: #141b29;
+     background-color: #2B313E;
      
    }
 /*The properties of the paragragh in the login container*/   
@@ -72,14 +72,14 @@ body{
    width: 90%;
    font-family: "Open Sans", sans-serif;
    height: 55px;
-   margin-bottom: 5%;
+   
 }
 /*The properties of the  password input */
 #visitoremail{
     width: 90%;
     font-family: "Open Sans", sans-serif;
     height: 55px; 
-    margin-bottom: 5%;
+   
 }
 #customermessage{
     width: 90%;
@@ -112,4 +112,7 @@ body{
     color:#ef672a;
     text-decoration: none;
     font-family: "Open Sans", sans-serif;
+}
+.form-action{
+   margin-top: 2%;
 }
