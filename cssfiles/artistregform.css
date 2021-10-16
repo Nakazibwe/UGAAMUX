@@ -138,11 +138,16 @@ body {
 #sign-out:hover {
     color: red;
 }
+.h4regform{
+    margin-left: 42%;
+    margin-top: 2%;
+    font-family: 'Carter One', cursive;
+}
 .container{
  width:fit-content;
  height: auto;
- margin-top: 5%;
- margin-bottom: 5%;
+ margin-top: 0%;
+ margin-bottom: 2%;
  display: flex;
  padding: 2%;
  background-color: #fff;
@@ -150,10 +155,19 @@ body {
  border: 1px solid #fff;
  
 }
+.form-action-cols{
+height: auto;
+border-right: 1px dotted #bfc1c2;
+border-left: 1px dotted #bfc1c2;
 
+}
+.row{
+    margin: auto;
+}
 .form-action input{
     width:100%;
     height: 50px;
+    margin-bottom:3%;
     border-radius: 4px;
 }
 #pgender{
@@ -162,6 +176,7 @@ body {
 #gender-form  {
     margin-top: 0;
     width: 100%;
+    margin-bottom: 6%;
     display: flex;
 }
 #gender-form span  {
@@ -174,6 +189,7 @@ body {
   
 }
 #button-form{
+    margin-top: 4%;
     width: 100%;
     display: flex;
 }
@@ -184,7 +200,7 @@ body {
     
 }
 .error{
-visibility: hidden;
+font-size: 12px;
 }
 #submit-btn{
  background-color: #f28500;
@@ -207,7 +223,7 @@ visibility: hidden;
     background-color: whitesmoke;
 }
 .footer {
-    height: 65px;
+    height: 60px;
     background: #555a64;
 }
 .nav-link {
@@ -233,10 +249,10 @@ visibility: hidden;
 /*The properties of the small quote on the About Us section*/
 #small-quote {
     font-size: 25px;
-    color: rgb(215, 94, 39);
+    color: #fff;
     font-weight: 900;
     font-family: 'Bonheur Royale', cursive;
 }
 #small-quote:hover{
-    color:#fff;
+    color:rgb(215, 94, 39);;
 }
