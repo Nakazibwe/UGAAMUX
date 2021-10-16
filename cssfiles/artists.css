@@ -7,14 +7,13 @@ body {
 }
 /*The properties of the header of the home page*/
 #header {
-    height: 300px;
+    height: 200px;
     box-sizing: border-box;
-    padding-top: 1%;
+    /* padding-top: 1%; */
     background-image: linear-gradient(
             rgba(20, 27, 41, 0.8),
             rgba(20, 27, 41, 0.9)
-        ),
-        url(/imagefiles/blackpiano.jpeg);
+        );
 }
 /*The properties of the top nav bar on the home page*/
 #top-navbar {
@@ -144,7 +143,8 @@ body {
     box-sizing: border-box;
     height: 450px;
     margin: auto;
-    margin-top: 20px;
+    box-sizing: border-box;
+    padding-top: 1%;
     width: 75%;
 }
 /*The properties of the heading on the text area container */
@@ -153,19 +153,13 @@ body {
     font-size: 60px;
     font-family: 'Carter One', cursive;
 }
-/*The properties of the paragraph in the text area */
-.header-text-area p {
-    color: #fff;
-    line-height: 40px;
-    font-weight: 700;
-    font-family: 'Open Sans', sans-serif;
-}
+
 /*The properties of the small quote on the header section. */
 #small-header-quote {
     font-size: 25px;
     color: rgb(215, 94, 39);
     display: block;
-    margin-top: 6%;
+    margin-top: 2%;
     font-weight:900;
     font-family: 'Bonheur Royale', cursive;
 }
@@ -1006,7 +1000,7 @@ body {
 }
 
 .footer {
-    height: 65px;
+    height: 60px;
     background: #555a64;
 }
 .nav-link {
@@ -1032,10 +1026,24 @@ body {
 /*The properties of the small quote on the About Us section*/
 #small-quote {
     font-size: 25px;
-    color: rgb(215, 94, 39);
+    color: #fff;
     font-weight: 900;
     font-family: 'Bonheur Royale', cursive;
 }
 #small-quote:hover{
+    color:rgb(215, 94, 39);
+}
+
+.top-search{
+ width:300px;
+ margin-left: 80%;
+ 
+}
+.search-btn{
     color:#fff;
+   border: 1px solid #ff781f; 
+}
+.search-btn:hover{
+    background-color:#ff781f ;
+    border: 1px solid #ff781f; 
 }
