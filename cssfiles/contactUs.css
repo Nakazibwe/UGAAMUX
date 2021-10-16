@@ -7,14 +7,13 @@ body {
 }
 /*The properties of the header of the home page*/
 #header {
-    height: 300px;
+    height: 200px;
     box-sizing: border-box;
     padding-top: 1%;
     background-image: linear-gradient(
             rgba(20, 27, 41, 0.8),
             rgba(20, 27, 41, 0.9)
-        ),
-        url(/imagefiles/blackpiano.jpeg);
+        );
 }
 /*The properties of the top nav bar on the home page*/
 #top-navbar {
@@ -160,19 +159,13 @@ body {
     font-size: 60px;
     font-family: 'Carter One', cursive;
 }
-/*The properties of the paragraph in the text area */
-.header-text-area p {
-    color: #fff;
-    line-height: 40px;
-    font-weight: 700;
-    font-family: 'Open Sans', sans-serif;
-}
+
 /*The properties of the small quote on the header section. */
 #small-header-quote {
     font-size: 25px;
     color: rgb(215, 94, 39);
     display: block;
-    margin-top: 6%;
+    margin-top: 3%;
     font-weight:900;
     font-family: 'Bonheur Royale', cursive;
 }
@@ -204,7 +197,8 @@ body {
 .form-action{
     
     width: 100%;
-    margin-top: 4%;
+    margin-top: 1%;
+    height: auto;
     box-sizing: border-box;
     padding-left: 2%;
     padding-right: 2%;
@@ -231,24 +225,36 @@ body {
 .form-action input ,textarea{
     width: 100%;
     height: 50px;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 
 #last-name-label{
     margin-left: 33%;
 }
 #submit-contactus{
+ margin-bottom: 4% ;
  border-radius: 4px;
+ font-weight: 900;
  border: 1px solid #ff781f;
  background-color: #ff781f;
  color: #fff;
  
- 
+}
+#lastname-error{
+ margin-left: 21%;
+}
+#firstname-error{
+ margin-left:2%;
+}
+#email-error{
+ margin-left:2%;  
 }
 
-
+#message-error{
+ margin-left:2%;  
+}
 .footer {
-    height: 65px;
+    height: 60px;
     background: #555a64;
 }
 .nav-link {
@@ -274,10 +280,10 @@ body {
 /*The properties of the small quote on the About Us section*/
 #small-quote {
     font-size: 25px;
-    color: rgb(215, 94, 39);
+    color: #fff;
     font-weight: 900;
     font-family: 'Bonheur Royale', cursive;
 }
 #small-quote:hover{
-    color:#fff;
+    color:rgb(215, 94, 39);;
 }

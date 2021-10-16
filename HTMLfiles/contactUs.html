@@ -60,8 +60,7 @@
         <!--Code for the inner text box inside the header section-->
         <div class="header-text-area">
             <h1>Contact Us</h1>
-            <p><i> Lets re-introduce you to Ugandan talent .</i> </p>
-
+            
             <small id="small-header-quote">Ugandan Talent Lives Here!!!</small>
         </div>
     </div>
@@ -83,26 +82,34 @@
                 </div>
             </div>
             <div class="col-lg-7 contacts contact-input">
-                <form id="form-id" name="contact-Us-form">
+                <form id="form-id" name="contactUsform">
                     <div class="form-action">
                         <label for="inputfirstname" id="firstnamelabel"> First Name</label>
                         <label for="inputlastname" id="last-name-label"> Last Name</label>
                         <div class="inner-flex">
                             
-                            <input type="text" id="inputfirstname" placeholder="First Name" required>
+                            <input type="text"  name ="firstname" id="inputfirstname" placeholder="First Name" >
 
                            
-                            <input type="text" id="inputlastname" placeholder=" Last Name" required>
+                            <input type="text" name ="lastname" id="inputlastname" placeholder=" Last Name" >
                         </div>
+                    </div>    
+                    <small id="firstname-error"></small>
+                    <small id="lastname-error"></small>
 
+                    <div class="form-action">
                         <label for="email" id="emaillabel"> Email</label><br>
-                        <input type="text" id="inputemail" placeholder="Enter Your Email " required><br>
+                        <input type="text" name="email" id="inputemail" placeholder="Enter Your Email " >
+                    </div>
+                    <small id="email-error"></small>
 
-
+                    <div class="form-action">
                         <label for="email" id="messagelabel"> Message </label><br>
-                        <textarea name="message" id="inputmessage" placeholder=" Message " required></textarea><br>
+                        <textarea name="message" id="inputmessage" placeholder=" Message "></textarea>
+                    </div>
+                    <small id="message-error"></small>
 
-
+                    <div class="form-action">
                         <input type="submit" id="submit-contactus" value="Submit">
                     </div>
                 </form>
@@ -126,5 +133,5 @@
 
     <script src="javaScriptfiles/js/bootstrap.min.js"></script>
 </body>
-
+ <script src="/javaScriptfiles/contactUs.js"></script>
 </html>
