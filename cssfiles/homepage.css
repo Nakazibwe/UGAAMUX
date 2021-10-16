@@ -7,14 +7,13 @@ body {
 }
 /*The properties of the header of the home page*/
 #header {
-    height: 300px;
+    height: 200px;
     box-sizing: border-box;
     padding-top: 1%;
-    background-image: linear-gradient(
+    background: linear-gradient(
             rgba(20, 27, 41, 0.8),
             rgba(20, 27, 41, 0.9)
-        ),
-        url(/imagefiles/blackpiano.jpeg);
+        );
 }
 /*The properties of the top nav bar on the home page*/
 #top-navbar {
@@ -158,18 +157,13 @@ body {
     font-family: 'Carter One', cursive;
 }
 /*The properties of the paragraph in the text area */
-.header-text-area p {
-    color: #fff;
-    line-height: 40px;
-    font-weight: 700;
-    font-family: 'Open Sans', sans-serif;
-}
+
 /*The properties of the small quote on the header section. */
 #small-header-quote {
     font-size: 25px;
     color: rgb(215, 94, 39);
     display: block;
-    margin-top: 6%;
+    margin-top: 3%;
     font-weight: 900;
     font-family: 'Bonheur Royale', cursive;
 }
@@ -204,6 +198,15 @@ body {
 #Artistsh2:hover {
     color: #ff781f;
 }
+.readmore{
+   text-decoration: none;
+   margin-left: 48%; 
+   font-weight: 600;
+   
+}
+.readmore:hover{
+  color:#ff781f;
+ }
 .artists {
     height: auto;
     /* border-radius: 25px; */
@@ -265,7 +268,8 @@ body {
     font-size: 30px;
 }
 .footer {
-    height: 65px;
+    margin-top: 2%;
+    height: 60px;
     background: #555a64;
 }
 .nav-link {
@@ -291,13 +295,13 @@ body {
 /*The properties of the small quote on the About Us section*/
 #small-quote {
     font-size: 25px;
-    color: rgb(215, 94, 39);
+    color: #fff;
     font-weight: 900;
     font-family: 'Bonheur Royale', cursive;
 }
 #small-quote:hover{
-    color:#fff;
+    color:rgb(215, 94, 39);
 }
 
 
-/*THE MEDIA QUERIES FOR THE HOME PAGE. */
+
