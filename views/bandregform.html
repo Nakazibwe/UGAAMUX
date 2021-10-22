@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGAAMUX Bands Registration Form</title>
+    <link rel="stylesheet" href="/cssfiles/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/cssfiles/bandregform.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+    
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" id="top-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" id="navbar-logo" href="/registrationpage"><small id="small-log">UGAA</small>MUX<img
+                    src="/imagefiles/ugflag.jpeg" alt="UG-LOGO" id="logopicture" height="30px" width="50px" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav" id="navbar-inner-div">
+                    <a class="nav-link" aria-current="page" id="navbar-admin" href="/registrationpage">ADMIN</a>
+                    <a class="nav-link" id="navbar-artistes" href="/artists">Artists</a>
+                    <a class="nav-link" id="navbar-bands" href="/bands">Bands</a>
+                    <a class="nav-link" id="navbar-comedians" href="/comedians">Comedians</a>
+                    <a class="nav-link" id="navbar-contactus" href="/contactUs">Contact Us</a>
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="navbar-dropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Account
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" id="sign-out" href="/">LOG OUT</a>
+                            </li>
+ 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <h4 class="h4regform">Band Registration</h4>
+    <div class="container">
+        <form action="/bandregistrationform" method="POST" name="BandRegistration" id="form-id">
+            <div class="row">
+                <div class="col-lg-4 form-action-cols">
+                    <div class="form-action">
+                        <label for="" id="bandname">Band Name</label><br>
+                        <input type="text" placeholder="Enter Band Name " name="BandName" id="band-name">
+                    </div>
+                    <small class="error" id="bandname-error"></small>
+
+                    <div class="form-action">
+                        <label for="" id="bandowner">Band Owner</label><br>
+                        <input type="text" placeholder=" Enter Band Owner " name="BandOwner" id="band-owner">
+                    </div>
+                    <small class="error" id="bandowner-error"></small>
+
+                    <div class="form-action">
+                        <label for="" id="bandhome">Band Home</label><br>
+                        <input type="text" placeholder=" Enter Band Home " name="BandHome" id="band-home">
+                    </div>
+                    <small class="error" id="bandhome-error"></small>
+
+                    <div class="form-action">
+                        <label for="" id="bandmembers">Number of Members</label><br>
+                        <input type="number" name="BandNumber" id="band-numbers">
+                    </div>
+                    <small class="error" id="bandmembers-error"></small>
+
+                    <div class="form-action">
+                        <label for="" id="bandslogan">Band Slogan</label><br>
+                        <input type="text" placeholder="Enter Band Slogan" name="BandSlogan" id="band-slogan">
+                    </div>
+                    <small class="error" id="bandslogan-error"></small>
+
+                    <div class="form-action">
+                        <label for="" id="Band-ID">Band ID</label><br>
+                        <input type="text" name="bandID" placeholder="Enter Band ID" id="band-id">
+                    </div>
+                    <small class="error" id="bandID-error"></small>
+
+                    <div class="form-action">
+                        <label for="" id="numofsongs">Number of Songs</label><br>
+                        <input type="number" id="numsongs" name="numberofsongs">
+                    </div>
+                    <small class="error" id="numberofsongs-ERROR"></small>
+
+
+                </div>
+
+                <div class="col-lg-4 form-action-cols">
+
+                    <div class="form-action">
+                        <label for="" id="date-of-formation">Date of Formation</label><br>
+                        <input type="date" name="DateFormation" id="date-of-formation">
+                    </div>
+                    <small class="error" id="dateofformationERROR"></small>
+
+                    <div class="form-action">
+                        <label for="" id="telcontact"> Band Telephone Contact(256)</label><br>
+                        <input type="text" placeholder="Enter Band  Phone number" name="telephone" id="telecontact">
+                    </div>
+                    <small class="error" id="telephone-error"></small>
+
+                    <div class="form-action">
+                        <label for="" id="socialcontact">Twitter Handle</label><br>
+                        <input type="text" placeholder="Enter Band twitter handle" name="twitter" id="twitter-contact">
+                    </div>
+                    <small class="error" id="twitterhandle-error"></small>
+
+                    <div class="form-action">
+                        <label for="" id="contact">Email </label><br>
+                        <input type="text" placeholder="Enter Band email" name="email" id="email-contact">
+                    </div>
+                    <small class="error" id="email-error"></small>
+
+                    <div class="form-action">
+                        <label for="" id="band-crowns">Band Crowns(if any)</label><br>
+                        <input type="text" placeholder="Enter Band Crowns" name="bandCrowns" id="band-crowns">
+                    </div>
+                    <small class="error" id="bandcrowns-error"></small>
+
+                    <div class="form-action">
+                        <label for="" id="albums">Number of Albums</label><br>
+                        <input type="number" name="albums" id="band-albums">
+                    </div>
+                    <small class="error" id="albums-error"></small>
+
+                    <div class="form-action">
+                        <label for="" id="genre"> Genre </label><br>
+                        <input type="text" placeholder=" Enter Band Genre " name="genre" id="band-genre">
+                    </div>
+                    <small class="error" id="genre-error"></small>
+
+                </div>
+                <div class="col-lg-4 form-action-cols">
+
+                    <div class="form-action">
+                        <label for="" id="band-icon"> Band Icon </label><br>
+                        <input type="file" name="icon" id="Band-icon">
+                    </div>
+                    <small class="error" id="band-icon-error"></small>
+                    <div class="form-action">
+                        <label for="" id="profile-pic"> Profile Picture </label><br>
+                        <input type="file" name="Profilepicture" id="profile-photo">
+                    </div>
+                    <small class="error" id="profilephoto-error"></small>
+                    <div class="form-action">
+                        <label for="" id="otherowners"> Other Owners, (if any) </label><br>
+                        <textarea name="ownership" placeholder="Enter Other band Owners" id="Otherowners" cols="30"
+                            rows="10"></textarea>
+                    </div>
+                    <small class="error" id="other-owners-error"></small>
+
+                    <div class="form-action">
+                        <label for="" id="sponsors">Band Sponsors,(if any)</label><br>
+                        <textarea name="bandsponsors" placeholder="Enter Band Sponsors" id="band-sponsors" cols="30"
+                            rows="10"></textarea>
+                    </div>
+                    <small class="error" id="sponsors-ERROR"></small>
+
+                    <div id="button-form">
+                        <input id="submit-btn" type="submit" name="submit-button" value="SUBMIT">
+                        <input id="cancel-btn" type="reset" name="cancel-button" value="CANCEL">
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <div class="navbar navbar-expand-lg navbar-dark footer">
+        <a href="#" class="nav-link copy">&copy 2021 Grace Nakazibwe </a>
+        <small id="small-quote">Ugandan Talent Lives Here</small>
+        <div class="nav-container">
+            <a href="#" class="nav-link icon"><i class="fa fa-facebook-square"></i></a>
+            <a href="#" class="nav-link icon"><i class="fa fa-twitter-square"></i></a>
+            <a href="#" class="nav-link icon"><i class="fa fa-google-plus-square"></i></a>
+            <a href="#" class="nav-link icon"><i class="fa fa-instagram"></i></i></a>
+            <a href="#" class="nav-link icon"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </div>
+    <script src="/javaScriptfiles/js/bootstrap.min.js"></script>
+    <script src="/javaScriptfiles/bandregform.js"></script>
+</body>
+
+</html>
