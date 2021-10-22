@@ -1,0 +1,148 @@
+/*The properties of the body*/
+body{
+    margin:0;
+    padding:0;
+    background:#434853;
+        
+     
+}
+/*The properties of the top-container on the page*/
+#top-navbar{
+ height: 100px;  
+ box-sizing: border-box;
+
+ 
+}
+/*The properties for the inner div inside the nav bar*/
+#navbar-inner-div{
+   margin-left:50%;
+}
+/*The properties of the logo on the top-navbar of the loginpage*/
+#navbar-logo{
+    font-family:'Bebas Neue', cursive;
+    font-size: 45px;
+    width:150px;
+    color: rgb(215, 94, 39);
+    text-decoration: none;
+    margin-left: 5%;
+    
+    
+   }
+/*The properties of the small property on the logo of the top-nav bar  of the login page*/
+   #small-log{
+   color: #fff;
+   }
+/*The properties of the donthaveaccount on the navbar */   
+   #donthaveaccount{
+     color: #fff;
+     width: 70%;
+     font-family: 'Open Sans', sans-serif;
+   }
+/*The properties of the registerwithus-link */
+   #registerwithus-link{
+    color:#ef672a;
+    width: 200px;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    
+    
+   }
+/*The properties of the hover on the registerwithus-link*/
+   #registerwithus-link:hover{text-decoration: underline;}
+/*The properties of the login container on the login page*/   
+   #login-container{
+     width:35%;
+     padding-top: 20px;
+     box-sizing: border-box;
+     text-align: center;
+     margin-top:2%;
+     height:420px;
+     background-color: #2B313E;
+     
+   }
+/*The properties of the paragragh in the login container*/   
+   #login-container p{
+       color: #fff;
+       font-family: "Open Sans", sans-serif;
+
+    }
+/*The properties of the username input */
+#username{
+   width: 90%;
+   font-family: "Open Sans", sans-serif;
+   height: 55px;
+   
+}
+/*The properties of the  password input */
+#userpassword{
+    width: 90%;
+    font-family: "Open Sans", sans-serif;
+    height: 55px; 
+    
+}
+/*The properties  of the usersubmit button*/
+#usersubmit{
+    width: 90%;
+    height: 55px; 
+    color:#fff;
+    text-align: center;
+    font-weight: 900;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1;
+    background: #ef672a;
+    border: 1px solid #ef672a;
+}
+/*The properties of the hovering on the submit button*/
+#usersubmit:hover{
+    color:#ef672a;
+    background-color: #fff;
+    border: 1px solid #fff;
+
+}
+/*The properties of the forgot password link*/
+#forgotpassword{
+    color:#ef672a;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+}
+.form-action{
+   margin-top: 2%;
+}
+
+
+
+.footer{
+   margin-top: 2%;
+   height: 60px;
+   border:2px solid white;
+   background-color: #434853;
+}
+.nav-link {
+   color: #fff;
+}
+.nav-link:hover {
+   color: #ff781f;
+}
+.nav-container {
+   margin-left: 40%;
+   display: flex;
+}
+.icon {
+   color: #fff;
+}
+.copy {
+   font-family: sans-serif;
+   font-size: 14px;
+   margin-left: 4%;
+   font-weight: 900;
+}
+/*The properties of the small quote on the About Us section*/
+#small-quote {
+   font-size: 25px;
+   color: #fff;
+   font-weight: 900;
+   font-family: 'Bonheur Royale', cursive;
+}
+#small-quote:hover {
+   color: rgb(215, 94, 39);
+}

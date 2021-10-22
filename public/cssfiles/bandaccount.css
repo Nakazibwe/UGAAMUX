@@ -1,0 +1,194 @@
+        /*The properties of the body*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #434853;
+    
+}
+/*The properties of the top-container on the page*/
+#top-navbar {
+    height: 65px;
+    box-sizing: border-box;
+}
+/*The properties for the inner div inside the nav bar*/
+#navbar-inner-div {
+    margin-left: 70%;
+}
+/*The properties of the logo on the top-navbar of the loginpage*/
+#navbar-logo {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 45px;
+    width: 150px;
+    color: rgb(215, 94, 39);
+    text-decoration: none;
+    margin-left: 5%;
+}
+/*The properties of the small property on the logo of the top-nav bar  of the login page*/
+#small-log {
+    color: #fff;
+}  
+/*The logout dropdown.*/
+#navbar-dropdown {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 140px;
+    color: #fff;
+    margin-left: 2px;
+    background-color: inherit;
+    padding-left: 20px;
+    font-weight: 900;
+    padding-top: 10px;
+    border-style: hidden;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+#navbar-dropdown:hover {
+    color: #ff781f;
+}
+/*The signout link on the artist account*/
+#sign-out {
+    font-size: 0.875em;
+    font-weight: 600;
+    text-decoration: none;
+}
+/*The properties of the hovering on the top nav bar of the home page*/
+#sign-out:hover {
+    color: red;
+}
+
+.container {
+    /* width:fit-content; */
+    width: 80%;
+    height: auto;
+    /* margin-top: 1%; */
+    margin-bottom: 2%;
+    padding: 2%;
+    color:#fff;
+    background-color: #434853;
+    box-sizing: border-box;
+    border: 1px solid #434853;
+}
+.photo-div{
+ margin: 4%;
+ padding:0;
+   
+}
+
+
+.band-info {
+    height: auto;
+    float: right;
+    
+}
+.bandgenre {
+    height: 80px;
+    padding: 3%;
+    width:25%;
+    border-radius: 50px;
+    margin: 4%;
+    color:#fff;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    background-color:#72767E ;
+    border: 1px solid  #72767E;
+}
+
+.bandgenre:hover{
+    color: #ff781f;
+}
+.bandalbums {
+    height: 80px;
+    padding:3%;
+    width:25%;
+    color:#fff;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    border-radius: 50px;
+    margin: 4%;
+    text-decoration: none;
+    display: inline;
+    background-color: #5A5F69;
+    border: 1px solid #5A5F69;
+}
+.bandalbums:hover{
+    color: #ff781f;
+}
+.bandsongs {
+    height: 80px;
+    padding: 3%;
+    width:25%;
+    color:#fff;
+    border-radius: 50px;
+    margin: 4%;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    background-color:#72767E ;
+    border: 1px solid  #72767E;
+}
+.bandsongs:hover{
+    color: #ff781f;
+}
+
+h5{
+    margin-left: 19%;
+    margin-bottom: 2%;
+    font-size:30px;
+    font-family: 'Bonheur Royale', cursive;
+}
+h5:hover{
+   color: #ff781f;
+}
+
+.moreinformation{
+ /* border: 1px solid red; */
+ border-radius: 25px;
+ margin-top: 3%;
+ 
+}
+.moreinformation p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+.footer {
+    margin-top: 2%;
+    height: 60px;
+    /* background: #555a64; */
+    background-color: #434853;
+}
+.nav-link {
+    color: #fff;
+}
+.nav-link:hover {
+    color: #ff781f;
+}
+.nav-container {
+    margin-left: 40%;
+    display: flex;
+}
+.icon {
+    color: #fff;
+}
+.copy {
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-left: 4%;
+    font-weight: 900;
+}
+/*The properties of the small quote on the About Us section*/
+#small-quote {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 900;
+    font-family: 'Bonheur Royale', cursive;
+}
+#small-quote:hover {
+    color: rgb(215, 94, 39);
+}

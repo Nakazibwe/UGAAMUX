@@ -1,0 +1,289 @@
+/*The properties of the body on the home page*/
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: #fffafa; */
+    background-color: #f2f3f4;
+}
+/*The properties of the header of the home page*/
+#header {
+    height: 200px;
+    box-sizing: border-box;
+    padding-top: 1%;
+    background-image: linear-gradient(
+            rgba(20, 27, 41, 0.8),
+            rgba(20, 27, 41, 0.9)
+        );
+}
+/*The properties of the top nav bar on the home page*/
+#top-navbar {
+    height: 65px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 20px;
+    background: #555a64;
+    /* background: linear-gradient(rgba(20, 27, 41, 0.8), rgba(20, 27, 41, 0.9)); */
+  
+}
+
+/*The properties of the logo on the top-navbar of the loginpage*/
+#navbar-logo {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 45px;
+    width: 150px;
+    color: rgb(215, 94, 39);
+    text-decoration: none;
+    margin-left: 5%;
+}
+/*The properties of the small property on the logo on the navbar on the homepage*/
+#small-log {
+    color: #fff;
+}
+
+/*The properties of the inner div inside the nav bar*/
+#navbar-inner-div {
+    margin-left: 38%;
+    
+}
+/*The properties of the artists link on the  top navbar of the homepage */
+#navbar-artistes {
+    font-family:  sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 100px;
+    margin-left: 5px;
+    padding-left: 30px;
+    padding-top: 10px;
+    font-weight:900;
+    text-decoration: none;
+    color: #fff;
+    box-sizing: border-box;
+}
+#navbar-artistes:hover {
+    color:#ff781f;
+    
+}
+
+#navbar-home{
+    font-family:  sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 100px;
+    margin-left: 5px;
+    padding-left: 30px;
+    padding-top: 10px;
+    font-weight:900;
+    text-decoration: none;
+    color: #fff;
+    box-sizing: border-box;
+}
+#navbar-home:hover {
+    color:#ff781f;
+    
+}
+/*The properties of the comedians link in the top nav bar of the homepage*/
+#navbar-comedians {
+    font-family:  sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 120px;
+    color: #fff;
+    margin-left: 2px;
+    font-weight:900;
+    padding-left: 30px;
+    text-decoration: none;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+#navbar-comedians:hover {color:#ff781f;}
+
+/*The properties of the bands on the top nav bar on the home page */
+#navbar-bands {
+    font-family:  sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 80px;
+    color: #fff;
+    margin-left: 2px;
+    font-weight:900;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+#navbar-bands:hover {color:#ff781f;}
+/*The properties of the about us on the top nav bar on the home page*/
+#navbar-aboutus {
+    font-family:  sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 100px;
+    color: #fff;
+    margin-left: 2px;
+    font-weight:900;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+#navbar-aboutus:hover {color:#ff781f;}
+/*The properties of the contactus on the top-nav bar*/
+#navbar-contactus {
+    font-family:  sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 120px;
+    color: #fff;
+    margin-left: 2px;
+    font-weight:900;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+#navbar-contactus:hover {color:#ff781f;}
+/*The properties of the text area container inside of the header */
+.header-text-area {
+    text-align: center;
+    box-sizing: border-box;
+    height: 450px;
+    margin: auto;
+    margin-top: 20px;
+    width: 75%;
+}
+/*The properties of the heading on the text area container */
+.header-text-area h1 {
+    color: #fff;
+    font-size: 60px;
+    font-family: 'Carter One', cursive;
+}
+
+/*The properties of the small quote on the header section. */
+#small-header-quote {
+    font-size: 25px;
+    color: rgb(215, 94, 39);
+    display: block;
+    margin-top: 3%;
+    font-weight:900;
+    font-family: 'Bonheur Royale', cursive;
+}
+
+#small-header-quote:hover {color: #fff;}
+
+.container{
+    height: auto;
+    width: 100%;
+    
+}
+.contacts{
+  background-color:#fff;
+  border: 1px solid #fff;
+  margin-top: 6%;
+  width: 45%;
+  margin-bottom: 6%;
+  margin-right: 5%;
+}
+.contact-info{
+    height:auto;
+    
+}
+.contact-input{
+  height: auto;
+  
+  
+}
+.form-action{
+    
+    width: 100%;
+    margin-top: 1%;
+    height: auto;
+    box-sizing: border-box;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 3%;
+    font-family: 'Open Sans',sans-serif;
+}
+.form-action h2{
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 40px;
+}
+.form-action h2:hover{color: #ff781f;}
+
+.inner-flex{
+ display: flex;
+ width: 100%;
+ 
+}
+
+.inner-flex input{ 
+    width: 90%;
+    margin-right: 2%;
+    
+}
+.form-action input ,textarea{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 2%;
+}
+
+#last-name-label{
+    margin-left: 33%;
+}
+#submit-contactus{
+ margin-bottom: 4% ;
+ border-radius: 4px;
+ font-weight: 900;
+ border: 1px solid #ff781f;
+ background-color: #ff781f;
+ color: #fff;
+ 
+}
+#lastname-error{
+ margin-left: 21%;
+}
+#firstname-error{
+ margin-left:2%;
+}
+#email-error{
+ margin-left:2%;  
+}
+
+#message-error{
+ margin-left:2%;  
+}
+.footer {
+    height: 60px;
+    background: #555a64;
+}
+.nav-link {
+    color: #fff;
+}
+.nav-link:hover {
+    color: #ff781f;
+}
+.nav-container {
+    margin-left: 40%;
+    display: flex;
+    
+}
+.icon {
+    color:#fff; 
+}
+.copy {
+    font-family:  sans-serif;
+    font-size: 14px;
+    margin-left: 4%;
+    font-weight: 900;
+}
+/*The properties of the small quote on the About Us section*/
+#small-quote {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 900;
+    font-family: 'Bonheur Royale', cursive;
+}
+#small-quote:hover{
+    color:rgb(215, 94, 39);;
+}
