@@ -6,20 +6,22 @@ const UserNameERROR = document.getElementById('username-error');
 const UserPassWordERROR = document.getElementById('password-error');
 
 // Regular expressions.
-const alphaNumeric = /^[a-zA-Z0-9]+$/;
+// const alphaNumeric = /^[a-zA-Z0-9]+$/; // Regex that is currectly not in use.
+const alphaNumeric = /^[a-zA-Z0-9 ]*$/;
 const validate = () => {
   // Validating  the Username input.
-  if (UserName.value == '') {
+  const userName = UserName.value.trim();
+  if (userName == '') {
     UserNameERROR.innerHTML = 'UserName  Field  Required ';
     UserNameERROR.style = ' color : red';
     UserName.style.border = '1px solid red';
     UserName.focus();
-  } else if (!(UserName.value.length > 1)) {
+  } else if (!(userName.length > 1)) {
     UserName.style.border = '1px solid red';
     UserNameERROR.innerHTML = 'Username Incomplete';
     UserNameERROR.style = 'color:red ';
     UserName.focus();
-  } else if (!UserName.value.match(alphaNumeric)) {
+  } else if (!userName.match(alphaNumeric)) {
     UserName.style.border = '1px solid red';
     UserNameERROR.innerHTML = 'Incorrect Username Format ';
     UserNameERROR.style = 'color:red';
@@ -29,18 +31,19 @@ const validate = () => {
     UserNameERROR.style = 'color: #fff';
   }
 
-  // Validating  the user  password input
-  if (PassWord.value == '') {
+  // Validating  the user  password input.
+  const password = PassWord.value.trim();
+  if (password == '') {
     UserPassWordERROR.innerHTML = 'UserName  Field  Required ';
     UserPassWordERROR.style = ' color : red';
     PassWord.style.border = '1px solid red';
     PassWord.focus();
-  } else if (!(PassWord.value.length > 4)) {
+  } else if (!(password.length > 4)) {
     PassWord.style.border = '1px solid red';
     UserPassWordERROR.innerHTML = 'Password  Incomplete';
     UserPassWordERROR.style = 'color:red ';
     PassWord.focus();
-  } else if (!PassWord.value.match(alphaNumeric)) {
+  } else if (!password.match(alphaNumeric)) {
     PassWord.style.border = '1px solid red';
     UserPassWordERROR.innerHTML = 'Incorrect Password Format ';
     UserPassWordERROR.style = 'color:red';
