@@ -6,12 +6,13 @@ const Email = document.forgotpassword.email;
 const EmailError = document.getElementById('email-error');
 
 const validate = () => {
-  if (Email.value == '') {
+  const email = Email.value.trim();
+  if (email == '') {
     EmailError.style = 'color: red';
     EmailError.innerHTML = 'Enter Email Address';
     Email.style.border = '1px solid red';
     Email.focus();
-  } else if (!Email.value.match(emailFormat)) {
+  } else if (!email.match(emailFormat)) {
     EmailError.innerHTML = 'Email Format entered is Wrong';
     EmailError.style = 'color:red';
     Email.style.border = '1px solid red';
