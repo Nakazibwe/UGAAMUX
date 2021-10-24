@@ -8,19 +8,23 @@ const contactUsSchema = new mongoose.Schema({
     firstname: {
         type: String,
         trim: true,
+        default: '',
     },
     lastname: {
         type: String,
         trim: true,
+        default: '',
     },
     email: {
         type: String,
         trim: true,
+        default: '',
          
     },
     message: {
         type: String,
+        default: '', 
         
     },
-});
+});  
 module.exports = mongoose.model('Contactus', contactUsSchema);
