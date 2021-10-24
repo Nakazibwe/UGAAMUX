@@ -9,81 +9,96 @@ const artistsRegSchema = new mongoose.Schema({
     firstName: {
         type: String,
         trim: true,
+        default: '',
     },
     lastName: {
         type: String,
         trim: true,
+        default: '',
     },
     stageName: {
         type: String,
         trim: true,
+        default: '',
          
     },
     artistID: {
         type: String,
         trim: true,
+        default: '',
         
     },
     telephone: {
         type: String,
         trim: true,
+        default: '',
     },
     twitter: {
         type: String,
         trim: true,
+        default: '',
     },
     email: {
         type: String,
         trim: true,
         unique: true,
+        default: '',
          
     },
     ArtistDOB: {
-        type: String,
+        type: Date,
         trim: true,
+        
         
     },
     basedDistrict: {
         type: String,
         trim: true,
+        default: '',
     },
     nationalIDNIN: {
         type: String,
         trim: true,
+        default: '',
     },
     datestartedsing: {
-        type: String,
+        type: Date,
         trim: true,
-        unique: true,
          
     },
     Location: {
         type: String,
         trim: true,
+        default: '',
         
     },
     numberofalbums: {
         type: Number,
         trim: true,
+        default: 0,
         
     },
     numberofsongs: {
         type: Number,
         trim: true,
+        default: 0,
         
     },
     genre: {
         type: String,
         trim: true,
+        default: '',
         
     },
     gender: {
         type: String,
         trim: true,
+        default: '',
         
     },
     pictureupload: {
-        // type: Image, 
+        data: Buffer,
+        contentType: String,
            
     },
 
