@@ -20,7 +20,8 @@ const BandReg = require('./models/bandRegModel');
 const ForgotPassword = require('./models/forgotpasswdModel');
 // Instatiations
 const app = express();
-const port = 3000;
+// PORT.
+const port = process.env.PORT || 3000;
 
 mongoose.connect('mongodb://localhost:27017/UGAAMUX', {
     useNewUrlParser: true,
@@ -50,7 +51,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html');
 });
-
+   
 // Route to get to the about Us page.
 app.get('/aboutUs', (req, res) => {
     res.sendFile(__dirname + '/views/aboutUs.html');
