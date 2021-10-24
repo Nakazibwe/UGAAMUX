@@ -33,7 +33,8 @@ const ProfilepictureERROR = document.getElementById('upload-error');
 // Regular expressions.
 const nonumber = /^[A-Za-z]+$/;
 const capitalize = /^[A-Z][a-z]/;
-const alphaNumeric = /^[a-zA-Z0-9]+$/;
+const alphaNumeric = /^[a-zA-Z0-9 ]*$/;
+// const alphaNumeric = /^[a-zA-Z0-9]+$/;  //Regex not being used currently.
 const systemIDFormat = /^[a-z]{3}\d+[a-z]{3}/;
 const nationalIDFormat = /^[A-Z]{2}\d+[A-Z]{3}/;
 const phoneFormat = /^\d{12}$/;
@@ -42,22 +43,23 @@ const emailFormat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
 
 const validate = () => {
   // Validating the first name input field
-  if (Firstname.value == '') {
+  const comedianFirstName = Firstname.value.trim();
+  if (comedianFirstName == '') {
     FirstnameERROR.innerHTML = 'First  Name Field Required';
     FirstnameERROR.style = 'color:red ';
     Firstname.style.border = '1px solid red';
     Firstname.focus();
-  } else if (!(Firstname.value.length > 1)) {
+  } else if (!(comedianFirstName.length > 1)) {
     Firstname.style.border = '1px solid red';
     FirstnameERROR.innerHTML = 'First name is supposed to be more than one letter';
     FirstnameERROR.style = 'color:red ';
     Firstname.focus();
-  } else if (!Firstname.value.match(nonumber)) {
+  } else if (!comedianFirstName.match(nonumber)) {
     FirstnameERROR.innerHTML = 'First Name should not  contain numbers';
     FirstnameERROR.style = 'color:red ';
     Firstname.style.border = '1px solid red';
     Firstname.focus();
-  } else if (!Firstname.value.match(capitalize)) {
+  } else if (!comedianFirstName.match(capitalize)) {
     FirstnameERROR.innerHTML = 'First Name should start with a capital letter';
     FirstnameERROR.style = 'color:red ';
     Firstname.style.border = '1px solid red';
@@ -69,22 +71,23 @@ const validate = () => {
   }
 
   // Validating the last name input field .
-  if (Secondname.value == '') {
+  const comedianSecondName = Secondname.value.trim();
+  if (comedianSecondName == '') {
     SecondnameERROR.innerHTML = ' Last Name Field Required ';
     SecondnameERROR.style = 'color:red';
     Secondname.style.border = '1px solid red';
     Secondname.focus();
-  } else if (!(Secondname.value.length > 1)) {
+  } else if (!(comedianSecondName.length > 1)) {
     Secondname.style.border = '1px solid red';
     SecondnameERROR.innerHTML = 'Last name is supposed to be more than one letter';
     SecondnameERROR.style = 'color:red ';
     Secondname.focus();
-  } else if (!Secondname.value.match(nonumber)) {
+  } else if (!comedianSecondName.match(nonumber)) {
     SecondnameERROR.innerHTML = 'Last Name should not  contain numbers';
     SecondnameERROR.style = 'color:red ';
     Secondname.style.border = '1px solid red';
     Secondname.focus();
-  } else if (!Secondname.value.match(capitalize)) {
+  } else if (!comedianSecondName.match(capitalize)) {
     SecondnameERROR.innerHTML = 'Last  Name should start with a capital letter ';
     SecondnameERROR.style = 'color:red ';
     Secondname.style.border = '1px solid red';
@@ -95,22 +98,23 @@ const validate = () => {
     Secondname.style.border = '1px solid green';
   }
   // Validating the Stage name for comedian.
-  if (Stagename.value == '') {
+  const comedianStageName = Stagename.value.trim();
+  if (comedianStageName == '') {
     StagenameERROR.innerHTML = 'Stage Name Field Required ';
     StagenameERROR.style = 'color:red';
     Stagename.style.border = '1px solid red';
     Stagename.focus();
-  } else if (!(Stagename.value.length > 1)) {
+  } else if (!(comedianStageName.length > 1)) {
     Stagename.style.border = '1px solid red';
     StagenameERROR.innerHTML = 'Stage  name is supposed to be more than one letter';
     StagenameERROR.style = 'color:red ';
     Stagename.focus();
-  } else if (!Stagename.value.match(capitalize)) {
+  } else if (!comedianStageName.match(capitalize)) {
     Stagename.innerHTML = 'Stage Name should start with a capital letter';
     StagenameERROR.style = 'color:red ';
     Stagename.style.border = '1px solid red';
     Stagename.focus();
-  } else if (!Stagename.value.match(alphaNumeric)) {
+  } else if (!comedianStageName.match(alphaNumeric)) {
     Stagename.style.border = '1px solid red';
     StagenameERROR.innerHTML = ' Stage Name Format should be Alphanumeric';
     StagenameERROR.style = 'color:red';
@@ -120,13 +124,14 @@ const validate = () => {
     StagenameERROR.style = 'color:green ';
     Stagename.style.border = '1px solid green';
   }
-  // Validating Comedian System ID
-  if (ComedianID.value == '') {
+  // Validating Comedian System ID.
+  const comedianID = ComedianID.value.trim();
+  if (comedianID == '') {
     ComedianIDERROR.innerHTML = 'Comedian ID Field required ';
     ComedianIDERROR.style = 'color:red';
     ComedianID.style.border = '1px solid red ';
     ComedianID.focus();
-  } else if (!ComedianID.value.match(systemIDFormat)) {
+  } else if (!comedianID.match(systemIDFormat)) {
     ComedianID.style.border = '1px solid red';
     ComedianIDERROR.innerHTML = ' Comedian ID Format entered  is Wrong';
     ComedianIDERROR.style = 'color:red';
@@ -137,12 +142,13 @@ const validate = () => {
     ComedianID.style.border = '1px solid green';
   }
   // Validating Comedian Phonenumbers.
+  const comedianPhoneNumber = ComedianPhonenumber.value.trim();
   if (ComedianPhonenumber.value == '') {
     PhonenumberERROR.innerHTML = 'Telephone  number Field Required ';
     PhonenumberERROR.style = 'color:red';
     ComedianPhonenumber.style.border = '1px solid red';
     ComedianPhonenumber.focus();
-  } else if (!ComedianPhonenumber.value.match(phoneFormat)) {
+  } else if (!comedianPhoneNumber.match(phoneFormat)) {
     PhonenumberERROR.innerHTML = 'Phone number Format Entered is Wrong';
     PhonenumberERROR.style = 'color:red';
     ComedianPhonenumber.style.border = '1px solid red';
@@ -152,13 +158,14 @@ const validate = () => {
     PhonenumberERROR.style = 'color:green ';
     ComedianPhonenumber.style.border = '1px solid green';
   }
-  // Validating the  Comedian National ID
-  if (NationalIDNIN.value == '') {
+  // Validating the  Comedian National ID.
+  const nationalNIN = NationalIDNIN.value.trim();
+  if (nationalNIN == '') {
     NationalIDERROR.innerHTML = 'National ID NIN Field Required ';
     NationalIDERROR.style = 'color:red';
     NationalIDNIN.style.border = '1px solid red ';
     NationalIDNIN.focus();
-  } else if (!NationalIDNIN.value.match(nationalIDFormat)) {
+  } else if (!nationalNIN.match(nationalIDFormat)) {
     NationalIDERROR.innerHTML = 'National ID NIN  Format entered is Wrong';
     NationalIDERROR.style = 'color:red';
     NationalIDNIN.style.border = '1px solid red';
@@ -169,12 +176,13 @@ const validate = () => {
     NationalIDNIN.style.border = '1px solid green';
   }
   // Validating the comedian twitter handle.
-  if (Twitterhandle.value == '') {
+  const comedianTwitter = Twitterhandle.value.trim();
+  if (comedianTwitter == '') {
     TwitterERROR.innerHTML = 'Twitter Handle Field Required ';
     TwitterERROR.style = 'color:red';
     Twitterhandle.style.border = '1px solid red';
     Twitterhandle.focus();
-  } else if (!Twitterhandle.value.match(twitterFormat)) {
+  } else if (!comedianTwitter.match(twitterFormat)) {
     TwitterERROR.innerHTML = ' Twitter Handle  doesnot match Twitter format ';
     TwitterERROR.style = 'color:red';
     Twitterhandle.style.border = '1px solid red';
@@ -186,12 +194,13 @@ const validate = () => {
   }
 
   // Validating  the comedian Email.
-  if (ComedianEmail.value == '') {
+  const comedianEmail = ComedianEmail.value.trim();
+  if (comedianEmail == '') {
     ComedianEmail.style.border = '1px solid red';
     ComedianEmailERROR.innerHTML = 'Email  Field  Required  ';
     ComedianEmailERROR.style = 'color:red';
     ComedianEmail.focus();
-  } else if (!ComedianEmail.value.match(emailFormat)) {
+  } else if (!comedianEmail.match(emailFormat)) {
     ComedianEmailERROR.innerHTML = 'Email Format entered is Wrong';
     ComedianEmailERROR.style = 'color:red';
     ComedianEmail.style.border = '1px solid red';
@@ -217,22 +226,23 @@ const validate = () => {
     ComedianDateofBirth.style.border = '1px solid green';
   }
   // Validating the Comedian location.
-  if (ComedianLocation.value == '') {
+  const comedianLocation = ComedianLocation.value.trim();
+  if (comedianLocation == '') {
     ComedianLocationERROR.innerHTML = 'Location  Field is Required ';
     ComedianLocationERROR.style = 'color : red ';
     ComedianLocation.style.border = '1px solid red';
     ComedianLocation.focus();
-  } else if (!(ComedianLocation.value.length > 1)) {
+  } else if (!(comedianLocation.length > 1)) {
     ComedianLocation.style.border = '1px solid red';
     ComedianLocationERROR.innerHTML = 'Comedian Location  is supposed to be more than one letter';
     ComedianLocationERROR.style = 'color:red ';
     ComedianLocation.focus();
-  } else if (!ComedianLocation.value.match(nonumber)) {
+  } else if (!comedianLocation.match(nonumber)) {
     ComedianLocationERROR.innerHTML = 'Comedian   Location   should not  contain numbers';
     ComedianLocationERROR.style = 'color:red ';
     ComedianLocation.style.border = '1px solid red';
     ComedianLocation.focus();
-  } else if (!ComedianLocation.value.match(capitalize)) {
+  } else if (!comedianLocation.match(capitalize)) {
     ComedianLocationERROR.innerHTML = ' Comedian Location  should start with a capital letter';
     ComedianLocationERROR.style = 'color:red ';
     ComedianLocation.style.border = '1px solid red';
@@ -244,22 +254,23 @@ const validate = () => {
   }
 
   // Validating  comedian based district.
-  if (BasedDistrict.value == '') {
+  const district = BasedDistrict.value.trim();
+  if (district == '') {
     BasedDistrictERROR.innerHTML = ' Comedian Based District Field Required ';
     BasedDistrictERROR.style = 'color:red';
     BasedDistrict.style.border = '1px solid red';
     BasedDistrict.focus();
-  } else if (!(BasedDistrict.value.length > 1)) {
+  } else if (!(district.length > 1)) {
     BasedDistrict.style.border = '1px solid red';
     BasedDistrictERROR.innerHTML = 'Based District is supposed to be more than one letter';
     BasedDistrictERROR.style = 'color:red ';
     BasedDistrict.focus();
-  } else if (!BasedDistrict.value.match(nonumber)) {
+  } else if (!district.match(nonumber)) {
     BasedDistrictERROR.innerHTML = 'Based District  should not  contain numbers';
     BasedDistrictERROR.style = 'color:red ';
     BasedDistrict.style.border = '1px solid red';
     BasedDistrict.focus();
-  } else if (!BasedDistrict.value.match(capitalize)) {
+  } else if (!district.match(capitalize)) {
     BasedDistrictERROR.innerHTML = ' Based District should start with a capital letter';
     BasedDistrictERROR.style = 'color:red ';
     BasedDistrict.style.border = '1px solid red';
