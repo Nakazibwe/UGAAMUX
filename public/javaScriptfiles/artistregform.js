@@ -47,7 +47,8 @@ const GenderERROR = document.getElementById('gender-error');
 const nonumber = /^[A-Za-z]+$/;
 const capitalize = /^[A-Z][a-z]/;
 const morethan1 = /[\w\s]+/;
-const alphaNumeric = /^[a-zA-Z0-9]+$/;
+// const alphaNumeric = /^[a-zA-Z0-9]+$/; // Regex not in use yet.
+const alphaNumeric = /^[a-zA-Z0-9 ]*$/;
 const systemIDFormat = /^[a-z]{3}\d+[a-z]{3}/;
 const nationalIDFormat = /^[A-Z]{2}\d+[A-Z]{3}/;
 const phoneFormat = /^\d{12}$/;
@@ -56,22 +57,23 @@ const emailFormat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
 
 const validate = () => {
   // Validating the first name .
-  if (Firstname.value == '') {
+  const artistfirstname = Firstname.value.trim();
+  if (artistfirstname == '') {
     Firstname.style.border = '1px solid red';
     FirstNameERROR.innerHTML = 'First Name Field Required';
     FirstNameERROR.style = 'color:red ';
     Firstname.focus();
-  } else if (!(Firstname.value.length > 1)) {
+  } else if (!(artistfirstname.length > 1)) {
     Firstname.style.border = '1px solid red';
     FirstNameERROR.innerHTML = 'First name is supposed to be more than one letter';
     FirstNameERROR.style = 'color:red ';
     Firstname.focus();
-  } else if (!Firstname.value.match(nonumber)) {
+  } else if (!artistfirstname.match(nonumber)) {
     FirstNameERROR.innerHTML = 'First Name should not  contain numbers';
     FirstNameERROR.style = 'color:red ';
     Firstname.style.border = '1px solid red';
     Firstname.focus();
-  } else if (!Firstname.value.match(capitalize)) {
+  } else if (!artistfirstname.match(capitalize)) {
     FirstNameERROR.innerHTML = 'First Name should start with a capital letter';
     FirstNameERROR.style = 'color:red ';
     Firstname.style.border = '1px solid red';
@@ -82,22 +84,23 @@ const validate = () => {
     Firstname.style.border = '1px solid green';
   }
   // Last name input  validation
-  if (Lastname.value == '') {
+  const artistlastname = Lastname.value.trim();
+  if (artistlastname == '') {
     Lastname.style.border = '1px solid red';
     LastNameERROR.innerHTML = 'Last Name Field Required ';
     LastNameERROR.style = 'color:red ';
     Lastname.focus();
-  } else if (!(Lastname.value.length > 1)) {
+  } else if (!(artistlastname.length > 1)) {
     Lastname.style.border = '1px solid red';
     LastNameERROR.innerHTML = 'Last name is supposed to be more than one letter';
     LastNameERROR.style = 'color:red ';
     Lastname.focus();
-  } else if (!Lastname.value.match(nonumber)) {
+  } else if (!artistlastname.match(nonumber)) {
     LastNameERROR.innerHTML = 'Last Name should not  contain numbers';
     LastNameERROR.style = 'color:red ';
     Lastname.style.border = '1px solid red';
     Lastname.focus();
-  } else if (!Lastname.value.match(capitalize)) {
+  } else if (!artistlastname.match(capitalize)) {
     LastNameERROR.innerHTML = 'Last  Name should start with a capital letter ';
     LastNameERROR.style = 'color:red ';
     Lastname.style.border = '1px solid red';
@@ -108,22 +111,23 @@ const validate = () => {
     Lastname.style.border = '1px solid green';
   }
   // Stagename input validation
-  if (Stagename.value == '') {
+  const artiststagename = Stagename.value.trim();
+  if (artiststagename == '') {
     Stagename.style.border = '1px solid red';
     StageNameERROR.innerHTML = ' Stagename Field Required ';
     StageNameERROR.style = 'color:red';
     Stagename.focus();
-  } else if (!(Stagename.value.length > 1)) {
+  } else if (!(artiststagename.length > 1)) {
     Stagename.style.border = '1px solid red';
     StageNameERROR.innerHTML = 'Stage  name is supposed to be more than one letter';
     StageNameERROR.style = 'color:red ';
     Stagename.focus();
-  } else if (!Stagename.value.match(capitalize)) {
+  } else if (!artiststagename.match(capitalize)) {
     StageNameERROR.innerHTML = 'Stage Name should start with a capital letter';
     StageNameERROR.style = 'color:red ';
     Stagename.style.border = '1px solid red';
     Stagename.focus();
-  } else if (!Stagename.value.match(alphaNumeric)) {
+  } else if (!artiststagename.match(alphaNumeric)) {
     Stagename.style.border = '1px solid red';
     StageNameERROR.innerHTML = ' Stagename Format should be Alphanumeric';
     StageNameERROR.style = 'color:red';
@@ -134,12 +138,13 @@ const validate = () => {
     Stagename.style.border = '1px solid green';
   }
   // Validation for Artist ID.
-  if (ArtistID.value == '') {
+  const artistID = ArtistID.value.trim();
+  if (artistID == '') {
     ArtistID.style.border = '1px solid red';
     ArtistIDERROR.innerHTML = ' Artist ID Field Required';
     ArtistIDERROR.style = 'color:red';
     ArtistID.focus();
-  } else if (!ArtistID.value.match(systemIDFormat)) {
+  } else if (!artistID.match(systemIDFormat)) {
     ArtistID.style.border = '1px solid red';
     ArtistIDERROR.innerHTML = ' Artist ID Format entered  is wrong';
     ArtistIDERROR.style = 'color:red';
@@ -150,12 +155,13 @@ const validate = () => {
     ArtistID.style.border = '1px solid green';
   }
   // Validation for Telephone  contact.
-  if (Telephone.value == '') {
+  const artistTelephone = Telephone.value.trim();
+  if (artistTelephone == '') {
     PhonenumberERROR.innerHTML = 'Phone number Field Required';
     PhonenumberERROR.style = 'color:red';
     Telephone.style.border = '1px solid red';
     Telephone.focus();
-  } else if (!Telephone.value.match(phoneFormat)) {
+  } else if (!artistTelephone.match(phoneFormat)) {
     PhonenumberERROR.innerHTML = 'Phone number Format Entered is Wrong';
     PhonenumberERROR.style = 'color:red';
     Telephone.style.border = '1px solid red';
@@ -165,13 +171,14 @@ const validate = () => {
     PhonenumberERROR.style = 'color:green ';
     Telephone.style.border = '1px solid green';
   }
-  // Vadating the twitter flied
-  if (Twitterhandle.value == '') {
+  // Vadating the twitter field.
+  const artistTwitter = Twitterhandle.value.trim();
+  if (artistTwitter.value == '') {
     TwitterERROR.innerHTML = 'Twitter Handle Field is Required';
     TwitterERROR.style = 'color:red';
     Twitterhandle.style.border = '1px solid red';
     Twitterhandle.focus();
-  } else if (!Twitterhandle.value.match(twitterFormat)) {
+  } else if (!artistTwitter.match(twitterFormat)) {
     TwitterERROR.innerHTML = 'Twitter Handle  doesnot match Twitter format ';
     TwitterERROR.style = 'color:red';
     Twitterhandle.style.border = '1px solid red';
@@ -182,13 +189,13 @@ const validate = () => {
     Twitterhandle.style.border = '1px solid green';
   }
   // Validating Artist Email input
-
-  if (ArtistEmail.value == '') {
+  const artistEmail = ArtistEmail.value.trim();
+  if (artistEmail == '') {
     EmailERROR.innerHTML = 'Artist Email Field Required ';
     EmailERROR.style = 'color:red';
     ArtistEmail.style.border = '1px solid red';
     ArtistEmail.focus();
-  } else if (!ArtistEmail.value.match(emailFormat)) {
+  } else if (!artistEmail.match(emailFormat)) {
     EmailERROR.innerHTML = 'Email Format entered is Wrong';
     EmailERROR.style = 'color:red';
     ArtistEmail.style.border = '1px solid red';
@@ -207,26 +214,27 @@ const validate = () => {
   } else {
     DateofBirthERROR.innerHTML = 'Field correctly filled ';
     DateofBirthERROR.style = 'color:green ';
-    DateofBirth.style.border = '1px solid green';
+    DateofBirth.style.border = '1px solid green';   
   }
 
   // Validating Artist Based District.
-  if (BasedDistrict.value == '') {
+  const district = BasedDistrict.value.trim();
+  if (district == '') {
     BasedDistrictERROR.innerHTML = 'Artist Based District Field Required';
     BasedDistrictERROR.style = 'color:red';
     BasedDistrict.style.border = '1px solid red';
     BasedDistrict.focus();
-  } else if (!(BasedDistrict.value.length > 1)) {
+  } else if (!(district.length > 1)) {
     BasedDistrict.style.border = '1px solid red';
     BasedDistrictERROR.innerHTML = 'Based District is supposed to be more than one letter';
     BasedDistrictERROR.style = 'color:red ';
     BasedDistrict.focus();
-  } else if (!BasedDistrict.value.match(nonumber)) {
+  } else if (!district.match(nonumber)) {
     BasedDistrictERROR.innerHTML = 'Based District  should not  contain numbers';
     BasedDistrictERROR.style = 'color:red ';
     BasedDistrict.style.border = '1px solid red';
     BasedDistrict.focus();
-  } else if (!BasedDistrict.value.match(capitalize)) {
+  } else if (!district.match(capitalize)) {
     BasedDistrictERROR.innerHTML = ' Based District should start with a capital letter';
     BasedDistrictERROR.style = 'color:red ';
     BasedDistrict.style.border = '1px solid red';
@@ -237,12 +245,13 @@ const validate = () => {
     BasedDistrict.style.border = '1px solid green';
   }
   // Validating the NationalID NIN
-  if (NationalIDNIN.value == '') {
+  const nationalNIN = NationalIDNIN.value.trim();
+  if (nationalNIN == '') {
     NationalNINERROR.innerHTML = 'National ID NIN  Field  Required';
     NationalNINERROR.style = 'color:red';
     NationalIDNIN.style.border = '1px solid red';
     NationalIDNIN.focus();
-  } else if (!NationalIDNIN.value.match(nationalIDFormat)) {
+  } else if (!nationalNIN.match(nationalIDFormat)) {
     NationalNINERROR.innerHTML = 'National ID NIN  Format Wrong';
     NationalNINERROR.style = 'color:red';
     NationalIDNIN.style.border = '1px solid red';
@@ -264,22 +273,23 @@ const validate = () => {
     DateCareerStart.style.border = '1px solid green';
   }
   // Validating the Artiste location.
-  if (ArtistLocation.value == '') {
+  const artistLocation = ArtistLocation.value.trim();
+  if (artistLocation == '') {
     ArtistLocationERROR.innerHTML = 'Artist Location Field Required';
     ArtistLocationERROR.style = 'color:red';
     ArtistLocation.style.border = '1px solid red';
     ArtistLocation.focus();
-  } else if (!(ArtistLocation.value.length > 1)) {
+  } else if (!(artistLocation.length > 1)) {
     ArtistLocation.style.border = '1px solid red';
     ArtistLocationERROR.innerHTML = 'Artist Location  is supposed to be more than one letter';
     ArtistLocationERROR.style = 'color:red ';
     ArtistLocation.focus();
-  } else if (!ArtistLocation.value.match(nonumber)) {
+  } else if (!artistLocation.match(nonumber)) {
     ArtistLocationERROR.innerHTML = 'Artist Location   should not  contain numbers';
     ArtistLocationERROR.style = 'color:red ';
     ArtistLocation.style.border = '1px solid red';
     ArtistLocation.focus();
-  } else if (!ArtistLocation.value.match(capitalize)) {
+  } else if (!artistLocation.match(capitalize)) {
     ArtistLocationERROR.innerHTML = ' Artist Location  should start with a capital letter';
     ArtistLocationERROR.style = 'color:red ';
     ArtistLocation.style.border = '1px solid red';
@@ -289,7 +299,7 @@ const validate = () => {
     ArtistLocationERROR.style = 'color:green ';
     ArtistLocation.style.border = '1px solid green';
   }
-  // Validating the Number of Albums
+  // Validating the Number of Albums.
   if (NumberofAlbums.value == '') {
     NumberofAlbumsERROR.innerHTML = ' Number of Albums Field Required ';
     NumberofAlbumsERROR.style = 'color:red';
@@ -322,22 +332,23 @@ const validate = () => {
     NumberofSongs.style.border = '1px solid green';
   }
   // Validating Artist Genre .
-  if (ArtistGenre.value == '') {
+  const artistGenre = ArtistGenre.value.trim();
+  if (artistGenre == '') {
     GenreERROR.innerHTML = 'Artist Genre Field Required';
     GenreERROR.style = 'color:red';
     ArtistGenre.style.border = '1px solid red';
     ArtistGenre.focus();
-  } else if (!(ArtistGenre.value.length > 1)) {
+  } else if (!(artistGenre.length > 1)) {
     ArtistGenre.style.border = '1px solid red';
     GenreERROR.innerHTML = 'Artist Genre  is supposed to be more than one letter';
     GenreERROR.style = 'color:red ';
     ArtistGenre.focus();
-  } else if (!ArtistGenre.value.match(capitalize)) {
+  } else if (!artistGenre.match(capitalize)) {
     GenreERROR.innerHTML = ' Artist Genre  should start with a capital letter';
     GenreERROR.style = 'color:red ';
     ArtistGenre.style.border = '1px solid red';
     ArtistGenre.focus();
-  } else if (!ArtistGenre.value.match(alphaNumeric)) {
+  } else if (!artistGenre.match(alphaNumeric)) {
     ArtistGenre.style.border = '1px solid red';
     GenreERROR.innerHTML = ' Artist Genre Format should be Alphanumeric';
     GenreERROR.style = 'color:red';
