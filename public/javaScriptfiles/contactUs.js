@@ -15,23 +15,24 @@ const capitalize = /^[A-Z][a-z]/;
 const emailFormat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
 
 const validate = () => {
-  // Validating first name input
-  if (FirstName.value == '') {
+  // Validating first name input.
+  const firstName = FirstName.value.trim();
+  if (firstName == '') {
     FirstNameError.innerHTML = 'First Name Required ';
     FirstNameError.style = 'color:red';
     FirstName.style.border = '1px solid red';
     FirstName.focus();
-  } else if (!(FirstName.value.length > 1)) {
+  } else if (!(firstName.length > 1)) {
     FirstName.style.border = '1px solid red';
     FirstNameError.innerHTML = 'First Name Incomplete';
     FirstNameError.style = 'color:red ';
     FirstName.focus();
-  } else if (!FirstName.value.match(nonumber)) {
+  } else if (!firstName.match(nonumber)) {
     FirstNameError.innerHTML = 'Enter without numbers';
     FirstNameError.style = 'color:red ';
     FirstName.style.border = '1px solid red';
     FirstName.focus();
-  } else if (!FirstName.value.match(capitalize)) {
+  } else if (!firstName.match(capitalize)) {
     FirstNameError.innerHTML = 'Start with a capital letter';
     FirstNameError.style = 'color:red ';
     FirstName.style.border = '1px solid red';
@@ -43,22 +44,23 @@ const validate = () => {
   }
 
   // Validation for the last name input.
-  if (SecondName.value == '') {
+  const secondName = SecondName.value.trim();
+  if (secondName == '') {
     SecondNameError.innerHTML = 'Last Name Required ';
     SecondNameError.style = 'color:red';
     SecondName.style.border = '1px solid red';
     SecondName.focus();
-  } else if (!(SecondName.value.length > 1)) {
+  } else if (!(secondName.length > 1)) {
     SecondName.style.border = '1px solid red';
     SecondNameError.innerHTML = 'Last Name Incomplete';
     SecondNameError.style = 'color:red ';
     SecondName.focus();
-  } else if (!SecondName.value.match(nonumber)) {
+  } else if (!secondName.match(nonumber)) {
     SecondNameError.innerHTML = 'Enter without numbers';
     SecondNameError.style = 'color:red ';
     SecondName.style.border = '1px solid red';
     SecondName.focus();
-  } else if (!SecondName.value.match(capitalize)) {
+  } else if (!secondName.match(capitalize)) {
     SecondNameError.innerHTML = 'Start with a capital letter';
     SecondNameError.style = 'color:red ';
     SecondName.style.border = '1px solid red';
@@ -70,12 +72,13 @@ const validate = () => {
   }
 
   // Validating the email input.
-  if (Email.value == '') {
+  const email = Email.value.trim();
+  if (email == '') {
     EmailError.innerHTML = 'Email Field Required';
     EmailError.style = 'color:red';
     Email.style.border = '1px solid red ';
     Email.focus();
-  } else if (!Email.value.match(emailFormat)) {
+  } else if (!email.match(emailFormat)) {
     EmailError.innerHTML = 'Email Format entered is Wrong';
     EmailError.style = 'color:red';
     Email.style.border = '1px solid red';
@@ -87,7 +90,8 @@ const validate = () => {
   }
 
   // Validating the  message text area.
-  if (Message.value == '') {
+  const message = Message.value.trim();
+  if (message == '') {
     MessageError.innerHTML = 'Message Field Required ';
     MessageError.style = 'color:red';
     Message.style.border = '1px solid red';
