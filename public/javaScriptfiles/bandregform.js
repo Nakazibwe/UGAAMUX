@@ -43,32 +43,33 @@ const OtherBandOwnersERROR = document.getElementById('other-owners-error');
 // Regular expressions.
 const nonumber = /^[A-Za-z]+$/;
 const capitalize = /^[A-Z][a-z]/;
-const alphaNumeric = /^[a-zA-Z0-9]+$/;
+// const alphaNumeric = /^[a-zA-Z0-9]+$/; // Regex not currently in use.
 const systemIDFormat = /^[a-z]{3}\d+[a-z]{3}/;
 // const nationalIDFormat = /^[A-Z]{2}\d+[A-Z]{3}/;
 const phoneFormat = /^\d{12}$/;
-// const spacesFormat = /\[\[do\s+("[\w\s]+")\s*\]\]/;
+const alphaNumeric = /^[a-zA-Z0-9 ]*$/;
 const twitterFormat = /(^|[^@\w])@(\w{1,15})\b/;
 const emailFormat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
 
 const validate = () => {
-  // Validation of the Band Name input .
-  if (Bandname.value == '') {
+  // Validation of the Band Name input.
+  const bandName = Bandname.value.trim();
+  if (bandName == '') {
     BandnameERROR.innerHTML = 'Band  Name  Field  Required';
     BandnameERROR.style = 'color:red';
     Bandname.style.border = '1px solid red';
     Bandname.focus();
-  } else if (!(Bandname.value.length > 1)) {
+  } else if (!(bandName.length > 1)) {
     Bandname.style.border = '1px solid red';
     BandnameERROR.innerHTML = 'Band Name is supposed to be more than one letter';
     BandnameERROR.style = 'color:red ';
     Bandname.focus();
-  } else if (!Bandname.value.match(capitalize)) {
+  } else if (!bandName.match(capitalize)) {
     BandnameERROR.innerHTML = 'Band Name should start with a capital letter';
     BandnameERROR.style = 'color:red ';
     Bandname.style.border = '1px solid red';
     Bandname.focus();
-  } else if (!Bandname.value.match(alphaNumeric)) {
+  } else if (!bandName.match(alphaNumeric)) {
     Bandname.style.border = '1px solid red';
     BandnameERROR.innerHTML = 'Band Name  Format should be Alphanumeric';
     BandnameERROR.style = 'color:red';
@@ -79,23 +80,24 @@ const validate = () => {
     Bandname.style.border = '1px solid green';
   }
 
-  // Validating  the band owner input .
-  if (Bandowner.value == '') {
+  // Validating  the band owner input.
+  const bandOwner = Bandowner.value.trim();
+  if (bandOwner == '') {
     Bandowner.style.border = '1px solid red';
     BandownerERROR.innerHTML = ' Band Owner Field Required ';
     BandownerERROR.style = 'color:red';
     Bandowner.focus();
-  } else if (!(Bandowner.value.length > 1)) {
+  } else if (!(bandOwner.length > 1)) {
     Bandowner.style.border = '1px solid red';
     BandownerERROR.innerHTML = 'Band Owner is supposed to be more than one letter';
     BandownerERROR.style = 'color:red ';
     Bandowner.focus();
-  } else if (!Bandowner.value.match(nonumber)) {
+  } else if (!bandOwner.match(alphaNumeric)) {
     BandownerERROR.innerHTML = 'Band  Owner  should not  contain numbers';
     BandownerERROR.style = 'color:red ';
     Bandowner.style.border = '1px solid red';
     Bandowner.focus();
-  } else if (!Bandowner.value.match(capitalize)) {
+  } else if (!bandOwner.match(capitalize)) {
     BandownerERROR.innerHTML = 'Band Owner  should start with a capital letter';
     BandownerERROR.style = 'color:red ';
     Bandowner.style.border = '1px solid red';
@@ -107,25 +109,26 @@ const validate = () => {
   }
 
   // Validating the band home input.
-  if (Bandhome.value == '') {
+  const bandHome = Bandhome.value.trim();
+  if (bandHome == '') {
     BandhomeERROR.innerHTML = ' Band Home Field Required ';
     BandhomeERROR.style = 'color:red';
     Bandhome.style.border = '1px solid red';
     Bandhome.focus();
-  } else if (!(Bandhome.value.length > 1)) {
+  } else if (!(bandHome.length > 1)) {
     Bandhome.style.border = '1px solid red';
     BandhomeERROR.innerHTML = 'Band Home is supposed to be more than one letter';
     BandhomeERROR.style = 'color:red ';
     Bandhome.focus();
-  } else if (!Bandhome.value.match(capitalize)) {
-    BandhomeERROR.innerHTML = 'Band Home  should start with a capital letter';
-    BandhomeERROR.style = 'color:red ';
-    Bandhome.style.border = '1px solid red';
-    Bandhome.focus();
-  } else if (!Bandhome.value.match(alphaNumeric)) {
+  } else if (!bandHome.match(alphaNumeric)) {
     Bandhome.style.border = '1px solid red';
     BandhomeERROR.innerHTML = 'Band Home  Format should be Alphanumeric';
     BandhomeERROR.style = 'color:red';
+    Bandhome.focus();
+  } else if (!bandHome.match(capitalize)) {
+    BandhomeERROR.innerHTML = 'Band Home  should start with a capital letter';
+    BandhomeERROR.style = 'color:red ';
+    Bandhome.style.border = '1px solid red';
     Bandhome.focus();
   } else {
     BandhomeERROR.innerHTML = ' Field correctly filled ';
@@ -151,23 +154,23 @@ const validate = () => {
   }
 
   // Validating the band slogan input
-
-  if (Bandslogan.value == '') {
+  const bandSlogan = Bandslogan.value.trim();
+  if (bandSlogan == '') {
     BandSloganERROR.innerHTML = 'Band  Slogan  Field  Required ';
     BandSloganERROR.style = 'color:red';
     Bandslogan.style.border = '1px solid red';
     Bandslogan.focus();
-  } else if (!(Bandslogan.value.length > 1)) {
+  } else if (!(bandSlogan.length > 1)) {
     Bandslogan.style.border = '1px solid red';
     BandSloganERROR.innerHTML = 'Band  Slogan is supposed to be more than one letter';
     BandSloganERROR.style = 'color:red ';
     Bandslogan.focus();
-  } else if (!Bandslogan.value.match(capitalize)) {
+  } else if (!bandSlogan.match(capitalize)) {
     BandSloganERROR.innerHTML = 'Band  Slogan  should start with a capital letter';
     BandSloganERROR.style = 'color:red ';
     Bandslogan.style.border = '1px solid red';
     Bandslogan.focus();
-  } else if (!Bandslogan.value.match(alphaNumeric)) {
+  } else if (!bandSlogan.match(alphaNumeric)) {
     Bandslogan.style.border = '1px solid red';
     BandSloganERROR.innerHTML = 'Band Slogan  Format should be Alphanumeric';
     BandSloganERROR.style = 'color:red';
@@ -179,12 +182,13 @@ const validate = () => {
   }
 
   // Validating the band ID in the band.
-  if (Bandid.value == '') {
+  const bandID = Bandid.value.trim();
+  if (bandID == '') {
     BandIDERROR.innerHTML = ' Band ID Field is Required ';
     BandIDERROR.style = 'color:red';
     Bandid.style.border = '1px solid red';
     Bandid.focus();
-  } else if (!Bandid.value.match(systemIDFormat)) {
+  } else if (!bandID.match(systemIDFormat)) {
     Bandid.style.border = '1px solid red';
     BandIDERROR.innerHTML = ' Band  ID Format entered  is wrong';
     BandIDERROR.style = 'color:red';
@@ -195,7 +199,7 @@ const validate = () => {
     Bandid.style.border = '1px solid green';
   }
 
-  // Validating the  band number of songs
+  // Validating the  band number of songs.
   if (BandSongs.value == '') {
     BandSongsERROR.innerHTML = 'Band Songs Field Required ';
     BandSongsERROR.style = 'color:red';
@@ -212,7 +216,6 @@ const validate = () => {
     BandSongs.style.border = '1px solid green';
   }
   // Validating the date band was formed.
-
   if (DateofFormation.checked == false && DateofFormation.value == '') {
     DateofFormationERROR.innerHTML = 'Date of Formation  Field Required ';
     DateofFormationERROR.style = 'color:red';
@@ -225,12 +228,13 @@ const validate = () => {
   }
 
   // Validating the Band Telephone.
-  if (TelephoneContact.value == '') {
+  const bandphone = TelephoneContact.value.trim();
+  if (bandphone == '') {
     TelephoneERROR.innerHTML = 'Telephone Contact Field Required ';
     TelephoneERROR.style = 'color: red';
     TelephoneContact.style.border = '1px solid red';
     TelephoneContact.focus();
-  } else if (!TelephoneContact.value.match(phoneFormat)) {
+  } else if (!bandphone.match(phoneFormat)) {
     TelephoneERROR.innerHTML = 'Telephone Contact  Format Entered is Wrong';
     TelephoneERROR.style = 'color:red';
     TelephoneContact.style.border = '1px solid red';
@@ -242,12 +246,13 @@ const validate = () => {
   }
 
   // Validating the twitter handle of bands.
-  if (TwitterHandle.value == '') {
+  const bandTwitter = TwitterHandle.value.trim();
+  if (bandTwitter == '') {
     TwitterHandleERROR.innerHTML = ' Twitter  Handle  Field  Required ';
     TwitterHandleERROR.style = 'color:red ';
     TwitterHandle.style.border = ' 1px solid red ';
     TwitterHandle.focus();
-  } else if (!TwitterHandle.value.match(twitterFormat)) {
+  } else if (!bandTwitter.match(twitterFormat)) {
     TwitterHandleERROR.innerHTML = 'Twitter Handle  doesnot match Twitter format ';
     TwitterHandleERROR.style = 'color:red';
     TwitterHandle.style.border = '1px solid red';
@@ -258,13 +263,14 @@ const validate = () => {
     TwitterHandle.style.border = '1px solid green';
   }
 
-  // Validating the band email .
-  if (BandEmail.value == '') {
+  // Validating the band email.
+  const bandEmail = BandEmail.value.trim();
+  if (bandEmail == '') {
     BandEmailERROR.innerHTML = ' Band Email Field Required ';
     BandEmailERROR.style = 'color:red';
     BandEmail.style.border = '1px solid red ';
     BandEmail.focus();
-  } else if (!BandEmail.value.match(emailFormat)) {
+  } else if (!bandEmail.match(emailFormat)) {
     BandEmailERROR.innerHTML = 'Email Format entered is Wrong';
     BandEmailERROR.style = 'color:red';
     BandEmail.style.border = '1px solid red';
@@ -275,23 +281,24 @@ const validate = () => {
     BandEmail.style.border = '1px solid green';
   }
 
-  // Validation the Band Crowns .
-  if (Bandcrowns.value == '') {
+  // Validation the Band Crowns.
+  const bandCrowns = Bandcrowns.value.trim();
+  if (bandCrowns == '') {
     BandcrownsERROR.innerHTML = 'Band Crowns Field  Required ';
     BandcrownsERROR.style = 'color:red';
     Bandcrowns.style.border = '1px solid red ';
     Bandcrowns.focus();
-  } else if (!(Bandcrowns.value.length > 1)) {
+  } else if (!(bandCrowns.length > 1)) {
     Bandcrowns.style.border = '1px solid red';
     BandcrownsERROR.innerHTML = 'Band Crowns are  supposed to be more than one letter';
     BandcrownsERROR.style = 'color:red ';
     Bandcrowns.focus();
-  } else if (!Bandcrowns.value.match(capitalize)) {
+  } else if (!bandCrowns.match(capitalize)) {
     BandcrownsERROR.innerHTML = 'Band Crowns  should start with a capital letter';
     BandcrownsERROR.style = 'color:red ';
     Bandcrowns.style.border = '1px solid red';
     Bandcrowns.focus();
-  } else if (!Bandcrowns.value.match(alphaNumeric)) {
+  } else if (!bandCrowns.match(alphaNumeric)) {
     Bandcrowns.style.border = '1px solid red';
     BandcrownsERROR.innerHTML = 'Band Crowns Format should be Alphanumeric';
     BandcrownsERROR.style = 'color:red';
@@ -320,22 +327,23 @@ const validate = () => {
   }
 
   // Validating the Genre of Band.
-  if (Genre.value == '') {
+  const bandgenre = Genre.value.trim();
+  if (bandgenre == '') {
     GenreERROR.innerHTML = ' Genre field Required ';
     GenreERROR.style = 'color:red';
     Genre.style.border = '1px solid red';
     Genre.focus();
-  } else if (!(Genre.value.length > 1)) {
+  } else if (!(bandgenre.length > 1)) {
     Genre.style.border = '1px solid red';
     GenreERROR.innerHTML = 'Genre  is  supposed to be more than one letter';
     GenreERROR.style = 'color:red ';
     Genre.focus();
-  } else if (!Genre.value.match(capitalize)) {
+  } else if (!bandgenre.match(capitalize)) {
     GenreERROR.innerHTML = 'Genre   should start with a capital letter';
     GenreERROR.style = 'color:red ';
     Genre.style.border = '1px solid red';
     Genre.focus();
-  } else if (!Genre.value.match(alphaNumeric)) {
+  } else if (!bandgenre.match(alphaNumeric)) {
     Genre.style.border = '1px solid red';
     GenreERROR.innerHTML = 'Genre Format should be Alphanumeric';
     GenreERROR.style = 'color:red';
@@ -367,7 +375,8 @@ const validate = () => {
   }
 
   // Validating more band owners.
-  if (Bandsponsors.value == '') {
+  const bandSponsors = Bandsponsors.value.trim();
+  if (bandSponsors == '') {
     BandsponsorsERROR.innerHTML = 'Band Sponsors Field Required. If Non indicate N/A';
     BandsponsorsERROR.style = 'color:red';
     Bandsponsors.style.border = '1px solid red ';
@@ -379,7 +388,8 @@ const validate = () => {
   }
 
   // Validating more band owners.
-  if (OtherBandOwners.value == '') {
+  const otherBandOwners = OtherBandOwners.value.trim();
+  if (otherBandOwners == '') {
     OtherBandOwnersERROR.innerHTML = 'Other Band Owners Field Required. If Non indicate N/A';
     OtherBandOwnersERROR.style = 'color:red';
     OtherBandOwners.style.border = '1px solid red ';
@@ -389,7 +399,7 @@ const validate = () => {
     OtherBandOwnersERROR.style = 'color:green ';
     OtherBandOwners.style.border = '1px solid green';
   }
-};
+};   
 
 const Bandform = document.getElementById('form-id');
 Bandform.addEventListener('submit', validate);
