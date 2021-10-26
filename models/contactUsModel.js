@@ -8,22 +8,22 @@ const contactUsSchema = new mongoose.Schema({
     firstname: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
     },
     lastname: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
     },
     email: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
          
     },
     message: {
         type: String,
-        default: '', 
+        required: true,  
         
     },
 });  
