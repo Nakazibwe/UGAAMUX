@@ -3,107 +3,123 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable indent */
 const mongoose = require('mongoose');
+const passportmongoose = require('passport-local-mongoose');
 
 const artistsRegSchema = new mongoose.Schema({
     
     firstName: {
         type: String,
         trim: true,
-        default: '',
+        required: true,  
     },
-    lastName: {
-        type: String,
+    lastName: {   
+        type: String, 
         trim: true,
-        default: '',
+        required: true, 
     },
     stageName: {
         type: String,
         trim: true,
-        default: '',
+        required: true, 
          
     },
     artistID: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
         
     },
     telephone: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
     },
     twitter: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
     },
     email: {
         type: String,
         trim: true,
         unique: true,
-        default: '',
+        required: true,
          
     },
     ArtistDOB: {
         type: Date,
         trim: true,
+        required: true,
         
         
     },
     basedDistrict: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
     },
     nationalIDNIN: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
     },
     datestartedsing: {
         type: Date,
         trim: true,
+        required: true,
          
     },
     Location: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
         
     },
     numberofalbums: {
         type: Number,
         trim: true,
         default: 0,
+        required: true,
         
     },
     numberofsongs: {
         type: Number,
         trim: true,
         default: 0,
+        required: true,
         
+    },
+    password: {
+        type: String,
+        trim: true,
+        required: true,
+    },
+    role: {
+        type: String,
+        trim: true,
+        required: true,
     },
     genre: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
         
     },
     gender: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
         
     },
     pictureupload: {
+        
         data: Buffer,
         contentType: String,
            
-    },
-
-
-
+    },  
+});
+artistsRegSchema.plugin(passportmongoose, {
+    usernameField: 'email',
     
 });
-module.exports = mongoose.model('ArtistsReg', artistsRegSchema);
+module.exports = mongoose.model('ArtistsReg', artistsRegSchema);  
