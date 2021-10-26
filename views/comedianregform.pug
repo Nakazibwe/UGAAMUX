@@ -1,0 +1,149 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title  UGAAMUX Comedian Registration form
+    link(rel='stylesheet' href='/cssfiles/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/cssfiles/comedianregform.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Carter+One&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+  body
+    nav#top-navbar.navbar.navbar-expand-lg.navbar-dark
+      .container-fluid
+        a#navbar-logo.navbar-brand(href='/registrationpage')
+          small#small-log UGAA
+          | MUX
+          img#logopicture(src='/imagefiles/ugflag.jpeg' alt='UG-LOGO' height='30px' width='50px')
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarNavAltMarkup.collapse.navbar-collapse
+          #navbar-inner-div.navbar-nav
+            a#navbar-admin.nav-link(aria-current='page' href='/registrationpage') ADMIN
+            a#navbar-artistes.nav-link(href='/artists') Artists
+            a#navbar-bands.nav-link(href='/bands') Bands
+            a#navbar-comedians.nav-link(href='/comedians') Comedians
+            a#navbar-contactus.nav-link(href='/contactUs') Contact Us
+            .dropdown
+              a#navbar-dropdown.btn.btn-secondary.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                | Account
+              ul.dropdown-menu(aria-labelledby='dropdownMenuLink')
+                li
+                  a#sign-out.dropdown-item(href='/') LOG OUT
+    h4.h4regform Comedian Registration
+    .container
+      form#form-id(action='/registercomedian/comedianregistrationform' method='POST' name='ComedianRegistration')
+        .row
+          .col-lg-4.form-action-cols
+            .form-action
+              label#firstname(for='') First Name
+              input#fname(type='text' name='firstName' placeholder='Enter Comedian First Name ')
+            small#firstname-error.error
+            .form-action
+              label#lastname(for='') Last Name
+              input#lname(type='text' name='lastName' placeholder='Enter Comedian Last Name ')
+            small#lastname-error.error
+            .form-action
+              label#stgname(for='') Stage Name
+              br
+              input#stgname(type='text' name='stagename' placeholder='Enter Comedian Stage name')
+            small#stagename-error.error
+            .form-action
+              label#ComedianID(for='') Comedian ID
+              br
+              input#comedian-id(type='text' name='comedianID' placeholder='Enter Comedian ID')
+            small#comedianID-error.error
+            .form-action
+              label#telcontact(for='') Telephone Contact(256)
+              br
+              input#telecontact(type='text' name='comedianphone' placeholder='Enter Comedian Phone number' )
+            small#telephone-error.error
+            .form-action
+              label#nin(for='') National ID NIN
+              br
+              input#NIN-id(type='text' name='NationalNIN' placeholder='Enter Comedian  NIN')
+            small#nationalNIN-error.error
+          .col-lg-4.form-action-cols
+            .form-action
+              label#socialcontact(for='') Twitter Handle
+              br
+              input#twitter-contact(type='text' placeholder='Enter Comedian twitter handle' name='twitter')
+            small#twitter-error.error
+            .form-action
+              label#contact(for='') Email 
+              br
+              input#email-contact(type='text' placeholder='Enter Comedian Email' name='email')
+            small#email-error.error
+            .form-action
+              label#DOB(for='') Date of birth
+              br
+              input#dob-id(max='2017-12-31' name='ComedianDOB' type='date')
+            small#comedianDOB-ERROR.error
+            .form-action
+              label#location(for='') Location
+              br
+              input#location(type='text' name='Location' placeholder='Enter Comedian location')
+            small#location-error.error
+            .form-action
+              label#based(for='') Based(District)
+              br
+              input#based(type='text' name='Based' placeholder='Enter district comedian is based')
+            small#district-based-error.error
+            .form-action
+              label#date-started(for='') Date Began Comedy
+              br
+              input#date-started(type='date' name='startedcomedy')
+            small#datestartedcomedyerror.error
+          .col-lg-4.form-action-cols
+            p#pgender Gender
+            #gender-form
+              span
+                label#fmale(for='smale') Male
+                input#smale(type='radio' name='gender' value='male')
+              span
+                label#fmale(for='sfemale') Female
+                input#sfemale(type='radio' name='gender' value='female')
+            small#gender-error.error
+            .form-action
+              label#profile-photo(for='') Profile Picture
+              br
+              input#profile-pic(type='file' name='uploadedpicture')
+            small#upload-error.error
+            #button-form
+              input#submit-btn(type='submit' name='submit-button' value='SUBMIT')
+              input#cancel-btn(type='reset' name='cancel-button' value='CANCEL')
+    .navbar.navbar-expand-lg.navbar-dark.footer
+      a.nav-link.copy(href='#') &copy 2021 Grace Nakazibwe 
+      small#small-quote Ugandan Talent Lives Here
+      .nav-container
+        a.nav-link.icon(href='#')
+          i.fa.fa-facebook-square
+        a.nav-link.icon(href='#')
+          i.fa.fa-twitter-square
+        a.nav-link.icon(href='#')
+          i.fa.fa-google-plus-square
+        a.nav-link.icon(href='#')
+          i.fa.fa-instagram
+        a.nav-link.icon(href='#')
+          i.fa.fa-linkedin
+    script(src='/javaScriptfiles/js/bootstrap.min.js')
+    script(src='/javaScriptfiles/comedianregform.js')
