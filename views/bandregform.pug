@@ -1,0 +1,167 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title UGAAMUX Bands Registration Form
+    link(rel='stylesheet' href='/cssfiles/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/cssfiles/bandregform.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Carter+One&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+  body
+    nav#top-navbar.navbar.navbar-expand-lg.navbar-dark
+      .container-fluid
+        a#navbar-logo.navbar-brand(href='/registrationpage')
+          small#small-log UGAA
+          | MUX
+          img#logopicture(src='/imagefiles/ugflag.jpeg' alt='UG-LOGO' height='30px' width='50px')
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarNavAltMarkup.collapse.navbar-collapse
+          #navbar-inner-div.navbar-nav
+            a#navbar-admin.nav-link(aria-current='page' href='/registrationpage') ADMIN
+            a#navbar-artistes.nav-link(href='/artists') Artists
+            a#navbar-bands.nav-link(href='/bands') Bands
+            a#navbar-comedians.nav-link(href='/comedians') Comedians
+            a#navbar-contactus.nav-link(href='/contactUs') Contact Us
+            .dropdown
+              a#navbar-dropdown.btn.btn-secondary.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                | Account
+              ul.dropdown-menu(aria-labelledby='dropdownMenuLink')
+                li
+                  a#sign-out.dropdown-item(href='/') LOG OUT
+    h4.h4regform Band Registration
+    .container
+      form#form-id(action='/bandregistrationform' method='POST' name='BandRegistration')
+        .row
+          .col-lg-4.form-action-cols
+            .form-action
+              label#bandname(for='') Band Name
+              br
+              input#band-name(type='text' placeholder='Enter Band Name ' name='BandName')
+            small#bandname-error.error
+            .form-action
+              label#bandowner(for='') Band Owner
+              br
+              input#band-owner(type='text' placeholder=' Enter Band Owner ' name='BandOwner')
+            small#bandowner-error.error
+            .form-action
+              label#bandhome(for='') Band Home
+              br
+              input#band-home(type='text' placeholder=' Enter Band Home ' name='BandHome')
+            small#bandhome-error.error
+            .form-action
+              label#bandmembers(for='') Number of Members
+              br
+              input#band-numbers(type='number' name='BandNumber')
+            small#bandmembers-error.error
+            .form-action
+              label#bandslogan(for='') Band Slogan
+              br
+              input#band-slogan(type='text' placeholder='Enter Band Slogan' name='BandSlogan')
+            small#bandslogan-error.error
+            .form-action
+              label#Band-ID(for='') Band ID
+              br
+              input#band-id(type='text' name='bandID' placeholder='Enter Band ID')
+            small#bandID-error.error
+            .form-action
+              label#numofsongs(for='') Number of Songs
+              br
+              input#numsongs(type='number' name='numberofsongs')
+            small#numberofsongs-ERROR.error
+          .col-lg-4.form-action-cols
+            .form-action
+              label#date-of-formation(for='') Date of Formation
+              br
+              input#date-of-formation(type='date' name='DateFormation')
+            small#dateofformationERROR.error
+            .form-action
+              label#telcontact(for='')  Band Telephone Contact(256)
+              br
+              input#telecontact(type='text' placeholder='Enter Band  Phone number' name='telephone')
+            small#telephone-error.error
+            .form-action
+              label#socialcontact(for='') Twitter Handle
+              br
+              input#twitter-contact(type='text' placeholder='Enter Band twitter handle' name='twitter')
+            small#twitterhandle-error.error
+            .form-action
+              label#contact(for='') Email 
+              br
+              input#email-contact(type='text' placeholder='Enter Band email' name='email')
+            small#email-error.error
+            .form-action
+              label#band-crowns(for='') Band Crowns(if any)
+              br
+              input#band-crowns(type='text' placeholder='Enter Band Crowns' name='bandCrowns')
+            small#bandcrowns-error.error
+            .form-action
+              label#albums(for='') Number of Albums
+              br
+              input#band-albums(type='number' name='albums')
+            small#albums-error.error
+            .form-action
+              label#genre(for='')  Genre 
+              br
+              input#band-genre(type='text' placeholder=' Enter Band Genre ' name='genre')
+            small#genre-error.error
+          .col-lg-4.form-action-cols
+            .form-action
+              label#band-icon(for='')  Band Icon 
+              br
+              input#Band-icon(type='file' name='icon')
+            small#band-icon-error.error
+            .form-action
+              label#profile-pic(for='')  Profile Picture 
+              br
+              input#profile-photo(type='file' name='Profilepicture')
+            small#profilephoto-error.error
+            .form-action
+              label#otherowners(for='')  Other Owners, (if any) 
+              br
+              textarea#Otherowners(name='ownership' placeholder='Enter Other band Owners' cols='30' rows='10')
+            small#other-owners-error.error
+            .form-action
+              label#sponsors(for='') Band Sponsors,(if any)
+              br
+              textarea#band-sponsors(name='bandsponsors' placeholder='Enter Band Sponsors' cols='30' rows='10')
+            small#sponsors-ERROR.error
+            #button-form
+              input#submit-btn(type='submit' name='submit-button' value='SUBMIT')
+              input#cancel-btn(type='reset' name='cancel-button' value='CANCEL')
+    .navbar.navbar-expand-lg.navbar-dark.footer
+      a.nav-link.copy(href='#') &copy 2021 Grace Nakazibwe 
+      small#small-quote Ugandan Talent Lives Here
+      .nav-container
+        a.nav-link.icon(href='#')
+          i.fa.fa-facebook-square
+        a.nav-link.icon(href='#')
+          i.fa.fa-twitter-square
+        a.nav-link.icon(href='#')
+          i.fa.fa-google-plus-square
+        a.nav-link.icon(href='#')
+          i.fa.fa-instagram
+        a.nav-link.icon(href='#')
+          i.fa.fa-linkedin
+    script(src='/javaScriptfiles/js/bootstrap.min.js')
+    script(src='/javaScriptfiles/bandregform.js')
