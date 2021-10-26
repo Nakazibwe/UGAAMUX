@@ -12,18 +12,36 @@
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
+const passport = require('passport');
+const expressSession = require('express-session')({
+    secret: 'secret',
+    resave: false,
+    saveUninitialized: false
+  });
+
+const ArtistsReg = require('./models/artistRegModel');
+
+
+const artistRegRoutes = require('./routes/registerArtistRoutes');
+const comedianRegRoutes = require('./routes/registerComediansRoutes');
+
+
+
+
 const Contactus = require('./models/contactUsModel');
 const RegMessage = require('./models/registerMessageModel');
-const ArtistsReg = require('./models/artistRegModel');
-const ComedianReg = require('./models/comedianRegModel');
-const BandReg = require('./models/bandRegModel');
+
+
+
 const ForgotPassword = require('./models/forgotpasswdModel');
+
+require('dotenv').config();
 // Instatiations
 const app = express();
 // PORT.
 const port = process.env.PORT || 3000;
 
-mongoose.connect('mongodb://localhost:27017/UGAAMUX', {
+mongoose.connect(process.env.DATABASE, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     // useCreateIndex: true,
@@ -40,18 +58,40 @@ mongoose.connection
 
 // Configurations
 app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine','pug');
+app.set('view engine', 'pug');
 
 // Middle-ware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(expressSession);
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(ArtistsReg.createStrategy());
+passport.serializeUser(ArtistsReg.serializeUser());
+passport.deserializeUser(ArtistsReg.deserializeUser());
+
+
+
+
 // Routes
+// Routes to the register artist pages.
+app.use('/registerartist', artistRegRoutes);
+
+// Routes to the register comedian pages.
+app.use('/registercomedian', comedianRegRoutes);
+
+
+
 // Route to  get the landing page (index.html)
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html');
 });
-   
+
+
+// module.exports = router;
+
 // Route to get to the about Us page.
 app.get('/aboutUs', (req, res) => {
     res.sendFile(__dirname + '/views/aboutUs.html');
@@ -115,26 +155,8 @@ app.get('/registrationpage', (req, res) => {
     res.sendFile(__dirname + '/views/registrationpage.html');
 });
 
-// Route to the registration of artists
-app.get('/artistregistrationform', (req, res) => {
-    res.sendFile(__dirname + '/views/artistregform.html');
-});
 
-// Route to post the data from the artist registration page.
 
-app.post('/artistregistrationform', (req, res) => {
-    console.log(req.body);
-});
-
-// Route to the comedians registration page.
-app.get('/comedianregistrationform', (req, res) => {
-    res.sendFile(__dirname + '/views/comedianregform.html');
-});
-
-// Route to post from  comedians registration page.
-app.post('/comedianregistrationform', (req, res) => {
-    console.log(req.body);
-});
 
 // Route to the bands registration page.
 app.get('/bandregistrationform', (req, res) => {
