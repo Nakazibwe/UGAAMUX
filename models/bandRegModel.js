@@ -10,90 +10,97 @@ const BandRegSchema = new mongoose.Schema({
     BandName: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
     },
     BandOwner: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
     },
     BandHome: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
         
     },
     BandNumber: {
         type: Number,
         trim: true,
         default: 0,
+        required: true,
     },
     BandSlogan: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
     },
     bandID: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
                    
     },
     numberofsongs: {
         type: Number,
         trim: true,
         default: 0,
+        required: true,
     },
     DateFormation: {
         type: Date,
         trim: true,
+        required: true,
         
     },
     telephone: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
                   
     },
     twitter: {
         type: String,
         trim: true,
         default: '',
+        required: true,
     },
     email: {
         type: String,
         trim: true,
         unique: true,
-        default: '',
+        required: true,
     },
     bandCrowns: {
         type: String,
         trim: true,
-        default: '',
+        
                 
     },
     albums: {
         type: Number,
         trim: true,
-        default: '',
+        required: true,
     },
     genre: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
           
     },
     icon: {
+        
         data: Buffer,
         contentType: String,
         
+        
     },
     Profilepicture: {
+        
         data: Buffer,
         contentType: String,
                    
     },
-    ownership: {
+    ownership: {  
         type: String,
         default: '',
         
@@ -102,7 +109,7 @@ const BandRegSchema = new mongoose.Schema({
         type: String,
         default: '',
         
-    },
+    },  
     
    
 });       
