@@ -10,16 +10,16 @@ const RegMessageSchema = new mongoose.Schema({
     customername: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
     },
     customeremail: {
         type: String,
         trim: true,
-        default: '',
+        required: true,
     },
     message: {
         type: String,
-        default: '',
+        required: true,
                 
         
     }, 
