@@ -41,8 +41,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav" id="navbar-inner-div">
-                    <a class="nav-link" aria-current="page" id="navbar-admin"
-                        href="/registrationpage">ADMIN</a>
+                    <a class="nav-link" aria-current="page" id="navbar-admin" href="/registrationpage">ADMIN</a>
                     <a class="nav-link" id="navbar-artistes" href="/artists">Artists</a>
                     <a class="nav-link" id="navbar-bands" href="/bands">Bands</a>
                     <a class="nav-link" id="navbar-comedians" href="/comedians">Comedians</a>
@@ -65,10 +64,10 @@
         </div>
     </nav>
     <h4 class="h4regform">Comedian Registration</h4>
-    <div class="container">  
+    <div class="container">
 
 
-        <form action="/comedianregistrationform" method = "POST"  name="ComedianRegistration" id="form-id">
+        <form action="/comedianregistrationform" method="POST" name="ComedianRegistration" id="form-id">
             <div class="row">
                 <div class="col-lg-4 form-action-cols">
                     <div class="form-action">
@@ -96,7 +95,8 @@
 
                     <div class="form-action">
                         <label for="" id="telcontact">Telephone Contact(256)</label><br>
-                        <input type="text"  name = "comedianphone" placeholder="Enter Comedian Phone number" name="telephone" id="telecontact">
+                        <input type="text" name="comedianphone" placeholder="Enter Comedian Phone number"
+                             id="telecontact">
                     </div>
                     <small class="error" id="telephone-error"></small>
                     <div class="form-action">
@@ -114,18 +114,18 @@
                         <input type="text" placeholder="Enter Comedian twitter handle" name="twitter"
                             id="twitter-contact">
                     </div>
-                    <small class="error" id= "twitter-error"></small>
+                    <small class="error" id="twitter-error"></small>
                     <div class="form-action">
                         <label for="" id="contact">Email </label><br>
                         <input type="text" placeholder="Enter Comedian Email" name="email" id="email-contact">
                     </div>
-                    <small class="error" id = "email-error"></small>
+                    <small class="error" id="email-error"></small>
                     <div class="form-action">
 
                         <label for="" id="DOB">Date of birth</label><br>
-                        <input  max='2017-12-31' name="ComedianDOB" type="date" id="dob-id">
+                        <input max='2017-12-31' name="ComedianDOB" type="date" id="dob-id">
                     </div>
-                    <small class="error" id= "comedianDOB-ERROR"></small>
+                    <small class="error" id="comedianDOB-ERROR"></small>
 
                     <div class="form-action">
                         <label for="" id="location">Location</label><br>
@@ -140,14 +140,14 @@
                     <small class="error" id="district-based-error"></small>
                     <div class="form-action">
                         <label for="" id="date-started">Date Began Comedy</label><br>
-                        <input type="date" name = "startedcomedy" id="date-started">
+                        <input type="date" name="startedcomedy" id="date-started">
                     </div>
                     <small class="error" id="datestartedcomedyerror"></small>
 
 
                 </div>
                 <div class="col-lg-4 form-action-cols">
- 
+
 
                     <p id="pgender">Gender</p>
                     <div id="gender-form">
@@ -158,13 +158,13 @@
                             <input type="radio" name="gender" value="female" id="sfemale"></span>
 
                     </div>
-                    <small class="error" id = "gender-error" ></small>
+                    <small class="error" id="gender-error"></small>
 
                     <div class="form-action">
                         <label for="" id="profile-photo">Profile Picture</label><br>
                         <input id="artiste-image" type="file" name="uploadedpicture" id="profile-pic">
                     </div>
-                    <small class="error" id ="upload-error"></small>
+                    <small class="error" id="upload-error"></small>
                     <div id="button-form">
                         <input id="submit-btn" type="submit" name="submit-button" value="SUBMIT">
                         <input id="cancel-btn" type="reset" name="cancel-button" value="CANCEL">
@@ -192,5 +192,5 @@
     <script src="/javaScriptfiles/js/bootstrap.min.js"></script>
     <script src="/javaScriptfiles/comedianregform.js"></script>
 </body>
- 
+
 </html>
