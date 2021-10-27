@@ -29,7 +29,7 @@ const BandhomeERROR = document.getElementById('bandhome-error');
 const BandmenbersERROR = document.getElementById('bandmembers-error');
 const BandSloganERROR = document.getElementById('bandslogan-error');
 const BandIDERROR = document.getElementById('bandID-error');
-const BandsponsorsERROR = document.getElementById('sponsors-ERROR');
+const BandsponsorsERROR = document.getElementById('sponsors-ERROR'); 
 const DateofFormationERROR = document.getElementById('dateofformationERROR');
 const TelephoneERROR = document.getElementById('telephone-error');
 const TwitterHandleERROR = document.getElementById('twitterhandle-error');
@@ -41,7 +41,7 @@ const BandSongsERROR = document.getElementById('numberofsongs-ERROR');
 const BandIconERROR = document.getElementById('band-icon-error');
 const ProfilePictureERROR = document.getElementById('profilephoto-error');
 const OtherBandOwnersERROR = document.getElementById('other-owners-error');
-const passWordERROR = document.getElementById('passworderror');
+const passwordERROR = document.getElementById('passworderror');
 const userRoleERROR = document.getElementById('roles-error');
 
 // Regular expressions.
@@ -406,19 +406,19 @@ const validate = () => {
   // Validating the password input.
   const userpassword = Password.value.trim();
   if (userpassword == '') {
-    passWordERROR.innerHTML = 'Password Field Required ';
-    passWordERROR.style = 'color:red';
     Password.style.border = '1px solid red';
+    passwordERROR.innerHTML = 'Password Field Required';
+    passwordERROR.style = 'color:red';
     Password.focus();
   } else if (!(userpassword.length > 8)) {
-    passWordERROR.innerHTML = 'Enter password with more than 8 characters';
-    passWordERROR.style = 'color:red';
+    passwordERROR.innerHTML = 'Enter password with more than 8 characters';
+    passwordERROR.style = 'color:red';
     Password.style.border = '1px solid red';
-    Password.focus(); 
+    Password.focus();
   } else {
-    passWordERROR.innerHTML = 'Field Correctly Field';
-    passWordERROR.style = 'color:green';
     Password.style.border = '1px solid green';
+    passwordERROR.innerHTML = 'Password Field Filled';
+    passwordERROR.style = 'color:green';
   }
 
   // Validating the role input.
