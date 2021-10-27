@@ -134,7 +134,7 @@ app.post('/login', passport.authenticate('local', { failureRedirect: '/login' })
     console.log(req.body);
 
     res.redirect('/artistinfo/artistsaccount');
-});
+});  
 
 // Route to the forgot password page.
 app.get('/forgotpassword', (req, res) => {
