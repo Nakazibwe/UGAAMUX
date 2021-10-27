@@ -20,10 +20,12 @@ const expressSession = require('express-session')({
   });
 
 const ArtistsReg = require('./models/artistRegModel');
+const ClerkReg = require('./models/clerkRegModel');
 
-
+   
 const artistRegRoutes = require('./routes/registerArtistRoutes');
 const comedianRegRoutes = require('./routes/registerComediansRoutes');
+const bandRegRoutes = require('./routes/registerBandsRoutes');
 
 
 
@@ -49,7 +51,7 @@ mongoose.connect(process.env.DATABASE, {
 });
 
 mongoose.connection
-    .on('open', () => {
+    .on('open', () => { 
         console.log('Mongoose connection open');
     })
     .on('error', (err) => {
@@ -82,7 +84,8 @@ app.use('/registerartist', artistRegRoutes);
 // Routes to the register comedian pages.
 app.use('/registercomedian', comedianRegRoutes);
 
-
+// Routes to the register band pages. 
+app.use('/registerband', bandRegRoutes);
 
 // Route to  get the landing page (index.html)
 app.get('/', (req, res) => {
@@ -90,7 +93,6 @@ app.get('/', (req, res) => {
 });
 
 
-// module.exports = router;
 
 // Route to get to the about Us page.
 app.get('/aboutUs', (req, res) => {
@@ -150,23 +152,12 @@ app.get('/registermessage', (req, res) => {
 app.post('/registermessage', (req, res) => {
     console.log(req.body);
 });
-// Route to the register page for clerk
+// Route to the dashbord  for clerk to register creatives .
 app.get('/registrationpage', (req, res) => {
     res.sendFile(__dirname + '/views/registrationpage.html');
 });
 
 
-
-
-// Route to the bands registration page.
-app.get('/bandregistrationform', (req, res) => {
-    res.sendFile(__dirname + '/views/bandregform.html');
-});
-
-// Route to post from  band registration page.
-app.post('/bandregistrationform', (req, res) => {
-    console.log(req.body);
-});
 // Route to go  to the  Ugaamux artist account.
 app.get('/artistaccount', (req, res) => {
     res.sendFile(__dirname + '/views/artistaccount.html');
@@ -179,9 +170,16 @@ app.get('/comedianaccount', (req, res) => {
 
 // Route to go the Ugaamux band account.
 app.get('/bandaccount', (req, res) => {
-    res.sendFile(__dirname + '/views/bandaccount.html');
+    res.sendFile(__dirname + '/views/bandaccount.html'); 
 });
 
+// Route to go the clerk registration page. 
+app.get('/clerkregistrationform', (req, res) => {
+    res.sendFile(__dirname + '/views/clerkregform.html');
+});
+app.post('/clerkregistrationform', (req, res) => {
+    console.log(req.body);
+});
 
 
 
