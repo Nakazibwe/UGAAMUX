@@ -87,7 +87,17 @@ const BandRegSchema = new mongoose.Schema({
         required: true,
           
     },
-    icon: {
+    password: {
+        type: String,
+        trim: true,
+        required: true,
+    },
+    role: {
+        type: String,
+        trim: true,
+        required: true,
+    },
+    icon: {   
         
         data: Buffer,
         contentType: String,
