@@ -51,7 +51,7 @@ html(lang='en')
                   a#sign-out.dropdown-item(href='/') LOG OUT
     h4.h4regform Band Registration
     .container
-      form#form-id(action='/bandregistrationform' method='POST' name='BandRegistration')
+      form#form-id(action='/registerband/bandregistrationform' method='POST' name='BandRegistration')
         .row
           .col-lg-4.form-action-cols
             .form-action
@@ -126,6 +126,20 @@ html(lang='en')
               input#band-genre(type='text' placeholder=' Enter Band Genre ' name='genre')
             small#genre-error.error
           .col-lg-4.form-action-cols
+
+            .form-action
+              label#passwd(for='') Password
+              br
+              input#userpassword(type='password' placeholder = "Create Password" name='password')
+            small#passworderror.error
+            
+            .form-action
+              label#userrole(for='') Role
+              br 
+              select#roles(name="role")
+                option(value="default") Select a role 
+                option(value="band") Band
+            small#roles-error.error
             .form-action
               label#band-icon(for='')  Band Icon 
               br
@@ -162,6 +176,6 @@ html(lang='en')
         a.nav-link.icon(href='#')
           i.fa.fa-instagram
         a.nav-link.icon(href='#')
-          i.fa.fa-linkedin
+          i.fa.fa-linkedin  
     script(src='/javaScriptfiles/js/bootstrap.min.js')
     script(src='/javaScriptfiles/bandregform.js')
