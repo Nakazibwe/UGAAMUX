@@ -20,6 +20,8 @@ const BandSongs = document.BandRegistration.numberofsongs;
 const BandIcon = document.BandRegistration.icon;
 const ProfilePicture = document.BandRegistration.Profilepicture;
 const OtherBandOwners = document.BandRegistration.ownership;
+const Password = document.BandRegistration.password;
+const Role = document.BandRegistration.role;
 
 const BandnameERROR = document.getElementById('bandname-error');
 const BandownerERROR = document.getElementById('bandowner-error');
@@ -39,6 +41,8 @@ const BandSongsERROR = document.getElementById('numberofsongs-ERROR');
 const BandIconERROR = document.getElementById('band-icon-error');
 const ProfilePictureERROR = document.getElementById('profilephoto-error');
 const OtherBandOwnersERROR = document.getElementById('other-owners-error');
+const passWordERROR = document.getElementById('passworderror');
+const userRoleERROR = document.getElementById('roles-error');
 
 // Regular expressions.
 const nonumber = /^[A-Za-z]+$/;
@@ -399,7 +403,37 @@ const validate = () => {
     OtherBandOwnersERROR.style = 'color:green ';
     OtherBandOwners.style.border = '1px solid green';
   }
-};   
+  // Validating the password input.
+  const userpassword = Password.value.trim();
+  if (userpassword == '') {
+    passWordERROR.innerHTML = 'Password Field Required ';
+    passWordERROR.style = 'color:red';
+    Password.style.border = '1px solid red';
+    Password.focus();
+  } else if (!(userpassword.length > 8)) {
+    passWordERROR.innerHTML = 'Enter password with more than 8 characters';
+    passWordERROR.style = 'color:red';
+    Password.style.border = '1px solid red';
+    Password.focus(); 
+  } else {
+    passWordERROR.innerHTML = 'Field Correctly Field';
+    passWordERROR.style = 'color:green';
+    Password.style.border = '1px solid green';
+  }
+
+  // Validating the role input.
+  const userRole = Role.value.trim();
+  if (userRole == 'default') {
+    userRoleERROR.innerHTML = 'Role Field Required';
+    userRoleERROR.style = 'color:red';
+    Role.style.border = '1px solid red';
+    Role.focus();
+  } else {
+    userRoleERROR.innerHTML = 'Field Correctly Field';
+    userRoleERROR.style = 'color:green';
+    Role.style.border = '1px solid green';
+  }
+};
 
 const Bandform = document.getElementById('form-id');
 Bandform.addEventListener('submit', validate);
