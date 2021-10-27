@@ -12,6 +12,8 @@ const ComedianLocation = document.ComedianRegistration.Location;
 const BasedDistrict = document.ComedianRegistration.Based;
 const DateCareerStart = document.ComedianRegistration.startedcomedy;
 const Profilepicture = document.ComedianRegistration.uploadedpicture;
+const Role = document.ComedianRegistration.role;
+const Password = document.ComedianRegistration.password;
 const Male = document.getElementById('smale');
 const Female = document.getElementById('sfemale');
 
@@ -29,6 +31,8 @@ const BasedDistrictERROR = document.getElementById('district-based-error');
 const DateCareerStartERROR = document.getElementById('datestartedcomedyerror');
 const GenderERROR = document.getElementById('gender-error');
 const ProfilepictureERROR = document.getElementById('upload-error');
+const PassWordERROR = document.getElementById('passworderror');
+const userRoleERROR = document.getElementById('roles-error');
 
 // Regular expressions.
 const nonumber = /^[A-Za-z]+$/;
@@ -308,6 +312,37 @@ const validate = () => {
   } else {
     ProfilepictureERROR.innerHTML = 'Field correctly filled';
     ProfilepictureERROR.style = 'color:green ';
+  }
+
+  // Validating Password input field.
+  const userpassword = Password.value.trim();
+  if (userpassword == '') {
+    PassWordERROR.innerHTML = 'Password Field Required ';
+    PassWordERROR.style = 'color:red';
+    Password.style.border = '1px solid red';
+    Password.focus();
+  } else if (!(userpassword.length > 8)) {
+    PassWordERROR.innerHTML = 'Enter password with more than 8 characters';
+    PassWordERROR.style = 'color:red';
+    Password.style.border = '1px solid red';
+    Password.focus();
+  } else {
+    PassWordERROR.innerHTML = 'Field Correctly Field';
+    PassWordERROR.style = 'color:green';
+    Password.style.border = '1px solid green';
+  }
+
+  // Validating userrole input field.
+  const userrole = Role.value.trim();
+  if (userrole == 'default') {
+    userRoleERROR.innerHTML = 'Role Field Required';
+    userRoleERROR.style = 'color:red';
+    Role.style.border = '1px solid red';
+    Role.focus();
+  } else {
+    userRoleERROR.innerHTML = 'Field Correctly Field';
+    userRoleERROR.style = 'color:green';
+    Role.style.border = '1px solid green';
   }
 };
 
