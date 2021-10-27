@@ -17,7 +17,7 @@ const ComedianRegSchema = new mongoose.Schema({
         trim: true,
         required: true,
     },
-    stagename: {
+    stagename: {  
         type: String,
         trim: true,
         required: true,        
@@ -67,6 +67,16 @@ const ComedianRegSchema = new mongoose.Schema({
     },
     startedcomedy: {
         type: Date,
+        trim: true,
+        required: true,
+    },
+    password: {
+        type: String,
+        trim: true,
+        required: true,
+    },
+    role: {
+        type: String,
         trim: true,
         required: true,
     },
