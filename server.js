@@ -16,13 +16,13 @@ const passport = require('passport');
 const expressSession = require('express-session')({
     secret: 'secret',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
   });
 
 const ArtistsReg = require('./models/artistRegModel');
 const ClerkReg = require('./models/clerkRegModel');
 
-   
+
 const artistRegRoutes = require('./routes/registerArtistRoutes');
 const comedianRegRoutes = require('./routes/registerComediansRoutes');
 const bandRegRoutes = require('./routes/registerBandsRoutes');
@@ -51,7 +51,7 @@ mongoose.connect(process.env.DATABASE, {
 });
 
 mongoose.connection
-    .on('open', () => { 
+    .on('open', () => {
         console.log('Mongoose connection open');
     })
     .on('error', (err) => {
@@ -62,10 +62,11 @@ mongoose.connection
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+
 // Middle-ware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use('/public/imagefiles', express.static(__dirname + '/public/imagefiles'));
 app.use(expressSession);
 app.use(passport.initialize());
 app.use(passport.session());
@@ -79,12 +80,12 @@ passport.deserializeUser(ArtistsReg.deserializeUser());
 
 // Routes
 // Routes to the register artist pages.
-app.use('/registerartist', artistRegRoutes);
+app.use('/artistinfo', artistRegRoutes);
 
 // Routes to the register comedian pages.
 app.use('/registercomedian', comedianRegRoutes);
 
-// Routes to the register band pages. 
+// Routes to the register band pages.
 app.use('/registerband', bandRegRoutes);
 
 // Route to  get the landing page (index.html)
@@ -126,11 +127,13 @@ app.post('/contactUs', (req, res) => {
 
 // Route to the login in page.
 app.get('/login', (req, res) => {
-    res.sendFile(__dirname + '/views/login.html');
+    res.render('login');
 });
 // Route to post data from the login page.
-app.post('/login', (req, res) => {
+app.post('/login', passport.authenticate('local', { failureRedirect: '/login' }), (req, res) => {
     console.log(req.body);
+
+    res.redirect('/artistinfo/artistsaccount');
 });
 
 // Route to the forgot password page.
@@ -158,10 +161,7 @@ app.get('/registrationpage', (req, res) => {
 });
 
 
-// Route to go  to the  Ugaamux artist account.
-app.get('/artistaccount', (req, res) => {
-    res.sendFile(__dirname + '/views/artistaccount.html');
-});
+
 
 // Route to go to the Ugaamux comedian account.
 app.get('/comedianaccount', (req, res) => {
@@ -170,10 +170,10 @@ app.get('/comedianaccount', (req, res) => {
 
 // Route to go the Ugaamux band account.
 app.get('/bandaccount', (req, res) => {
-    res.sendFile(__dirname + '/views/bandaccount.html'); 
+    res.sendFile(__dirname + '/views/bandaccount.html');
 });
 
-// Route to go the clerk registration page. 
+// Route to go the clerk registration page.
 app.get('/clerkregistrationform', (req, res) => {
     res.sendFile(__dirname + '/views/clerkregform.html');
 });
