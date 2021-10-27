@@ -82,12 +82,14 @@ html(lang='en')
               br
               input#twitter-contact(type='text' placeholder='Enter Artist twitter handle' name='twitter')
             small#twitter-error.error
-          .col-lg-4.form-action-cols
             .form-action
               label#contact(for='') Email 
               br
               input#email-contact(type='text' placeholder='Enter Artist Email' name='email')
             small#email-error.error
+
+          .col-lg-4.form-action-cols
+
             .form-action
               label#DOB(for='') Date of birth
               br
@@ -113,29 +115,32 @@ html(lang='en')
               br
               input#location(type='text' name='Location' placeholder='Enter Artist Location')
             small#loacation-error.error
-          .col-lg-4.form-action-cols
             .form-action
               label#numofalbums(for='') Number of Albums
               br
               input#numalbums(type='number' name='numberofalbums')
-            small#number-of-album-error.error
+            small#number-of-album-error.error 
             .form-action
               label#numofsongs(for='') Number of Songs
               br
               input#numsongs(type='number' name='numberofsongs')
             small#number-of-song-error.error
+
+          .col-lg-4.form-action-cols
+
+
             .form-action
-              label#numofsongs(for='') Password
+              label#passwd(for='') Password
               br
-              input#numsongs(type='password' name='password')
-            small#number-of-song-error.error
+              input#userpassword(type='password' placeholder = "Create Password"  name='password')
+            small#passworderror.error
             .form-action
-              label#numofsongs(for='') Role
+              label#userrole(for='') Role
               br
               select#roles(name="role")
                 option(value="default") Select a role 
                 option(value="artist") Artist 
-            small#number-of-song-error.error
+            small#roles-error.error
             .form-action
               label#genre(for='') Genre
               br
