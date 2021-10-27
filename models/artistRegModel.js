@@ -112,11 +112,10 @@ const artistsRegSchema = new mongoose.Schema({
         
     },
     pictureupload: {
-        
-        data: Buffer,
-        contentType: String,
-           
-    },  
+        type: String,
+    }
+    
+     
 });
 artistsRegSchema.plugin(passportmongoose, {
     usernameField: 'email',
