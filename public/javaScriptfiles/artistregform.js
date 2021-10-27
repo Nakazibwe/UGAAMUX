@@ -382,7 +382,7 @@ const validate = () => {
   // Validating password field input.
   const userpassword = Password.value.trim();
   if (userpassword == '') {
-    Password.style.border = '1px solid red';
+    Password.style.border = '1px solid red';   
     PasswordERROR.innerHTML = 'Password Field Required';
     PasswordERROR.style = 'color:red';
     Password.focus();
