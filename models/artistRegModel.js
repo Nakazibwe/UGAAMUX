@@ -108,7 +108,7 @@ const artistsRegSchema = new mongoose.Schema({
     gender: {
         type: String,
         trim: true,
-        required: true,
+        required: true, 
         
     },
     pictureupload: {
