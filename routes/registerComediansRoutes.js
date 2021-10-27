@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-path-concat */
 /* eslint-disable prefer-template */
 const express = require('express');
