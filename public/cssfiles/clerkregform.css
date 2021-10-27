@@ -52,7 +52,7 @@ body {
     padding-top: 20px;
     box-sizing: border-box;
     text-align: center;
-    margin-top: 2%;
+    margin-top: 1%;
     height: auto;
     background-color: #2b313e;
 }
@@ -65,29 +65,29 @@ body {
 #firstname {
     width: 90%;
     font-family: 'Open Sans', sans-serif;
-    height: 55px;
+    height: 40px;
 }
 /*The properties of the userlast name input */
 #lastname {
     width: 90%;
     font-family: 'Open Sans', sans-serif;
-    height: 50px;
+    height: 40px;
 }
 
 #clerkemail {
     width: 90%;
     font-family: 'Open Sans', sans-serif;
-    height: 50px;
+    height: 40px;
 }
 #clerkrole {
     width: 90%;
     font-family: 'Open Sans', sans-serif;
-    height: 50px;
+    height: 40px;
 }
 #clerkpassword {
     width: 90%;
     font-family: 'Open Sans', sans-serif;
-    height: 50px;
+    height: 40px; 
 }
 /*The properties  of the register  button*/
 #submitmessage {
