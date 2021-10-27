@@ -8,6 +8,7 @@ const UserPassWordERROR = document.getElementById('password-error');
 // Regular expressions.
 // const alphaNumeric = /^[a-zA-Z0-9]+$/; // Regex that is currectly not in use.
 const alphaNumeric = /^[a-zA-Z0-9 ]*$/;
+const emailFormat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
 const validate = () => {
   // Validating  the Username input.
   const userName = UserName.value.trim();
@@ -16,12 +17,12 @@ const validate = () => {
     UserNameERROR.style = ' color : red';
     UserName.style.border = '1px solid red';
     UserName.focus();
-  } else if (!(userName.length > 1)) {
+  } else if (!(userName.length > 2)) {
     UserName.style.border = '1px solid red';
     UserNameERROR.innerHTML = 'Username Incomplete';
     UserNameERROR.style = 'color:red ';
     UserName.focus();
-  } else if (!userName.match(alphaNumeric)) {
+  } else if (!userName.match(emailFormat)) {
     UserName.style.border = '1px solid red';
     UserNameERROR.innerHTML = 'Incorrect Username Format ';
     UserNameERROR.style = 'color:red';
