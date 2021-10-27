@@ -34,19 +34,14 @@ const validate = () => {
   // Validating  the user  password input.
   const password = PassWord.value.trim();
   if (password == '') {
-    UserPassWordERROR.innerHTML = 'UserName  Field  Required ';
+    UserPassWordERROR.innerHTML = 'Password   Field  Required ';
     UserPassWordERROR.style = ' color : red';
     PassWord.style.border = '1px solid red';
     PassWord.focus();
-  } else if (!(password.length > 4)) {
+  } else if (!(password.length > 8)) {
     PassWord.style.border = '1px solid red';
     UserPassWordERROR.innerHTML = 'Password  Incomplete';
     UserPassWordERROR.style = 'color:red ';
-    PassWord.focus();
-  } else if (!password.match(alphaNumeric)) {
-    PassWord.style.border = '1px solid red';
-    UserPassWordERROR.innerHTML = 'Incorrect Password Format ';
-    UserPassWordERROR.style = 'color:red';
     PassWord.focus();
   } else {
     UserPassWordERROR.innerHTML = ' Field Correctly Filled, Thank you ';
