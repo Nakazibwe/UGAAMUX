@@ -55,8 +55,9 @@ body{
      padding-top: 20px;
      box-sizing: border-box;
      text-align: center;
-     margin-top:2%;
-     height:420px;
+     margin-top:1%;
+     height:440px;
+     margin-bottom: 8%;
      background-color: #2B313E;
      
    }
@@ -86,8 +87,7 @@ body{
     height: 55px; 
     color:#fff;
     text-align: center;
-    font-weight: 900;
-    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
     line-height: 1;
     background: #ef672a;
     border: 1px solid #ef672a;
@@ -114,7 +114,6 @@ body{
 .footer{
    margin-top: 2%;
    height: 60px;
-   border:2px solid white;
    background-color: #434853;
 }
 .nav-link {
@@ -128,7 +127,7 @@ body{
    display: flex;
 }
 .icon {
-   color: #fff;
+   color: #fff;  
 }
 .copy {
    font-family: sans-serif;
@@ -146,3 +145,7 @@ body{
 #small-quote:hover {
    color: rgb(215, 94, 39);
 }
+
+
+
+
