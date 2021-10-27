@@ -22,6 +22,8 @@ const NumberofAlbums = document.ArstisteRegistration.numberofalbums;
 const NumberofSongs = document.ArstisteRegistration.numberofsongs;
 const ArtistGenre = document.ArstisteRegistration.genre;
 const PictureFile = document.ArstisteRegistration.pictureupload;
+const Password = document.ArstisteRegistration.password;
+const Role = document.ArstisteRegistration.role;
 const MaleGender = document.getElementById('smale');
 const FemaleGender = document.getElementById('sfemale');
 
@@ -42,6 +44,8 @@ const NumberofSongsERROR = document.getElementById('number-of-song-error');
 const GenreERROR = document.getElementById('genre-error');
 const PictureFileERROR = document.getElementById('pictureupload-error');
 const GenderERROR = document.getElementById('gender-error');
+const PasswordERROR = document.getElementById('passworderror');
+const UserroleERROR = document.getElementById('roles-error');
 
 // Regular expressions.
 const nonumber = /^[A-Za-z]+$/;
@@ -214,7 +218,7 @@ const validate = () => {
   } else {
     DateofBirthERROR.innerHTML = 'Field correctly filled ';
     DateofBirthERROR.style = 'color:green ';
-    DateofBirth.style.border = '1px solid green';   
+    DateofBirth.style.border = '1px solid green';
   }
 
   // Validating Artist Based District.
@@ -374,6 +378,35 @@ const validate = () => {
   } else {
     PictureFileERROR.innerHTML = 'Field correctly filled';
     PictureFileERROR.style = 'color:green ';
+  }
+  // Validating password field input.
+  const userpassword = Password.value.trim();
+  if (userpassword == '') {
+    Password.style.border = '1px solid red';
+    PasswordERROR.innerHTML = 'Password Field Required';
+    PasswordERROR.style = 'color:red';
+    Password.focus();
+  } else if (!(userpassword.length > 8)) {
+    PasswordERROR.innerHTML = 'Enter password with more than 8 characters';
+    PasswordERROR.style = 'color:red';
+    Password.style.border = '1px solid red';
+    Password.focus();
+  } else {
+    Password.style.border = '1px solid green';
+    PasswordERROR.innerHTML = 'Password Field Filled';
+    PasswordERROR.style = 'color:green';
+  }
+  // Validating user role field input.
+  const userrole = Role.value.trim();
+  if (userrole =='default') {
+    UserroleERROR.innerHTML = 'Role Field Required';
+    UserroleERROR.style = 'color:red';
+    Role.style.border = '1px solid red';
+    Role.focus();
+  } else {
+    UserroleERROR.innerHTML = 'Field Correctly Field';
+    UserroleERROR.style = 'color:green';
+    Role.style.border = '1px solid green';
   }
 };
 
