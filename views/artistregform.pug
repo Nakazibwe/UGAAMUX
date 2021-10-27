@@ -51,7 +51,7 @@ html(lang='en')
                   a#sign-out.dropdown-item(href='/') LOG OUT
     h4.h4regform Artist Registration
     .container
-      form#form-id(action='/registerartist/artistregistrationform' method='POST' name='ArstisteRegistration')
+      form#form-id(action='/registerartist/artistregistrationform' method='POST' name='ArstisteRegistration' enctype="multipart/form-data" )
         .row
           .col-lg-4.form-action-cols
             .form-action
@@ -169,7 +169,7 @@ html(lang='en')
       .nav-container
         a.nav-link.icon(href='#')
           i.fa.fa-facebook-square
-        a.nav-link.icon(href='#')
+        a.nav-link.icon(href='#') 
           i.fa.fa-twitter-square
         a.nav-link.icon(href='#')
           i.fa.fa-google-plus-square
