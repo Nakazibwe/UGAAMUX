@@ -12,7 +12,7 @@ html(lang='en')
     link(rel='preconnect' href='https://fonts.googleapis.com')
     link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
     link(rel='preconnect' href='https://fonts.googleapis.com')
-    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)  
     link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap' rel='stylesheet')
     link(href='https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap' rel='stylesheet')
     link(rel='preconnect' href='https://fonts.googleapis.com')
@@ -114,6 +114,21 @@ html(lang='en')
               input#date-started(type='date' name='startedcomedy')
             small#datestartedcomedyerror.error
           .col-lg-4.form-action-cols
+            .form-action
+              label#passwd(for='') Password
+              br
+              input#userpassword(type='password' placeholder = "Create Password" name='password')
+            small#passworderror.error
+
+            .form-action
+              label#userrole(for='') Role
+              br
+              select#roles(name="role")
+                option(value="default") Select a role 
+                option(value="comedian") Comedian
+            small#roles-error.error
+
+
             p#pgender Gender
             #gender-form
               span
