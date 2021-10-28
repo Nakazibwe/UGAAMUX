@@ -5,6 +5,8 @@
 /* eslint-disable indent */
 const mongoose = require('mongoose');
 
+const passportmongoose = require('passport-local-mongoose');
+
 const BandRegSchema = new mongoose.Schema({
     
     BandName: {
@@ -18,7 +20,7 @@ const BandRegSchema = new mongoose.Schema({
         required: true,
     },
     BandHome: {
-        type: String,
+        type: String, 
         trim: true,
         required: true,
         
@@ -98,16 +100,13 @@ const BandRegSchema = new mongoose.Schema({
         required: true, 
     },
     icon: {   
-        
-        data: Buffer,
-        contentType: String,
+        type: String,  
+    
         
         
     },
     Profilepicture: {
-        
-        data: Buffer,
-        contentType: String,
+        type: String,
                    
     },
     ownership: {  
@@ -122,5 +121,11 @@ const BandRegSchema = new mongoose.Schema({
     },  
     
    
-});       
+});
+
+BandRegSchema.plugin(passportmongoose, { 
+    usernameField: 'email', 
+    
+});
+
 module.exports = mongoose.model('BandReg', BandRegSchema);
