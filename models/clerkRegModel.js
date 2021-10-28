@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const passportmongoose = require('passport-local-mongoose');
+
 const ClerkRegSchema = new mongoose.Schema({
 
   firstname: {
@@ -29,4 +31,9 @@ const ClerkRegSchema = new mongoose.Schema({
   },
 
 });
+ClerkRegSchema.plugin(passportmongoose, {
+  usernameField: 'email',
+
+});
+
 module.exports = mongoose.model('ClerkReg', ClerkRegSchema);
