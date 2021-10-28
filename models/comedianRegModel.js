@@ -4,6 +4,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable indent */
 const mongoose = require('mongoose');
+const passportmongoose = require('passport-local-mongoose');
 
 const ComedianRegSchema = new mongoose.Schema({
     
@@ -86,11 +87,15 @@ const ComedianRegSchema = new mongoose.Schema({
         required: true,
     },
     uploadedpicture: {
-        
-        data: Buffer,
-        contentType: String,
+        type: String,  
+
               
     },  
     
-});      
+});
+
+ComedianRegSchema.plugin(passportmongoose, {
+    usernameField: 'email', 
+    
+});
 module.exports = mongoose.model('ComedianReg', ComedianRegSchema);
