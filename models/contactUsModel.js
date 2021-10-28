@@ -26,5 +26,6 @@ const contactUsSchema = new mongoose.Schema({
         required: true,   
         
     },
-});  
+});
+
 module.exports = mongoose.model('Contactus', contactUsSchema);
