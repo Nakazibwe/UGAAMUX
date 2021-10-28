@@ -37,7 +37,7 @@ router.post('/artistregistrationform', upload.single('pictureupload'), async (re
         throw err;
         console.log('Data has not been posted', err);
       }
-      res.redirect('/artistinfo/artistregistrationform');
+      res.redirect('/artistinfo/artistregistrationform'); 
     });
   } catch (err) {
     res.status(400).send('Sorry! Data was not sent to DB');
