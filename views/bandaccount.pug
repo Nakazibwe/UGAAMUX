@@ -51,13 +51,13 @@ html(lang='en')
           .row
             a.bandgenre Genre 
               br
-              | RnB
+              | #{band.genre} 
             a.bandalbums Albums
               br
-              | 23
+              | #{band.albums} 
             a.bandsongs Songs 
               br
-              | 234
+              | #{band.numberofsongs} 
         .col-lg-6.band-info
           .row.moreinformation
             h5 Band Information
@@ -74,19 +74,22 @@ html(lang='en')
               p Band crowns
               p Additional owners
               p Band sponsors
+        if bands.length 
+        each band in bands
+
             .col-lg-5.containerB
-              p Band's name
-              p Band's owner
-              p Band's home
-              p Band members
-              p Band's slogan
-              p Date of formation
-              p Band's Telephone
-              p Band's Twitter
-              p Band's Email
-              p Band's crowns
-              p Additional band owners
-              p Band's sponsors
+              p #{band.BandName} 
+              p #{band.BandOwner} 
+              p #{band.BandHome} 
+              p #{band.BandNumber} 
+              p #{band.BandSlogan} 
+              p #{band.DateFormation} 
+              p #{band.telephone} 
+              p #{band.twitter} 
+              p #{band.email} 
+              p #{band.bandCrowns} 
+              p #{band.ownership} 
+              p #{band.bandsponsors} 
     .navbar.navbar-expand-lg.navbar-dark.footer
       a.nav-link.copy(href='#') &copy 2021 Grace Nakazibwe 
       small#small-quote Ugandan Talent Lives Here
