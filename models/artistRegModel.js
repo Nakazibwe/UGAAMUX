@@ -92,12 +92,12 @@ const artistsRegSchema = new mongoose.Schema({
     password: {
         type: String,
         trim: true,
-        required: true,
+        required: true, 
     },
     role: {
         type: String,
         trim: true,
-        required: true,
+        required: true, 
     },
     genre: {
         type: String,
@@ -121,4 +121,4 @@ artistsRegSchema.plugin(passportmongoose, {
     usernameField: 'email',
     
 });
-module.exports = mongoose.model('ArtistsReg', artistsRegSchema);  
+module.exports = mongoose.model('ArtistsReg', artistsRegSchema);     
