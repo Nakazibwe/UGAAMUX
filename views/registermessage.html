@@ -28,10 +28,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
 </head>
 
-<body>   
+<body>
     <!--Code for the top nav on the register message page-->
     <nav class="navbar navbar-expand-lg navbar-dark " id="top-navbar">
         <div class="container-fluid">
@@ -58,20 +58,20 @@
                 src="/imagefiles/ugflag.jpeg" alt="UG-LOGO" id="logopicture" height="30px" width="50px"></a>
         <p>Unfortunately, you are unable to self register!</p>
         <p>Send us a Message, we shall contact you.</p>
-        <form  action = "/registermessage" method = "POST" name ="RegisterMessage" id="form-id">
+        <form action="/registermessage" method="POST" name="RegisterMessage" id="form-id">
             <div class="form-action">
-                <input type="text"  name= "customername" id="visitorname" placeholder="Enter Your Name">
+                <input type="text" name="customername" id="visitorname" placeholder="Enter Your Name">
             </div>
             <small id="name-error"></small>
             <div class="form-action">
-                <input type="text" name= "customeremail" id="visitoremail" placeholder="Enter Your Email">
+                <input type="text" name="customeremail" id="visitoremail" placeholder="Enter Your Email">
             </div>
-            <small id="email-error"> </small>  
+            <small id="email-error"> </small>
             <div class=form-action>
                 <textarea name="message" id="customermessage" rows="5" cols="33"
                     placeholder="Type A Message"></textarea>
             </div>
-            <small id="message-error"></small>  
+            <small id="message-error"></small>
             <div class="form-action">
                 <input type="submit" id="submitmessage" value="SEND MESSAGE ">
             </div>
