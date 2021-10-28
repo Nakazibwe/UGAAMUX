@@ -42,16 +42,16 @@ html(lang='en')
             a#navbar-artistes.nav-link(href='/artists') Artists
             a#navbar-bands.nav-link(href='/bands') Bands
             a#navbar-comedians.nav-link(href='/comedians') Comedians
-            a#navbar-contactus.nav-link(href='/contactUs') Contact Us
+            a#navbar-contactus.nav-link(href='/contactinfo/contactUs') Contact Us
             .dropdown
               a#navbar-dropdown.btn.btn-secondary.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
                 | Account
               ul.dropdown-menu(aria-labelledby='dropdownMenuLink')
                 li
                   a#sign-out.dropdown-item(href='/') LOG OUT
-    h4.h4regform Comedian Registration
+    h4.h4regform Comedian Registration  
     .container
-      form#form-id(action='/registercomedian/comedianregistrationform' method='POST' name='ComedianRegistration')
+      form#form-id(action='/comedianinfo/comedianregistrationform' method='POST' name='ComedianRegistration' enctype="multipart/form-data")
         .row
           .col-lg-4.form-action-cols
             .form-action
@@ -60,7 +60,7 @@ html(lang='en')
             small#firstname-error.error
             .form-action
               label#lastname(for='') Last Name
-              input#lname(type='text' name='lastName' placeholder='Enter Comedian Last Name ')
+              input#lname(type='text' name='lastName' placeholder='Enter Comedian Last Name ') 
             small#lastname-error.error
             .form-action
               label#stgname(for='') Stage Name
