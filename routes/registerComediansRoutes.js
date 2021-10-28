@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 /* eslint-disable no-path-concat */
 /* eslint-disable prefer-template */
@@ -17,4 +18,4 @@ router.post('/comedianregistrationform', (req, res) => {
   console.log(req.body);
 });
 
-module.exports = router;
+module.exports = router; 
