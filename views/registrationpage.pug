@@ -1,0 +1,83 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title UGAAMUX Creatives Registration Page
+    link(rel='stylesheet' href='/cssfiles/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/cssfiles/registrationpage.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Carter+One&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+  body
+    // -Code for the top navigation bar
+    nav#top-navbar.navbar.navbar-expand-lg.navbar-dark
+      .container-fluid
+        a#navbar-logo.navbar-brand(href='/registrationpage')
+          small#small-log UGAA
+          | MUX
+          img#logopicture(src='/imagefiles/ugflag.jpeg' alt='UG-LOGO' height='30px' width='50px')
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarNavAltMarkup.collapse.navbar-collapse
+          #navbar-inner-div.navbar-nav
+            a#navbar-aboutus.nav-link(aria-current='page' href='/aboutUs')
+              | About
+              | Us
+            a#navbar-artistes.nav-link(href='/artists') Artists
+            a#navbar-bands.nav-link(href='/bands') Bands
+            a#navbar-comedians.nav-link(href='/comedians') Comedians
+            a#navbar-contactus.nav-link(href='/contactinfo/contactUs') Contact Us
+            .dropdown
+              a#navbar-dropdown.btn.btn-secondary.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                | Account
+              ul.dropdown-menu(aria-labelledby='dropdownMenuLink')
+                li
+                  a#sign-out.dropdown-item(href='/') LOG OUT
+    .container
+      h2 Welcome to UGAAMUX
+      p
+        | Please make sure you enter information correctly. All creatives are to present valid documents before
+        | registration, to avoid impersonation. After registration avail login details to all registered creatives,
+        | immediately.
+      br
+      p Choose a registration form
+      br
+      a(href='/bandinfo/bandregistrationform') Bands
+      a(href='/artistinfo/artistregistrationform') Artists
+      a(href='/comedianinfo/comedianregistrationform') Comedians
+      br
+      small.small-text Ugandan Talent Lives Here!!!
+    .navbar.navbar-expand-lg.navbar-dark.footer
+      a.nav-link.copy(href='#') &copy 2021 Grace Nakazibwe 
+      small#small-quote Ugandan Talent Lives Here
+      .nav-container
+        a.nav-link.icon(href='#')
+          i.fa.fa-facebook-square
+        a.nav-link.icon(href='#')
+          i.fa.fa-twitter-square
+        a.nav-link.icon(href='#')
+          i.fa.fa-google-plus-square
+        a.nav-link.icon(href='#')
+          i.fa.fa-instagram
+        a.nav-link.icon(href='#')
+          i.fa.fa-linkedin
+    script(src='/javaScriptfiles/js/bootstrap.min.js')
