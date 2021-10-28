@@ -1,0 +1,308 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title UGAAMUX Artists
+    link(rel='stylesheet' href='/cssfiles/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/cssfiles/artists.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Carter+One&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(href='https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+  body
+    // -Code for the top navigation bar
+    nav#top-navbar.navbar.navbar-expand-lg.navbar-dark
+      .container-fluid
+        a#navbar-logo.navbar-brand(href='/')
+          small#small-log UGAA
+          | MUX
+          img#logopicture(src='/imagefiles/ugflag.jpeg' alt='UG-LOGO' height='30px' width='50px')
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarNavAltMarkup.collapse.navbar-collapse
+          #navbar-inner-div.navbar-nav
+            a#navbar-home.nav-link(href='/')  Home
+            a#navbar-aboutus.nav-link(aria-current='page' href='/aboutUs')
+              | About
+              | Us
+            a#navbar-artistes.nav-link(href='/artists') Artists
+            a#navbar-bands.nav-link(href='/bands') Bands
+            a#navbar-comedians.nav-link(href='/comedians') Comedians
+            a#navbar-contactus.nav-link(href='/contactinfo/contactUs') Contact Us
+    // Code for the header section
+    #header.container-fluid
+      // Code for the inner text box inside the header section
+      .header-text-area
+        form.d-flex.top-search
+          input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
+          button.btn.btn-outline-success.search-btn(type='submit') Search
+        h1 Artists
+        small#small-header-quote Ugandan Talent Lives Here!!!
+    #row1.row
+      #image-div1.col-lg-2.col-sm-12
+        img#azawiimage.img-fluid(src='/imagefiles/Azawi.jpeg' alt='Azawi photo')
+      #text-div1.col-lg-3.col-sm-12
+        h5#title-ID1.card-title  Azawi 
+        p.card-text
+          | During her musical journey as a songwriter, Azawi was
+          | discovered by
+          | Swangz Avenue music label. She has 15 songs and among these is the famous,
+          | "Quanaminno". She promised that she would start to work on her first album, which is currently
+          | unfamiliar.
+        a.card-text(href='#')
+          small.text-muted
+            | @AzawiOfficial
+      #image-div2.col-lg-2.col-sm-12
+        img#camili-img.img-fluid(src='/imagefiles/Chameleon.jpeg' alt='Chameleon photo')
+      #text-div2.col-lg-3.col-sm-12
+        h5#title-ID2.card-title  Jose Chameleone
+        p.card-text
+          | Chameleon started his music career in the early 1990s with the
+          | Ogopa Deejays, He has 13 known albums and
+          | several songs like the popular "Wale Wale". He is the founder of Leone Island
+          | label which
+          | he uses to record his music.
+        a.card-text(href='#')
+          small.text-muted
+            | @JChameleone
+    #row2.row
+      #image-div3.col-lg-2.col-sm-12
+        img#fik-img.img-fluid(src='/imagefiles/FikFamaica.jpeg' alt='FikFamaica photo')
+      #text-div3.col-lg-3.col-sm-12
+        h5#title-ID3.card-title  Fik Fameica 
+        p.card-text
+          | Fik Fameica fame came in 2015 with "Pistol" under the Black
+          | Man Town
+          | music label. Fik has nine albums, and several songs
+          | like the popular "Omu Bwati".
+        a.card-text(href='#')
+          small.text-muted  @FFameica
+      #image-div4.col-lg-2.col-sm-12
+        img#juliana-img.img-fluid(src='/imagefiles/JulianaKanyomozi.jpeg' alt='Juliana Kanyomozi photo')
+      #text-div4.col-lg-3.col-sm-12
+        h5#title-ID4.card-title  Juliana Kanyomozi
+        p.card-text
+          | Juliana went solo with her music career, and evolved from
+          | Karaoke
+          | singer, and made a successful career. She has 14 known albums and several songs including the popular,
+          | "Kanyimbe"
+        a.card-text(href='#')
+          small.text-muted
+            | @JKanyomozi
+    #row3.row
+      #image-div5.col-lg-2.col-sm-12
+        img#mung-img.img-fluid(src='/imagefiles/MunG.jpeg' alt='MunG photo')
+      #text-div5.col-lg-3.col-sm-12
+        h5#title-ID5.card-title  MUN*G
+        p.card-text
+          | MUN*G is a rap artist under the label BABOON FOREST
+          | ENTERMAINMENT.He has been in the rap game for some time.
+          | He has 19 albums including the famous, "Kyaba Too Much”
+        a.card-text(href='#')
+          small.text-muted  @MunGmato
+      #image-div6.col-lg-2.col-sm-12
+        img#vinka-img.img-fluid(src='/imagefiles/Vinka.jpeg' alt='Vinka photo')
+      #text-div6.col-lg-3.col-sm-12
+        h5#title-ID6.card-title  Vinka 
+        p.card-text
+          | Late 2016, the record label she worked for asked her to
+          | convert into a musician.
+          | She is currently signed to the Swangz Avenue label and she has 17 albums, this
+          | includes the famous, "Love Panic".
+        a.card-text(href='# ')
+          small.text-muted  @IamVinka
+    #row4.row
+      #image-div7.col-lg-2.col-sm-12
+        img#sheeba-img.img-fluid(src='/imagefiles/karungi.jpeg' alt='Sheeba photo')
+      #text-div7.col-lg-3.col-sm-12
+        h5#title-ID7.card-title  Sheeba Karungi
+        p.card-text
+          | Sheeba is a musician, dancer and actress who debuted her acting
+          | career in
+          | Queen of Katwe as Shakira. She is currently has 8 albums and is known for her popular works like,
+          | "Nkwatako".
+        a.card-text(href='#')
+          small#small-handle7.text-muted @Ksheebah1
+      #image-div8.col-lg-2.col-sm-12
+        img#maurice-img.img-fluid(src='/imagefiles/MauriceKirye.jpeg' alt='Maurice photo')
+      #text-div8.col-lg-3.col-sm-12
+        h5#title-ID8.card-title  Maurice Kirya 
+        p.card-text
+          | Maurice Kirya is a singer, songwriter, actor and humanitarian.
+          | He has 5 albums and he is famous for his works like,
+          | "Misubbaawa,"
+        a.card-text(href='#')
+          small.text-muted
+            | @mauricekirya
+    #row5.row
+      #image-div9.col-lg-2.col-sm-12
+        img#rema-img.img-fluid(src='/imagefiles/RemaNamakula.jpeg' alt='Rema Namakula photo')
+      #text-div9.col-lg-3
+        h5#title-ID9.card-title  Rema Namakula 
+        p.card-text
+          | Rema Namakula, popularly referred to as Rema has 6 known albums
+          | and is famous for most of her popular works like, "Oliwange" .
+        a.card-text(href='#')
+          small.text-muted
+            | @REMAUG1
+      #image-div10.col-lg-2.col-sm-12
+        img#kenzo-img.img-fluid(src='/imagefiles/Eddy-kenzo.jpeg' alt='Kenzo photo')
+      #text-div10.col-lg-3.col-sm-12
+        h5#title-ID10.card-title  Eddy Kenzo 
+        p.card-text
+          | Eddy Kenzo, is a Ugandan singer and music executive who is a
+          | founder and a member of Big Talent Entertainment. He has
+          | released 8 albums,
+          | including Roots in 2018 and most recently Made in Africa in 2021.
+        a.card-text(href='#')
+          small.text-muted
+            | @eddykenzoficial
+    #row6.row
+      #image-div11.col-lg-2.col-sm-12
+        img#bebe-img.img-fluid(src='/imagefiles/BebeCool.jpeg' alt='Bebe cool photo')
+      #text-div11.col-lg-3.col-sm-12
+        h5#title-ID11.card-title  Bebe Cool
+        p.card-text
+          | Bebe Cool is a ragga musician from Uganda. He started his
+          | career around 1997 in Nairobi, Kenya, he was one of the first artists affiliated
+          | with Ogopa DJs, a
+          | production house and record label in Kenya. He has 8 albums currently known.
+        a.card-text(href='#')
+          small.text-muted
+            | @BebeCoolUG
+      #image-div12.col-lg-2.col-sm-12
+        img#nwagi-img.img-fluid(src='/imagefiles/WinneNwagi.jpeg' alt='Nwagi  photo')
+      #text-div12.col-lg-3.col-sm-12
+        h5#title-ID12.card-title  Winnie Nwagi 
+        p.card-text
+          | Nwagi's music career began when she became the second runner-up
+          | during the second season of "CocaCola Rated Next" music competitions in 2014.
+          | She has 9
+          | known albums, and is signed to Swangz Avenue label.
+        a.card-text(href='#')
+          small.text-muted
+            | @WinnieNwagi
+    #row7.row
+      #image-div13.col-lg-2.col-sm-12
+        img#ninarose-img.img-fluid(src='/imagefiles/NinaRose.jpeg' alt='NinaRose  photo')
+      #text-div13.col-lg-3.col-sm-12
+        h5#title-ID13.card-title  Nina Rose 
+        p.card-text
+          | Nina Rose is a song writer, singer and model who has traversed the Ugandan
+          | entertainment
+          | industry with her exceptional talent. She has 2 known albums and is famous for her "Andeleya" hit .
+        a.card-text(href='#')
+          small#small-handle13.text-muted
+            | @NinarozMusic
+      #image-div14.col-lg-2.col-sm-12
+        img#navio-img.img-fluid(src='/imagefiles/Navio.jpeg' alt='Navio  photo')
+      #text-div14.col-lg-3.col-sm-12
+        h5#title-ID14.card-title  Navio 
+        p.card-text
+          | Navio is a musician and record producer. Starting off his career, he was part of the
+          | award-winning Hip hop group Klear Kut that introduced the term "Ugaflow" to describe Uganda's hip hop
+          | scene.He has 7 known albums.
+        a.card-text(href='#')
+          small.text-muted
+            | @naviomusic
+    #row8.row
+      #image-div15.col-lg-2.col-sm-12
+        img#apass-img.img-fluid(src='/imagefiles/Apass.jpeg' alt='Apass photo')
+      #text-div15.col-lg-3.col-sm-12
+        h5#title-ID15.card-title  Apass 
+        p.card-text
+          | Apass is a Ugandan musician and songwriter, He has
+          | written songs for Bebe Cool and co-written 'Love I fell' with Michael Ross. He has is famous for
+          | alot of his work like
+          | "Wuuyo".
+          | He has 6 known albums.
+        a.card-text(href='#')
+          small#small-handle15.text-muted
+            | @IamApass
+      #image-div16.col-lg-2.col-sm-12
+        img#spicy-img.img-fluid(src='/imagefiles/SpiceDiana.jpeg' alt='spicy photo')
+      #text-div16.col-lg-3.col-sm-12
+        h5#title-ID16.card-title  Spice Diana 
+        p.card-text
+          | Spice Diana, is a female Ugandan musician who started her music career early while
+          | studying at Makerere University. She has 4 known albums and is famous for her many works like,
+          | "Bestfriend".
+        a.card-text(href='#')
+          small.text-muted
+            | @SpiceDianaUg
+    #row10.row
+      #image-div17.col-lg-2.col-sm-12
+        img#pia-img.img-fluid(src='/imagefiles/PiaPounds.jpeg' alt='pia photo')
+      #text-div17.col-lg-3
+        h5#title-ID17.card-title  Pia Pounds 
+        p.card-text
+          | Pia Pounds career started in 2011.
+          | She was signed by Big Talent Entertainment label in 2018.
+          | She later exited Big Talent Entertainment, for a sole career.
+          | She is known for alot of her work and mostlty
+          | her recent hit , 'Tupaate'.
+        a.card-text(href='#')
+          small#small-handle17.text-muted
+            | @pia_pounds
+      #image-div18.col-lg-2.col-sm-12
+        img#naava-img.img-fluid(src='/imagefiles/NaavaGrey.jpeg' alt='naava photo')
+      #text-div18.col-lg-3.col-sm-12
+        h5#title-ID18.card-title  Naava Grey 
+        p.card-text
+          | Grey Naava is a Ugandan artist signed to Fenon Records. She has built a successful
+          | career in the entertainment industry. And has 8 known albums.
+        a.card-text(href='#')
+          small.text-muted
+            | @Iam_naavagrey
+    .row
+      #image-div19.col-lg-2.col-sm-12
+        img#daddyandre-img.img-fluid(src='/imagefiles/DaddyAndre.png' alt='daddyandre photo')
+      #text-div19.col-lg-3.col-sm-12
+        h5#title-ID19.card-title  Daddy Andre
+        p.card-text
+          | Daddy Andre is a Ugandan music producer, singer and songwriter. He has 5 known albums of his own but he
+          | is mostly famous for his excellent producer skills.
+        a.card-text(href='#')
+          small.text-muted
+            | @daddyandreug
+      #image-div20.col-lg-2.col-sm-12
+        img#lydia-img.img-fluid(src='/imagefiles/LydiaJazmine.jpeg' alt='lydiajazmin photo')
+      #text-div20.col-lg-3.col-sm-12
+        h5#title-ID20.card-title  Lydia Jazmine 
+        p.card-text
+          | Jazmine started her career as a back-up singer for other artists. She has 17 albums that are publically
+          | known. And is famous for her works like, "Same
+          | Way" .
+        a.card-text(href='#')
+          small.text-muted
+            | @LydiahJazmine
+    .navbar.navbar-expand-lg.navbar-dark.footer
+      a.nav-link.copy(href='#') &copy 2021 Grace Nakazibwe 
+      small#small-quote Ugandan Talent Lives Here
+      .nav-container
+        a.nav-link.icon(href='#')
+          i.fa.fa-facebook-square
+        a.nav-link.icon(href='#')
+          i.fa.fa-twitter-square
+        a.nav-link.icon(href='#')
+          i.fa.fa-google-plus-square
+        a.nav-link.icon(href='#')
+          i.fa.fa-instagram
+        a.nav-link.icon(href='#')
+          i.fa.fa-linkedin
+    script(src='javaScriptfiles/js/bootstrap.min.js')
