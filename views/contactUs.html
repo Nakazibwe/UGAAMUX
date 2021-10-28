@@ -35,7 +35,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark " id="top-navbar">
         <div class="container-fluid">
             <a class="navbar-brand" id="navbar-logo" href="/"><small id="small-log">UGAA</small>MUX<img
-                    src="/imagefiles/ugflag.jpeg" alt="UG-LOGO" id="logopicture" height="30px" width="50px"></a>
+                    src="/imagefiles/ugflag.jpeg" alt="UG-LOGO" id="logopicture" height="30px" width="50px">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -43,24 +44,23 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav" id="navbar-inner-div">
                     <a class="nav-link" id="navbar-home" href="/">Home</a>
-                    <a class="nav-link active" aria-current="page" id="navbar-aboutus"
-                        href="/aboutUs">About
+                    <a class="nav-link active" aria-current="page" id="navbar-aboutus" href="/aboutUs">About
                         Us</a>
                     <a class="nav-link" id="navbar-artistes" href="/artists">Artists</a>
                     <a class="nav-link" id="navbar-bands" href="/bands">Bands</a>
                     <a class="nav-link" id="navbar-comedians" href="/comedians">Comedians</a>
-                    <a class="nav-link" id="navbar-contactus" href="/contactUs">Contact Us</a>
+                    <a class="nav-link" id="navbar-contactus" href="/contactinfo/contactUs">Contact Us</a>
 
                 </div>
             </div>
-        </div>
+        </div>  
     </nav>
     <!--Code for the header section-->
     <div class="container-fluid" id="header">
         <!--Code for the inner text box inside the header section-->
         <div class="header-text-area">
             <h1>Contact Us</h1>
-            
+
             <small id="small-header-quote">Ugandan Talent Lives Here!!!</small>
         </div>
     </div>
@@ -73,7 +73,7 @@
                     <p>13th Street Nansana, Wamala.</p>
                     <h2>Email Us</h2>
                     <p>info@ugaamux.com</p>
-                    
+
                     <h2>Call Us</h2>
                     <p>+256-414-674-867</p>
                     <p>+256-774-869-821</p>
@@ -82,24 +82,24 @@
                 </div>
             </div>
             <div class="col-lg-7 contacts contact-input">
-                <form action= "/contactUs" method = "POST" id="form-id" name="contactUsform">
+                <form action="/contactinfo/contactUs" method="POST" id="form-id" name="contactUsform">
                     <div class="form-action">
                         <label for="inputfirstname" id="firstnamelabel"> First Name</label>
                         <label for="inputlastname" id="last-name-label"> Last Name</label>
                         <div class="inner-flex">
-                            
-                            <input type="text"  name ="firstname" id="inputfirstname" placeholder="First Name" >
 
-                           
-                            <input type="text" name ="lastname" id="inputlastname" placeholder=" Last Name" >
+                            <input type="text" name="firstname" id="inputfirstname" placeholder="First Name">
+
+
+                            <input type="text" name="lastname" id="inputlastname" placeholder=" Last Name">
                         </div>
-                    </div>    
+                    </div>
                     <small id="firstname-error"></small>
                     <small id="lastname-error"></small>
 
                     <div class="form-action">
                         <label for="email" id="emaillabel"> Email</label><br>
-                        <input type="text" name="email" id="inputemail" placeholder="Enter Your Email " >
+                        <input type="text" name="email" id="inputemail" placeholder="Enter Your Email ">
                     </div>
                     <small id="email-error"></small>
 
@@ -134,5 +134,5 @@
     <script src="javaScriptfiles/js/bootstrap.min.js"></script>
     <script src="/javaScriptfiles/contactUs.js"></script>
 </body>
- 
+
 </html>
