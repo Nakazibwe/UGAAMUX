@@ -75,6 +75,18 @@ passport.use(ArtistsReg.createStrategy());
 passport.serializeUser(ArtistsReg.serializeUser());
 passport.deserializeUser(ArtistsReg.deserializeUser());
 
+passport.use(BandReg.createStrategy());
+passport.serializeUser(BandReg.serializeUser());
+passport.deserializeUser(BandReg.deserializeUser());
+
+passport.use(ClerkReg.createStrategy());
+passport.serializeUser(ClerkReg.serializeUser());
+passport.deserializeUser(ClerkReg.deserializeUser());
+
+passport.use(ComedianReg.createStrategy());
+passport.serializeUser(ComedianReg.serializeUser());
+passport.deserializeUser(ComedianReg.deserializeUser());
+
 
    
 
@@ -102,12 +114,12 @@ app.use('/passwordreset', forgotpasswdRoutes);
 
 // Route to  get the landing page (index.html).
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/views/index.html');
+    res.sendFile(__dirname + '/views/index.html'); 
 });
 
 // Route to get to the about Us page. 
 app.get('/aboutUs', (req, res) => {
-    res.sendFile(__dirname + '/views/aboutUs.html');
+    res.sendFile(__dirname + '/views/aboutUs.html'); 
 });
 
 // Route to get to the Artists Page.
@@ -115,15 +127,6 @@ app.get('/artists', (req, res) => {
     res.render('artists');
 });
 
-// Route to go to the Ugaamux private comedian account.
-app.get('/comedianaccount', (req, res) => {
-    res.render('comedianaccount');
-});
-
-// Route to go the Ugaamux private  band account.
-app.get('/bandaccount', (req, res) => {
-    res.render('bandaccount');
-});
 
 // Route to get to the comedians Page.
 app.get('/comedians', (req, res) => {
@@ -150,6 +153,12 @@ app.post('/login', passport.authenticate('local', { failureRedirect: '/login' })
 app.get('/registrationpage', (req, res) => {
     res.sendFile(__dirname + '/views/registrationpage.html');
 });
+
+
+
+
+
+
 
 
 
