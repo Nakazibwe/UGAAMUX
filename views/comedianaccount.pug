@@ -58,23 +58,26 @@ html(lang='en')
               p Telephone 
               p Twitter 
               p Email
-              p Date of Birth
+              p Date of Birth 
               p Location
               p District
               p Date Comedy Began
               p Gender
+        if comedians.length
+        each comedian in comedians 
             .col-lg-5.containerB
-              p  Comedian First name
-              p  Comedian Last name
-              p  Comedian Stage name
-              p  Comedian Telephone 
-              p  Comedian Twitter 
-              p  Comedian Email
-              p  Comedian Date of Birth
-              p  Comedian Location
-              p  Comedian District
-              p  Comedy Start Date 
-              p  Comedian Gender
+              p  #{comedian.firstName} 
+              p  #{comedian.lastName} 
+              p  #{comedian.stagename} 
+              p  #{comedian.comedianphone} 
+              p  #{comedian.twitter} 
+              p  #{comedian.email} 
+              p  #{comedian.ComedianDOB} 
+              p  #{comedian.Location} 
+              p  #{comedian.Based} 
+              p  #{comedian.startedcomedy} 
+              p  #{comedian.gender} 
+              
     .navbar.navbar-expand-lg.navbar-dark.footer
       a.nav-link.copy(href='#') &copy 2021 Grace Nakazibwe 
       small#small-quote Ugandan Talent Lives Here
