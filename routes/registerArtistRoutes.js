@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'public/imagefiles');
   },
-  filename: (req, file, cb) => {
+  filename: (req, file, cb) => {  
     cb(null, file.originalname);
   },
 });
@@ -60,4 +60,4 @@ router.get('/artistsaccount', async (req, res) => {
 
 });
 
-module.exports = router;
+module.exports = router; 
