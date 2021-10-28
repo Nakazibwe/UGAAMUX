@@ -41,11 +41,11 @@ html(lang='en')
           #navbar-inner-div.navbar-nav
             a#donthaveaccount.nav-link
               | Don't have an account?
-            a#registerwithus-link.nav-link(href='/registermessage')
+            a#registerwithus-link.nav-link(href='/registerrequest/registermessage')
               | Register With Us.
     // The code of the login container.
     #login-container.container
-      a#navbar-logo.navbar-brand(href='/')
+      a#navbar-logo.navbar-brand(href='/') 
         small#small-log UGAA
         | MUX
         img#logopicture(src='/imagefiles/ugflag.jpeg' alt='UG-LOGO' height='30px' width='50px')
@@ -61,8 +61,8 @@ html(lang='en')
           input#usersubmit(type='submit' value='LOG IN')
         br
       
-      a#forgotpassword(href='/forgotpassword') I forgot my password
-    .navbar.navbar-expand-lg.navbar-dark.footer
+      a#forgotpassword(href='/passwordreset/forgotpassword') I forgot my password
+    .navbar.navbar-expand-lg.navbar-dark.footer 
       a.nav-link.copy(href='#') &copy 2021 Grace Nakazibwe 
       small#small-quote Ugandan Talent Lives Here
       .nav-container
@@ -77,4 +77,4 @@ html(lang='en')
         a.nav-link.icon(href='#')
           i.fa.fa-linkedin
     script(src='/javaScriptfiles/js/bootstrap.min.js')
-    script(src='/javaScriptfiles/login.js')
+    script(src='/javaScriptfiles/login.js') 
