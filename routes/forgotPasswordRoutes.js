@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 
 const router = express.Router();
 
-const ForgotPassword = require('../models/forgotpasswdModel');
+const ForgotPassword = require('../models/forgotpasswdModel'); 
 
 // Route to the forgot password page.
 router.get('/forgotpassword', (req, res) => {
