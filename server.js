@@ -18,24 +18,24 @@ const expressSession = require('express-session')({
     resave: false,
     saveUninitialized: false,
   });
-
+// Requiring the database models and schemers.
 const ArtistsReg = require('./models/artistRegModel');
+const BandReg = require('./models/bandRegModel');
 const ClerkReg = require('./models/clerkRegModel');
+const ComedianReg = require('./models/comedianRegModel');
+const Contactus = require('./models/contactUsModel');
+const RegMessage = require('./models/registerMessageModel');
+const ForgotPassword = require('./models/forgotpasswdModel');
 
-
+// Requiring the different routes.
 const artistRegRoutes = require('./routes/registerArtistRoutes');
 const comedianRegRoutes = require('./routes/registerComediansRoutes');
 const bandRegRoutes = require('./routes/registerBandsRoutes');
+const contactUsRoutes = require('./routes/contactUsRoutes');
+const registerMessageRoutes = require('./routes/registerMessageRoutes');
+const clerkRegRoutes = require('./routes/registerClerksRoutes');
+const forgotpasswdRoutes = require('./routes/forgotPasswordRoutes');
 
-
-
-
-const Contactus = require('./models/contactUsModel');
-const RegMessage = require('./models/registerMessageModel');
-
-
-
-const ForgotPassword = require('./models/forgotpasswdModel');
 
 require('dotenv').config();
 // Instatiations
@@ -76,120 +76,80 @@ passport.serializeUser(ArtistsReg.serializeUser());
 passport.deserializeUser(ArtistsReg.deserializeUser());
 
 
+   
 
-
-// Routes
+// Routes for the project.
 // Routes to the register artist pages.
 app.use('/artistinfo', artistRegRoutes);
 
 // Routes to the register comedian pages.
-app.use('/registercomedian', comedianRegRoutes);
+app.use('/comedianinfo', comedianRegRoutes);
 
 // Routes to the register band pages.
-app.use('/registerband', bandRegRoutes);
+app.use('/bandinfo', bandRegRoutes);
 
-// Route to  get the landing page (index.html)
+// Routes to the contactus page .
+app.use('/contactinfo', contactUsRoutes);
+
+// Routes to the register messages pages.
+app.use('/registerrequest', registerMessageRoutes);
+
+// Routes to the clerk registrations .
+app.use('/clerkinfo', clerkRegRoutes);
+
+// Routes to the forgotpassword pages.
+app.use('/passwordreset', forgotpasswdRoutes);
+
+// Route to  get the landing page (index.html).
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html');
 });
 
-
-
-// Route to get to the about Us page.
+// Route to get to the about Us page. 
 app.get('/aboutUs', (req, res) => {
     res.sendFile(__dirname + '/views/aboutUs.html');
 });
 
 // Route to get to the Artists Page.
 app.get('/artists', (req, res) => {
-    res.sendFile(__dirname + '/views/artists.html');
+    res.render('artists');
+});
+
+// Route to go to the Ugaamux private comedian account.
+app.get('/comedianaccount', (req, res) => {
+    res.render('comedianaccount');
+});
+
+// Route to go the Ugaamux private  band account.
+app.get('/bandaccount', (req, res) => {
+    res.render('bandaccount');
 });
 
 // Route to get to the comedians Page.
 app.get('/comedians', (req, res) => {
-    res.sendFile(__dirname + '/views/comedians.html');
+    res.render('comedians');
 });
 
 // Route to get the bands page.
 app.get('/bands', (req, res) => {
-    res.sendFile(__dirname + '/views/bands.html');
-});
-
-// Route to  get the contactus page (contactus.html)
-app.get('/contactUs', (req, res) => {
-    res.sendFile(__dirname + '/views/contactUs.html');
-});
-
-// Route to post data from the contactus form on the page.
-app.post('/contactUs', (req, res) => {
-    console.log(req.body);
+    res.render('bands');
 });
 
 // Route to the login in page.
 app.get('/login', (req, res) => {
-    res.render('login');
+    res.render('login'); 
 });
 // Route to post data from the login page.
 app.post('/login', passport.authenticate('local', { failureRedirect: '/login' }), (req, res) => {
     console.log(req.body);
 
     res.redirect('/artistinfo/artistsaccount');
-});  
-
-// Route to the forgot password page.
-app.get('/forgotpassword', (req, res) => {
-    res.sendFile(__dirname + '/views/forgotpassword.html');
 });
 
-// Route to post data from the forgot password page.
-app.post('/forgotpassword', (req, res) => {
-    console.log(req.body);
-});
-
-// Route to the register message page.
-app.get('/registermessage', (req, res) => {
-    res.sendFile(__dirname + '/views/registermessage.html');
-});
-
-// Route to post data from the register message page.
-app.post('/registermessage', (req, res) => {
-    console.log(req.body);
-});
-// Route to the dashbord  for clerk to register creatives .
+// Route to the dashbord  for clerk to register all creatives .
 app.get('/registrationpage', (req, res) => {
     res.sendFile(__dirname + '/views/registrationpage.html');
 });
-
-
-
-
-// Route to go to the Ugaamux comedian account.
-app.get('/comedianaccount', (req, res) => {
-    res.sendFile(__dirname + '/views/comedianaccount.html');
-});
-
-// Route to go the Ugaamux band account.
-app.get('/bandaccount', (req, res) => {
-    res.sendFile(__dirname + '/views/bandaccount.html');
-});
-
-// Route to go the clerk registration page.
-app.get('/clerkregistrationform', (req, res) => {
-    res.sendFile(__dirname + '/views/clerkregform.html');
-});
-app.post('/clerkregistrationform', (req, res) => {
-    console.log(req.body);
-});
-
-
-
-
-
-
-
-
-
-
 
 
 
