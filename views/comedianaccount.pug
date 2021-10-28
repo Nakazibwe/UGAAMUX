@@ -1,0 +1,92 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title UGAAMUX Comedian Account
+    link(rel='stylesheet' href='/cssfiles/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/cssfiles/comedianaccount.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Carter+One&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+  body
+    nav#top-navbar.navbar.navbar-expand-lg.navbar-dark
+      .container-fluid
+        a#navbar-logo.navbar-brand(href='/')
+          small#small-log UGAA
+          | MUX
+          img#logopicture(src='/imagefiles/ugflag.jpeg' alt='UG-LOGO' height='30px' width='50px')
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarNavAltMarkup.collapse.navbar-collapse
+          #navbar-inner-div.navbar-nav
+            .dropdown
+              a#navbar-dropdown.btn.btn-secondary.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                | Account
+              ul.dropdown-menu(aria-labelledby='dropdownMenuLink')
+                li
+                  a#sign-out.dropdown-item(href='/') LOG OUT
+    .container
+      .row
+        .col-lg-4.photo-div
+          img.img-fluid(src='/imagefiles/UncleMo.jpeg' alt='comedian photo')
+        .col-lg-7.comedian-info
+          .row.moreinformation
+            h5 Personal Information
+            .col-lg-5.containerA
+              p First name
+              p Last name
+              p Stage name
+              p Telephone 
+              p Twitter 
+              p Email
+              p Date of Birth
+              p Location
+              p District
+              p Date Comedy Began
+              p Gender
+            .col-lg-5.containerB
+              p  Comedian First name
+              p  Comedian Last name
+              p  Comedian Stage name
+              p  Comedian Telephone 
+              p  Comedian Twitter 
+              p  Comedian Email
+              p  Comedian Date of Birth
+              p  Comedian Location
+              p  Comedian District
+              p  Comedy Start Date 
+              p  Comedian Gender
+    .navbar.navbar-expand-lg.navbar-dark.footer
+      a.nav-link.copy(href='#') &copy 2021 Grace Nakazibwe 
+      small#small-quote Ugandan Talent Lives Here
+      .nav-container
+        a.nav-link.icon(href='#')
+          i.fa.fa-facebook-square
+        a.nav-link.icon(href='#')
+          i.fa.fa-twitter-square
+        a.nav-link.icon(href='#')
+          i.fa.fa-google-plus-square
+        a.nav-link.icon(href='#')
+          i.fa.fa-instagram
+        a.nav-link.icon(href='#')
+          i.fa.fa-linkedin
+    script(src='/javaScriptfiles/js/bootstrap.min.js')
