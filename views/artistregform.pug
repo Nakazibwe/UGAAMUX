@@ -42,7 +42,7 @@ html(lang='en')
             a#navbar-artistes.nav-link(href='/artists') Artists
             a#navbar-bands.nav-link(href='/bands') Bands
             a#navbar-comedians.nav-link(href='/comedians') Comedians
-            a#navbar-contactus.nav-link(href='/contactUs') Contact Us
+            a#navbar-contactus.nav-link(href='/contactinfo/contactUs') Contact Us
             .dropdown
               a#navbar-dropdown.btn.btn-secondary.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
                 | Account
@@ -51,9 +51,9 @@ html(lang='en')
                   a#sign-out.dropdown-item(href='/') LOG OUT
     h4.h4regform Artist Registration
     .container
-      form#form-id(action='/registerartist/artistregistrationform' method='POST' name='ArstisteRegistration' enctype="multipart/form-data" )
+      form#form-id(action='/artistinfo/artistregistrationform' method='POST' name='ArstisteRegistration' enctype="multipart/form-data" ) 
         .row
-          .col-lg-4.form-action-cols
+          .col-lg-4.form-action-cols 
             .form-action
               label#firstname(for='') First Name
               input#fname(type='text' name='firstName' placeholder='Enter Artist  First Name ')
