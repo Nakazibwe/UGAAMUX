@@ -51,13 +51,13 @@ html(lang='en')
           .row
             a.artistgenre Genre
               br
-              | RnB
+              | #{artist.genre} 
             a.artistalbums Albums 
               br
-              | 23
+              | #{artist.numberofalbums}  
             a.artistsongs Songs
               br
-              | 234
+              | #{artist.numberofsongs} 
         .col-lg-7.artist-info
           .row.moreinformation
             h5 Personal Information
@@ -73,20 +73,20 @@ html(lang='en')
               p Date Music Began
               p Location
               p Gender
-        if artists.length
+        if artists.length 
         each artist in artists  
-            .col-lg-5.containerB
+            .col-lg-5.containerB 
               p #{artist.firstName} 
-              p Artist Last name
-              p Artist Stage name
-              p Artist Telephone
-              p Artist Twitter 
-              p Artist Email
-              p Artist Date of Birth
-              p Artist District
-              p Artist Date Music Began
-              p Artist Location
-              p Artist Gender
+              p #{artist.lastName} 
+              p #{artist.stageName} 
+              p #{artist.telephone} 
+              p #{artist.twitter} 
+              p #{artist.email} 
+              p #{artist.ArtistDOB} 
+              p #{artist.basedDistrict} 
+              p #{artist.datestartedsing} 
+              p #{artist.Location} 
+              p #{artist.gender} 
     .navbar.navbar-expand-lg.navbar-dark.footer
       a.nav-link.copy(href='#') &copy 2021 Grace Nakazibwe 
       small#small-quote Ugandan Talent Lives Here
