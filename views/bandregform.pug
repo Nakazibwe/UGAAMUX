@@ -42,7 +42,7 @@ html(lang='en')
             a#navbar-artistes.nav-link(href='/artists') Artists
             a#navbar-bands.nav-link(href='/bands') Bands
             a#navbar-comedians.nav-link(href='/comedians') Comedians
-            a#navbar-contactus.nav-link(href='/contactUs') Contact Us
+            a#navbar-contactus.nav-link(href='/contactinfo/contactUs') Contact Us
             .dropdown
               a#navbar-dropdown.btn.btn-secondary.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
                 | Account
@@ -51,7 +51,7 @@ html(lang='en')
                   a#sign-out.dropdown-item(href='/') LOG OUT
     h4.h4regform Band Registration
     .container
-      form#form-id(action='/registerband/bandregistrationform' method='POST' name='BandRegistration')
+      form#form-id(action='/bandinfo/bandregistrationform' method='POST' name='BandRegistration'  enctype="multipart/form-data")
         .row
           .col-lg-4.form-action-cols
             .form-action
@@ -65,7 +65,7 @@ html(lang='en')
               input#band-owner(type='text' placeholder=' Enter Band Owner ' name='BandOwner')
             small#bandowner-error.error
             .form-action
-              label#bandhome(for='') Band Home
+              label#bandhome(for='') Band Home  
               br
               input#band-home(type='text' placeholder=' Enter Band Home ' name='BandHome')
             small#bandhome-error.error
