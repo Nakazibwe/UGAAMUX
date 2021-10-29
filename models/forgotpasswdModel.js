@@ -10,7 +10,7 @@ const ForgotpasswdSchema = new mongoose.Schema({
     email: {
         type: String,
         trim: true,
-        required: true, 
+        required: true,  
     },
 });      
 module.exports = mongoose.model('ForgotPassword', ForgotpasswdSchema);
