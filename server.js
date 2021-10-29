@@ -106,7 +106,7 @@ app.use('/contactinfo', contactUsRoutes);
 // Routes to the register messages pages.
 app.use('/registerrequest', registerMessageRoutes);
 
-// Routes to the clerk registrations .
+// Routes to the clerk registrations .  
 app.use('/clerkinfo', clerkRegRoutes);
 
 // Routes to the forgotpassword pages.
