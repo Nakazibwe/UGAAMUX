@@ -438,6 +438,4 @@ const validate = () => {
 const Bandform = document.getElementById('form-id');
 Bandform.addEventListener('submit', validate);
 
-// Bandform.addEventListener('submit', (e) => {
-//   e.preventDefault();
-// });
+
