@@ -26,6 +26,3 @@ const validate = () => {
 const ForgotPasswordform = document.getElementById('form-id');
 ForgotPasswordform.addEventListener('submit', validate);
 
-// ForgotPasswordform.addEventListener('submit', (e) => {
-//   e.preventDefault();
-// });
