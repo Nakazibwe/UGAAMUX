@@ -72,6 +72,4 @@ const validate = () => {
 const RegisterMessageForm = document.getElementById('form-id');
 RegisterMessageForm.addEventListener('submit', validate);
 
-// RegisterMessageForm.addEventListener('submit', (e) => {
-//   e.preventDefault();
-// });
+
