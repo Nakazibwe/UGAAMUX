@@ -349,6 +349,4 @@ const validate = () => {
 const Comedianform = document.getElementById('form-id');
 Comedianform.addEventListener('submit', validate);
 
-// Comedianform.addEventListener('submit', (e) => {
-//   e.preventDefault();
-// });
+
