@@ -101,21 +101,21 @@ const validate = () => {
   }
   // Validation for the password.
   const userpassword = Password.value.trim();
-    if (userpassword == '') {
-       Password.style.border = '1px solid red';
-       passwordERROR.innerHTML = 'Password Field Required';
-       passwordERROR.style = 'color:red';
-       Password.focus();
-  // } else if (!(userpassword.length > 8)) {
-  //   passwordERROR.innerHTML = 'Enter password with more than 8 characters';
-  //   passwordERROR.style = 'color:red';
-  //   Password.style.border = '1px solid red';
-  //   Password.focus();
-  // } else {   
-  //   Password.style.border = '1px solid green';
-  //   passwordERROR.innerHTML = 'Password Field Filled';
-  //   passwordERROR.style = 'color:green';
-  // }
+  if (userpassword == '') {
+    Password.style.border = '1px solid red';
+    passwordERROR.innerHTML = 'Password Field Required';
+    passwordERROR.style = 'color:red';
+    Password.focus();
+  } else if (!(userpassword.length > 8)) {
+    passwordERROR.innerHTML = 'Enter password with more than 8 characters';
+    passwordERROR.style = 'color:red';
+    Password.style.border = '1px solid red';
+    Password.focus();
+  } else {
+    Password.style.border = '1px solid green';
+    passwordERROR.innerHTML = 'Password Field Filled';
+    passwordERROR.style = 'color:green';
+  }
   // Validating the role field input.
   const userrole = userRole.value.trim();
   if (userrole == 'default') {
@@ -132,7 +132,3 @@ const validate = () => {
 
 const clerkForm = document.getElementById('form-id');
 clerkForm.addEventListener('submit', validate);
-
-// clerkForm.addEventListener('submit', (e) => {
-//   e.defaultPrevented();
-// });
