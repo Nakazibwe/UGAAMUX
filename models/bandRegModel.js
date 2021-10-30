@@ -116,7 +116,7 @@ const BandRegSchema = new mongoose.Schema({
     },
     bandsponsors: {
         type: String,
-        default: '',
+        default: '', 
         
     },  
     
