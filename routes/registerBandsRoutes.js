@@ -1,3 +1,5 @@
+/* eslint-disable prefer-destructuring */
+/* eslint-disable max-len */
 /* eslint-disable no-unreachable */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
@@ -6,6 +8,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const multer = require('multer');
+const path = require('path');
 const BandReg = require('../models/bandRegModel');
 
 const router = express.Router();
@@ -27,26 +30,35 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // Route to post from  band registration page.
-router.post('/bandregistrationform', upload.single('Profilepicture'), upload.single('icon'), async (req, res) => {
-  console.log(req.body);
-  try {
-    const bandReg = new BandReg(req.body);
-    bandReg.Profilepicture = req.file.path;
-    bandReg.icon = req.file.path;
-    console.log(bandReg);
-    console.log('This is the image you want to upload', req.file);
-    await BandReg.register(bandReg, req.body.password, (err) => {
-      if (err) {
-        throw err;
-        console.log('Data has not been posted', err);
-      }
-      res.redirect('/bandinfo/bandregistrationform');
-    });
-  } catch (err) {
-    res.status(400).send('Sorry! Data was not sent to DB');
-    console.log(err);
-  }
-});
+router.post(
+  '/bandregistrationform',
+  upload.fields([
+    { name: 'icon', maxCount: 1 },
+    { name: 'Profilepicture', maxCount: 1 },
+  ]),
+  async (req, res) => {
+    try {
+      const bandReg = new BandReg(req.body);
+      bandReg.icon = req.files.icon[0].path;
+      bandReg.Profilepicture = req.files.Profilepicture[0].path;
+      console.log('These are  the images you want to uploads');
+
+      console.log(bandReg);
+
+      await BandReg.register(bandReg, req.body.password, (err) => {
+        if (err) {
+          throw err;
+          console.log('Data has not been posted', err);
+        }
+        res.redirect('/bandinfo/bandregistrationform');
+      });
+    } catch (err) {
+      res.status(400).send('Sorry! Data was not sent to DB');
+      console.log(err);
+    }
+    console.log(req.body);
+  },
+);
 
 // Route to go the Ugaamux private  band account.
 router.get('/bandaccount', async (req, res) => {
