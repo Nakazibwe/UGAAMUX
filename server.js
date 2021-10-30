@@ -88,7 +88,7 @@ passport.serializeUser(ComedianReg.serializeUser());
 passport.deserializeUser(ComedianReg.deserializeUser());
 
 
-   
+
 
 // Routes for the project.
 // Routes to the register artist pages.
@@ -106,7 +106,7 @@ app.use('/contactinfo', contactUsRoutes);
 // Routes to the register messages pages.
 app.use('/registerrequest', registerMessageRoutes);
 
-// Routes to the clerk registrations .  
+// Routes to the clerk registrations .
 app.use('/clerkinfo', clerkRegRoutes);
 
 // Routes to the forgotpassword pages.
@@ -114,12 +114,12 @@ app.use('/passwordreset', forgotpasswdRoutes);
 
 // Route to  get the landing page (index.html).
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/views/index.html'); 
-});
+    res.sendFile(__dirname + '/views/index.html');
+ });
 
-// Route to get to the about Us page. 
+// Route to get to the about Us page.
 app.get('/aboutUs', (req, res) => {
-    res.sendFile(__dirname + '/views/aboutUs.html'); 
+    res.sendFile(__dirname + '/views/aboutUs.html');
 });
 
 // Route to get to the Artists Page.
@@ -140,7 +140,7 @@ app.get('/bands', (req, res) => {
 
 // Route to the login in page.
 app.get('/login', (req, res) => {
-    res.render('login'); 
+    res.render('login');
 });
 // Route to post data from the login page.
 app.post('/login', passport.authenticate('local', { failureRedirect: '/login' }), (req, res) => {
