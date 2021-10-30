@@ -53,6 +53,4 @@ const validate = () => {
 const LoginForm = document.getElementById('form-id');
 LoginForm.addEventListener('submit', validate);
 
-// LoginForm.addEventListener('submit', (e) => {
-//   e.preventDefault();
-// });
+
