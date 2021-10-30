@@ -4,37 +4,47 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const multer = require('multer');
-const RegMessage = require('../models/registerMessageModel');
+const nodemailer = require('nodemailer');
+require('dotenv').config();
 
 const router = express.Router();
-
+const RegMessage = require('../models/registerMessageModel');
 // Route to the register message page.
 router.get('/registermessage', (req, res) => {
   res.render('registermessage');
 });
-
-// Route to post data from the register message page.
+// Route to post register message to the super admin.
 router.post('/registermessage', (req, res) => {
-  console.log(req.body);
-});
+  const transporter = nodemailer.createTransport({
+    service: 'hotmail',
+    auth: {
+      user: 'nakazibwe19grace@outlook.com',
+      pass: process.env.PASSWORD,
+    },
+  });
 
-router.post('/registermessage', async (req, res) => {
-  console.log(req.body);
-  try {
-    const regMessage = new RegMessage(req.body);
-    console.log(regMessage);
+  const mailOptions = {
+    from: 'nakazibwe19grace@outlook.com',
+    to: 'nakazibwe24grace@outlook.com',
+    subject: ' EMAIL WITH  UGAAMUX REGISTER REQUEST DETAILS ',
+    html: `<html><body><p> Name : ${req.body.customername}</p><p> Email : ${req.body.customeremail}</p><p>Message : ${req.body.message}</p></body></html>`,
+  };
 
-    await RegMessage.save(regMessage, (err) => {
-      if (err) {
-        throw err;
-        console.log('Data has not been posted', err);
-      }
-      res.redirect('/registerrequest/registermessage');
-    });
-  } catch (err) {
-    res.status(400).send('Sorry! Data was not sent to DB');
-    console.log(err);
-  }
+  transporter.sendMail(mailOptions, (err, data) => {
+    if (err) {
+      console.log(
+        'There was an error in sending the email with nodejs',
+      );
+      console.log(err);
+    } else {
+      console.log(data);
+      console.log(
+        'Email was sent successfully',
+      );
+    }
+  });
+
+  res.redirect('/registerrequest/registermessage');
 });
 
 module.exports = router;
