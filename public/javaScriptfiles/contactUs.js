@@ -106,6 +106,4 @@ const validate = () => {
 const contactForm = document.getElementById('form-id');
 contactForm.addEventListener('submit', validate);
 
-// contactForm.addEventListener('submit', (e) => {
-//   e.preventDefault();
-// });
+
