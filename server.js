@@ -118,7 +118,7 @@ app.get('/', (req, res) => {
  });
 
 // Route to get to the about Us page.
-app.get('/aboutUs', (req, res) => {
+app.get('/aboutUs', (req, res) => { 
     res.sendFile(__dirname + '/views/aboutUs.html');
 });
 
