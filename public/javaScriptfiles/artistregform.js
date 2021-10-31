@@ -412,5 +412,3 @@ const validate = () => {
 
 const Artistform = document.getElementById('form-id');
 Artistform.addEventListener('submit', validate);
-
-
