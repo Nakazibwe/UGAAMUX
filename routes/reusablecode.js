@@ -18,3 +18,19 @@
 //     console.log(err);
 //   }
 // });
+
+router.get('/artistpersonalaccount', async (req, res) => {
+    // if (req.session.user) {
+      try {
+        const users = await ArtistsReg.find();
+        // console.log(users);
+        res.render('artistaccount', { users });
+        // console.log('These are my artists', artists)
+      } catch {
+        res.status(400).send('Unable to find artist');
+      } 
+  
+    // } else {
+    //   res.redirect('/login');
+    // }
+  });
