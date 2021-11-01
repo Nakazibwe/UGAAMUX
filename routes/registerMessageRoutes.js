@@ -44,7 +44,8 @@ router.post('/registermessage', (req, res) => {
     }
   });
 
-  res.redirect('/registerrequest/registermessage');
+  // res.redirect('/registerrequest/registermessage');
+  res.redirect('/');
 });
 
 module.exports = router;

@@ -39,7 +39,8 @@ router.post('/comedianregistrationform', upload.single('uploadedpicture'), async
         throw err;
         console.log('Data has not been posted', err);
       }
-      res.redirect('/comedianinfo/comedianregistrationform');
+      // res.redirect('/comedianinfo/comedianregistrationform');
+      res.redirect('/registrationpage');
     });
   } catch (err) {
     res.status(400).send('Sorry! Data was not sent to DB');
