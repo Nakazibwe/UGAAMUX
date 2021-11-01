@@ -23,6 +23,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const passportmongoose = require('passport-local-mongoose');
+
 const expressSession = require('express-session')({
     secret: 'secret',
     resave: false,
@@ -211,18 +212,6 @@ app.use('/', publicBandRoutes);
 app.get('/admindashboard', (req, res) => {
     res.sendFile(__dirname + '/views/admindashboard.html');
   });
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
