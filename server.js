@@ -45,8 +45,16 @@ const contactUsRoutes = require('./routes/contactUsRoutes');
 const registerMessageRoutes = require('./routes/registerMessageRoutes');
 const clerkRegRoutes = require('./routes/registerClerksRoutes');
 const forgotpasswdRoutes = require('./routes/forgotPasswordRoutes');
+const loginRoutes = require('./routes/loginRoutes');
+const publicArtistRoutes = require('./routes/publicArtistRoutes');
+const publicComedianRoutes = require('./routes/publicComedianRoutes');
+const publicBandRoutes = require('./routes/publicBandRoutes');
 
 
+
+
+
+    
 require('dotenv').config();
 // Instatiations
 const app = express();
@@ -82,9 +90,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Artist Strategy
-// passport.use(ArtistsReg.createStrategy());
-// passport.serializeUser(ArtistsReg.serializeUser());
-// passport.deserializeUser(ArtistsReg.deserializeUser());
+passport.use(ArtistsReg.createStrategy());
+passport.serializeUser(ArtistsReg.serializeUser());
+passport.deserializeUser(ArtistsReg.deserializeUser());
 
 // Authentication trial.
 // passport.use(ArtistsReg.createStrategy(
@@ -153,7 +161,18 @@ passport.deserializeUser(ComedianReg.deserializeUser());
 
 
 
-// Routes for the project.
+// Routes for the  entire project.
+
+// Route to  get the landing page (index.html).
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/views/index.html');
+ });
+
+// Route to get to the about Us page.
+app.get('/aboutUs', (req, res) => {
+    res.sendFile(__dirname + '/views/aboutUs.html');
+});
+
 // Routes to the register artist pages.
 app.use('/artistinfo', artistRegRoutes);
 
@@ -175,47 +194,18 @@ app.use('/clerkinfo', clerkRegRoutes);
 // Routes to the forgotpassword pages.
 app.use('/passwordreset', forgotpasswdRoutes);
 
-// Route to  get the landing page (index.html).
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/views/index.html');
- });
+// Routes to the login page. 
+app.use('/', loginRoutes);
 
-// Route to get to the about Us page.
-app.get('/aboutUs', (req, res) => {
-    res.sendFile(__dirname + '/views/aboutUs.html');
-});
+// Routes to the artist public pages. 
+app.use('/', publicArtistRoutes);
 
-// Route to get to the Artists Page.
-app.get('/artists', (req, res) => {
-    res.render('artists');
-});
+// Routes to the comedian public pages . 
+app.use('/', publicComedianRoutes);
 
+// Routes to the band public pages . 
+app.use('/', publicBandRoutes);
 
-// Route to get to the comedians Page.
-app.get('/comedians', (req, res) => {
-    res.render('comedians');
-});
-
-// Route to get the bands page.
-app.get('/bands', (req, res) => {
-    res.render('bands');
-});
-
-// Route to the login in page.
-app.get('/login', (req, res) => {
-    res.render('login');
-});
-// Route to send data from the login page.
-// app.post('/login', passport.authenticate('local', { failureRedirect: '/login' }), (req, res) => {
-//     console.log(req.body);
-
-//     res.redirect('/artistinfo/artistsaccount');
-// });
-app.post('/login', passport.authenticate('local', { failureRedirect: '/login', successRedirect: '/artistinfo/artistsaccount' }), (req, res, next) => {
-    (req, res, next);
-    // res.redirect('/artistinfo/artistsaccount');
-    console.log(req.body);
-});
 
 // Route to the dashboard for clerk to view registered creatives. 
 app.get('/admindashboard', (req, res) => {
