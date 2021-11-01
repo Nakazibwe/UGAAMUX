@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
     cb(null, 'public/imagefiles');
   },
   filename: (req, file, cb) => {
-    cb(null, file.originalname); 
+    cb(null, file.originalname);
   },
 });
 const upload = multer({ storage });
@@ -37,11 +37,12 @@ router.post('/artistregistrationform', upload.single('pictureupload'), async (re
         throw err;
         console.log('Data has not been posted', err);
       }
-      res.redirect('/artistinfo/artistregistrationform'); 
+      // res.redirect('/artistinfo/artistregistrationform');
+      res.redirect('/registrationpage');
     });
   } catch (err) {
     res.status(400).send('Sorry! Data was not sent to DB');
-    console.log(err); 
+    console.log(err);
   }
 });
 
