@@ -49,7 +49,8 @@ router.post('/forgotpassword', (req, res) => {
       );
     }
   });
-  res.redirect('/passwordreset/forgotpassword');
+  // res.redirect('/passwordreset/forgotpassword');
+  res.redirect('/');
 });
 
 
