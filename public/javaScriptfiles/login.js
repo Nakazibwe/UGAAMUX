@@ -1,5 +1,5 @@
 /* eslint-disable eqeqeq */
-const UserName = document.Login.username;
+const UserName = document.Login.email;
 const PassWord = document.Login.password;
 
 const UserNameERROR = document.getElementById('username-error');
