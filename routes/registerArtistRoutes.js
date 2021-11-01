@@ -1,3 +1,4 @@
+/* eslint-disable object-shorthand */
 /* eslint-disable no-unreachable */
 /* eslint-disable no-console */
 const express = require('express');
@@ -47,11 +48,28 @@ router.post('/artistregistrationform', upload.single('pictureupload'), async (re
 });
 
 // Route to go  to the  Ugaamux artist account.
-router.get('/artistsaccount', async (req, res) => {
+// router.get('/artistpersonalaccount', async (req, res) => {
+//   // if (req.session.user) {
+//     try {
+//       const users = await ArtistsReg.find();
+//       // console.log(users);
+//       res.render('artistaccount', { users });
+//       // console.log('These are my artists', artists)
+//     } catch {
+//       res.status(400).send('Unable to find artist');
+//     }
+
+//   // } else {
+//   //   res.redirect('/login');
+//   // }
+// });
+router.get('/artistpersonalaccount', async (req, res) => {
   if (req.session.user) {
     try {
-      const users = await ArtistsReg.find();
-      res.render('artistaccount', { artists: users });
+      // const user = await ArtistsReg.findOne({ email: req.body.email });
+      // console.log(users);
+      res.render('artistaccount', { user: req.user });
+    // console.log('These are my artists', artists)
     } catch {
       res.status(400).send('Unable to find artist');
     }
