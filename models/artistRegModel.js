@@ -116,7 +116,7 @@ const artistsRegSchema = new mongoose.Schema({
     }
     
      
-});
+}); 
 artistsRegSchema.plugin(passportmongoose, {
     usernameField: 'email',
     
