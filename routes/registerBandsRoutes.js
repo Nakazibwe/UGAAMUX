@@ -50,7 +50,8 @@ router.post(
           throw err;
           console.log('Data has not been posted', err);
         }
-        res.redirect('/bandinfo/bandregistrationform');
+        // res.redirect('/bandinfo/bandregistrationform');
+        res.redirect('/registrationpage');
       });
     } catch (err) {
       res.status(400).send('Sorry! Data was not sent to DB');
