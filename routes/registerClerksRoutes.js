@@ -12,6 +12,13 @@ router.get('/clerkregistrationform', (req, res) => {
   res.render('clerkregform');
 });
 
+// Route to the page for clerk to register all creatives .
+router.get('/creativesregistration', (req, res) => {
+  res.render('registrationpage');
+});
+
+
+
 // Route to post data from the clerk form.
 router.post('/clerkregistrationform', async (req, res) => {
   console.log(req.body);
@@ -23,7 +30,8 @@ router.post('/clerkregistrationform', async (req, res) => {
         throw err;
         console.log('Data has not been posted', err);
       }
-      res.redirect('/clerkinfo/clerkregistrationform');
+      // res.redirect('/clerkinfo/clerkregistrationform');
+      res.redirect('/login');
     });
   } catch (err) {
     res.status(400).send('Sorry! Data was not sent to DB');
