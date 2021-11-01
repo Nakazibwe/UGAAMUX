@@ -5,12 +5,3 @@ $(document).ready(() => {
     $('#sidebar').toggleClass('active');
   });
 });
-
-/* eslint-disable eol-last */
-// $(document).ready(() => {
-//     $('#sidebarCollapse').on('click', () => {
-//       $('#sidebar').toggleClass('active');
-//     });
-//   });
-  
-  
