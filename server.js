@@ -1,3 +1,12 @@
+/* eslint-disable prefer-arrow-callback */
+/* eslint-disable func-names */
+/* eslint-disable no-else-return */
+/* eslint-disable consistent-return */
+/* eslint-disable object-shorthand */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-undef */
+/* eslint-disable no-use-before-define */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/no-absolute-path */
 /* eslint-disable import/extensions */
@@ -13,6 +22,7 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const passport = require('passport');
+const passportmongoose = require('passport-local-mongoose');
 const expressSession = require('express-session')({
     secret: 'secret',
     resave: false,
@@ -71,18 +81,71 @@ app.use(expressSession);
 app.use(passport.initialize());
 app.use(passport.session());
 
-passport.use(ArtistsReg.createStrategy());
-passport.serializeUser(ArtistsReg.serializeUser());
-passport.deserializeUser(ArtistsReg.deserializeUser());
+// Artist Strategy
+// passport.use(ArtistsReg.createStrategy());
+// passport.serializeUser(ArtistsReg.serializeUser());
+// passport.deserializeUser(ArtistsReg.deserializeUser());
 
+// Authentication trial.
+// passport.use(ArtistsReg.createStrategy(
+    
+//     { usernameField: 'email' }, (email, password, done) => {
+//         // Match User
+//         ArtistsReg.findOne({ email: email })
+//             .then((user) => {
+//                 if (!user) {
+//                     return done(null, false);
+//                 }
+
+//                 // Match password
+//                 passport.compare(password, user.password, (err, isMatch) => {
+//                     if (err) throw err;
+//                     if (isMatch) {
+//                         return done(null, user);                    
+//                     } else {
+//                         return done(null, false);
+//                     }
+//                 });
+//             })
+//             .catch((err) => console.log(err));
+//     },
+// ));
+// passport.serializeUser(ArtistsReg.serializeUser((id, done) => {
+//     done(null, user.id);
+// }));
+// passport.deserializeUser(ArtistsReg.deserializeUser((id, done) => {
+//     done(err, user);
+// }));
+
+// Second Trial Authentication
+// passport.use(ArtistsReg.createStrategy(
+//     { usernameField: 'email' }, (email, password, done) => {
+//         ArtistsReg.findOne({ email: email }, function (err, user) {
+//             if (err) { return done(err); }
+//             if (!user) { return done(null, false); }
+//             if (!user.verifyPassword(password)) { return done(null, false); }
+//             return done(null, user);
+//         });
+//     },
+// ));
+// passport.serializeUser(ArtistsReg.serializeUser((id, done) => {
+//     done(null, user.id);
+// }));
+// passport.deserializeUser(ArtistsReg.deserializeUser((id, done) => {
+//     done(err, user);
+// }));
+
+// Bands strategy .
 passport.use(BandReg.createStrategy());
 passport.serializeUser(BandReg.serializeUser());
 passport.deserializeUser(BandReg.deserializeUser());
 
+// Clerks Strategy
 passport.use(ClerkReg.createStrategy());
 passport.serializeUser(ClerkReg.serializeUser());
 passport.deserializeUser(ClerkReg.deserializeUser());
 
+// Comedians strategy.
 passport.use(ComedianReg.createStrategy());
 passport.serializeUser(ComedianReg.serializeUser());
 passport.deserializeUser(ComedianReg.deserializeUser());
@@ -118,7 +181,7 @@ app.get('/', (req, res) => {
  });
 
 // Route to get to the about Us page.
-app.get('/aboutUs', (req, res) => { 
+app.get('/aboutUs', (req, res) => {
     res.sendFile(__dirname + '/views/aboutUs.html');
 });
 
@@ -142,17 +205,25 @@ app.get('/bands', (req, res) => {
 app.get('/login', (req, res) => {
     res.render('login');
 });
-// Route to post data from the login page.
-app.post('/login', passport.authenticate('local', { failureRedirect: '/login' }), (req, res) => {
+// Route to send data from the login page.
+// app.post('/login', passport.authenticate('local', { failureRedirect: '/login' }), (req, res) => {
+//     console.log(req.body);
+
+//     res.redirect('/artistinfo/artistsaccount');
+// });
+app.post('/login', passport.authenticate('local', { failureRedirect: '/login', successRedirect: '/artistinfo/artistsaccount' }), (req, res, next) => {
+    (req, res, next);
+    // res.redirect('/artistinfo/artistsaccount');
     console.log(req.body);
-
-    res.redirect('/artistinfo/artistsaccount');
 });
 
-// Route to the dashbord  for clerk to register all creatives .
-app.get('/registrationpage', (req, res) => {
-    res.sendFile(__dirname + '/views/registrationpage.html');
-});
+// Route to the dashboard for clerk to view registered creatives. 
+app.get('/admindashboard', (req, res) => {
+    res.sendFile(__dirname + '/views/admindashboard.html');
+  });
+
+
+
 
 
 
