@@ -113,7 +113,7 @@ const artistsRegSchema = new mongoose.Schema({
     },
     pictureupload: {
         type: String,
-    }
+    },
     
      
 }); 
