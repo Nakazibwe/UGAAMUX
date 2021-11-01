@@ -252,10 +252,10 @@ text-align: center;
 /*The properties of the small quote on the About Us section*/
 #small-quote {
     font-size: 25px;
-    color: rgb(215, 94, 39);
+    color: #fff;
     font-weight: 900;
     font-family: 'Bonheur Royale', cursive;
 }
 #small-quote:hover{
-    color:#fff;
+    color:#ff781f;
 }
