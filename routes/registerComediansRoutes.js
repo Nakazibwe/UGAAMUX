@@ -7,6 +7,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const multer = require('multer');
 const ComedianReg = require('../models/comedianRegModel');
+const User = require('../models/UserModel');
 
 const router = express.Router();
 
@@ -31,16 +32,17 @@ router.post('/comedianregistrationform', upload.single('uploadedpicture'), async
   console.log(req.body);
   try {
     const comedianReg = new ComedianReg(req.body);
+    const user = new User(req.body);
     comedianReg.uploadedpicture = req.file.path;
-    console.log(comedianReg);
-    console.log('This is the image you want to upload', req.file);
-    await ComedianReg.register(comedianReg, req.body.password, (err) => {
+    // console.log(comedianReg);
+    // console.log('This is the image you want to upload', req.file);
+    await comedianReg.save();
+    await User.register(user, req.body.password, (err) => {
       if (err) {
         throw err;
-        console.log('Data has not been posted', err);
       }
-      // res.redirect('/comedianinfo/comedianregistrationform');
-      res.redirect('/registrationpage');
+
+      res.redirect('/clerkinfo/creativesregistration');
     });
   } catch (err) {
     res.status(400).send('Sorry! Data was not sent to DB');
@@ -48,13 +50,12 @@ router.post('/comedianregistrationform', upload.single('uploadedpicture'), async
   }
 });
 
-
 // Route to go  to the  Ugaamux private comedian account.
 router.get('/comedianaccount', async (req, res) => {
   if (req.session.user) {
     try {
-      const users = await ComedianReg.find();
-      res.render('comedianaccount', { comedians: users });
+      const user = await ComedianReg.findOne({ email: req.user.email });
+      res.render('comedianaccount', { comedian: user });
     } catch {
       res.status(400).send('Unable to find comedian');
     }
