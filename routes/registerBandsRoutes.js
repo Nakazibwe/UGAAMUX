@@ -50,13 +50,12 @@ router.post(
       await User.register(user, req.body.password, (err) => {
         if (err) {
           throw err;
-          // console.log('Data has not been posted', err);
         }
-        // res.redirect('/bandinfo/bandregistrationform');
+
         res.redirect('/clerkinfo/creativesregistration');
       });
     } catch (err) {
-      res.status(400).send('Sorry! Data was not sent to DB');
+      res.status(400).send('Sorry! Data was not sent to DB'); 
       console.log(err);
     }
     console.log(req.body);
