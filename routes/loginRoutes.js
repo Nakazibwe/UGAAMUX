@@ -1,3 +1,5 @@
+/* eslint-disable no-empty */
+/* eslint-disable no-undef */
 /* eslint-disable eqeqeq */
 /* eslint-disable space-infix-ops */
 /* eslint-disable max-len */
@@ -6,7 +8,12 @@
 /* eslint-disable no-unused-vars */
 const express = require('express');
 const passport = require('passport');
+const bcrypt = require('bcryptjs');
 const ArtistsReg = require('../models/artistRegModel');
+const ComedianReg = require('../models/comedianRegModel');
+const BandReg = require('../models/bandRegModel');
+const ClerkReg = require('../models/clerkRegModel');
+const User = require('../models/UserModel');
 
 const router = express.Router();
 
@@ -17,12 +24,19 @@ router.get('/login', (req, res) => {
 // Route to login .
 router.post('/login', passport.authenticate('local', { failureRedirect: '/login' }), async (req, res) => {
   req.session.user = req.user;
-  const user = await ArtistsReg.findOne({ email: req.body.email });
-  if (user.email == req.body.email) {
+
+  if ((req.user.email && req.user.password.match(User))&&(req.user.email && req.user.password.match(ArtistsReg))) {
     res.redirect('/artistinfo/artistpersonalaccount');
   }
-  
- 
+  if ((req.user.email && req.user.password.match(User)) && (req.user.email && req.user.password.match(ComedianReg))) {
+    res.redirect('/comedianinfo/comedianaccount');
+  }
+  if ((req.user.email && req.user.password.match(User)) && (req.user.email && req.user.password.match(BandReg))) {
+    res.redirect('/bandinfo/bandaccount');
+  }
+  if ((req.user.email && req.user.password.match(User)) && (req.user.email && req.user.password.match(ClerkReg))) {
+    res.redirect('/clerkinfo/creativesregistration');
+  }
 });
 
 module.exports = router;
