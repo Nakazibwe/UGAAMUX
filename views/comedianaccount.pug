@@ -47,7 +47,7 @@ html(lang='en')
     .container
       .row
         .col-lg-4.photo-div
-          img.img-fluid(src='/imagefiles/UncleMo.jpeg' alt='comedian photo')
+          img.img-fluid(src='/'+comedian.uploadedpicture width = "400px" height = "600px" alt='comedian photo')
         .col-lg-7.comedian-info
           .row.moreinformation
             h5 Personal Information
@@ -63,19 +63,19 @@ html(lang='en')
               p District
               p Date Comedy Began
               p Gender
-        if comedians.length
-        each comedian in comedians 
+        
             .col-lg-5.containerB
+
               p  #{comedian.firstName} 
               p  #{comedian.lastName} 
               p  #{comedian.stagename} 
               p  #{comedian.comedianphone} 
               p  #{comedian.twitter} 
               p  #{comedian.email} 
-              p  #{comedian.ComedianDOB} 
+              p  #{moment(comedian.ComedianDOB).format('DD/MM/YYYY')} 
               p  #{comedian.Location} 
               p  #{comedian.Based} 
-              p  #{comedian.startedcomedy} 
+              p  #{moment(comedian.startedcomedy).format('DD/MM/YYYY')} 
               p  #{comedian.gender} 
               
     .navbar.navbar-expand-lg.navbar-dark.footer
