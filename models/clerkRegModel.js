@@ -19,16 +19,6 @@ const ClerkRegSchema = new mongoose.Schema({
     trim: true,
     required: true,
   },
-  password: {
-    type: String,
-    trim: true,
-    required: true,
-  },
-  role: {
-    type: String,
-    trim: true,
-    required: true,
-  },
 
 });
 ClerkRegSchema.plugin(passportmongoose, {
