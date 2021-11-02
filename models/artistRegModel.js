@@ -89,16 +89,7 @@ const artistsRegSchema = new mongoose.Schema({
         required: true,
         
     },
-    password: {
-        type: String,
-        trim: true,
-        required: true,  
-    },
-    role: {
-        type: String,
-        trim: true,
-        required: true, 
-    },
+
     genre: {
         type: String,
         trim: true,
