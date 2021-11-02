@@ -47,12 +47,12 @@ html(lang='en')
     .container
       .row
         .col-lg-5.photo-div
-          img.img-fluid(src='/imagefiles/canaan-gents.jpeg' alt='band photo')
+          img.img-fluid(src='/'+band.Profilepicture width = "400px" height = "600px" alt='band photo')
           .row
             a.bandgenre Genre 
               br
               | #{band.genre} 
-            a.bandalbums Albums
+            a.bandalbums Albums 
               br
               | #{band.albums} 
             a.bandsongs Songs 
@@ -74,16 +74,15 @@ html(lang='en')
               p Band crowns
               p Additional owners
               p Band sponsors
-        if bands.length 
-        each band in bands
-
+        
             .col-lg-5.containerB
+            
               p #{band.BandName} 
               p #{band.BandOwner} 
               p #{band.BandHome} 
               p #{band.BandNumber} 
               p #{band.BandSlogan} 
-              p #{band.DateFormation} 
+              p #{moment(band.DateFormation).format('DD/MM/YYYY')} 
               p #{band.telephone} 
               p #{band.twitter} 
               p #{band.email} 
