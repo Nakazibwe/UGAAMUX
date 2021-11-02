@@ -10,6 +10,7 @@ const mongoose = require('mongoose');
 const multer = require('multer');
 const path = require('path');
 const BandReg = require('../models/bandRegModel');
+const User = require('../models/UserModel');
 
 const router = express.Router();
 
@@ -38,20 +39,21 @@ router.post(
   ]),
   async (req, res) => {
     try {
+      const user = new User(req.body);
       const bandReg = new BandReg(req.body);
       bandReg.icon = req.files.icon[0].path;
       bandReg.Profilepicture = req.files.Profilepicture[0].path;
-      console.log('These are  the images you want to uploads');
+      // console.log('These are  the images you want to uploads');
 
-      console.log(bandReg);
-
-      await BandReg.register(bandReg, req.body.password, (err) => {
+      // console.log(bandReg);
+      await bandReg.save();
+      await User.register(user, req.body.password, (err) => {
         if (err) {
           throw err;
-          console.log('Data has not been posted', err);
+          // console.log('Data has not been posted', err);
         }
         // res.redirect('/bandinfo/bandregistrationform');
-        res.redirect('/registrationpage');
+        res.redirect('/clerkinfo/creativesregistration');
       });
     } catch (err) {
       res.status(400).send('Sorry! Data was not sent to DB');
@@ -65,8 +67,8 @@ router.post(
 router.get('/bandaccount', async (req, res) => {
   if (req.session.user) {
     try {
-      const users = await BandReg.find();
-      res.render('bandaccount', { bands: users });
+      const user = await BandReg.findOne({ email: req.user.email });
+      res.render('bandaccount', { band: user });
     } catch {
       res.status(400).send('Unable to find band');
     }
