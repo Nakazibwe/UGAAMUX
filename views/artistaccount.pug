@@ -47,17 +47,17 @@ html(lang='en')
     .container
       .row
         .col-lg-4.photo-div
-          //- img.img-fluid(src='/imagefiles/Azawi.jpeg' alt='artist photo')
+          img.img-fluid(src='/'+artist.pictureupload width = "400px" height = "600px" alt='artist photo')
           .row
             a.artistgenre Genre
               br
-              | #{user.genre} 
+              | #{artist.genre} 
             a.artistalbums Albums 
               br
-              | #{user.numberofalbums}  
+              | #{artist.numberofalbums}  
             a.artistsongs Songs
               br
-              | #{user.numberofsongs} 
+              | #{artist.numberofsongs} 
         .col-lg-7.artist-info
           .row.moreinformation
             h5 Personal Information
@@ -76,17 +76,17 @@ html(lang='en')
           
             .col-lg-5.containerB 
           
-              p #{user.firstName} 
-              p #{user.lastName} 
-              p #{user.stageName} 
-              p #{user.telephone} 
-              p #{user.twitter} 
-              p #{user.email} 
-              p #{user.ArtistDOB} 
-              p #{user.basedDistrict} 
-              p #{user.datestartedsing} 
-              p #{user.Location} 
-              p #{user.gender} 
+              p #{artist.firstName} 
+              p #{artist.lastName} 
+              p #{artist.stageName} 
+              p #{artist.telephone} 
+              p #{artist.twitter} 
+              p #{artist.email} 
+              p #{moment(artist.ArtistDOB).format('DD/MM/YYYY')} 
+              p #{artist.basedDistrict} 
+              p #{moment(artist.datestartedsing).format('DD/MM/YYYY')} 
+              p #{artist.Location} 
+              p #{artist.gender} 
     .navbar.navbar-expand-lg.navbar-dark.footer
       a.nav-link.copy(href='#') &copy 2021 Grace Nakazibwe 
       small#small-quote Ugandan Talent Lives Here
