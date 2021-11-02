@@ -23,12 +23,15 @@ const path = require('path');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const passportmongoose = require('passport-local-mongoose');
+const flash = require('connect-flash');
+const moment = require('moment');
 
 const expressSession = require('express-session')({
     secret: 'secret',
     resave: false,
     saveUninitialized: false,
-  });
+});
+
 // Requiring the database models and schemers.
 const ArtistsReg = require('./models/artistRegModel');
 const BandReg = require('./models/bandRegModel');
@@ -37,6 +40,7 @@ const ComedianReg = require('./models/comedianRegModel');
 const Contactus = require('./models/contactUsModel');
 const RegMessage = require('./models/registerMessageModel');
 const ForgotPassword = require('./models/forgotpasswdModel');
+const User = require('./models/UserModel');
 
 // Requiring the different routes.
 const artistRegRoutes = require('./routes/registerArtistRoutes');
@@ -53,6 +57,7 @@ const publicBandRoutes = require('./routes/publicBandRoutes');
 
 
 
+// const basicAuth = require('./permissions/basicAuthentication')(passport);
 
 
     
@@ -66,7 +71,6 @@ mongoose.connect(process.env.DATABASE, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     // useCreateIndex: true,
-
 });
 
 mongoose.connection
@@ -80,6 +84,7 @@ mongoose.connection
 // Configurations
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+app.locals.moment = moment;
 
 
 // Middle-ware
@@ -89,78 +94,19 @@ app.use('/public/imagefiles', express.static(__dirname + '/public/imagefiles'));
 app.use(expressSession);
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(flash());
 
-// Artist Strategy
-passport.use(ArtistsReg.createStrategy());
-passport.serializeUser(ArtistsReg.serializeUser());
-passport.deserializeUser(ArtistsReg.deserializeUser());
+// Global Vars 
+app.use((req, res, next) => {
+    res.locals.success_msg = req.flash('success_msg');
+    res.locals.error_msg = req.flash('error_msg');
+    next();
+});
 
-// Authentication trial.
-// passport.use(ArtistsReg.createStrategy(
-    
-//     { usernameField: 'email' }, (email, password, done) => {
-//         // Match User
-//         ArtistsReg.findOne({ email: email })
-//             .then((user) => {
-//                 if (!user) {
-//                     return done(null, false);
-//                 }
-
-//                 // Match password
-//                 passport.compare(password, user.password, (err, isMatch) => {
-//                     if (err) throw err;
-//                     if (isMatch) {
-//                         return done(null, user);                    
-//                     } else {
-//                         return done(null, false);
-//                     }
-//                 });
-//             })
-//             .catch((err) => console.log(err));
-//     },
-// ));
-// passport.serializeUser(ArtistsReg.serializeUser((id, done) => {
-//     done(null, user.id);
-// }));
-// passport.deserializeUser(ArtistsReg.deserializeUser((id, done) => {
-//     done(err, user);
-// }));
-
-// Second Trial Authentication
-// passport.use(ArtistsReg.createStrategy(
-//     { usernameField: 'email' }, (email, password, done) => {
-//         ArtistsReg.findOne({ email: email }, function (err, user) {
-//             if (err) { return done(err); }
-//             if (!user) { return done(null, false); }
-//             if (!user.verifyPassword(password)) { return done(null, false); }
-//             return done(null, user);
-//         });
-//     },
-// ));
-// passport.serializeUser(ArtistsReg.serializeUser((id, done) => {
-//     done(null, user.id);
-// }));
-// passport.deserializeUser(ArtistsReg.deserializeUser((id, done) => {
-//     done(err, user);
-// }));
-
-// Bands strategy .
-passport.use(BandReg.createStrategy());
-passport.serializeUser(BandReg.serializeUser());
-passport.deserializeUser(BandReg.deserializeUser());
-
-// Clerks Strategy
-passport.use(ClerkReg.createStrategy());
-passport.serializeUser(ClerkReg.serializeUser());
-passport.deserializeUser(ClerkReg.deserializeUser());
-
-// Comedians strategy.
-passport.use(ComedianReg.createStrategy());
-passport.serializeUser(ComedianReg.serializeUser());
-passport.deserializeUser(ComedianReg.deserializeUser());
-
-
-
+// Users  Strategy
+passport.use(User.createStrategy());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 // Routes for the  entire project.
 
