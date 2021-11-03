@@ -48,8 +48,8 @@ html(lang='en')
     #header.container-fluid
       // Code for the inner text box inside the header section
       .header-text-area
-        form.d-flex.top-search
-          input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
+        form.d-flex.top-search(action="/artists" )
+          input.form-control.me-2(type='search' placeholder='Search by Stage name' name ="stageName" aria-label='Search')
           button.btn.btn-outline-success.search-btn(type='submit') Search
         h1 Artists
         small#small-header-quote Ugandan Talent Lives Here!!!
@@ -57,16 +57,18 @@ html(lang='en')
       #image-div1.col-lg-2.col-sm-12
         img#azawiimage.img-fluid(src='/imagefiles/Azawi.jpeg' alt='Azawi photo')
       #text-div1.col-lg-3.col-sm-12
-        h5#title-ID1.card-title  Azawi 
-        p.card-text
-          | During her musical journey as a songwriter, Azawi was
-          | discovered by
-          | Swangz Avenue music label. She has 15 songs and among these is the famous,
-          | "Quanaminno". She promised that she would start to work on her first album, which is currently
-          | unfamiliar.
-        a.card-text(href='#')
-          small.text-muted
-            | @AzawiOfficial
+        if artists.length 
+        each artist in artists 
+          h5#title-ID1.card-title  Azawi #{artist.stageName} 
+          p.card-text
+            | During her musical journey as a songwriter, Azawi was
+            | discovered by
+            | Swangz Avenue music label. She has 15 songs and among these is the famous,
+            | "Quanaminno". She promised that she would start to work on her first album, which is currently
+            | unfamiliar.
+          a.card-text(href='#')
+            small.text-muted
+              | @AzawiOfficial #{artist.twitter} 
       #image-div2.col-lg-2.col-sm-12
         img#camili-img.img-fluid(src='/imagefiles/Chameleon.jpeg' alt='Chameleon photo')
       #text-div2.col-lg-3.col-sm-12
