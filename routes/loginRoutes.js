@@ -25,16 +25,23 @@ router.get('/login', (req, res) => {
 // Route to login .
 router.post('/login', passport.authenticate('local', { failureRedirect: '/login' }), async (req, res) => {
   req.session.user = req.user;
-
-  if ((req.user.email && req.user.password.match(User)) && (req.user.email && req.user.password.match(ArtistsReg))) {
-    res.redirect('/artistinfo/artistpersonalaccount');
-  } if ((req.user.email && req.user.password.match(User)) && (req.user.email && req.user.password.match(ComedianReg))) {
-    res.redirect('/comedianinfo/comedianaccount');
-  } if ((req.user.email && req.user.password.match(User)) && (req.user.email && req.user.password.match(BandReg))) {
-    res.redirect('/bandinfo/bandaccount');
-  } if ((req.user.email && req.user.password.match(User)) && (req.user.email && req.user.password.match(ClerkReg))) {
-    res.redirect('/clerkinfo/creativesregistration');
-  }
+  // Login logic for the different users of the system .
+  User.findOne({ email: req.body.email })
+    .then((data) => {
+      // console.log(data);
+      if (data.role == 'artist') {
+        res.redirect('/artistinfo/artistpersonalaccount');
+      } else if (data.role == 'comedian') {
+        res.redirect('/comedianinfo/comedianaccount');
+      } else if (data.role == 'band') {
+        res.redirect('/bandinfo/bandaccount');
+      } else if (data.role == 'clerk') {
+        res.redirect('/clerkinfo/creativesregistration');
+      } else {
+        res.redirect('/');
+      }
+    })
+    .catch((err) => { console.log(err); });
 });
 
 module.exports = router;
