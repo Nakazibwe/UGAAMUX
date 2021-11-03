@@ -48,7 +48,7 @@ html(lang='en')
                 | Account
               ul.dropdown-menu(aria-labelledby='dropdownMenuLink')
                 li
-                  a#sign-out.dropdown-item(href='/') LOG OUT
+                  a#sign-out.dropdown-item(href= '/logout') LOG OUT
     h4.h4regform Artist Registration
     .container
       form#form-id(action='/artistinfo/artistregistrationform' method='POST' name='ArstisteRegistration' enctype="multipart/form-data" ) 
