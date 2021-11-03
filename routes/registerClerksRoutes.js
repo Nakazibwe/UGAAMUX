@@ -10,7 +10,11 @@ const ClerkReg = require('../models/clerkRegModel');
 const router = express.Router();
 // Route to the page for clerk to register all other  creatives .
 router.get('/creativesregistration', (req, res) => {
-  res.render('registrationpage');
+  if (req.session.user) {
+    res.render('registrationpage');
+  } else {
+    res.redirect('/login');
+  }
 });
 
 // Route to go the clerk registration page.
