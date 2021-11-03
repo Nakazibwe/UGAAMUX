@@ -48,7 +48,7 @@ router.post('/artistregistrationform', upload.single('pictureupload'), async (re
         throw err;
       }
 
-      res.redirect('/clerkinfo/creativesregistration'); 
+      res.redirect('/clerkinfo/creativesregistration');
     });
   } catch (err) {
     res.status(400).send('Sorry! Data was not sent to DB');
