@@ -1,3 +1,4 @@
+/* eslint-disable object-shorthand */
 /* eslint-disable no-unreachable */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
@@ -5,6 +6,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const multer = require('multer');
 const User = require('../models/UserModel');
+const ArtistsReg = require('../models/artistRegModel');
+const BandReg = require('../models/bandRegModel');
+const ComedianReg = require('../models/comedianRegModel');
 const ClerkReg = require('../models/clerkRegModel');
 
 const router = express.Router();
@@ -41,6 +45,28 @@ router.post('/clerkregistrationform', async (req, res) => {
     res.status(400).send('Sorry! Data was not sent to DB');
     console.log(err);
   }
+});
+
+// Route to the dashboard for clerk to view registered creatives.
+router.get('/admindashboard', async (req, res) => {
+  try {
+    const artists = await ArtistsReg.find();
+    const bands = await BandReg.find();
+    const comedians = await ComedianReg.find();
+    const users = await User.find();
+    res.render('admindashboard',
+      {
+        artists: artists,
+        comedians: comedians,
+        bands: bands,
+        users: users,
+      });
+  } catch {
+    res.status(400).send('Unable to find artist');
+  }
+});
+router.post('/admindashboard', (req, res) => {
+
 });
 
 module.exports = router;
