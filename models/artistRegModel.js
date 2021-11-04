@@ -30,7 +30,7 @@ const artistsRegSchema = new mongoose.Schema({
         
     },
     telephone: {
-        type: String,
+        type: String,  
         trim: true,
         required: true,
     },
@@ -90,11 +90,16 @@ const artistsRegSchema = new mongoose.Schema({
         
     },
 
-    genre: {
+    genre: { 
         type: String,
         trim: true,
         required: true,
         
+    },
+    bio: {
+        type: String,
+        required: true, 
+
     },
     gender: {
         type: String,
@@ -113,3 +118,5 @@ artistsRegSchema.plugin(passportmongoose, {
     
 });
 module.exports = mongoose.model('ArtistsReg', artistsRegSchema);     
+// if artists.length 
+// each artist in artists 
