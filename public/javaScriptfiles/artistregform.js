@@ -412,3 +412,10 @@ const validate = () => {
 
 const Artistform = document.getElementById('form-id');
 Artistform.addEventListener('submit', validate);
+
+// Artistform.addEventListener('submit', (e) => {
+//   if (validate == null) {
+//     e.preventDefault();
+//   }
+// });
+
