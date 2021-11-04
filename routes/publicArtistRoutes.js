@@ -9,19 +9,18 @@ const router = express.Router();
 const ArtistsReg = require('../models/artistRegModel');
 
 // Route to get to the Artists Page.
-router.get('/artists', async (req, res) => {
+router.get('/artists', async (req, res) => { 
   try {
-    let  users = await ArtistsReg.find();
+    let users = await ArtistsReg.find(); 
     if (req.query.stageName) {
       users = await ArtistsReg.find({ stageName: req.query.stageName });
     } else if (req.query.twitter) {
       users = await ArtistsReg.find({ twitter: req.query.twitter });
     }
-    res.render('artists', {artists: users});
-  } catch (err){
+    res.render('artists', { artists: users });
+  } catch (err) {
     res.status(400).send('Artist is Unavailable', err);
   }
- 
 });
 
 
