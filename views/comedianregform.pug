@@ -42,13 +42,13 @@ html(lang='en')
             a#navbar-artistes.nav-link(href='/artists') Artists
             a#navbar-bands.nav-link(href='/bands') Bands
             a#navbar-comedians.nav-link(href='/comedians') Comedians
-            a#navbar-contactus.nav-link(href='/contactinfo/contactUs') Contact Us
+            a#navbar-contactus.nav-link(href='/contactinfo/contactUs') Contact Us 
             .dropdown
               a#navbar-dropdown.btn.btn-secondary.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
                 | Account
               ul.dropdown-menu(aria-labelledby='dropdownMenuLink')
                 li
-                  a#sign-out.dropdown-item(href='/') LOG OUT
+                  a#sign-out.dropdown-item(href='/logout') LOG OUT  
     h4.h4regform Comedian Registration  
     .container
       form#form-id(action='/comedianinfo/comedianregistrationform' method='POST' name='ComedianRegistration' enctype="multipart/form-data")
@@ -127,6 +127,11 @@ html(lang='en')
                 option(value="default") Select a role 
                 option(value="comedian") Comedian
             small#roles-error.error
+            .form-action
+              label#bio(for='') Comedian Bio 
+              br
+              textarea#comedian-bio(name='bio' placeholder='Enter Comedian Bio' cols='30' rows='10')
+            small#bio-ERROR.error
 
 
             p#pgender Gender
