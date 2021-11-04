@@ -83,7 +83,7 @@ body {
 .artistgenre {
     height: 80px;
     padding: 3%;
-    width:25%;
+    width:28%;
     border-radius: 50px;
     margin: 4%;
     color:#fff;
@@ -101,7 +101,7 @@ body {
 .artistalbums {
     height: 80px;
     padding:3%;
-    width:25%;
+    width:24%;
     color:#fff;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
@@ -118,7 +118,7 @@ body {
 .artistsongs {
     height: 80px;
     padding: 3%;
-    width:25%;
+    width:24%;
     color:#fff;
     border-radius: 50px;
     margin: 4%;
