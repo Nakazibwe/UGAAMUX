@@ -6,27 +6,28 @@ block content
         div.col.form-group.col-md-12   
             div.form-row
                 div.col-md-10
-                    p Here is your information #{user.firstname}
+                    p Here is your information #{user.firstName}
                 div.col-md-2
                     form(method="post" action='/logout') 
-                        button.btn.btn-dark.btn-block(type="submit") Log out
+                        button.btn.btn-dark.btn-block(type="submit") Log out 
     div.form-row
-        img(src='/'+user.imageupload width="100px" height="100px")
-    form(method="post" action="/update?id="+user._id)
+        img(src='/'+user.imageupload width="100px" height="100px") 
+    form(method="post")
+     form(method="post" action="/update?id="+artist._id) 
         table.table
             thead.thead-dark
                 tr
-                    th Firstname
+                    th First name
                     td 
-                        input.form-control(value = user.firstname name ="firstname")
+                        input.form-control(value = artist.firstName name ="firstName")
                 tr
-                    th Lastname
+                    th Lastname 
                     td 
-                        input.form-control(value = user.lastname name ="lastname")
+                        input.form-control(value = artist.lastname name ="lastname")
                 tr
-                    th Email
+                    th Email 
                     td 
-                        input.form-control(value = user.email name ="email")
+                        input.form-control(value = artist.email name ="email")
                 tr
                     th Gender
                     td 
@@ -46,7 +47,7 @@ block content
                 tr
                     th Country
                     td 
-                        input.form-control(value = user.country name ="country")
+                        input.form-control(value = user.country name ="country") 
                 tr
                     th City
                     td 
@@ -61,4 +62,4 @@ block content
                     td(colspan=2)
                         button.btn.btn-dark.btn-block(type="submit") Update
 
-                            
+//-  form(method="post" action="/update?id="+user._id)                   
