@@ -1,0 +1,221 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title  UGAAMUX Admin Dashboard 
+        script(defer src='https://use.fontawesome.com/releases/v5.0.13/js/solid.js' integrity='sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ' crossorigin='anonymous').
+
+        script(defer src='https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js' integrity='sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY' crossorigin='anonymous').
+
+        script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous').
+
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js' integrity='sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ' crossorigin='anonymous').
+
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js' integrity='sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm' crossorigin='anonymous').
+
+        script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+        script(src='https://unpkg.com/gijgo@1.9.13/js/gijgo.js' type='text/javascript')
+        link(href='https://unpkg.com/gijgo@1.9.13/css/gijgo.css' rel='stylesheet' type='text/css')
+        link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css' integrity='sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4' crossorigin='anonymous')
+        link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous')
+        
+        link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+        link(rel='stylesheet' href='/cssfiles/admindashboard.css')
+    body
+        .wrapper
+            nav#sidebar
+                .sidebar-header
+                    h3 UGAAMUX
+                ul.list-unstyled.components
+                    p Admin Dashboard
+                    li.active
+                        a.dropdown-toggle(href='#homeSubmenu' data-toggle='collapse' aria-expanded='false') Home
+                        ul#homeSubmenu.collapse.list-unstyled
+                            li
+                                a(href='/clerkinfo/creativesregistration') Admin Homepage
+                            li
+                                a(href='/') Public Homepage
+                    li
+                        a(href='/aboutUs') About
+                    li
+                        a.dropdown-toggle(href='#pageSubmenu' data-toggle='collapse' aria-expanded='false') Registered Creatives
+                        ul#pageSubmenu.collapse.list-unstyled
+                            li
+                                a(href='#regart') Registered Artists
+                            li
+                                a(href='#regcom') Registered Comedians
+                            li
+                                a(href='#regbands') Registered Bands
+                    li
+                        a(href='#') Portfolio
+                    li
+                        a(href='/logout') LOG OUT
+            #content
+                nav.navbar.navbar-expand-lg.navbar-light.bg-light
+                    .container-fluid
+                        button#sidebarCollapse.btn.btn-info(type='button')
+                            i.fas.fa-align-left
+                            span Toggle Sidebar
+                        button.btn.btn-dark.d-inline-block.d-lg-none.ml-auto(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+                            i.fas.fa-align-justify
+                        #navbarSupportedContent.collapse.navbar-collapse
+                            ul.nav.navbar-nav.ml-auto
+                                li.nav-item.active
+                                    a.nav-link(href='#regart') Artists
+                                li.nav-item
+                                    a.nav-link(href='#regbands') Bands
+                                li.nav-item
+                                    a.nav-link(href='#regcom') Comedians
+                                
+                                   
+                #regart.line.registeredcreatives
+                    h2 Registered Artists
+                        div.form-row
+                            div.col.form-group.col-md-12
+                                form.search( method="POST" action='/clerkinfo/admindashboard')
+        
+                                    div.form-row
+                                        div.col-md-8
+                                            input.form-control(name='stageName' placeholder="Search by stage name")
+                                        div.col-md-4
+                                            input.btn.btn-dark.btn-block(type="submit")     
+                        table.table
+                            thead.thead-dark
+                                tr
+                                    th Artist ID 
+                                    th Artist First name
+                                    th Artist Last name
+                                    th Artist stage name
+                                    th Artist telephone
+                                    th Artist twitter
+                                    th Artist email
+                                    th Artist gender
+                                    th Artist genre
+                                    th Artist image
+                                    th Artist update
+                                    th Artist delete
+                            tbody
+                                if artists.length
+                                each artist in artists
+                                    tr
+                                        td #{artist.artistID}
+                                        td #{artist.firstName}
+                                        td #{artist.lastName}
+                                        td #{artist.stageName}
+                                        td #{artist.telephone}
+                                        td #{artist.twitter}
+                                        td #{artist.email}
+                                        td #{artist.gender}
+                                        td #{artist.genre}
+                                        td 
+                                            //- img(src=`/img/#{artist.pictureupload}`)
+                                            //- img(src=`/img/${artist.pictureupload}` alt="image" style="width:20%" margin ="5px auto")
+                                            img(src='/'+artist.pictureupload alt="image" width="50px" height="50px") 
+                                        td
+                                           a(href='/updateartist'+artist._id) Update
+                                        td
+                                            form(method="post" action='/deleteartist')
+                                                input(type="hidden" placeholder="" name="id", value= artist._id)
+                                                button.btn.btn-dark.btn-block(type="submit") Delete
+
+                #regcom.line.registeredcreatives
+                    h2 Registered Comedians
+                        div.form-row
+                            div.col.form-group.col-md-12
+                                form.search(method="POST" action='/clerkinfo/admindashboard')
+                                    div.form-row
+                                        div.col-md-8
+                                            input.form-control(name='stageName' placeholder="Search by stage name")
+                                        div.col-md-4
+                                            input.btn.btn-dark.btn-block(type="submit")  
+                        table.table
+                            thead.thead-dark
+                                tr
+                                    th Comedian ID 
+                                    th Comedian First name
+                                    th Comedian Last name
+                                    th Comedian stage name
+                                    th Comedian telephone
+                                    th Comedian twitter
+                                    th Comedian email
+                                    th Comedian gender
+                                    //- th Comedian genre
+                                    th Comedian image
+                                    th Comedian update
+                                    th Comedian  delete
+                            tbody
+                                if comedians.length
+                                each comedian in comedians
+                                    tr
+                                        td #{comedian.comedianID}
+                                        td #{comedian.firstName}
+                                        td #{comedian.lastName}
+                                        td #{comedian.stagename}
+                                        td #{comedian.comedianphone}
+                                        td #{comedian.twitter}
+                                        td #{comedian.email}
+                                        td #{comedian.gender}
+                                        //- td #{comedian.genre}
+                                        td 
+                                            img(src='/'+comedian.uploadedpicture alt="image" width="50px" height="50px") 
+                                        td
+                                            a(href='/update/'+comedian._id) Update
+                                        td
+                                            form(method="POST" action = '/deletecomedian')
+                                                input(type="hidden" placeholder="" name="id", value= comedian._id)
+                                                button.btn.btn-dark.btn-block(type="submit") Delete
+
+                #regbands.line.registeredcreatives
+                    h2 Registered Bands
+                        div.form-row
+                            div.col.form-group.col-md-12
+                                form.search(method="POST" action='/clerkinfo/admindashboard')
+                                    div.form-row
+                                        div.col-md-8
+                                            input.form-control(name='BandName' placeholder="Search by band name")
+                                        div.col-md-4
+                                            input.btn.btn-dark.btn-block(type="submit")
+                        table.table
+                            thead.thead-dark
+                                tr
+                                    th Band ID
+                                    th Band Name
+                                    th Band owner
+                                    th Band home
+                                    th Number of members
+                                    th Band telephone
+                                    th Band email
+                                    th Band sponsors
+                                    th Band genre
+                                    th Band  image
+                                    th Band  update
+                                    th Band  delete
+                            tbody
+                                if bands.length 
+                                each band in bands
+                                     tr
+                                        td #{band.bandID}
+                                        td #{band.BandName}
+                                        td #{band.BandOwner}
+                                        td #{band.BandNumber}
+                                        td #{band.telephone}
+                                        td #{band.twitter}
+                                        td #{band.email}
+                                        td #{band.bandsponsors}
+                                        td #{band.genre} 
+                                        td
+                                            img(src='/'+band.Profilepicture alt="image" width="50px" height="50px") 
+                                        td
+                                            a(href='/update/'+band._id) Update
+                                        td
+                                            form(method="POST" action = '/deleteband')
+                                                input(type="hidden" placeholder="" name="id", value= band._id)
+                                                button.btn.btn-dark.btn-block(type="submit") Delete 
+
+                
+                
+                    
+
+            script(src='/javaScriptfiles/admindashboard.js')
