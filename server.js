@@ -1,3 +1,4 @@
+/* eslint-disable no-empty */
 /* eslint-disable prefer-arrow-callback */
 /* eslint-disable func-names */
 /* eslint-disable no-else-return */
@@ -20,6 +21,7 @@
 // Dependencies
 const express = require('express');
 const path = require('path');
+const pug = require('pug');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const passportmongoose = require('passport-local-mongoose');
@@ -54,7 +56,7 @@ const loginRoutes = require('./routes/loginRoutes');
 const publicArtistRoutes = require('./routes/publicArtistRoutes');
 const publicComedianRoutes = require('./routes/publicComedianRoutes');
 const publicBandRoutes = require('./routes/publicBandRoutes');
-
+  
 
 
 // const basicAuth = require('./permissions/basicAuthentication')(passport);
@@ -154,10 +156,9 @@ app.use('/', publicComedianRoutes);
 app.use('/', publicBandRoutes);
 
 
-// Route to the dashboard for clerk to view registered creatives. 
-app.get('/admindashboard', (req, res) => {
-    res.sendFile(__dirname + '/views/admindashboard.html');
-  });
+
+
+
 
 
 
