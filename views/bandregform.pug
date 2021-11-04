@@ -42,16 +42,16 @@ html(lang='en')
             a#navbar-artistes.nav-link(href='/artists') Artists
             a#navbar-bands.nav-link(href='/bands') Bands
             a#navbar-comedians.nav-link(href='/comedians') Comedians
-            a#navbar-contactus.nav-link(href='/contactinfo/contactUs') Contact Us
+            a#navbar-contactus.nav-link(href='/contactinfo/contactUs') Contact Us  
             .dropdown
               a#navbar-dropdown.btn.btn-secondary.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
                 | Account
               ul.dropdown-menu(aria-labelledby='dropdownMenuLink')
                 li
-                  a#sign-out.dropdown-item(href='/') LOG OUT
+                  a#sign-out.dropdown-item(href= '/logout') LOG OUT 
     h4.h4regform Band Registration
     .container
-      form#form-id(action='/bandinfo/bandregistrationform' method='POST' name='BandRegistration'  enctype="multipart/form-data")
+      form#form-id(action='/bandinfo/bandregistrationform' method='POST' name='BandRegistration' enctype="multipart/form-data")
         .row
           .col-lg-4.form-action-cols
             .form-action
@@ -89,6 +89,13 @@ html(lang='en')
               br
               input#numsongs(type='number' name='numberofsongs')
             small#numberofsongs-ERROR.error
+            .form-action
+              label#userrole(for='') Role
+              br 
+              select#roles(name="role")
+                option(value="default") Select a role 
+                option(value="band") Band
+            small#roles-error.error
           .col-lg-4.form-action-cols
             .form-action
               label#date-of-formation(for='') Date of Formation
@@ -125,31 +132,13 @@ html(lang='en')
               br
               input#band-genre(type='text' placeholder=' Enter Band Genre ' name='genre')
             small#genre-error.error
-          .col-lg-4.form-action-cols
-
             .form-action
               label#passwd(for='') Password
               br
               input#userpassword(type='password' placeholder = "Create Password" name ='password')
             small#passworderror.error
-            
-            .form-action
-              label#userrole(for='') Role
-              br 
-              select#roles(name="role")
-                option(value="default") Select a role 
-                option(value="band") Band
-            small#roles-error.error
-            .form-action
-              label#band-icon(for='')  Band Icon 
-              br
-              input#Band-icon(type='file' name='icon')
-            small#band-icon-error.error
-            .form-action
-              label#profile-pic(for='')  Profile Picture 
-              br
-              input#profile-photo(type='file' name='Profilepicture')
-            small#profilephoto-error.error
+          .col-lg-4.form-action-cols
+
             .form-action
               label#otherowners(for='')  Other Owners, (if any) 
               br
@@ -160,7 +149,22 @@ html(lang='en')
               br
               textarea#band-sponsors(name='bandsponsors' placeholder='Enter Band Sponsors' cols='30' rows='10')
             small#sponsors-ERROR.error
-            
+            .form-action
+              label#bio(for='') Band Bio
+              br
+              textarea#band-bio(name='bio' placeholder='Enter Band Bio' cols='30' rows='10')
+            small#bio-ERROR.error
+            .form-action
+              label#band-icon(for='')  Band Icon 
+              br
+              input#Band-icon(type='file' name='icon')
+            small#band-icon-error.error 
+            .form-action
+              label#profile-pic(for='')  Profile Picture 
+              br
+              input#profile-photo(type='file' name='Profilepicture') 
+            small#profilephoto-error.error
+
             #button-form
               input#submit-btn(type='submit' name='submit-button' value='SUBMIT')
               input#cancel-btn(type='reset' name='cancel-button' value='CANCEL')
