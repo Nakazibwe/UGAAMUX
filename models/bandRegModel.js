@@ -63,7 +63,6 @@ const BandRegSchema = new mongoose.Schema({
     twitter: {
         type: String,
         trim: true,
-        default: '',
         required: true,
     },
     email: {
@@ -75,8 +74,7 @@ const BandRegSchema = new mongoose.Schema({
     bandCrowns: {
         type: String,
         trim: true,
-        
-                
+           
     },
     albums: {
         type: Number,
@@ -89,26 +87,28 @@ const BandRegSchema = new mongoose.Schema({
         required: true,
           
     },
+    ownership: {  
+        type: String,
+           
+    },
+    bandsponsors: {
+        type: String,
+            
+    },
+    bio: {
+        type: String,
+        required: true,
+    },
     icon: {   
         type: String,  
-    
-        
-        
+       
     },
     Profilepicture: {
         type: String,
                    
     },
-    ownership: {  
-        type: String,
-        default: '',
-        
-    },
-    bandsponsors: {
-        type: String,
-        default: '', 
-        
-    },  
+   
+   
     
    
 });
