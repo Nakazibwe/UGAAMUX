@@ -165,7 +165,7 @@ border-left: 1px dotted #bfc1c2;
 .row{
     margin: auto;
 }
-.form-action input ,select{
+.form-action input , select ,  textarea{
     width:100%;
     height: 40px;
     margin-bottom:3%;
