@@ -46,7 +46,7 @@ html(lang='en')
             .dropdown
               a#navbar-dropdown.btn.btn-secondary.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
                 | Account
-              ul.dropdown-menu(aria-labelledby='dropdownMenuLink')
+              ul.dropdown-menu(aria-labelledby='dropdownMenuLink') 
                 li
                   a#sign-out.dropdown-item(href= '/logout') LOG OUT
     h4.h4regform Artist Registration
@@ -57,7 +57,7 @@ html(lang='en')
             .form-action
               label#firstname(for='') First Name
               input#fname(type='text' name='firstName' placeholder='Enter Artist  First Name ')
-            small#firstname-error.error
+            small#firstname-error.error 
             .form-action
               label#lastname(for='') Last Name
               input#lname(type='text' name='lastName' placeholder='Enter  Artist  Last Name ')
@@ -73,7 +73,7 @@ html(lang='en')
               input#artist-id(type='text' name='artistID' placeholder='Enter Artist ID')
             small#artistID-error.error
             .form-action
-              label#telcontact(for='') Telephone Contact(256)
+              label#telcontact(for='') Telephone Contact(256)  
               br
               input#telecontact(type='text' placeholder='Enter Artist Phone number' name='telephone')
             small#phonenumber-error.error
@@ -146,6 +146,12 @@ html(lang='en')
               br
               input#music-type(type='text' placeholder='Enter Artist Genre' name='genre')
             small#genre-error.error
+            .form-action
+              label#artistbio(for='')  Artist Bio
+              br
+              textarea#artistbio(name='bio' placeholder='Enter Artist Bio' cols='30' rows='10')
+            small#bio-error.error 
+
             p#pgender Gender
             #gender-form
               span
