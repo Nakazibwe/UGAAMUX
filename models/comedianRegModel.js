@@ -71,6 +71,10 @@ const ComedianRegSchema = new mongoose.Schema({
         trim: true,
         required: true,
     },
+    bio: {
+        type: String,
+        required: true,
+    },
     gender: {
         type: String,
         trim: true,
