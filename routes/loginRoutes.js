@@ -1,3 +1,4 @@
+/* eslint-disable object-shorthand */
 /* eslint-disable no-empty */
 /* eslint-disable no-undef */
 /* eslint-disable eqeqeq */
@@ -58,8 +59,8 @@ router.get('/logout', (req, res) => {
 router.post('/deleteartist', async (req, res) => {
   if (req.session.user) {
     try {
-      await ArtistsReg.deleteOne({ _id: req.body.id });
-      await User.deleteOne({ _id: req.body.id });
+      await ArtistsReg.deleteOne({ email: req.body.id });
+      await User.deleteOne({ email: req.body.id });
       res.redirect('back');
     } catch (err) {
       res.send('You are unable to delete an artist ', err);
@@ -73,8 +74,8 @@ router.post('/deleteartist', async (req, res) => {
 router.post('/deletecomedian', async (req, res) => {
   if (req.session.user) {
     try {
-      await ComedianReg.deleteOne({ _id: req.body.id });
-      await User.deleteOne({ _id: req.body.id });
+      await ComedianReg.deleteOne({ email: req.body.id });
+      await User.deleteOne({ email: req.body.id });
       res.redirect('back');
     } catch (err) {
       res.send('You are unable to delete a comedian ', err);
@@ -88,8 +89,8 @@ router.post('/deletecomedian', async (req, res) => {
 router.post('/deleteband', async (req, res) => {
   if (req.session.user) {
     try {
-      await BandReg.deleteOne({ _id: req.body.id });
-      await User.deleteOne({ _id: req.body.id });
+      await BandReg.deleteOne({ email: req.body.id });
+      await User.deleteOne({ email: req.body.id });
       res.redirect('back');
     } catch (err) {
       res.send('You are unable to delete a band ', err);
@@ -100,33 +101,37 @@ router.post('/deleteband', async (req, res) => {
   }
 });
 
-// router.get('/admindashboard', async (req, res) => {
-//   try {
-//     const artists = await ArtistsReg.find();
-//     const bands = await BandReg.find();
-//     const comedians = await ComedianReg.find();
-//     const clerks = await ClerkReg.find();
-//     // console.log(artists);
-//     // console.log(bands);
-//     // console.log(comedians);
-//     // console.log(clerks);
-//     res.render('admindashboard',
-//       {
-//         artists: artists,
-//         comedians: comedians,
-//         clerks: clerks,
-//         bands: bands,
-//       });
-//   } catch {
-//     res.status(400).send('Unable to find artist');
-//   }
-// });
+router.get('/updateartist', (req, res) => {
+  res.render('updateartist');
+});
 
-router.get('/updateartist', async (req, res) => {
+router.post('/updateartist', async (req, res) => {
+  if (req.session.user) {
+    try {
+      const artists = await ArtistsReg.updateOne({ _id: req.body.id });
+      const users = await User.updateOne({ _id: req.body.id });
+      res.render('updateartist', {
+        artists: artists,
+        users: users,
+      });
+    } catch {
+      res.status(400).send('Unable to update  artist');
+    }
+  } else {
+    console.log('cant find session');
+    res.redirect('/login');
+  }
+});
+
+router.get('/updatecomedian', async (req, res) => {
+  res.render('updatecomedian');
+});
+
+router.post('/updatecomedian', async (req, res) => {
   // if (req.session.user) {
   try {
-    // const artists = await ArtistsReg.updateOne({ _id: req.body.id });
-    // const users = await User.updateOne({ _id: req.body.id });
+    const artists = await ArtistsReg.updateOne({ _id: req.body.id });
+    const users = await User.updateOne({ _id: req.body.id });
     res.render('updateartist');
   } catch {
     res.status(400).send('Unable to update  artist');
