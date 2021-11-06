@@ -11,7 +11,7 @@ const ArtistsReg = require('../models/artistRegModel');
 // Route to get to the Artists Page.
 router.get('/artists', async (req, res) => { 
   try {
-    let users = await ArtistsReg.find(); 
+    let users = await ArtistsReg.find();
     if (req.query.stageName) {
       users = await ArtistsReg.find({ stageName: req.query.stageName });
     } else if (req.query.twitter) {
