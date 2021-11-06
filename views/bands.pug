@@ -48,94 +48,93 @@ html(lang='en')
       // Code for the inner text box inside the header section
       #header-text-area.container
         form.d-flex.top-search
-          input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
+          input.form-control.me-2(type='search' placeholder='Search' aria-label='Search' name = 'BandName')
           button.btn.btn-outline-success.search-btn(type='submit') Search
         h1 Bands
         small#small-header-quote Ugandan Talent Lives Here!!!
     .row
-      .col-lg-5.img-div-left
-        img.card-img-top.img-fluid(src='/imagefiles/Ivuga-Band.jpeg' alt='Ivuga band')
-      .col-lg-5.text-div-left
-        h5.card-title.TITLE  Ivuga Band
-        p.card-text
-          | IvugaLive is a live entertainment band that offers services for private
-          | and public functions. It was born from the great musical passion and skill
-          | and is dedicated to giving the Kampala entertainment scene a touch of musical
-          | genius.
-        a.card-text(href='#')
-          small.text-muted  @ivugaBand 
-    .row
-      .col-lg-5.img-div-left
-        img.card-img-top.img-fluid(src='/imagefiles/magic-hornz.jpeg' alt='Magic Hornz band')
-      .col-lg-5.text-div-left
-        h5.card-title.TITLE Magic Hornz Band
-        p.card-text
-          | Magic Hornz
-          | performances combine Jazz, traditional African Beats, folk, Raggae and Salsa with an
-          | original mix of traditional and contemporary sounds from around globe, giving the music a punchy front
-          | line-up to flavour the performance with magic of the Horns.
-        a.card-text(href='#')
-          small.text-muted  @BandHornz 
-    .row
-      .col-lg-5.img-div-left
-        img.card-img-top.img-fluid(src='/imagefiles/canaan-gents.jpeg' alt='Canaan gents')
-      .col-lg-5.text-div-left
-        h5.card-title.TITLE  Canaan Gents Band
-        p.card-text
-          | Canaan Gents is an Acapella vocal band devoted to making Christ famous
-          | while pursuing excellence and setting a trend in Capella music. The band sings in
-          | stunning vocal harmony without instrumental accompaniment. It's an engaging mix of tightly-crafted
-          | music.
-          | Canaan gents has stamped its mark in the musical arena by releasing an EP dubbed "Nkwagala EP" of 8
-          | songs
-          | as well Uganda’s first A cappella music video for their song “Sing”.
-        a.card-text(href='#')
-          small.text-muted  @Canaangents
-    .row
-      .col-lg-5.img-div-left
-        img.card-img-top.img-fluid(src='/imagefiles/NewEaglesBand.png' alt='New Eagles band')
-      .col-lg-5.text-div-left
-        h5.card-title.TITLE  The New Eagles Band
-        p.card-text
-          | The New Eagles band has won not only the admiration of musical pundits,
-          | critics and local audiences, but also the support of distinguished international music
-          | promoters. This band was founded by the singing couple Geofrey Lutaaya and Irene Namatovu.
-        a.card-text(href='#')
-          small.text-muted  De New Eagles
-    .row
-      .col-lg-5.img-div-left
-        img.card-img-top.img-fluid(src='/imagefiles/Janziband.jpeg' alt='Janzi band')
-      .col-lg-5.text-div-left
-        h5.card-title.TITLE  Janzi Band
-        p.card-text
-          | Janzi is a Ugandan afro-fusion, contemporary and world music band formed on 27 August
-          | 2009 by Ssewa Ssewa and friends Abraham Sekasi, Jackson Kirya and Steven Oundo. The band has a hybrid
-          | repertoire of music, including notable covers as well as an original ethno-pop discography.
-        a.card-text(href='#')
-          small.text-muted  @JanziBand
-    .row
-      .col-lg-5.img-div-left
-        img.card-img-top.img-fluid(src='/imagefiles/AfrigoBand.jpeg' alt='Afrigo band')
-      .col-lg-5.text-div-left
-        h5.card-title.TITLE  Afrigo Band
-        p.card-text
-          | The Afrigo Band is a musical band in Uganda. It is the longest-lasting musical
-          | group in the history of Uganda, having existed for 46 years by August 2021. The band is famous
-          | for alot of its works like the famous, "Sikulimba" .
-        a.card-text(href='#')
-          small.text-muted  @Afrigoband256
-    .row
-      .col-lg-5.img-div-left
-        img.card-img-top.img-fluid(src='/imagefiles/GoldenBand.png' alt='Golden band')
-      .col-lg-5.text-div-left
-        h5.card-title.TITLE  Golden Band
-        p.card-text
-          | The golden band was founded after the falling out of the old Eagles Production
-          | band. The Golden
-          | band has many popular artists such as Mesearch Ssemakula and Catherine
-          | Kusasira.
-        a.card-text(href='#')
-          small.text-muted  The Golden Band
+      if bands.length 
+      each band in bands 
+        .col-lg-5.img-div-left
+          img.card-img-top.img-fluid(src='/'+band.Profilepicture alt=' band photo')
+        .col-lg-5.text-div-left
+          h5.card-title.TITLE  #{band.BandName}  
+          p.card-text
+            | #{band.bio}  
+          a.card-text(href='#')
+            small.text-muted  #{band.twitter}  
+      //- .row
+      //-   .col-lg-5.img-div-left
+      //-     img.card-img-top.img-fluid(src='/imagefiles/magic-hornz.jpeg' alt='Magic Hornz band')
+      //-   .col-lg-5.text-div-left
+      //-     h5.card-title.TITLE Magic Hornz Band
+      //-     p.card-text
+      //-       | Magic Hornz
+      //-       | performances combine Jazz, traditional African Beats, folk, Raggae and Salsa with an
+      //-       | original mix of traditional and contemporary sounds from around globe, giving the music a punchy front
+      //-       | line-up to flavour the performance with magic of the Horns.
+      //-     a.card-text(href='#')
+      //-       small.text-muted  @BandHornz 
+      //- .row
+      //-   .col-lg-5.img-div-left
+      //-     img.card-img-top.img-fluid(src='/imagefiles/canaan-gents.jpeg' alt='Canaan gents')
+      //-   .col-lg-5.text-div-left
+      //-     h5.card-title.TITLE  Canaan Gents Band
+      //-     p.card-text
+      //-       | Canaan Gents is an Acapella vocal band devoted to making Christ famous
+      //-       | while pursuing excellence and setting a trend in Capella music. The band sings in
+      //-       | stunning vocal harmony without instrumental accompaniment. It's an engaging mix of tightly-crafted
+      //-       | music.
+      //-       | Canaan gents has stamped its mark in the musical arena by releasing an EP dubbed "Nkwagala EP" of 8
+      //-       | songs
+      //-       | as well Uganda’s first A cappella music video for their song “Sing”.
+      //-     a.card-text(href='#')
+      //-       small.text-muted  @Canaangents
+      //- .row
+      //-   .col-lg-5.img-div-left
+      //-     img.card-img-top.img-fluid(src='/imagefiles/NewEaglesBand.png' alt='New Eagles band')
+      //-   .col-lg-5.text-div-left
+      //-     h5.card-title.TITLE  The New Eagles Band
+      //-     p.card-text
+      //-       | The New Eagles band has won not only the admiration of musical pundits,
+      //-       | critics and local audiences, but also the support of distinguished international music
+      //-       | promoters. This band was founded by the singing couple Geofrey Lutaaya and Irene Namatovu.
+      //-     a.card-text(href='#')
+      //-       small.text-muted  De New Eagles
+      //- .row
+      //-   .col-lg-5.img-div-left
+      //-     img.card-img-top.img-fluid(src='/imagefiles/Janziband.jpeg' alt='Janzi band')
+      //-   .col-lg-5.text-div-left
+      //-     h5.card-title.TITLE  Janzi Band
+      //-     p.card-text
+      //-       | Janzi is a Ugandan afro-fusion, contemporary and world music band formed on 27 August
+      //-       | 2009 by Ssewa Ssewa and friends Abraham Sekasi, Jackson Kirya and Steven Oundo. The band has a hybrid
+      //-       | repertoire of music, including notable covers as well as an original ethno-pop discography.
+      //-     a.card-text(href='#')
+      //-       small.text-muted  @JanziBand
+      //- .row
+      //-   .col-lg-5.img-div-left
+      //-     img.card-img-top.img-fluid(src='/imagefiles/AfrigoBand.jpeg' alt='Afrigo band')
+      //-   .col-lg-5.text-div-left
+      //-     h5.card-title.TITLE  Afrigo Band
+      //-     p.card-text
+      //-       | The Afrigo Band is a musical band in Uganda. It is the longest-lasting musical
+      //-       | group in the history of Uganda, having existed for 46 years by August 2021. The band is famous
+      //-       | for alot of its works like the famous, "Sikulimba" .
+      //-     a.card-text(href='#')
+      //-       small.text-muted  @Afrigoband256
+      //- .row
+      //-   .col-lg-5.img-div-left
+      //-     img.card-img-top.img-fluid(src='/imagefiles/GoldenBand.png' alt='Golden band')
+      //-   .col-lg-5.text-div-left
+      //-     h5.card-title.TITLE  Golden Band
+      //-     p.card-text
+      //-       | The golden band was founded after the falling out of the old Eagles Production
+      //-       | band. The Golden
+      //-       | band has many popular artists such as Mesearch Ssemakula and Catherine
+      //-       | Kusasira.
+      //-     a.card-text(href='#')
+      //-       small.text-muted  The Golden Band
     .navbar.navbar-expand-lg.navbar-dark.footer
       a.nav-link.copy(href='#') &copy 2021 Grace Nakazibwe 
       small#small-quote Ugandan Talent Lives Here
@@ -150,4 +149,4 @@ html(lang='en')
           i.fa.fa-instagram
         a.nav-link.icon(href='#')
           i.fa.fa-linkedin
-    script(src='/javaScriptfiles/js/bootstrap.min.js')
+    script(src='/javaScriptfiles/js/bootstrap.min.js') 
