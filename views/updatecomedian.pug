@@ -1,0 +1,56 @@
+extends layout1
+block content
+    header.card-header
+        h4.card-title UGAAMUX
+
+    div.form-row
+        div.col.form-group.col-md-12   
+            div.form-row
+                div.col-md-10  
+                    //- p Here is the  information of  #{comedian.stageName}
+                div.col-md-2
+                    form(method="post" action='/logout') 
+                        //- button.btn.btn-dark.btn-block(type="submit") Log out
+    div.form-row
+        //- img(src='/'+comedian.pictureupload width="100px" height="100px") 
+    form(method="post")
+    
+
+        table.table
+            thead.thead-dark
+                tr
+                    th Comedian   first  name
+                    td 
+                        //- input.form-control(value = comedian.firstName name ="firstName")
+                tr
+                    th  Comedian   last name
+                    td 
+                        //- input.form-control(value = comedian.lastName name ="lastName")
+                tr
+                    th Comedian  email
+                    td 
+                        //- input.form-control(value = comedian.email name ="email")
+                tr
+                    th Comedian stage  name
+                    td 
+                        //-  input.form-control(value = comedian.stageName name ="stageName")
+      
+                tr
+                    th Comedian  Telephone 
+                    td 
+                        //-  input.form-control(value = comedian.telephone name ="telephone")
+
+                   
+                tr
+                    th Comedian   Twitter
+                    td   
+                        //- input.form-control(value = comedian.twitter name ="twitter") 
+                tr
+            
+                      
+                tr
+                    td(colspan=2)
+                        button.btn.btn-dark.btn-block(type="submit") Update
+
+    //-  form(method="post" action="/update?id="+comedian._id)          
+     
