@@ -117,7 +117,7 @@ html(lang='en')
                                            a(href='/updateartist'+artist._id) Update
                                         td
                                             form(method="post" action='/deleteartist')
-                                                input(type="hidden" placeholder="" name="id", value= artist._id)
+                                                input(type="hidden" placeholder="" name="id", value= artist.email)
                                                 button.btn.btn-dark.btn-block(type="submit") Delete
 
                 #regcom.line.registeredcreatives
@@ -164,7 +164,7 @@ html(lang='en')
                                             a(href='/update/'+comedian._id) Update
                                         td
                                             form(method="POST" action = '/deletecomedian')
-                                                input(type="hidden" placeholder="" name="id", value= comedian._id)
+                                                input(type="hidden" placeholder="" name="id", value= comedian.email)
                                                 button.btn.btn-dark.btn-block(type="submit") Delete
 
                 #regbands.line.registeredcreatives
@@ -183,9 +183,9 @@ html(lang='en')
                                     th Band ID
                                     th Band Name
                                     th Band owner
-                                    th Band home
                                     th Number of members
                                     th Band telephone
+                                    th Band twitter
                                     th Band email
                                     th Band sponsors
                                     th Band genre
@@ -211,7 +211,7 @@ html(lang='en')
                                             a(href='/update/'+band._id) Update
                                         td
                                             form(method="POST" action = '/deleteband')
-                                                input(type="hidden" placeholder="" name="id", value= band._id)
+                                                input(type="hidden" placeholder="" name="id", value= band.email)
                                                 button.btn.btn-dark.btn-block(type="submit") Delete 
 
                 
