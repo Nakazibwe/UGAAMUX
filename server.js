@@ -28,7 +28,7 @@ const passportmongoose = require('passport-local-mongoose');
 const flash = require('connect-flash');
 const moment = require('moment');
 
-const expressSession = require('express-session')({
+const expressSession = require('express-session')({ 
     secret: 'secret',
     resave: false,
     saveUninitialized: false,
