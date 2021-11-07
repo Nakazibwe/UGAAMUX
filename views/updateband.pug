@@ -1,0 +1,105 @@
+extends layout1
+block content
+    header.card-header
+        h3.card-title UGAAMUX
+
+
+    div.form-row
+        div.col.form-group.col-md-12   
+            div.form-row
+                
+                    div.col-md-8 
+                        small You can  now update  information of  #{band.BandName}
+                        br
+                        img(src='/'+band.Profilepicture width="100px" height="50px") 
+                    //- div.col-md-2
+                        
+                        
+                            
+        div.form-row
+            
+        
+            form(method="post" action="/updateband/"+band.email)    
+        
+
+                table.table
+                    thead.thead-dark
+                        tr
+                            th Band name 
+                            td 
+                                input.form-control(value = band.BandName name ="BandName")
+                        tr
+                            th  Band owner
+                            td 
+                                input.form-control(value =  band.BandOwner name ="BandOwner")
+                        tr
+                            th  Band home
+                            td 
+                                input.form-control(value = band.BandHome name ="BandHome")
+                        tr
+                            th  Band members
+                            td 
+                                
+                                input.form-control(type="number" value = band.BandNumber name ="BandNumber")
+            
+                        tr
+                            th Band Slogan
+                            td 
+                                input.form-control(value = band.BandSlogan name ="BandSlogan")
+
+                        
+                        tr
+                            th Band songs
+                            td   
+                                input.form-control(type="number" value = band.numberofsongs name ="numberofsongs") 
+                        tr
+                            th Band telephone
+                            td
+                                input.form-control(value = band.telephone name ="telephone")  
+                        tr
+                            th Band twitter
+                            td
+                                input.form-control(value = band.twitter name = "twitter")
+
+                        tr
+                            th Band  email
+                            td
+                                input.form-control(value = band.email name ="email") 
+
+                        tr
+                            th Band  Crowns(if any)
+                            td
+                                input.form-control(value = band.bandCrowns name ="bandCrowns")  
+
+                        tr
+                            th Band albums
+                            td
+                                input.form-control( type="number" value = band.albums name ="albums") 
+
+                        tr
+                            th Band genre
+                            td
+                                input.form-control(value = band.genre name ="genre")        
+                        
+                        tr
+                            th Other band owners
+                            td
+                                input.form-control(value = band.ownership name ="ownership")
+
+                        tr
+                            th Band sponsors
+                            td
+                                input.form-control(value = band.bandsponsors name ="bandsponsors")  
+
+                        tr
+                            th Band bio
+                            td
+                                input.form-control(value = band.bio name ="bio")               
+                                
+                        tr
+                            td(colspan=3)
+                                button.btn.btn-dark.btn-block(type="submit") Update   
+
+                              
+
+            
