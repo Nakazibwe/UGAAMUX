@@ -1,61 +1,80 @@
 extends layout1
 block content
     header.card-header
-        h4.card-title UGAAMUX
+        h3.card-title UGAAMUX
 
 
     div.form-row
         div.col.form-group.col-md-12   
             div.form-row
-                if artists.length
-                each artist in artists
-                    div.col-md-10  
-                        p Here is the  information of  #{artist.stageName}
-                    div.col-md-2
+                
+                    div.col-md-8 
+                        small You can  now update  information of  #{artist.stageName}
+                        br
+                        img(src='/'+artist.pictureupload width="100px" height="100px") 
+                    //- div.col-md-2
+                        
                         
                             
         div.form-row
-            //- img(src='/'+artist.pictureupload width="100px" height="100px") 
+            
         
-            form(method="post" action="/update?id="+artist._id)   
+            form(method="post" action="/updateartist/"+artist.email)   
         
 
-            table.table
-                thead.thead-dark
-                    tr
-                        th Artist   first  name
-                        td 
-                            input.form-control(value = artist.firstName name ="firstName")
-                    tr
-                        th  Artist  last name
-                        td 
-                            input.form-control(value = artist.lastName name ="lastName")
-                    tr
-                        th Artist   email
-                        td 
-                            input.form-control(value = artist.email name ="email")
-                    tr
-                        th Stage  name
-                        td 
-                            input.form-control(value = artist.stageName name ="stageName")
-        
-                    tr
-                        th Artist  Telephone 
-                        td 
-                            input.form-control(value = artist.telephone name ="telephone")
+                table.table
+                    thead.thead-dark
+                        tr
+                            th Artist   Stage  name 
+                            td 
+                                input.form-control(value = artist.stageName name ="stageName")
+                        tr
+                            th  Artist  Telephone
+                            td 
+                                input.form-control(value = artist.telephone name ="telephone")
+                        tr
+                            th Artist   Email
+                            td 
+                                input.form-control(value = artist.email name ="email")
+                        tr
+                            th Artist  bio
+                            td 
+                                
+                                input.form-control(value = artist.bio name ="bio")
+            
+                        tr
+                            th Artist  District 
+                            td 
+                                input.form-control(value = artist.basedDistrict name ="basedDistrict")
 
-                    
-                    tr
-                        th Artist  Twitter
-                        td   
-                            input.form-control(value = artist.twitter name ="twitter") 
-                    tr
-                        th Genre
-                        td
-                            input.form-control(value = artist.genre name ="genre")  
-                            
-                    tr
-                        td(colspan=2)
-                            button.btn.btn-dark.btn-block(type="submit") Update
+                        
+                        tr
+                            th Artist  Twitter
+                            td   
+                                input.form-control(value = artist.twitter name ="twitter") 
+                        tr
+                            th Artist Genre
+                            td
+                                input.form-control(value = artist.genre name ="genre")  
+                        tr
+                            th Artist  Location
+                            td
+                                input.form-control(value = artist.Location name ="Location")
 
-        
+                        tr
+                            th Artist  Albums
+                            td
+                                input.form-control( type ="number" value = artist.numberofalbums name ="numberofalbums") 
+
+                        tr
+                            th Artist  Songs
+                            td
+                                input.form-control( type ="number" value = artist.numberofsongs name ="numberofsongs")                      
+                                
+                        tr
+                            td(colspan=3)
+                                button.btn.btn-dark.btn-block(type="submit") Update   
+
+                              
+
+            
