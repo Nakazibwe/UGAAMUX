@@ -200,6 +200,9 @@ body {
     font-family: 'Bonheur Royale', cursive;
     font-size: 40px;
 }
+.card-title:hover{
+    color: #ff781f;
+}
 /*The properties of the twitter handle text*/
 #small-handle1 {
     color: #aed3e1;
