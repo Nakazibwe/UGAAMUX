@@ -1,56 +1,64 @@
 extends layout1
 block content
     header.card-header
-        h4.card-title UGAAMUX
+        h3.card-title UGAAMUX
 
     div.form-row
         div.col.form-group.col-md-12   
             div.form-row
                 div.col-md-10  
-                    //- p Here is the  information of  #{comedian.stageName}
-                div.col-md-2
-                    form(method="post" action='/logout') 
-                        //- button.btn.btn-dark.btn-block(type="submit") Log out
+                    small You can  now update  information of #{comedian.stagename}
+                    br
+                    img(src='/'+comedian.uploadedpicture width="100px" height="100px") 
+                //- div.col-md-2
+                     
+                        
     div.form-row
-        //- img(src='/'+comedian.pictureupload width="100px" height="100px") 
-    form(method="post")
+        
+    form(method="post" action="/updatecomedian/"+comedian.email) 
     
 
         table.table
             thead.thead-dark
                 tr
-                    th Comedian   first  name
+                    th Comedian  stage name
                     td 
-                        //- input.form-control(value = comedian.firstName name ="firstName")
+                        input.form-control(value = comedian.stagename name ="stagename")
                 tr
-                    th  Comedian   last name
+                    th  Comedian  telephone
                     td 
-                        //- input.form-control(value = comedian.lastName name ="lastName")
+                        input.form-control(value = comedian.comedianphone name ="comedianphone")
                 tr
                     th Comedian  email
                     td 
-                        //- input.form-control(value = comedian.email name ="email")
+                        input.form-control(value = comedian.email name ="email")
                 tr
-                    th Comedian stage  name
+                    th Comedian bio
                     td 
-                        //-  input.form-control(value = comedian.stageName name ="stageName")
+                         input.form-control(value = comedian.bio name ="bio")
       
                 tr
-                    th Comedian  Telephone 
+                    th Comedian  location
                     td 
-                        //-  input.form-control(value = comedian.telephone name ="telephone")
+                         input.form-control(value = comedian.Location name ="Location")
 
                    
                 tr
                     th Comedian   Twitter
                     td   
-                        //- input.form-control(value = comedian.twitter name ="twitter") 
+                        input.form-control(value = comedian.twitter name ="twitter") 
                 tr
+                    th Comedian   District
+                    td 
+                         input.form-control(value = comedian.Based name ="Based") 
+
+
+
             
                       
                 tr
                     td(colspan=2)
                         button.btn.btn-dark.btn-block(type="submit") Update
 
-    //-  form(method="post" action="/update?id="+comedian._id)          
-     
+             
+                
