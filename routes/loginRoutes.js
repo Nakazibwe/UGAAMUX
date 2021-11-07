@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable object-shorthand */
 /* eslint-disable no-empty */
 /* eslint-disable no-undef */
@@ -101,19 +102,19 @@ router.post('/deleteband', async (req, res) => {
   }
 });
 
-router.get('/updateartist', (req, res) => {
-  res.render('updateartist');
+router.get('/updateartist/:id', async (req, res) => {
+  const artist = await ArtistsReg.findById(req.params.id);
+  res.render('updateartist', { artist: artist });
 });
 
-router.post('/updateartist', async (req, res) => {
+router.post('/updateartist/:email', async (req, res) => {
   if (req.session.user) {
     try {
-      const artists = await ArtistsReg.updateOne({ _id: req.body.id });
-      const users = await User.updateOne({ _id: req.body.id });
-      res.render('updateartist', {
-        artists: artists,
-        users: users,
-      });
+      const artist = await ArtistsReg.updateOne({ email: req.params.email }, req.body);
+      const user = await User.updateOne({ email: req.params.email }, { email: req.body.email });
+      res.redirect('/clerkinfo/admindashboard');
+      console.log(artist);
+      console.log(user);
     } catch {
       res.status(400).send('Unable to update  artist');
     }
@@ -123,23 +124,48 @@ router.post('/updateartist', async (req, res) => {
   }
 });
 
-router.get('/updatecomedian', async (req, res) => {
-  res.render('updatecomedian');
+router.get('/updatecomedian/:id', async (req, res) => {
+  const comedian = await ComedianReg.findById(req.params.id);
+  res.render('updatecomedian', { comedian: comedian });
 });
 
-router.post('/updatecomedian', async (req, res) => {
-  // if (req.session.user) {
-  try {
-    const artists = await ArtistsReg.updateOne({ _id: req.body.id });
-    const users = await User.updateOne({ _id: req.body.id });
-    res.render('updateartist');
-  } catch {
-    res.status(400).send('Unable to update  artist');
+router.post('/updatecomedian/:email', async (req, res) => {
+  if (req.session.user) {
+    try {
+      const comedian = await ComedianReg.updateOne({ email: req.params.email }, req.body);
+      const user = await User.updateOne({ email: req.params.email }, { email: req.body.email });
+      res.redirect('/clerkinfo/admindashboard');
+      console.log(comedian);
+      console.log(user);
+    } catch {
+      res.status(400).send('Unable to update  comedian');
+    }
+  } else {
+    console.log('cant find session');
+    res.redirect('/login');
   }
-  // } else {
-  //   console.log('cant find session');
-  //   res.redirect('/login');
-  // }
+});
+
+router.get('/updateband/:id', async (req, res) => {
+  const band = await BandReg.findById(req.params.id);
+  res.render('updateband', { band: band });
+});
+
+router.post('/updateband/:email', async (req, res) => {
+  if (req.session.user) {
+    try {
+      const band = await BandReg.updateOne({ email: req.params.email }, req.body);
+      const user = await User.updateOne({ email: req.params.email }, { email: req.body.email });
+      res.redirect('/clerkinfo/admindashboard');
+      console.log(band);
+      console.log(user);
+    } catch {
+      res.status(400).send('Unable to update  band');
+    }
+  } else {
+    console.log('cant find session');
+    res.redirect('/login');
+  }
 });
 
 module.exports = router;
