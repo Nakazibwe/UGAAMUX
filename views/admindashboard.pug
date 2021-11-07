@@ -80,7 +80,7 @@ html(lang='en')
                                         div.col-md-8
                                             input.form-control(name='stageName' placeholder="Search by stage name")
                                         div.col-md-4
-                                            input.btn.btn-dark.btn-block(type="submit")     
+                                            input.btn.btn-dark.btn-block(type="submit" value = "Search")     
                         table.table
                             thead.thead-dark
                                 tr
@@ -114,7 +114,7 @@ html(lang='en')
                                             //- img(src=`/img/${artist.pictureupload}` alt="image" style="width:20%" margin ="5px auto")
                                             img(src='/'+artist.pictureupload alt="image" width="50px" height="50px") 
                                         td
-                                           a(href='/updateartist'+artist._id) Update
+                                           a(href='/updateartist/'+artist._id value= artist._id) Update
                                         td
                                             form(method="post" action='/deleteartist')
                                                 input(type="hidden" placeholder="" name="id", value= artist.email)
@@ -129,7 +129,7 @@ html(lang='en')
                                         div.col-md-8
                                             input.form-control(name='stageName' placeholder="Search by stage name")
                                         div.col-md-4
-                                            input.btn.btn-dark.btn-block(type="submit")  
+                                            input.btn.btn-dark.btn-block(type="submit" value = "Search")  
                         table.table
                             thead.thead-dark
                                 tr
@@ -161,13 +161,14 @@ html(lang='en')
                                         td 
                                             img(src='/'+comedian.uploadedpicture alt="image" width="50px" height="50px") 
                                         td
-                                            a(href='/update/'+comedian._id) Update
+                                            a(href='/updatecomedian/'+comedian._id value= comedian._id) Update
+                                            
                                         td
                                             form(method="POST" action = '/deletecomedian')
                                                 input(type="hidden" placeholder="" name="id", value= comedian.email)
                                                 button.btn.btn-dark.btn-block(type="submit") Delete
 
-                #regbands.line.registeredcreatives
+                #regbands.line.registeredcreatives 
                     h2 Registered Bands
                         div.form-row
                             div.col.form-group.col-md-12
@@ -176,7 +177,7 @@ html(lang='en')
                                         div.col-md-8
                                             input.form-control(name='BandName' placeholder="Search by band name")
                                         div.col-md-4
-                                            input.btn.btn-dark.btn-block(type="submit")
+                                            input.btn.btn-dark.btn-block(type="submit" value = "Search")
                         table.table
                             thead.thead-dark
                                 tr
@@ -208,7 +209,7 @@ html(lang='en')
                                         td
                                             img(src='/'+band.Profilepicture alt="image" width="50px" height="50px") 
                                         td
-                                            a(href='/update/'+band._id) Update
+                                            a(href='/updateband/'+band._id value= band._id) Update
                                         td
                                             form(method="POST" action = '/deleteband')
                                                 input(type="hidden" placeholder="" name="id", value= band.email)
