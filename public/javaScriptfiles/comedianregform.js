@@ -14,6 +14,7 @@ const DateCareerStart = document.ComedianRegistration.startedcomedy;
 const Profilepicture = document.ComedianRegistration.uploadedpicture;
 const Role = document.ComedianRegistration.role;
 const Password = document.ComedianRegistration.password;
+const Comedianbio = document.ComedianRegistration.bio;
 const Male = document.getElementById('smale');
 const Female = document.getElementById('sfemale');
 
@@ -33,6 +34,7 @@ const GenderERROR = document.getElementById('gender-error');
 const ProfilepictureERROR = document.getElementById('upload-error');
 const PassWordERROR = document.getElementById('passworderror');
 const userRoleERROR = document.getElementById('roles-error');
+const ComedianbioERROR = document.getElementById('bio-ERROR');
 
 // Regular expressions.
 const nonumber = /^[A-Za-z]+$/;
@@ -344,9 +346,19 @@ const validate = () => {
     userRoleERROR.style = 'color:green';
     Role.style.border = '1px solid green';
   }
+  // Validating the bio input for comedians.
+  const comedianBio = Comedianbio.value.trim();
+  if (comedianBio == '') {
+    ComedianbioERROR.innerHTML = 'Comedian Bio Field Required';
+    ComedianbioERROR.style = 'color:red';
+    Comedianbio.style.border = '1px solid red';
+    Comedianbio.focus();
+  } else {
+    ComedianbioERROR.innerHTML = 'Field Correctly Filled';
+    ComedianbioERROR.style = 'color:green';
+    Comedianbio.style.border = '1px solid green';
+  }
 };
 
 const Comedianform = document.getElementById('form-id');
 Comedianform.addEventListener('submit', validate);
-
-
