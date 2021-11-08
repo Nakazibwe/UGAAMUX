@@ -28,12 +28,7 @@ router.get('/artists', async (req, res) => {
   }
 });
 
-// router.get('/artists', (req, res) => {
-//   const { stagename } = req.query;
-//   ArtistsReg.find({ where: { stageName: { [Op.like]: term } } })
-//     .then((artists) => res.render('artists', { artists }))
-//     .catch((err) => console.log(err));
-// });
+
 
 
 module.exports = router;
