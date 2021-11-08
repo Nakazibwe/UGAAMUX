@@ -24,6 +24,7 @@ const ArtistGenre = document.ArstisteRegistration.genre;
 const PictureFile = document.ArstisteRegistration.pictureupload;
 const Password = document.ArstisteRegistration.password;
 const Role = document.ArstisteRegistration.role;
+const Artistbio = document.ArstisteRegistration.bio;
 const MaleGender = document.getElementById('smale');
 const FemaleGender = document.getElementById('sfemale');
 
@@ -46,6 +47,7 @@ const PictureFileERROR = document.getElementById('pictureupload-error');
 const GenderERROR = document.getElementById('gender-error');
 const PasswordERROR = document.getElementById('passworderror');
 const UserroleERROR = document.getElementById('roles-error');
+const ArtistbioERROR = document.getElementById('bio-error');
 
 // Regular expressions.
 const nonumber = /^[A-Za-z]+$/;
@@ -382,7 +384,7 @@ const validate = () => {
   // Validating password field input.
   const userpassword = Password.value.trim();
   if (userpassword == '') {
-    Password.style.border = '1px solid red';   
+    Password.style.border = '1px solid red';
     PasswordERROR.innerHTML = 'Password Field Required';
     PasswordERROR.style = 'color:red';
     Password.focus();
@@ -404,18 +406,23 @@ const validate = () => {
     Role.style.border = '1px solid red';
     Role.focus();
   } else {
-    UserroleERROR.innerHTML = 'Field Correctly Field';
+    UserroleERROR.innerHTML = 'Field Correctly Filled';
     UserroleERROR.style = 'color:green';
     Role.style.border = '1px solid green';
+  }
+  // Validating the artist bio field input.
+  const artistBio = Artistbio.value.trim();
+  if (artistBio == '') {
+    ArtistbioERROR.innerHTML = 'Bio Field Required';
+    ArtistbioERROR.style = 'color:red';
+    Artistbio.style.border = '1px solid red';
+    Artistbio.focus();
+  } else {
+    ArtistbioERROR.innerHTML = 'Field Correctly Filled';
+    ArtistbioERROR.style = 'color:green';
+    Artistbio.style.border = '1px solid green';
   }
 };
 
 const Artistform = document.getElementById('form-id');
 Artistform.addEventListener('submit', validate);
-
-// Artistform.addEventListener('submit', (e) => {
-//   if (validate == null) {
-//     e.preventDefault();
-//   }
-// });
-
