@@ -65,6 +65,8 @@ router.get('/admindashboard', async (req, res) => {
     res.status(400).send('Unable to find artist');
   }
 });
+
+// Route for posting data from the dashboard.
 router.post('/admindashboard', (req, res) => {
 
 });
