@@ -22,6 +22,7 @@ const ProfilePicture = document.BandRegistration.Profilepicture;
 const OtherBandOwners = document.BandRegistration.ownership;
 const Password = document.BandRegistration.password;
 const Role = document.BandRegistration.role;
+const Bandbio = document.BandRegistration.bio;
 
 const BandnameERROR = document.getElementById('bandname-error');
 const BandownerERROR = document.getElementById('bandowner-error');
@@ -29,7 +30,7 @@ const BandhomeERROR = document.getElementById('bandhome-error');
 const BandmenbersERROR = document.getElementById('bandmembers-error');
 const BandSloganERROR = document.getElementById('bandslogan-error');
 const BandIDERROR = document.getElementById('bandID-error');
-const BandsponsorsERROR = document.getElementById('sponsors-ERROR'); 
+const BandsponsorsERROR = document.getElementById('sponsors-ERROR');
 const DateofFormationERROR = document.getElementById('dateofformationERROR');
 const TelephoneERROR = document.getElementById('telephone-error');
 const TwitterHandleERROR = document.getElementById('twitterhandle-error');
@@ -43,6 +44,7 @@ const ProfilePictureERROR = document.getElementById('profilephoto-error');
 const OtherBandOwnersERROR = document.getElementById('other-owners-error');
 const passwordERROR = document.getElementById('passworderror');
 const userRoleERROR = document.getElementById('roles-error');
+const BandbioERROR = document.getElementById('bio-ERROR');
 
 // Regular expressions.
 const nonumber = /^[A-Za-z]+$/;
@@ -433,9 +435,24 @@ const validate = () => {
     userRoleERROR.style = 'color:green';
     Role.style.border = '1px solid green';
   }
+  // Validating the band bio input .
+  const bandBio = Bandbio.value.trim();
+  if (bandBio == '') {
+    BandbioERROR.innerHTML = 'Band Bio Field Required';
+    BandbioERROR.style = 'color:red';
+    Bandbio.style.border = '1px solid red';
+    Bandbio.focus();
+  } else {
+    BandbioERROR.innerHTML = 'Field Correctly Field';
+    BandbioERROR.style = 'color:green';
+    Bandbio.style.border = '1px solid green';
+  }
 };
 
 const Bandform = document.getElementById('form-id');
 Bandform.addEventListener('submit', validate);
 
+// Bandform.addEventListener('submit', (e) => {
+//   e.preventDefault();
+// });
 
