@@ -6,6 +6,7 @@
 const mongoose = require('mongoose');
 const passportmongoose = require('passport-local-mongoose');
 
+// Comedian registration schema
 const ComedianRegSchema = new mongoose.Schema({
     
     firstName: {
@@ -88,8 +89,11 @@ const ComedianRegSchema = new mongoose.Schema({
     
 });
 
+// Passport local mongoose plug-in.
 ComedianRegSchema.plugin(passportmongoose, {
     usernameField: 'email', 
     
 });
+
+// Exporting the model 
 module.exports = mongoose.model('ComedianReg', ComedianRegSchema);

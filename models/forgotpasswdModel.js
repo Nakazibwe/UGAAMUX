@@ -4,7 +4,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable indent */
 const mongoose = require('mongoose');
-
+// Schema for forgot password
 const ForgotpasswdSchema = new mongoose.Schema({
     
     email: {
@@ -12,5 +12,7 @@ const ForgotpasswdSchema = new mongoose.Schema({
         trim: true,
         required: true,  
     },
-});      
+});
+
+// Exporting the  model. 
 module.exports = mongoose.model('ForgotPassword', ForgotpasswdSchema);

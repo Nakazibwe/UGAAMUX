@@ -18,8 +18,7 @@ router.get('/forgotpassword', (req, res) => {
   res.render('forgotpassword');
 });
 
-// Route to post data from the forgot password page.
-
+// Route to post data from the forgot password page to the email of the clerk.
 router.post('/forgotpassword', (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'hotmail',
@@ -49,14 +48,14 @@ router.post('/forgotpassword', (req, res) => {
       );
     }
   });
-  // res.redirect('/passwordreset/forgotpassword');
+
   res.redirect('/');
 });
 
 
 
 
-
+// Exporting the routers.
 module.exports = router;
 
 

@@ -13,7 +13,7 @@ const router = express.Router();
 router.get('/contactUs', (req, res) => {
   res.render('contactUs');
 });
-// Route to post contact information to be emailed to  Super admin .
+// Route to post contact information to be emailed to  clerk .
 router.post('/contactUs', (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'hotmail',
@@ -46,4 +46,5 @@ router.post('/contactUs', (req, res) => {
   res.redirect('/contactinfo/contactUs');
 });
 
+// Exporting the router to be used elsewhere.
 module.exports = router;

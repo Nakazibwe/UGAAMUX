@@ -1,12 +1,16 @@
 /* eslint-disable eqeqeq */
+
+// Assigning variables to the different inputs.
 const Customername = document.RegisterMessage.customername;
 const Customeremail = document.RegisterMessage.customeremail;
 const Customermessage = document.RegisterMessage.message;
 
+// Assigning variables to the different error messages for inputs.
 const CustomernameError = document.getElementById('name-error');
 const CustomeremailError = document.getElementById('email-error');
 const CustomermessageError = document.getElementById('message-error');
 
+// Regular expressions.
 const nonumber = /^[A-Za-z]+$/;
 const alphaNumeric = /^[a-zA-Z0-9 ]*$/;
 const capitalize = /^[A-Z][a-z]/;
@@ -69,7 +73,8 @@ const validate = () => {
   }
 };
 
+// Assigning  a variable to the form.
 const RegisterMessageForm = document.getElementById('form-id');
+
+// Adding an event listener to the form.
 RegisterMessageForm.addEventListener('submit', validate);
-
-

@@ -14,7 +14,7 @@ const ArtistsReg = require('../models/artistRegModel');
 
 
 
-// Route to get to the Artists Page.
+// Route to get to the Artists Page and query data on it.
 router.get('/artists', async (req, res) => {
   try {
     let users = await ArtistsReg.find();
@@ -30,5 +30,5 @@ router.get('/artists', async (req, res) => {
 
 
 
-
+// Exporting router.
 module.exports = router;

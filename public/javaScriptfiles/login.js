@@ -1,7 +1,10 @@
 /* eslint-disable eqeqeq */
+
+// Assigning variables to the different input.
 const UserName = document.Login.email;
 const PassWord = document.Login.password;
 
+// Assigning variables to the different errors of the inputs.
 const UserNameERROR = document.getElementById('username-error');
 const UserPassWordERROR = document.getElementById('password-error');
 
@@ -50,7 +53,8 @@ const validate = () => {
   }
 };
 
+// Assigning the form a variable.
 const LoginForm = document.getElementById('form-id');
+
+// Adding an event listener to the form.
 LoginForm.addEventListener('submit', validate);
-
-

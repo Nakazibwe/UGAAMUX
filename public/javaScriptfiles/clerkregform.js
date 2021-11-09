@@ -1,11 +1,14 @@
 /* eslint-disable no-empty */
 /* eslint-disable eqeqeq */
+
+// Assigning variables to the different inputs.
 const firstName = document.ClerkRegistration.firstname;
 const lastName = document.ClerkRegistration.lastname;
 const Email = document.ClerkRegistration.email;
 const Password = document.ClerkRegistration.password;
 const userRole = document.ClerkRegistration.role;
 
+// Assigning variables to the error messages of the different inputs.
 const firstnameERROR = document.getElementById('first-name-error');
 const lastnameERROR = document.getElementById('last-name-error');
 const emailERROR = document.getElementById('email-error');
@@ -22,6 +25,7 @@ const phoneFormat = /^\d{12}$/;
 const alphaNumeric = /^[a-zA-Z0-9 ]*$/;
 const emailFormat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
 
+// Validation function for all inputs.
 const validate = () => {
   // Validating the first name input
   const clerkFirstName = firstName.value.trim();
@@ -130,5 +134,8 @@ const validate = () => {
   }
 };
 
+// Assigning variable to the form.
 const clerkForm = document.getElementById('form-id');
+
+// Adding an event listener to the form.
 clerkForm.addEventListener('submit', validate);

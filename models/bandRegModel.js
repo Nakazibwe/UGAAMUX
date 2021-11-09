@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 
 const passportmongoose = require('passport-local-mongoose');
 
+// Band Schema for registering band.
 const BandRegSchema = new mongoose.Schema({
     
     BandName: {
@@ -113,9 +114,12 @@ const BandRegSchema = new mongoose.Schema({
    
 });
 
+
+// Passport local mongoose plugin. 
 BandRegSchema.plugin(passportmongoose, { 
     usernameField: 'email', 
     
 });
 
+// Exporting the model. 
 module.exports = mongoose.model('BandReg', BandRegSchema);

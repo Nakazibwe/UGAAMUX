@@ -12,6 +12,7 @@ const ComedianReg = require('../models/comedianRegModel');
 const ClerkReg = require('../models/clerkRegModel');
 
 const router = express.Router();
+
 // Route to the page for clerk to register all other  creatives .
 router.get('/creativesregistration', (req, res) => {
   if (req.session.user) {
@@ -71,4 +72,5 @@ router.post('/admindashboard', (req, res) => {
 
 });
 
+// Exporting the router .
 module.exports = router;

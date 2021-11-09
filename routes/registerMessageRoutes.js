@@ -13,7 +13,7 @@ const RegMessage = require('../models/registerMessageModel');
 router.get('/registermessage', (req, res) => {
   res.render('registermessage');
 });
-// Route to post register message to the super admin.
+// Route to post register message to the clerk via email.
 router.post('/registermessage', (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'hotmail',
@@ -44,8 +44,8 @@ router.post('/registermessage', (req, res) => {
     }
   });
 
-  // res.redirect('/registerrequest/registermessage');
   res.redirect('/');
 });
 
+// Exporting router.
 module.exports = router;

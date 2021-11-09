@@ -12,7 +12,7 @@ const BandReg = require('../models/bandRegModel');
 
 const router = express.Router();
 
-// Route to get the bands page.
+// Route to get the bands page and querrying data on it.
 router.get('/bands', async (req, res) => {
   try {
     let users = await BandReg.find();
@@ -25,9 +25,9 @@ router.get('/bands', async (req, res) => {
   } catch (err) {
     res.status(400).send('Band  is Unavailable', err);
   }
-}); 
+});
 
 
 
-
+// Exporting a router.
 module.exports = router;

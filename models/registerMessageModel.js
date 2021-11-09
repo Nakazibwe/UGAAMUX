@@ -5,6 +5,7 @@
 /* eslint-disable indent */
 const mongoose = require('mongoose');
 
+// Schema for the register message 
 const RegMessageSchema = new mongoose.Schema({
     
     customername: {
@@ -23,5 +24,7 @@ const RegMessageSchema = new mongoose.Schema({
                 
         
     }, 
-});      
+});
+
+// Exporting the model.
 module.exports = mongoose.model('RegMessage', RegMessageSchema);

@@ -6,6 +6,8 @@
 /* eslint-disable consistent-return */
 /* eslint-disable space-infix-ops */
 /* eslint-disable eqeqeq */
+
+// Assigning variables to the different inputs .
 const Firstname = document.ArstisteRegistration.firstName;
 const Lastname = document.ArstisteRegistration.lastName;
 const Stagename = document.ArstisteRegistration.stageName;
@@ -28,6 +30,7 @@ const Artistbio = document.ArstisteRegistration.bio;
 const MaleGender = document.getElementById('smale');
 const FemaleGender = document.getElementById('sfemale');
 
+// Assigning variables to the errors for different inputs.
 const FirstNameERROR = document.getElementById('firstname-error');
 const LastNameERROR = document.getElementById('lastname-error');
 const StageNameERROR = document.getElementById('stagename-error');
@@ -61,6 +64,7 @@ const phoneFormat = /^\d{12}$/;
 const twitterFormat = /(^|[^@\w])@(\w{1,15})\b/;
 const emailFormat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
 
+// Validation function for all inputs.
 const validate = (event) => {
   let isValid = true;
   // Validating the first name .
@@ -475,9 +479,11 @@ const validate = (event) => {
   }
 };
 
+// Assigning variable to the form.
 const Artistform = document.getElementById('form-id');
 // Artistform.addEventListener('submit', validate);
 
+// Adding an event listener.
 Artistform.addEventListener('submit', (event) => {
   validate(event);
 });

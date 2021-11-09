@@ -3,6 +3,7 @@
 /* eslint-disable indent */
 const mongoose = require('mongoose');
 
+// Contactus Schema 
 const contactUsSchema = new mongoose.Schema({
     
     firstname: {
@@ -28,4 +29,5 @@ const contactUsSchema = new mongoose.Schema({
     },
 });
 
+// Exporting the model 
 module.exports = mongoose.model('Contactus', contactUsSchema);

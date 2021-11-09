@@ -28,7 +28,7 @@ router.get('/login', (req, res) => {
 // Route to login  post request.
 router.post('/login', passport.authenticate('local', { failureRedirect: '/login' }), async (req, res) => {
   req.session.user = req.user;
-  // Login logic for the different users of the system .
+  // Login logic for the different users of the system and their roles.
   User.findOne({ email: req.body.email })
     .then((data) => {
       // console.log(data);
@@ -45,18 +45,16 @@ router.post('/login', passport.authenticate('local', { failureRedirect: '/login'
       }
     })
     .catch((err) => { console.log(err); });
-  // const userrole = roles[req.user.role];
-  // if (userrole == 'artist') {
-  //   res.redirect('/artistinfo/artistpersonalaccount');
-  // }
 });
 
+// Logout route for all pages.
 router.get('/logout', (req, res) => {
   req.session.destroy(() => {
     res.redirect('/');
   });
 });
 
+// Route for deleting an artist on the clerk dashboard .
 router.post('/deleteartist', async (req, res) => {
   if (req.session.user) {
     try {
@@ -71,7 +69,7 @@ router.post('/deleteartist', async (req, res) => {
     res.redirect('/login');
   }
 });
-
+// Route for deleting a comedian  on the clerk dashboard .
 router.post('/deletecomedian', async (req, res) => {
   if (req.session.user) {
     try {
@@ -87,6 +85,7 @@ router.post('/deletecomedian', async (req, res) => {
   }
 });
 
+// Route for deleting a band on the clerk dashboard.
 router.post('/deleteband', async (req, res) => {
   if (req.session.user) {
     try {
@@ -102,11 +101,13 @@ router.post('/deleteband', async (req, res) => {
   }
 });
 
+// Route for getting the form for  updating an artist on the clerk dashboard.
 router.get('/updateartist/:id', async (req, res) => {
   const artist = await ArtistsReg.findById(req.params.id);
   res.render('updateartist', { artist: artist });
 });
 
+// Route for posting the updated artist form from the dashboard.
 router.post('/updateartist/:email', async (req, res) => {
   if (req.session.user) {
     try {
@@ -124,11 +125,13 @@ router.post('/updateartist/:email', async (req, res) => {
   }
 });
 
+// Route for getting the form for  updating a comedian on the clerk dashboard.
 router.get('/updatecomedian/:id', async (req, res) => {
   const comedian = await ComedianReg.findById(req.params.id);
   res.render('updatecomedian', { comedian: comedian });
 });
 
+// Route for posting the updated comedian form from the dashboard.
 router.post('/updatecomedian/:email', async (req, res) => {
   if (req.session.user) {
     try {
@@ -146,11 +149,13 @@ router.post('/updatecomedian/:email', async (req, res) => {
   }
 });
 
+// Route for getting the update form of bands from the clerk dashboard.
 router.get('/updateband/:id', async (req, res) => {
   const band = await BandReg.findById(req.params.id);
   res.render('updateband', { band: band });
 });
 
+// Route for posting the updated ionformation from the form.
 router.post('/updateband/:email', async (req, res) => {
   if (req.session.user) {
     try {
@@ -168,4 +173,5 @@ router.post('/updateband/:email', async (req, res) => {
   }
 });
 
+// Exporting router
 module.exports = router;

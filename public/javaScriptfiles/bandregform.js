@@ -5,6 +5,8 @@
 /* eslint-disable no-empty */
 /* eslint-disable no-undef */
 /* eslint-disable eqeqeq */
+
+// Assigning variables to the different inputs.
 const Bandname = document.BandRegistration.BandName;
 const Bandowner = document.BandRegistration.BandOwner;
 const Bandhome = document.BandRegistration.BandHome;
@@ -27,6 +29,7 @@ const Password = document.BandRegistration.password;
 const Role = document.BandRegistration.role;
 const Bandbio = document.BandRegistration.bio;
 
+// Assigning variables to the errors of the different inputs.
 const BandnameERROR = document.getElementById('bandname-error');
 const BandownerERROR = document.getElementById('bandowner-error');
 const BandhomeERROR = document.getElementById('bandhome-error');
@@ -60,6 +63,7 @@ const alphaNumeric = /^[a-zA-Z0-9 ]*$/;
 const twitterFormat = /(^|[^@\w])@(\w{1,15})\b/;
 const emailFormat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
 
+// Validation function for all inputs. 
 const validate = (event) => {
   let isValid = true;
   // Validation of the Band Name input.
@@ -363,7 +367,6 @@ const validate = (event) => {
     BandAlbumsERROR.style = 'color:green';
     BandAlbums.style.border = '1px solid green';
   }
-
   // Validating the Genre of Band.
   const bandgenre = Genre.value.trim();
   if (bandgenre == '') {
@@ -497,10 +500,12 @@ const validate = (event) => {
   }
 };
 
+// Assigning variable to the form.
 const Bandform = document.getElementById('form-id');
 
 // Bandform.addEventListener('submit', validate);
 
+// Adding an event listener on the form.
 Bandform.addEventListener('submit', (event) => {
   validate(event);
 });

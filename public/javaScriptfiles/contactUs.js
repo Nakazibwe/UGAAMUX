@@ -1,9 +1,12 @@
 /* eslint-disable eqeqeq */
+
+// Assigning variables to the different inputs.
 const FirstName = document.contactUsform.firstname;
 const SecondName = document.contactUsform.lastname;
 const Email = document.contactUsform.email;
 const Message = document.contactUsform.message;
 
+// Assigning variables to the different error messages of input.
 const FirstNameError = document.getElementById('firstname-error');
 const SecondNameError = document.getElementById('lastname-error');
 const EmailError = document.getElementById('email-error');
@@ -14,6 +17,7 @@ const nonumber = /^[A-Za-z]+$/;
 const capitalize = /^[A-Z][a-z]/;
 const emailFormat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
 
+// Validation function for all inputs.
 const validate = () => {
   // Validating first name input.
   const firstName = FirstName.value.trim();
@@ -103,7 +107,8 @@ const validate = () => {
   }
 };
 
+// Assigning variables to the form.
 const contactForm = document.getElementById('form-id');
+
+// Added event listener on the form.
 contactForm.addEventListener('submit', validate);
-
-

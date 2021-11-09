@@ -5,6 +5,7 @@
 const mongoose = require('mongoose');
 const passportmongoose = require('passport-local-mongoose');
 
+// The artist registration schema 
 const artistsRegSchema = new mongoose.Schema({
     
     firstName: {
@@ -112,11 +113,13 @@ const artistsRegSchema = new mongoose.Schema({
     },
     
      
-}); 
+});
+
+// Passport local mongoose plugin. 
 artistsRegSchema.plugin(passportmongoose, {
     usernameField: 'email',
     
 });
+
+// Exporting the model.
 module.exports = mongoose.model('ArtistsReg', artistsRegSchema);     
-// if artists.length 
-// each artist in artists 

@@ -7,7 +7,7 @@ const express = require('express');
 const ComedianReg = require('../models/comedianRegModel');
 
 const router = express.Router();
-// Route to get to the comedians Page.
+// Route to get to the comedians Page and query data.
 router.get('/comedians', async (req, res) => {
   try {
     let users = await ComedianReg.find();
@@ -19,8 +19,8 @@ router.get('/comedians', async (req, res) => {
     res.render('comedians', { comedians: users });
   } catch (err) {
     res.status(400).send('Comedian  is Unavailable', err);
-  }  
+  }
 });
 
-
+// Exporting the router
 module.exports = router;

@@ -16,7 +16,7 @@ router.get('/comedianregistrationform', (req, res) => {
   res.render('comedianregform');
 });
 
-// Instatiation of storage
+// Instatiation of storage to store image files.
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'public/imagefiles');
@@ -27,15 +27,14 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-// Route to post from  comedians registration page.
+// Route to post  data from  comedians registration page.
 router.post('/comedianregistrationform', upload.single('uploadedpicture'), async (req, res) => {
   console.log(req.body);
   try {
     const comedianReg = new ComedianReg(req.body);
     const user = new User(req.body);
     comedianReg.uploadedpicture = req.file.path;
-    // console.log(comedianReg);
-    // console.log('This is the image you want to upload', req.file);
+
     await comedianReg.save();
     await User.register(user, req.body.password, (err) => {
       if (err) {
@@ -64,4 +63,5 @@ router.get('/comedianaccount', async (req, res) => {
   }
 });
 
+// Exporting the router.
 module.exports = router;

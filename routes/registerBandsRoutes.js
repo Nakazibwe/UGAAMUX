@@ -19,7 +19,7 @@ router.get('/bandregistrationform', (req, res) => {
   res.render('bandregform');
 });
 
-// Instatiation of storage
+// Instatiation of storage to store image files.
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'public/imagefiles');
@@ -43,9 +43,7 @@ router.post(
       const bandReg = new BandReg(req.body);
       bandReg.icon = req.files.icon[0].path;
       bandReg.Profilepicture = req.files.Profilepicture[0].path;
-      // console.log('These are  the images you want to uploads');
 
-      // console.log(bandReg);
       await bandReg.save();
       await User.register(user, req.body.password, (err) => {
         if (err) {
@@ -55,7 +53,7 @@ router.post(
         res.redirect('/clerkinfo/creativesregistration');
       });
     } catch (err) {
-      res.status(400).send('Sorry! Data was not sent to DB'); 
+      res.status(400).send('Sorry! Data was not sent to DB');
       console.log(err);
     }
     console.log(req.body);
@@ -76,4 +74,5 @@ router.get('/bandaccount', async (req, res) => {
   }
 });
 
+// Exporting router.
 module.exports = router;

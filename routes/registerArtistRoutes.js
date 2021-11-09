@@ -22,7 +22,7 @@ router.get('/artistregistrationform', (req, res) => {
   res.render('artistregform');
 });
 
-// Instatiation of storage
+// Instatiation of storage for image files.
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'public/imagefiles');
@@ -40,8 +40,7 @@ router.post('/artistregistrationform', upload.single('pictureupload'), async (re
     const artistReg = new ArtistsReg(req.body);
     const user = new User(req.body);
     artistReg.pictureupload = req.file.path;
-    // console.log(artistReg);
-    // console.log('This is the image you want to upload', req.file);
+
     await artistReg.save();
     await User.register(user, req.body.password, (err) => {
       if (err) {
@@ -56,7 +55,7 @@ router.post('/artistregistrationform', upload.single('pictureupload'), async (re
   }
 });
 
-// Route to go  to the  Ugaamux artist account.
+// Route to go  to the  Ugaamux personal artist account.
 router.get('/artistpersonalaccount', async (req, res) => {
   if (req.session.user) {
     try {
@@ -72,4 +71,5 @@ router.get('/artistpersonalaccount', async (req, res) => {
   }
 });
 
+// Exporting the router .
 module.exports = router;

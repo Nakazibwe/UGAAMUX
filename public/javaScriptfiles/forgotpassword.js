@@ -1,10 +1,15 @@
 /* eslint-disable eqeqeq */
+
+// Email regular expression 
 const emailFormat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
 
+// Assigning a variable to the email input.
 const Email = document.forgotpassword.email;
 
+// Assigning a variable for the email error message.
 const EmailError = document.getElementById('email-error');
 
+// Validation function for the inputs.
 const validate = () => {
   const email = Email.value.trim();
   if (email == '') {
@@ -23,6 +28,8 @@ const validate = () => {
   }
 };
 
+// Assigning a variable to the form.
 const ForgotPasswordform = document.getElementById('form-id');
-ForgotPasswordform.addEventListener('submit', validate);
 
+// Adding an event listener to the form.
+ForgotPasswordform.addEventListener('submit', validate);

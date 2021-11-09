@@ -28,13 +28,13 @@
 //         // console.log('These are my artists', artists)
 //       } catch {
 //         res.status(400).send('Unable to find artist');
-//       } 
-  
+//       }
+
 //     // } else {
 //     //   res.redirect('/login');
 //     // }
 // });
-  
+
 // Route to post the data from the artist registrationform page (New logic with hashed password)
 // router.post('/artistregistrationform', upload.single('pictureupload'), async (req, res) => {
 //   console.log(req.body);
@@ -59,7 +59,7 @@
 
 // Authentication trial.
 // passport.use(ArtistsReg.createStrategy(
-    
+
 //     { usernameField: 'email' }, (email, password, done) => {
 //         // Match User
 //         ArtistsReg.findOne({ email: email })
@@ -72,7 +72,7 @@
 //                 passport.compare(password, user.password, (err, isMatch) => {
 //                     if (err) throw err;
 //                     if (isMatch) {
-//                         return done(null, user);                    
+//                         return done(null, user);
 //                     } else {
 //                         return done(null, false);
 //                     }
@@ -83,7 +83,7 @@
 // ));
 // passport.serializeUser(ArtistsReg.serializeUser((id, done) => {
 //     done(null, user.id);
-// }));  
+// }));
 // passport.deserializeUser(ArtistsReg.deserializeUser((id, done) => {
 //     done(err, user);
 // }));
@@ -119,23 +119,23 @@
 //           if (err) {
 //             console.log(err);
 //           } else {
-  
+
 //             console.log('Here');
 //             res.render('artistList', {
 //               user: data,
 //               error: true
 //             });
-  
+
 //           }
 //         });
-  
+
 //       }
 //     }).catch(error => {
 //       console.log(error);
 //     })
-  
+
 //   })
-//Searching using sequalize. 
+// Searching using sequalize.
 
 // router.get('/artists', (req, res) => {
 //   const { stagename } = req.query;
@@ -143,3 +143,9 @@
 //     .then((artists) => res.render('artists', { artists }))
 //     .catch((err) => console.log(err));
 // });
+// Alternative method of user roles.
+
+// const userrole = roles[req.user.role];
+// if (userrole == 'artist') {
+//   res.redirect('/artistinfo/artistpersonalaccount');
+// }
