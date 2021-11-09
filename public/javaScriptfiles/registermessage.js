@@ -1,3 +1,5 @@
+/* eslint-disable no-useless-escape */
+/* eslint-disable consistent-return */
 /* eslint-disable eqeqeq */
 
 // Assigning variables to the different inputs.
@@ -16,28 +18,34 @@ const alphaNumeric = /^[a-zA-Z0-9 ]*$/;
 const capitalize = /^[A-Z][a-z]/;
 const emailFormat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
 
-const validate = () => {
+const validate = (event) => {
+  let isValid = true;
   // Validating the name input.
   const customerName = Customername.value.trim();
   if (customerName == '') {
     CustomernameError.innerHTML = 'Name Field Required ';
     CustomernameError.style = 'color:red';
     Customername.style.border = '1px solid red';
+    Customername.focus();
+    isValid = false;
   } else if (!(customerName.length > 1)) {
     Customername.style.border = '1px solid red';
     CustomernameError.innerHTML = ' Name  Incomplete';
     CustomernameError.style = 'color:red ';
     Customername.focus();
+    isValid = false;
   } else if (!customerName.match(alphaNumeric)) {
     CustomernameError.innerHTML = 'Enter name without numbers';
     CustomernameError.style = 'color:red ';
     Customername.style.border = '1px solid red';
     Customername.focus();
+    isValid = false;
   } else if (!customerName.match(capitalize)) {
     CustomernameError.innerHTML = 'Start name with a capital letter';
     CustomernameError.style = 'color:red ';
     Customername.style.border = '1px solid red';
     Customername.focus();
+    isValid = false;
   } else {
     CustomernameError.innerHTML = ' Field correctly filled, Thank you ';
     CustomernameError.style = 'color:#fff ';
@@ -50,11 +58,13 @@ const validate = () => {
     CustomeremailError.style = 'color:red';
     Customeremail.style.border = '1px solid red ';
     Customeremail.focus();
+    isValid = false;
   } else if (!customerEmail.match(emailFormat)) {
     CustomeremailError.innerHTML = 'Email Format entered is Wrong';
     CustomeremailError.style = 'color:red';
     Customeremail.style.border = '1px solid red';
     Customeremail.focus();
+    isValid = false;
   } else {
     CustomeremailError.innerHTML = 'Field correctly filled, Thank you ';
     CustomeremailError.style = 'color: #fff ';
@@ -67,9 +77,14 @@ const validate = () => {
     CustomermessageError.style = 'color:red';
     Customermessage.style.border = '1px solid red';
     Customermessage.focus();
+    isValid = false;
   } else {
     CustomermessageError.innerHTML = 'Field correctly filled, Thank you ';
     CustomermessageError.style = 'color: #fff ';
+  }
+  if (!isValid) {
+    event.preventDefault();
+    return false;
   }
 };
 
@@ -77,4 +92,8 @@ const validate = () => {
 const RegisterMessageForm = document.getElementById('form-id');
 
 // Adding an event listener to the form.
-RegisterMessageForm.addEventListener('submit', validate);
+// RegisterMessageForm.addEventListener('submit', validate);
+
+RegisterMessageForm.addEventListener('submit', (event) => {
+  validate(event);
+});

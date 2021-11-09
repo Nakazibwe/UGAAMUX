@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 /* eslint-disable no-else-return */
 /* eslint-disable consistent-return */
 /* eslint-disable no-unused-vars */

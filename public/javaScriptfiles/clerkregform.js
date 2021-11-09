@@ -1,3 +1,6 @@
+/* eslint-disable consistent-return */
+/* eslint-disable no-useless-escape */
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-empty */
 /* eslint-disable eqeqeq */
 
@@ -26,7 +29,8 @@ const alphaNumeric = /^[a-zA-Z0-9 ]*$/;
 const emailFormat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
 
 // Validation function for all inputs.
-const validate = () => {
+const validate = (event) => {
+  let isValid = true;
   // Validating the first name input
   const clerkFirstName = firstName.value.trim();
   if (clerkFirstName == '') {
@@ -34,21 +38,25 @@ const validate = () => {
     firstnameERROR.style = 'color:red';
     firstName.style.border = '1px solid red';
     firstName.focus();
+    isValid = false;
   } else if (!(clerkFirstName.length > 1)) {
     firstnameERROR.innerHTML = 'First name should be more than one character';
     firstnameERROR.style = 'color:red';
     firstName.style.border = '1px solid red';
     firstName.focus();
+    isValid = false;
   } else if (!clerkFirstName.match(nonumber)) {
     firstnameERROR.innerHTML = 'First name should not contain numbers';
     firstnameERROR.style = 'color:red';
     firstName.style.border = '1px solid red';
     firstName.focus();
+    isValid = false;
   } else if (!clerkFirstName.match(capitalize)) {
     firstnameERROR.innerHTML = 'First name should start with capital letters';
     firstnameERROR.style = 'color:red';
     firstName.style.border = '1px solid red';
     firstName.focus();
+    isValid = false;
   } else {
     firstnameERROR.innerHTML = 'Filled Correctly Filled';
     firstnameERROR.style = 'color:green';
@@ -61,21 +69,25 @@ const validate = () => {
     lastnameERROR.style = 'color:red';
     lastName.style.border = '1px solid red';
     lastName.focus();
+    isValid = false;
   } else if (!(clerkLastName.length > 1)) {
     lastnameERROR.innerHTML = 'Last name should be more than one character';
     lastnameERROR.style = 'color:red';
     lastName.style.border = '1px solid red';
     lastName.focus();
+    isValid = false;
   } else if (!clerkLastName.match(nonumber)) {
     lastnameERROR.innerHTML = 'Last name should not contain numbers';
     lastnameERROR.style = 'color:red';
     lastName.style.border = '1px solid red';
     lastName.focus();
+    isValid = false;
   } else if (!clerkLastName.match(capitalize)) {
     lastnameERROR.innerHTML = 'Last name should start with capital letters';
     lastnameERROR.style = 'color:red';
     lastName.style.border = '1px solid red';
     lastName.focus();
+    isValid = false;
   } else {
     lastnameERROR.innerHTML = 'Field Filled Correctly ';
     lastnameERROR.style = 'color:green';
@@ -88,16 +100,19 @@ const validate = () => {
     emailERROR.style = 'color:red';
     Email.style.border = '1px solid red';
     Email.focus();
+    isValid = false;
   } else if (!(clerkEmail.length > 1)) {
     emailERROR.innerHTML = ' Email Field should be more than one character ';
     emailERROR.style = 'color:red';
     Email.style.border = '1px solid red';
     Email.focus();
+    isValid = false;
   } else if (!clerkEmail.match(emailFormat)) {
     emailERROR.innerHTML = 'Email entered doesnt match a valid email';
     emailERROR.style = 'color:red';
     Email.style.border = '1px solid red';
     Email.focus();
+    isValid = false;
   } else {
     emailERROR.innerHTML = 'Field Filled Correctly ';
     emailERROR.style = 'color:green';
@@ -110,11 +125,13 @@ const validate = () => {
     passwordERROR.innerHTML = 'Password Field Required';
     passwordERROR.style = 'color:red';
     Password.focus();
+    isValid = false;
   } else if (!(userpassword.length > 8)) {
     passwordERROR.innerHTML = 'Enter password with more than 8 characters';
     passwordERROR.style = 'color:red';
     Password.style.border = '1px solid red';
     Password.focus();
+    isValid = false;
   } else {
     Password.style.border = '1px solid green';
     passwordERROR.innerHTML = 'Password Field Filled';
@@ -127,15 +144,24 @@ const validate = () => {
     userRoleERROR.style = 'color:red';
     userRole.style.border = '1px solid red';
     userRole.focus();
+    isValid = false;
   } else {
     userRoleERROR.innerHTML = 'Field Correctly Field';
     userRoleERROR.style = 'color:green';
     userRole.style.border = '1px solid green';
   }
+  if (!isValid) {
+    event.preventDefault();
+    return false;
+  }
 };
 
 // Assigning variable to the form.
-const clerkForm = document.getElementById('form-id');
+const clerkForm = document.getElementById('form-id'); 
 
 // Adding an event listener to the form.
-clerkForm.addEventListener('submit', validate);
+// clerkForm.addEventListener('submit', validate);
+
+clerkForm.addEventListener('submit', (event) => {
+  validate(event);
+});

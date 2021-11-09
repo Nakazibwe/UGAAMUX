@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 /* eslint-disable consistent-return */
 /* eslint-disable eqeqeq */
 
@@ -412,6 +413,6 @@ const Comedianform = document.getElementById('form-id');
 // Comedianform.addEventListener('submit', validate);
 
 // Adding an event listener to the form.
-Comedianform.addEventListener('submit', (event) => { 
-  validate(event);
+Comedianform.addEventListener('submit', (event) => {
+  validate(event); 
 });

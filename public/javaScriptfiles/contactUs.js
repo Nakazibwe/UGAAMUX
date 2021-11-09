@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 /* eslint-disable eqeqeq */
 
 // Assigning variables to the different inputs.
@@ -18,7 +19,8 @@ const capitalize = /^[A-Z][a-z]/;
 const emailFormat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
 
 // Validation function for all inputs.
-const validate = () => {
+const validate = (event) => {
+  let isValid = true;
   // Validating first name input.
   const firstName = FirstName.value.trim();
   if (firstName == '') {
@@ -26,21 +28,25 @@ const validate = () => {
     FirstNameError.style = 'color:red';
     FirstName.style.border = '1px solid red';
     FirstName.focus();
+    isValid = false;
   } else if (!(firstName.length > 1)) {
     FirstName.style.border = '1px solid red';
     FirstNameError.innerHTML = 'First Name Incomplete';
     FirstNameError.style = 'color:red ';
     FirstName.focus();
+    isValid = false;
   } else if (!firstName.match(nonumber)) {
     FirstNameError.innerHTML = 'Enter without numbers';
     FirstNameError.style = 'color:red ';
     FirstName.style.border = '1px solid red';
     FirstName.focus();
+    isValid = false;
   } else if (!firstName.match(capitalize)) {
     FirstNameError.innerHTML = 'Start with a capital letter';
     FirstNameError.style = 'color:red ';
     FirstName.style.border = '1px solid red';
     FirstName.focus();
+    isValid = false;
   } else {
     FirstNameError.innerHTML = ' Field correctly filled ';
     FirstNameError.style = 'color:green ';
@@ -54,21 +60,25 @@ const validate = () => {
     SecondNameError.style = 'color:red';
     SecondName.style.border = '1px solid red';
     SecondName.focus();
+    isValid = false;
   } else if (!(secondName.length > 1)) {
     SecondName.style.border = '1px solid red';
     SecondNameError.innerHTML = 'Last Name Incomplete';
     SecondNameError.style = 'color:red ';
     SecondName.focus();
+    isValid = false;
   } else if (!secondName.match(nonumber)) {
     SecondNameError.innerHTML = 'Enter without numbers';
     SecondNameError.style = 'color:red ';
     SecondName.style.border = '1px solid red';
     SecondName.focus();
+    isValid = false;
   } else if (!secondName.match(capitalize)) {
     SecondNameError.innerHTML = 'Start with a capital letter';
     SecondNameError.style = 'color:red ';
     SecondName.style.border = '1px solid red';
     SecondName.focus();
+    isValid = false;
   } else {
     SecondNameError.innerHTML = ' Field correctly filled ';
     SecondNameError.style = 'color:green ';
@@ -82,11 +92,13 @@ const validate = () => {
     EmailError.style = 'color:red';
     Email.style.border = '1px solid red ';
     Email.focus();
+    isValid = false;
   } else if (!email.match(emailFormat)) {
     EmailError.innerHTML = 'Email Format entered is Wrong';
     EmailError.style = 'color:red';
     Email.style.border = '1px solid red';
     Email.focus();
+    isValid = false;
   } else {
     EmailError.innerHTML = 'Field correctly filled ';
     EmailError.style = 'color:green ';
@@ -100,10 +112,15 @@ const validate = () => {
     MessageError.style = 'color:red';
     Message.style.border = '1px solid red';
     Message.focus();
+    isValid = false;
   } else {
     MessageError.innerHTML = 'Field correctly filled ';
     MessageError.style = 'color:green ';
     Message.style.border = '1px solid green';
+  }
+  if (!isValid) {
+    event.preventDefault();
+    return false;
   }
 };
 
@@ -111,4 +128,8 @@ const validate = () => {
 const contactForm = document.getElementById('form-id');
 
 // Added event listener on the form.
-contactForm.addEventListener('submit', validate);
+// contactForm.addEventListener('submit', validate);
+
+contactForm.addEventListener('submit', (event) => {
+  validate(event);
+});
