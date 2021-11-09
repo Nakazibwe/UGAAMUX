@@ -334,7 +334,7 @@ const validate = (event) => {
   } else if (!bandCrowns.match(capitalize)) {
     BandcrownsERROR.innerHTML = 'Band Crowns  should start with a capital letter';
     BandcrownsERROR.style = 'color:red ';
-    Bandcrowns.style.border = '1px solid red';
+    Bandcrowns.style.border = '1px solid red'; 
     Bandcrowns.focus();
     isValid = false;
   } else if (!bandCrowns.match(alphaNumeric)) {
@@ -427,7 +427,7 @@ const validate = (event) => {
     BandsponsorsERROR.innerHTML = 'Band Sponsors Field Required. If Non indicate N/A';
     BandsponsorsERROR.style = 'color:red';
     Bandsponsors.style.border = '1px solid red ';
-    BandBandsponsors.focus();
+    Bandsponsors.focus();
     isValid = false;
   } else {
     BandsponsorsERROR.innerHTML = 'Field correctly filled ';
