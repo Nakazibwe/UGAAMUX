@@ -51,7 +51,7 @@ html(lang='en')
                     li
                         a(href='#') Portfolio
                     li
-                        a(href='/logout') LOG OUT
+                        a(href='/logout') LOG OUT 
             #content
                 nav.navbar.navbar-expand-lg.navbar-light.bg-light
                     .container-fluid
@@ -85,14 +85,16 @@ html(lang='en')
                             thead.thead-dark
                                 tr
                                     th Artist ID 
-                                    th First name
-                                    th Last name
+                                    
+        
                                     th Stage name
                                     th Telephone
                                     th Twitter
                                     th Email
-                                    th Gender
+                                    th Location
                                     th Genre
+                                    th Albums
+                                    th Songs
                                     th Image
                                     th Update
                                     th Delete
@@ -101,14 +103,16 @@ html(lang='en')
                                 each artist in artists
                                     tr
                                         td #{artist.artistID}
-                                        td #{artist.firstName}
-                                        td #{artist.lastName}
+                                        
+                                        
                                         td #{artist.stageName}
                                         td #{artist.telephone}
                                         td #{artist.twitter}
                                         td #{artist.email}
-                                        td #{artist.gender}
+                                        td #{artist.Location}
                                         td #{artist.genre}
+                                        td #{artist.numberofalbums}
+                                        td #{artist.numberofsongs}
                                         td 
                                             //- img(src=`/img/#{artist.pictureupload}`)
                                             //- img(src=`/img/${artist.pictureupload}` alt="image" style="width:20%" margin ="5px auto")
@@ -134,30 +138,30 @@ html(lang='en')
                             thead.thead-dark
                                 tr
                                     th Comedian ID 
-                                    th First name
-                                    th Last name
+                                    
+                                    
                                     th Stage name
                                     th Telephone
                                     th Twitter
                                     th Email
-                                    th Gender
+                                    th Location
                                     
                                     th Image
                                     th Update
-                                    th Delete
+                                    th Delete 
                             tbody
                                 if comedians.length
                                 each comedian in comedians
                                     tr
                                         td #{comedian.comedianID}
-                                        td #{comedian.firstName}
-                                        td #{comedian.lastName}
+                                        
+                                        
                                         td #{comedian.stagename}
                                         td #{comedian.comedianphone}
                                         td #{comedian.twitter}
                                         td #{comedian.email}
-                                        td #{comedian.gender}
-                                        //- td #{comedian.genre}
+                                        td #{comedian.Location}
+                                        
                                         td 
                                             img(src='/'+comedian.uploadedpicture alt="image" width="50px" height="50px") 
                                         td
@@ -183,13 +187,15 @@ html(lang='en')
                                 tr
                                     th Band ID
                                     th Name
-                                    th Owner
+                                    
                                     th Members
                                     th Telephone
                                     th Twitter
                                     th Email
-                                    th Sponsors
-                                    th genre
+                                    
+                                    th Genre
+                                    th Albums
+                                    th Songs
                                     th Image
                                     th Update
                                     th Delete
@@ -199,13 +205,16 @@ html(lang='en')
                                      tr
                                         td #{band.bandID}
                                         td #{band.BandName}
-                                        td #{band.BandOwner}
+                                        
                                         td #{band.BandNumber}
                                         td #{band.telephone}
                                         td #{band.twitter}
                                         td #{band.email}
-                                        td #{band.bandsponsors}
                                         td #{band.genre} 
+                                        td #{band.albums} 
+                                        
+                                        td #{band.numberofsongs} 
+
                                         td
                                             img(src='/'+band.Profilepicture alt="image" width="50px" height="50px") 
                                         td
