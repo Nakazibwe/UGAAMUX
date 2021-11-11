@@ -1,3 +1,4 @@
+/* eslint-disable brace-style */
 /* eslint-disable no-useless-escape */
 /* eslint-disable consistent-return */
 /* eslint-disable eqeqeq */
@@ -132,13 +133,15 @@ const validate = (event) => {
     StagenameERROR.style = 'color:red ';
     Stagename.focus();
     isValid = false;
-  } else if (!comedianStageName.match(capitalize)) {
-    Stagename.innerHTML = 'Stage Name should start with a capital letter';
-    StagenameERROR.style = 'color:red ';
-    Stagename.style.border = '1px solid red';
-    Stagename.focus();
-    isValid = false;
-  } else if (!comedianStageName.match(alphaNumeric)) {
+  }
+  // else if (!comedianStageName.match(capitalize)) {
+  //     Stagename.innerHTML = 'Stage Name should start with a capital letter';
+  //     StagenameERROR.style = 'color:red ';
+  //     Stagename.style.border = '1px solid red';
+  //     Stagename.focus();
+  //     isValid = false;
+  // }
+  else if (!comedianStageName.match(alphaNumeric)) {
     Stagename.style.border = '1px solid red';
     StagenameERROR.innerHTML = ' Stage Name Format should be Alphanumeric';
     StagenameERROR.style = 'color:red';
@@ -407,12 +410,12 @@ const validate = (event) => {
   }
 };
 
-// Assigning a variable to the form. 
+// Assigning a variable to the form.
 const Comedianform = document.getElementById('form-id');
 
 // Comedianform.addEventListener('submit', validate);
 
 // Adding an event listener to the form.
 Comedianform.addEventListener('submit', (event) => {
-  validate(event); 
+  validate(event);
 });

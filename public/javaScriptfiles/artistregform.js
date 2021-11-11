@@ -1,3 +1,4 @@
+/* eslint-disable brace-style */
 /* eslint-disable no-useless-escape */
 /* eslint-disable no-alert */
 /* eslint-disable no-unreachable */
@@ -143,13 +144,15 @@ const validate = (event) => {
     StageNameERROR.style = 'color:red ';
     Stagename.focus();
     isValid = false;
-  } else if (!artiststagename.match(capitalize)) {
-    StageNameERROR.innerHTML = 'Stage Name should start with a capital letter';
-    StageNameERROR.style = 'color:red ';
-    Stagename.style.border = '1px solid red';
-    Stagename.focus();
-    isValid = false;
-  } else if (!artiststagename.match(alphaNumeric)) {
+  }
+  // else if (!artiststagename.match(capitalize)) {
+  //   StageNameERROR.innerHTML = 'Stage Name should start with a capital letter';
+  //   StageNameERROR.style = 'color:red ';
+  //   Stagename.style.border = '1px solid red';
+  //   Stagename.focus();
+  //   isValid = false;
+  // }
+  else if (!artiststagename.match(alphaNumeric)) {
     Stagename.style.border = '1px solid red';
     StageNameERROR.innerHTML = ' Stagename Format should be Alphanumeric';
     StageNameERROR.style = 'color:red';
