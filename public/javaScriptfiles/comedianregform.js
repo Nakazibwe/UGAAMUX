@@ -43,7 +43,7 @@ const userRoleERROR = document.getElementById('roles-error');
 const ComedianbioERROR = document.getElementById('bio-ERROR');
 
 // Regular expressions.
-const nonumber = /^[A-Za-z]+$/;
+const nonumber = /^[A-Za-z ]+$/;
 const capitalize = /^[A-Z][a-z]/;
 const alphaNumeric = /^[a-zA-Z0-9 ]*$/;
 // const alphaNumeric = /^[a-zA-Z0-9]+$/;  //Regex not being used currently.

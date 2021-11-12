@@ -54,7 +54,7 @@ const UserroleERROR = document.getElementById('roles-error');
 const ArtistbioERROR = document.getElementById('bio-error');
 
 // Regular expressions.
-const nonumber = /^[A-Za-z]+$/;
+const nonumber = /^[A-Za-z ]+$/;
 const capitalize = /^[A-Z][a-z]/;
 const morethan1 = /[\w\s]+/;
 // const alphaNumeric = /^[a-zA-Z0-9]+$/; // Regex not in use yet.

@@ -14,7 +14,7 @@ const EmailError = document.getElementById('email-error');
 const MessageError = document.getElementById('message-error');
 
 // Regular Expressions.
-const nonumber = /^[A-Za-z]+$/;
+const nonumber = /^[A-Za-z ]+$/;
 const capitalize = /^[A-Z][a-z]/;
 const emailFormat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
 

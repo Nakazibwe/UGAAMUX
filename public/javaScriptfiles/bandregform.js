@@ -54,7 +54,7 @@ const userRoleERROR = document.getElementById('roles-error');
 const BandbioERROR = document.getElementById('bio-ERROR');
 
 // Regular expressions.
-const nonumber = /^[A-Za-z]+$/;
+const nonumber = /^[A-Za-z ]+$/;
 const capitalize = /^[A-Z][a-z]/;
 // const alphaNumeric = /^[a-zA-Z0-9]+$/; // Regex not currently in use.
 const systemIDFormat = /^[a-z]{3}\d+[a-z]{3}/;

@@ -13,7 +13,7 @@ const CustomeremailError = document.getElementById('email-error');
 const CustomermessageError = document.getElementById('message-error');
 
 // Regular expressions.
-const nonumber = /^[A-Za-z]+$/;
+const nonumber = /^[A-Za-z ]+$/;
 const alphaNumeric = /^[a-zA-Z0-9 ]*$/;
 const capitalize = /^[A-Z][a-z]/;
 const emailFormat = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
