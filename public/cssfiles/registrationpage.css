@@ -1,3 +1,4 @@
+/*The properties of the body*/
 body{
     margin:0;
     padding:0;
@@ -5,7 +6,7 @@ body{
     
 }
 
-/*The properties of the top nav bar on the home page*/
+/*The properties of the top nav bar on the admin  home page*/
 #top-navbar {
     height: 65px;
     box-sizing: border-box;
@@ -21,7 +22,7 @@ body{
 #navbar-inner-div {
     margin-left: 20%;
 }
-/*The properties of the logo on the top-navbar of the loginpage*/
+/*The properties of the logo on the top-navbar */
 #navbar-logo {
     font-family: 'Bebas Neue', cursive;
     font-size: 45px;
@@ -30,7 +31,7 @@ body{
     text-decoration: none;
     margin-left: 5%;
 }
-/*The properties of the small property on the logo on the navbar on the homepage*/
+/*The properties of the small property on the logo on the navbar */
 #small-log {
     color: #fff;
 }
@@ -39,7 +40,7 @@ body{
 #navbar-inner-div {
     margin-left: 30%;
 }
-/*The properties of the artists link on the  top navbar of the homepage */
+/*The properties of the artists link on the  top navbar  */
 #navbar-artistes {
     font-family:  sans-serif;
     font-size: 0.875em;
@@ -53,8 +54,10 @@ body{
     color: #fff;
     box-sizing: border-box;
 }
+/*The properties of the artists link hover on the  top navbar  */
 #navbar-artistes:hover{color:#ff781f}
-/*The properties of the comedians link in the top nav bar of the homepage*/
+
+/*The properties of the comedians link in the top nav bar */
 #navbar-comedians {
     font-family:  sans-serif;
     font-size: 0.875em;
@@ -68,8 +71,10 @@ body{
     padding-top: 10px;
     box-sizing: border-box;
 }
+/*The properties of the comedians link  hover in the top nav bar */
 #navbar-comedians:hover{color:#ff781f}
-/*The properties of the bands on the top nav bar on the home page */
+
+/*The properties of the bands on the top nav bar  */
 #navbar-bands {
     font-family:  sans-serif;
     font-size: 0.875em;
@@ -83,8 +88,10 @@ body{
     text-decoration: none;
     box-sizing: border-box;
 }
+/*The properties of the bands hover  on the top nav bar  */
 #navbar-bands:hover{color:#ff781f}
-/*The properties of the about us on the top nav bar on the home page*/
+
+/*The properties of the about us on the top nav bar */
 #navbar-aboutus {
     font-family:  sans-serif;
     font-size: 0.875em;
@@ -98,7 +105,9 @@ body{
     text-decoration: none;
     box-sizing: border-box;
 }
+/*The properties of the about us hover  on the top nav bar */
 #navbar-aboutus:hover{color:#ff781f}
+
 /*The properties of the contactus on the top-nav bar*/
 #navbar-contactus {
     font-family: sans-serif;
@@ -113,8 +122,10 @@ body{
     text-decoration: none;
     box-sizing: border-box;
 }
+/*The properties of the contactus  hover on the top-nav bar*/
 #navbar-contactus:hover{color:#ff781f}
 
+/*The properties of the navbar-dropdown*/
 #navbar-dropdown {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.875em;
@@ -131,7 +142,9 @@ body{
     box-sizing: border-box;
     
 }
+/*The properties of the navbar-dropdown hover*/
 #navbar-dropdown:hover{color:#ff781f}
+
 /*The properties of the text area container inside of the header */
 .header-text-area {
     text-align: center;
@@ -154,7 +167,7 @@ body{
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
 }
-/*The properties of the small quote on the header section. */
+/*The properties of the small quote  */
 #small-header-quote {
     font-size: 25px;
     color: rgb(215, 94, 39);
@@ -163,18 +176,20 @@ body{
     font-weight: 900;
     font-family: 'Bonheur Royale', cursive;
 }
+/*The properties of the small quote hover */
 #small-header-quote:hover {color: #fff;}
-/*The properties of the signin on the top nav bar of the home page*/
+
+/*The properties of the signin on the top nav bar */
 #sign-out {
     font-size: 0.875em;
     font-weight: 600;
     text-decoration: none;
 }
-/*The properties of the hovering on the top nav bar of the home page*/
+/*The properties of the hovering on the top nav bar */
 #sign-out:hover {
     color: red;
 }
-
+/*The properties of the container*/
 .container{
 margin-top: 8%;
 color:#fff;
@@ -184,10 +199,12 @@ margin-bottom: 5%;
 text-align: center;
 
 }
+/*The properties  h2 of the container*/
 .container h2{
     font-size: 60px;
     font-family: 'Carter One', cursive;
 }
+/*The properties of  links  on the container*/
 .container a{
    
     padding-left: 5%;
@@ -201,17 +218,19 @@ text-align: center;
     text-decoration: none;
     border: 1px solid rgb(215, 94, 39);
 }
+/*The properties of  links hover  on the container*/
 .container a:hover{
     color:rgb(215, 94, 39);
     background-color: #fff;
     border: 1px solid #fff;
 }
-
+/*The properties paragraph of the container*/
 .container p{
     line-height: 30px;
     font-family: 'Open Sans',sans-serif;
     font-weight: 900;
 }
+/*The properties of the small-text*/
 .small-text{
     font-size: 25px;
     color: rgb(215, 94, 39);
@@ -220,42 +239,49 @@ text-align: center;
     font-weight: 900;
     font-family: 'Bonheur Royale', cursive;   
 }
-
+/*The properties of the small-text hover*/
 .small-text:hover{
   color:#fff;
 }
 
+/*The properties of the footer*/
 .footer {
     height: 65px;
     background: #555a64;
 }
+/*The properties of the nav-link*/
 .nav-link {
     color: #fff;
 }
+/*The properties of the nav-link hover*/
 .nav-link:hover {
     color: #ff781f;
 }
+/*The properties of the nav-container*/
 .nav-container {
     margin-left: 40%;
     display: flex;
     
 }
+/*The properties of the icon*/
 .icon {
     color:#fff; 
 }
+/*The properties of the copy*/
 .copy {
     font-family:  sans-serif;
     font-size: 14px;
     margin-left: 4%;
     font-weight: 900;
 }
-/*The properties of the small quote on the About Us section*/
+/*The properties of the small quote */
 #small-quote {
     font-size: 25px;
     color: #fff;
     font-weight: 900;
     font-family: 'Bonheur Royale', cursive;
 }
+/*The properties of the small quote hover */
 #small-quote:hover{
     color:#ff781f;
 }

@@ -3,11 +3,12 @@
 */
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+/*Properties of the body on the admin dashboard.*/
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
 }
-
+/*Properties of the paragraph*/
 p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
@@ -15,7 +16,7 @@ p {
     line-height: 1.7em;
     color: #999;
 }
-
+/*properties of link*/
 a,
 a:hover,
 a:focus {
@@ -23,7 +24,7 @@ a:focus {
     text-decoration: none;
     transition: all 0.3s;
 }
-
+/*Properties of the navbar*/
 .navbar {
     padding: 15px 10px;
     background: #fff;
@@ -32,13 +33,14 @@ a:focus {
     margin-bottom: 40px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 } 
-
+/*Properties of the navbar-btn class*/
  .navbar-btn {
     box-shadow: none;
     outline: none !important;
     border: none;
 }
 
+/*Properties of the line class*/
 .line {
     width: 100%;
     height: 1px;
@@ -50,12 +52,14 @@ a:focus {
     SIDEBAR STYLE
 ----------------------------------------------------- */
 
+/*The properties of the wrapper class */
 .wrapper {
     display: flex;
     width: 100%;
     align-items: stretch;
 }
 
+/*The properties of the sidebar id*/
 #sidebar {
     min-width: 250px;
     max-width: 250px;
@@ -64,46 +68,47 @@ a:focus {
     transition: all 0.3s;
 } 
 
+/*The properties  of sidebar.active */
 #sidebar.active {
     margin-left: -250px;
 }
-
+/* The properties of the sidebar and sidebar-header*/
 #sidebar .sidebar-header {
     padding: 20px;
     background: #2B313E;
 }
-
+/*The properties of the sidebar ul components*/
 #sidebar ul.components {
     padding: 20px 0;
     border-bottom: 1px solid #2B313E;
 }
-
+/*The properties of the sidebar ul paragraph*/
 #sidebar ul p {
     color: #fff;
     padding: 10px;
 }
-
+/*The properties of the  sidebar ul li links*/
 #sidebar ul li a {
     padding: 10px;
     font-size: 1.1em;
     display: block;
 } 
-
+/*The properties of the  sidebar ul li links hover.*/
  #sidebar ul li a:hover {
     color: #2B313E;
     background: #fff;
 }
-
+/*The properties of the  sidebar ul li links active.*/
  #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
     background: #555a64;
 }
-
+/*The properties of the  link data-toggle*/
 a[data-toggle="collapse"] {
     position: relative;
 }
-
+/*The properties of the  dropdown-toggle after.*/
 .dropdown-toggle::after {
     display: block;
     position: absolute;
@@ -111,17 +116,17 @@ a[data-toggle="collapse"] {
     right: 20px;
     transform: translateY(-50%);
 }
-
+/*The properties of the ul links*/
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
     background: #555a64;
 }
-
+/*The properties of the ul CTAs*/
 ul.CTAs {
     padding: 20px;
 }
-
+/*The properties of the ul CTAs links */
 ul.CTAs a {
     text-align: center;
     font-size: 0.9em !important;
@@ -129,12 +134,13 @@ ul.CTAs a {
     border-radius: 5px;
     margin-bottom: 5px;
 }
-
+/*The properties of the links download*/
 a.download {
     background: #fff;
     color: #7386D5;
 }
 
+/*The properties of the link article and link article hover*/
 a.article,
 a.article:hover {
     background: #6d7fcc !important;
@@ -144,35 +150,42 @@ a.article:hover {
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
-
+/*The properties of the content*/
 #content {
     width: 100%;
     padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
 }
+/*The properties of the registeredcreatives */
 .registeredcreatives{
   height:auto;
   width:100%;
   background-color: #fafafa; 
 }
+/*The properties of the sui-button-cell*/
 .sui-button-cell
 {
     text-align: center;
 }
+/*heading properties*/
  h2{
      
     font-size: 18px;
     font-family: sans-serif;
 }
+/*The properties of the tr*/
 tr{
     font-size: 13px;
     height: 20%;
     
 }
+/*The properties of the thead-dark.*/
 .thead-dark{
     width:inherit;
 }
+
+/*The properties of the td*/
 td{
     font-size:13px;
 }
@@ -183,7 +196,7 @@ td{
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
-
+/*Media queries.*/
 @media (max-width: 768px) {
     #sidebar {
         margin-left: -250px;

@@ -49,6 +49,7 @@ body{
    }
 /*The properties of the hover on the registerwithus-link*/
    #registerwithus-link:hover{text-decoration: underline;}
+
 /*The properties of the login container on the login page*/   
    #login-container{
      width:35%;
@@ -61,12 +62,14 @@ body{
      background-color: #2B313E;
      
    }
+
 /*The properties of the paragragh in the login container*/   
    #login-container p{
        color: #fff;
        font-family: "Open Sans", sans-serif;
 
     }
+
 /*The properties of the username input */
 #username{
    width: 90%;
@@ -74,6 +77,7 @@ body{
    height: 55px;
    
 }
+
 /*The properties of the  password input */
 #userpassword{
     width: 90%;
@@ -81,6 +85,7 @@ body{
     height: 55px; 
     
 }
+
 /*The properties  of the usersubmit button*/
 #usersubmit{
     width: 90%;
@@ -92,6 +97,7 @@ body{
     background: #ef672a;
     border: 1px solid #ef672a;
 }
+
 /*The properties of the hovering on the submit button*/
 #usersubmit:hover{
     color:#ef672a;
@@ -99,49 +105,55 @@ body{
     border: 1px solid #fff;
 
 }
+
 /*The properties of the forgot password link*/
 #forgotpassword{
     color:#ef672a;
     text-decoration: none;
     font-family: "Open Sans", sans-serif;
 }
+/*The properties of the form-action*/
 .form-action{
    margin-top: 2%;
 }
-
-
-
+/*The properties of the footer*/
 .footer{
    margin-top: 2%;
    height: 60px;
    background-color: #434853;
 }
+/*The properties of the nav-link*/
 .nav-link {
    color: #fff;
 }
+/*The properties of the nav-link hover*/
 .nav-link:hover {
    color: #ff781f;
 }
+/*The properties of the nav-container */
 .nav-container {
    margin-left: 40%;
    display: flex;
 }
+/*The properties of the icon*/
 .icon {
    color: #fff;  
 }
+/*The properties of the copy*/
 .copy {
    font-family: sans-serif;
    font-size: 14px;
    margin-left: 4%;
    font-weight: 900;
 }
-/*The properties of the small quote on the About Us section*/
+/*The properties of the small quote */
 #small-quote {
    font-size: 25px;
    color: #fff;
    font-weight: 900;
    font-family: 'Bonheur Royale', cursive;
 }
+/*The properties of the small quote hover */
 #small-quote:hover {
    color: rgb(215, 94, 39);
 }

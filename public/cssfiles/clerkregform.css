@@ -4,7 +4,7 @@ body {
     padding: 0;
     background: #434853;
 
-    /* font-family: 'Bebas Neue', cursive; */
+   
 }
 /*The properties of the top-container on the page*/
 #top-navbar {
@@ -15,7 +15,7 @@ body {
 #navbar-inner-div {
     margin-left: 50%;
 }
-/*The properties of the logo on the top-navbar of the loginpage*/
+/*The properties of the logo on the top-navbar*/
 #navbar-logo {
     font-family: 'Bebas Neue', cursive;
     font-size: 45px;
@@ -24,7 +24,7 @@ body {
     text-decoration: none;
     margin-left: 5%;
 }
-/*The properties of the small property on the logo of the top-nav bar  of the login page*/
+/*The properties of the small property on the logo of the top-nav bar */
 #small-log {
     color: #fff;
 }
@@ -46,7 +46,7 @@ body {
     text-decoration: underline;
 }
 
-/*The properties of the login container on the login page*/
+/*The properties of the registermessage-container */
 #registermessage-container {
     width: 35%;
     padding-top: 20px;
@@ -56,7 +56,7 @@ body {
     height: auto;
     background-color: #2b313e;
 }
-/*The properties of the paragragh in the login container*/
+/*The properties of the paragragh in registermessage-container*/
 #registermessage-container p {
     color: #fff;
     font-family: 'Open Sans', sans-serif;
@@ -73,17 +73,19 @@ body {
     font-family: 'Open Sans', sans-serif;
     height: 40px;
 }
-
+/*The properties of the clerkemail */
 #clerkemail {
     width: 90%;
     font-family: 'Open Sans', sans-serif;
     height: 40px;
 }
+/*The properties of the clerkrole*/
 #clerkrole {
     width: 90%;
     font-family: 'Open Sans', sans-serif;
     height: 40px;
 }
+/*The properties of the clerkpassword*/
 #clerkpassword {
     width: 90%;
     font-family: 'Open Sans', sans-serif;
@@ -114,43 +116,50 @@ body {
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
 }
+/*The properties of the form-action*/
 .form-action {
     margin-top: 2%;
 }
-
+/*The properties of the footer*/
 .footer {
     margin-top: 2%;
     height: 60px;
     /* background: #555a64; */
-    background-color: #434853;
-    
+    background-color: #434853; 
 }
+/*The properties of the nav-link*/
 .nav-link {
     color: #fff;
 }
+/*The properties of the nav-link hover*/
 .nav-link:hover {
     color: #ff781f;
 }
+/*The properties of the nav-container*/
 .nav-container {
     margin-left: 40%;
     display: flex;
 }
+/*The properties of the icon*/
 .icon {
     color: #fff;
 }
+
+/*The properties of the copy*/
 .copy {
     font-family: sans-serif;
     font-size: 14px;
     margin-left: 4%;
     font-weight: 900;
 }
-/*The properties of the small quote on the About Us section*/
+/*The properties of the small quote */
 #small-quote {
     font-size: 25px;
     color: #fff;
     font-weight: 900;
     font-family: 'Bonheur Royale', cursive;
 }
+/*The properties of the small quote hover*/
 #small-quote:hover {
     color: rgb(215, 94, 39);
 }

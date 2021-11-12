@@ -1,9 +1,10 @@
+/*The properties of the body*/
 body {
     margin: 0;
     padding: 0;
     background: #f2f3f4;
 }
-/*The properties of the top nav bar on the home page*/
+/*The properties of the top nav bar on the artist reg form*/
 #top-navbar {
     height: 65px;
     box-sizing: border-box;
@@ -19,7 +20,7 @@ body {
 #navbar-inner-div {
     margin-left: 20%;
 }
-/*The properties of the logo on the top-navbar of the loginpage*/
+/*The properties of the logo on the top-navbar of the artist reg page*/
 #navbar-logo {
     font-family: 'Bebas Neue', cursive;
     font-size: 45px;
@@ -28,7 +29,7 @@ body {
     text-decoration: none;
     margin-left: 5%;
 }
-/*The properties of the small property on the logo on the navbar on the homepage*/
+/*The properties of the small property on the logo on the navbar on the artist reg page*/
 #small-log {
     color: #fff;
 }
@@ -37,7 +38,7 @@ body {
 #navbar-inner-div {
     margin-left: 30%;
 }
-/*The properties of the artists link on the  top navbar of the homepage */
+/*The properties of the artists link on the  top navbar  */
 #navbar-artistes {
     font-family:  sans-serif;
     font-size: 0.875em;
@@ -52,7 +53,7 @@ body {
     box-sizing: border-box;
 }
 #navbar-artistes:hover{color:#ff781f}
-/*The properties of the comedians link in the top nav bar of the homepage*/
+/*The properties of the comedians link in the top nav bar */
 #navbar-comedians {
     font-family:  sans-serif;
     font-size: 0.875em;
@@ -66,8 +67,10 @@ body {
     padding-top: 10px;
     box-sizing: border-box;
 }
+/*The properties of the comedians link in the top nav bar hover */
 #navbar-comedians:hover{color:#ff781f}
-/*The properties of the bands on the top nav bar on the home page */
+
+/*The properties of the bands on the top nav bar  */
 #navbar-bands {
     font-family:  sans-serif;
     font-size: 0.875em;
@@ -81,8 +84,10 @@ body {
     text-decoration: none;
     box-sizing: border-box;
 }
+/*The properties of the bands on the top nav bar hover */
 #navbar-bands:hover{color:#ff781f}
-/*The properties of the about us on the top nav bar on the home page*/
+
+/*The properties of the about us on the top nav bar */
 #navbar-admin {
     font-family:  sans-serif;
     font-size: 0.875em;
@@ -96,7 +101,9 @@ body {
     text-decoration: none;
     box-sizing: border-box;
 }
+/*The properties of the about us on the top nav bar hover */
 #navbar-admin:hover{color:#ff781f}
+
 /*The properties of the contactus on the top-nav bar*/
 #navbar-contactus {
     font-family: sans-serif;
@@ -111,8 +118,10 @@ body {
     text-decoration: none;
     box-sizing: border-box;
 }
+/*The properties of the contactus on the top-nav bar hover*/
 #navbar-contactus:hover{color:#ff781f}
 
+/*The properties of the navbar dropdown*/
 #navbar-dropdown {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.875em;
@@ -129,21 +138,27 @@ body {
     box-sizing: border-box;
     
 }
+/*The properties of the navbar dropdown hover*/
 #navbar-dropdown:hover{color:#ff781f}
+
+/*The properties of the signout.*/
 #sign-out {
     font-size: 0.875em;
     font-weight: 600;
     text-decoration: none;
 }
-/*The properties of the hovering on the top nav bar of the home page*/
+/*The properties of the hovering on the top nav bar */
 #sign-out:hover {
     color: red;
 }
+
+/*The properties of the h4regform.*/
 .h4regform{
     margin-left: 42%;
     margin-top: 2%;
     font-family: 'Carter One', cursive;
 }
+/*The properties of the container.*/
 .container{
  width:fit-content;
  height: auto;
@@ -156,30 +171,36 @@ body {
  border: 1px solid #fff;
  
 }
+/*The properties of the form-action-cols.*/
 .form-action-cols{
 height: auto;
 border-right: 1px dotted #bfc1c2;
 border-left: 1px dotted #bfc1c2;
 
 }
+/*The properties of the row.*/
 .row{
     margin: auto;
 }
+/*The properties of the form-action input, select and textarea*/
 .form-action input , select ,  textarea{
     width:100%;
     height: 40px;
     margin-bottom:3%;
     border-radius: 4px;
 }
+/*The properties of the pgender*/
 #pgender{
     margin-bottom: 0;
 }
+/*The properties of the the gender-form*/
 #gender-form  {
     margin-top: 0;
     width: 100%;
     margin-bottom: 6%;
     display: flex;
 }
+/*The gender-form span.*/
 #gender-form span  {
     width: 50%;
     padding-left: 3%;
@@ -189,71 +210,87 @@ border-left: 1px dotted #bfc1c2;
     border:2px solid #757575;
   
 }
+/*The button-form properties.*/
 #button-form{
     margin-top: 4%;
     width: 100%;
     display: flex;
 }
+/*The properties of the button-form input.*/
 #button-form input{
     width: 50%;
     margin-right:2%;
     border-radius: 4px;
     
 }
+/*The properties error class. */
 .error{
 font-size: 12px;
 }
+
+/*The properties of the submit-btn */
 #submit-btn{
  background-color: #f28500;
  color:#fff;
  border:1px solid #f28500; 
  font-weight: 600;
 }
+/*The properties of the submit-btn hover.*/
 #submit-btn:hover{
  color: #ef672a;
  background-color: whitesmoke;
 }
+/*The properties of the cancel-btn*/
 #cancel-btn{
  background-color: #cb4154;
  color:#fff;
  border:1px solid #cb4154; 
  font-weight: 600; 
 }
+/*The properties of the cancel-btn hover*/
 #cancel-btn:hover {
     color: red;
     background-color: whitesmoke;
 }
+/*The properties of the footer*/
 .footer {
     height: 60px;
     background: #555a64;
 }
+/*The properties of the nav-link*/
 .nav-link {
     color: #fff;
 }
+/*The properties of the nav-link hover*/
 .nav-link:hover {
     color: #ff781f;
 }
+/*The properties of the nav-container*/
 .nav-container {
     margin-left: 40%;
     display: flex;
     
 }
+/*The properties of the icons*/
 .icon {
     color:#fff; 
 }
+
+/*The properties of the copy*/
 .copy {
     font-family:  sans-serif;
     font-size: 14px;
     margin-left: 4%;
     font-weight: 900;
 }
-/*The properties of the small quote on the About Us section*/
+/*The properties of the small quote on the footer*/
 #small-quote {
     font-size: 25px;
     color: #fff;
     font-weight: 900;
     font-family: 'Bonheur Royale', cursive;
 }
+/*The properties of the small quote  hover on the footer*/
 #small-quote:hover{
     color:rgb(215, 94, 39);;
 }

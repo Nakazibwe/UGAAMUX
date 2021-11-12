@@ -14,7 +14,7 @@ body {
 #navbar-inner-div {
     margin-left: 70%;
 }
-/*The properties of the logo on the top-navbar of the loginpage*/
+/*The properties of the logo on the top-navbar of the artist account page*/
 #navbar-logo {
     font-family: 'Bebas Neue', cursive;
     font-size: 45px;
@@ -23,7 +23,7 @@ body {
     text-decoration: none;
     margin-left: 5%;
 }
-/*The properties of the small property on the logo of the top-nav bar  of the login page*/
+/*The properties of the small property on the logo of the top-nav bar  of the artist account page*/
 #small-log {
     color: #fff;
 }
@@ -43,6 +43,7 @@ body {
     text-decoration: none;
     box-sizing: border-box;
 }
+/*The properties of the navbar dropdown hover.*/
 #navbar-dropdown:hover {
     color: #ff781f;
 }
@@ -52,10 +53,11 @@ body {
     font-weight: 600;
     text-decoration: none;
 }
-/*The properties of the hovering on the top nav bar of the home page*/
+/*The properties of the hovering on the top nav bar of the artist acount page*/
 #sign-out:hover {
     color: red;
 }
+/*The properties of the container */
 .container {
     /* width:fit-content; */
     width: 80%;
@@ -68,18 +70,19 @@ body {
     box-sizing: border-box;
     border: 1px solid #434853;
 }
+/*The properties of the photo-div */
 .photo-div{
  margin: 4%;
  padding:0;
    
 }
-
-
+/*The properties of the artist-info.*/
 .artist-info {
     height: auto;
     float: right;
     
 }
+/*The properties of the artistgenre */
 .artistgenre {
     height: 80px;
     padding: 3%;
@@ -94,10 +97,11 @@ body {
     background-color:#72767E ;
     border: 1px solid  #72767E;
 }
-
+/*The properties of the artistgenre hover.*/
 .artistgenre:hover{
     color: #ff781f;
 }
+/*The properties of the artist albums.*/
 .artistalbums {
     height: 80px;
     padding:3%;
@@ -112,9 +116,11 @@ body {
     background-color: #5A5F69;
     border: 1px solid #5A5F69;
 }
+/*The properties of the artist albums hover*/
 .artistalbums:hover{
     color: #ff781f;
 }
+/*The properties of the artistsongs*/
 .artistsongs {
     height: 80px;
     padding: 3%;
@@ -129,73 +135,73 @@ body {
     background-color:#72767E ;
     border: 1px solid  #72767E;
 }
+/*The properties of the artistsongs hover*/
 .artistsongs:hover{
     color: #ff781f;
 }
 
+/*The properties of the h5*/
 h5{
     margin-left: 12%;
     margin-bottom: 3%;
     font-size:30px;
     font-family: 'Bonheur Royale', cursive;
 }
+/*The properties of the h5 hover*/
 h5:hover{
    color: #ff781f;
 }
-
+/*The properties of the moreinformation*/
 .moreinformation{
  /* border: 1px solid red; */
  border-radius: 25px;
  margin-top: 3%;
  
 }
+/*The properties of the moreinformation paragraph.*/
 .moreinformation p{
     font-family: 'Open Sans', sans-serif;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+/*The properties of the footer*/
 .footer {
     margin-top: 2%;
     height: 60px;
     /* background: #555a64; */
     background-color: #434853;
 }
+/*The properties of the nav-link*/
 .nav-link {
     color: #fff;
 }
+/*The properties of the nav-link hover*/
 .nav-link:hover {
     color: #ff781f;
 }
+/*The properties of the nav-container.*/
 .nav-container {
     margin-left: 40%;
     display: flex;
 }
+/*The properties of the icons on the footer*/
 .icon {
     color: #fff;
 }
+/*The properties of the copy class*/
 .copy {
     font-family: sans-serif;
     font-size: 14px;
     margin-left: 4%;
     font-weight: 900;
 }
-/*The properties of the small quote on the About Us section*/
+/*The properties of the small quote on the footer*/
 #small-quote {
     font-size: 25px;
     color: #fff;
     font-weight: 900;
     font-family: 'Bonheur Royale', cursive;
 }
+/*The properties of the  hover of the small quote on the footer*/
 #small-quote:hover {
     color: rgb(215, 94, 39);
 }
