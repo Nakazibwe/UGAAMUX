@@ -1,29 +1,29 @@
 extends layout1
 block content
     header.card-header
-        h3.card-title UGAAMUX
+        h2.card-title #{artist.stageName}
 
 
     div.form-row
         div.col.form-group.col-md-12   
             div.form-row
                 
-                    div.col-md-8 
-                        small You can  now update  information of  #{artist.stageName}
-                        br
+                    div.col-md-8.updateimage 
+                        
+                        
                         img(src='/'+artist.pictureupload width="100px" height="100px") 
-                    //- div.col-md-2
+                    
                         
                         
                             
-        div.form-row
+        div.form-row 
             
         
-            form(method="post" action="/updateartist/"+artist.email)   
+            form.tableform(method="post"  action="/updateartist/"+artist.email)   
         
 
-                table.table
-                    thead.thead-dark
+                table.table 
+                    thead
                         tr
                             th Artist   Stage  name 
                             td 
