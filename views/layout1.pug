@@ -1,16 +1,76 @@
 doctype html
 html
     head
-        link(rel='stylesheet', href='/cssfiles/updatestyles.css')
+        
+     
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)  
+        link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap' rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap' rel='stylesheet')
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+        link(href='https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap' rel='stylesheet')
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+        link(href='https://fonts.googleapis.com/css2?family=Carter+One&display=swap' rel='stylesheet')
+        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+        link(href='https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap' rel='stylesheet')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
         link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
-        script(src="js/validations.js")
+        //- link(rel='stylesheet' href='/cssfiles/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/cssfiles/updatestyles.css')
+        script(src="/javaScriptfiles/js/bootstrap.min.js")
         title Update creative
     body
+
+        nav#top-navbar.navbar.navbar-expand-lg.navbar-dark
+            .container-fluid
+                a#navbar-logo.navbar-brand(href='/clerkinfo/creativesregistration')
+                    small#small-log UGAA
+                    | MUX
+                    img#logopicture(src='/imagefiles/ugflag.jpeg' alt='UG-LOGO' height='30px' width='50px')
+                button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarNavAltMarkup.collapse.navbar-collapse
+                    #navbar-inner-div.navbar-nav
+                        a#navbar-admin.nav-link(aria-current='page' href='/clerkinfo/creativesregistration') Registration
+                        a#navbar-dashboard.nav-link(href='/clerkinfo/admindashboard') Dashboard
+                        a#navbar-artistes.nav-link(href='/artists') Artists
+                        a#navbar-bands.nav-link(href='/bands') Bands
+                        a#navbar-comedians.nav-link(href='/comedians') Comedians
+                        
+                        .dropdown
+                            a#navbar-dropdown.btn.btn-secondary.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                                | Account
+                            ul.dropdown-menu(aria-labelledby='dropdownMenuLink')
+                                    li
+                                    a#sign-out.dropdown-item(href='/logout') LOG OUT  
         .row.justify-content-center
             div.col-md-6
                 div.card-body
                     block content
-    footer.row.justify-content-center
-         div.col-md-6
-            block footer
-                div.col-md-12 © 2021 Grace Nakazibwe.
+    
+    .navbar.navbar-expand-lg.navbar-dark.footer
+      a.nav-link.copy(href='#') &copy 2021 Grace Nakazibwe 
+      small#small-quote Ugandan Talent Lives Here
+      .nav-container
+        a.nav-link.icon(href='#')
+          i.fa.fa-facebook-square
+        a.nav-link.icon(href='#')
+          i.fa.fa-twitter-square
+        a.nav-link.icon(href='#')
+          i.fa.fa-google-plus-square
+        a.nav-link.icon(href='#')
+          i.fa.fa-instagram
+        a.nav-link.icon(href='#')
+          i.fa.fa-linkedin
+        //-  div.col-md-6
+            //- block footer
+                //- div.col-md-12 © 2021 Grace Nakazibwe.
