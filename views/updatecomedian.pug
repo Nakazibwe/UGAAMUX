@@ -1,16 +1,16 @@
 extends layout1
 block content
     header.card-header
-        h3.card-title UGAAMUX
+        h3.card-title #{comedian.stagename}
 
     div.form-row
         div.col.form-group.col-md-12   
             div.form-row
-                div.col-md-10  
-                    small You can  now update  information of #{comedian.stagename}
-                    br
+                div.col-md-10.updateimage 
+                    
+                    
                     img(src='/'+comedian.uploadedpicture width="100px" height="100px") 
-                //- div.col-md-2
+                
                      
                         
     div.form-row
@@ -19,7 +19,7 @@ block content
     
 
         table.table
-            thead.thead-dark
+            thead
                 tr
                     th Comedian  stage name
                     td 
