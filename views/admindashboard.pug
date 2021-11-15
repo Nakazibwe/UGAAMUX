@@ -56,8 +56,9 @@ html(lang='en')
                 nav.navbar.navbar-expand-lg.navbar-light.bg-light
                     .container-fluid
                         button#sidebarCollapse.btn.btn-info(type='button')
-                            i.fas.fa-align-left
-                            span Toggle Sidebar
+                            //- i.fas.fa-align-left
+                            i.fa.fa-bars(aria-hidden='true')
+                            //- span Toggle Sidebar
                         button.btn.btn-dark.d-inline-block.d-lg-none.ml-auto(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
                             i.fas.fa-align-justify
                         #navbarSupportedContent.collapse.navbar-collapse
@@ -82,7 +83,7 @@ html(lang='en')
                                         div.col-md-4
                                             //- input.btn.btn-dark.btn-block(type="submit" value = "Search")     
                         table.table
-                            thead.thead-dark
+                            thead
                                 tr
                                     th Artist ID 
                                     
@@ -135,7 +136,7 @@ html(lang='en')
                                         div.col-md-4
                                             //- input.btn.btn-dark.btn-block(type="submit" value = "Search")  
                         table.table
-                            thead.thead-dark
+                            thead
                                 tr
                                     th Comedian ID 
                                     
@@ -183,7 +184,7 @@ html(lang='en')
                                         div.col-md-4
                                             //- input.btn.btn-dark.btn-block(type="submit" value = "Search")
                         table.table
-                            thead.thead-dark
+                            thead
                                 tr
                                     th Band ID
                                     th Name
