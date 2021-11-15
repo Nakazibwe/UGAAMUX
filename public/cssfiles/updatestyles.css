@@ -1,4 +1,234 @@
+body{
+    margin:0;
+    padding: 0;
+}
+/*The properties of the top nav bar */
+#top-navbar {
+    height: 65px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 20px;
+    background: #555a64;
+    
+}
+
+/*The properties for the inner div inside the nav bar*/
+#navbar-inner-div {
+    margin-left: 20%;
+}
+/*The properties of the logo on the top-navbar */
+#navbar-logo {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 45px;
+    width: 150px;
+    color: rgb(215, 94, 39);
+    text-decoration: none;
+    margin-left: 5%;
+}
+/*The properties of the small property on the logo on the navbar */
+#small-log {
+    color: #fff;
+}
+
+/*The properties of the inner div inside the nav bar*/
+#navbar-inner-div {
+    margin-left: 30%;
+}
+/*The properties of the artists link on the  top navbar  */
+#navbar-artistes {
+    font-family:  sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 100px;
+    margin-left: 5px;
+    padding-left: 30px;
+    padding-top: 10px;
+    font-weight: 900;
+    text-decoration: none;
+    color: #fff;
+    box-sizing: border-box;
+}
+/*The properties of the artists link hover on the  top navbar  */
+#navbar-artistes:hover{color:#ff781f}
+
+/*The properties of the comedians link in the top nav bar */
+#navbar-comedians {
+    font-family:  sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 120px;
+    color: #fff;
+    margin-left: 2px;
+    font-weight: 900;
+    padding-left: 30px;
+    text-decoration: none;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+/*The properties of the comedians link hover in the top nav bar */
+#navbar-comedians:hover{color:#ff781f}
+
+/*The properties of the bands on the top nav bar  */
+#navbar-bands {
+    font-family:  sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 80px;
+    color: #fff;
+    margin-left: 2px;
+    font-weight: 900;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+/*The properties of the bands hover on the top nav bar  */
+#navbar-bands:hover{color:#ff781f}
+
+/*The properties of the about us on the top nav bar*/
+#navbar-admin {
+    font-family:  sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 100px;
+    color: #fff;
+    margin-left: 2px;
+    font-weight: 900;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+/*The properties of the about us hover on the top nav bar*/
+#navbar-admin:hover{color:#ff781f}
+
+/*The properties of the contactus on the top-nav bar*/
+#navbar-dashboard {
+    font-family: sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 120px;
+    color: #fff;
+    margin-left: 3%;
+    font-weight: 900;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+/*The properties of the contactus hover on the top-nav bar*/
+#navbar-contactus:hover{color:#ff781f}
+
+/*The properties of the navbar-dropdown*/
+#navbar-dropdown {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.875em;
+    height: 40px;
+    width: 140px;
+    color: #fff;
+    margin-left: 2px;
+    border-style: hidden;
+    background-color:inherit; 
+    padding-left: 20px;
+    font-weight: 900;
+    padding-top: 10px;
+    text-decoration: none;
+    box-sizing: border-box;
+    
+}
+/*The properties of the navbar-dropdown hover*/
+#navbar-dropdown:hover{color:#ff781f}
+
+/*The properties of the signout*/
+#sign-out {
+    font-size: 0.875em;
+    font-weight: 600;
+    text-decoration: none;
+}
+/*The properties of the hovering on the top nav bar */
+#sign-out:hover {
+    color: red;
+}
 /*The properties of the btn-block*/
 .btn-block{
- margin-left: inherit;
+ background-color: #2B313E;
+ font-weight: 600;
+}
+
+.table{
+width:580px;
+
+}
+
+.updateimage{
+    text-align: center;
+    margin: 30px auto 20px auto;
+    
+}
+.updateimage img{
+    border-radius: 50%;
+}
+.updateband{
+    text-align: center;
+    margin: 30px auto 20px auto; 
+}
+.updateband img{ 
+    border-radius: 10px;
+}
+header{
+    
+    text-align: center;
+}
+
+.card-title{
+    font-weight:900;
+}
+
+th{
+    color:#fff;
+    background-color: #2B313E;
+}
+
+/*The properties of the footer*/
+.footer {
+    height: 65px;
+    background: #555a64;
+}
+/*The properties of the nav-link*/
+.nav-link {
+    color: #fff;
+}
+/*The properties of the nav-link hover*/
+.nav-link:hover {
+    color: #ff781f;
+}
+/*The properties of the nav-container*/
+.nav-container {
+    margin-left: 40%;
+    display: flex;
+    
+}
+/*The properties of the icon*/
+.icon {
+    color:#fff; 
+}
+/*The properties of the copy*/
+.copy {
+    font-family:  sans-serif;
+    font-size: 14px;
+    margin-left: 4%;
+    font-weight: 900;
+}
+/*The properties of the small quote */
+#small-quote {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 900;
+    font-family: 'Bonheur Royale', cursive;
+}
+/*The properties of the small quote hover */
+#small-quote:hover{
+    color:#ff781f;
 }
