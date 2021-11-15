@@ -190,7 +190,18 @@ td{
     font-size:13px;
 }
 
-
+/*Properties for table head*/
+thead{
+    color: #fff;
+    background-color: #2B313E ;
+}
+#sidebarCollapse{
+    background-color:transparent;
+    color:#2B313E;
+    border:none;
+    font-size: 35px;
+    
+}
 
 
 /* ---------------------------------------------------
