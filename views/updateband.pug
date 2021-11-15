@@ -1,18 +1,18 @@
 extends layout1
 block content
     header.card-header
-        h3.card-title UGAAMUX
+        h3.card-title #{band.BandName}
 
 
     div.form-row
         div.col.form-group.col-md-12   
             div.form-row
                 
-                    div.col-md-8 
-                        small You can  now update  information of  #{band.BandName}
-                        br
-                        img(src='/'+band.Profilepicture width="100px" height="50px") 
-                    //- div.col-md-2 
+                    div.col-md-8.updateband
+                        
+                        
+                        img(src='/'+band.Profilepicture width="200px" height="100px") 
+                    
                         
                         
                             
@@ -23,7 +23,7 @@ block content
         
 
                 table.table
-                    thead.thead-dark
+                    thead
                         tr
                             th Band name 
                             td 
